@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emprende Diario · Una membresía de uHub</title>
+<meta name="description" content="La membresía de uHub para quien ya intentó y quiere volver. Sistema, ritmo y acompañamiento real para sostener tu camino emprendedor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#C0182A;
+  --red-dark:#8B0D1B;
+  --red-mid:#D94055;
+  --red-light:#FDEAEC;
+  --red-wash:#FFF5F6;
+  --ink:#1C1C1C;
+  --gray:#6B6B6B;
+  --gray-light:#F3F2EE;
+  --warm:#FAF8F4;
+  --white:#FFFFFF;
+  --border:#E2E0DA;
+  --font-display:'Barlow Condensed',sans-serif;
+  --font-body:'Barlow',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--white);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-48px);transition:opacity .65s ease,transform .65s ease}
+.reveal-l.visible{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(48px);transition:opacity .65s ease,transform .65s ease}
+.reveal-r.visible{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ── NAVBAR ── */
+header{
+  position:sticky;top:0;z-index:200;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:3px solid var(--red);
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:stretch;justify-content:space-between;
+  padding:0 32px;height:60px;
+}
+.logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{
+  width:32px;height:32px;background:var(--red);
+  display:flex;align-items:center;justify-content:center;
+}
+.logo-mark span{
+  font-family:var(--font-display);font-weight:900;
+  font-size:13px;color:var(--white);letter-spacing:-1px;
+}
+.logo-name{
+  font-family:var(--font-display);font-weight:700;
+  font-size:17px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);
+}
+nav{display:flex;align-items:stretch}
+nav a{
+  display:flex;align-items:center;padding:0 18px;
+  font-family:var(--font-display);font-weight:600;font-size:12px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;
+  border-left:1px solid var(--border);
+  transition:color .15s,background .15s;
+}
+nav a:hover{color:var(--red)}
+.nav-cta{
+  background:var(--red);color:var(--white)!important;
+  padding:0 24px;border-left:none!important;
+  transition:background .15s!important;
+}
+.nav-cta:hover{background:var(--red-dark)!important}
+@media(max-width:768px){nav{display:none}}
+
+/* ── HERO ── */
+.hero{
+  background:var(--red);
+  position:relative;overflow:hidden;
+  min-height:96vh;display:flex;flex-direction:column;
+}
+/* big BG text */
+.hero-bg-text{
+  position:absolute;bottom:-40px;left:-10px;right:0;
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(160px,22vw,280px);
+  text-transform:uppercase;letter-spacing:-.04em;line-height:1;
+  color:rgba(255,255,255,.06);
+  pointer-events:none;white-space:nowrap;
+  user-select:none;
+}
+.hero-bar{
+  background:rgba(0,0,0,.18);
+  padding:9px 32px;
+  display:flex;align-items:center;gap:14px;
+}
+.hero-bar-dot{
+  width:7px;height:7px;background:var(--white);border-radius:50%;
+  animation:pulse 1.6s infinite;flex-shrink:0;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero-bar span{
+  font-family:var(--font-display);font-weight:600;font-size:11px;
+  letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.8);
+}
+.hero-body{
+  flex:1;display:grid;grid-template-columns:1fr 420px;
+  max-width:1200px;margin:0 auto;width:100%;
+  padding:80px 32px 100px;gap:64px;align-items:center;
+  position:relative;z-index:1;
+}
+.hero-kicker{
+  font-family:var(--font-body);font-style:italic;font-weight:400;
+  font-size:15px;color:rgba(255,255,255,.65);
+  margin-bottom:20px;
+}
+.hero-h1{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(64px,9vw,120px);
+  line-height:.91;letter-spacing:-.02em;text-transform:uppercase;
+  color:var(--white);margin-bottom:28px;
+}
+.hero-h1 em{
+  font-style:normal;
+  display:block;color:rgba(255,255,255,.4);
+}
+.hero-desc{
+  font-size:17px;color:rgba(255,255,255,.8);
+  line-height:1.65;max-width:500px;margin-bottom:44px;
+}
+.hero-desc strong{color:var(--white);font-weight:600}
+.hero-btns{display:flex;flex-direction:column;gap:10px;max-width:440px}
+.btn-w{
+  display:block;text-align:center;
+  background:var(--white);color:var(--red);
+  padding:17px 32px;
+  font-family:var(--font-display);font-weight:800;font-size:17px;
+  letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+  border:2px solid var(--white);
+  transition:all .15s;
+}
+.btn-w:hover{background:transparent;color:var(--white)}
+.btn-outline-w{
+  display:block;text-align:center;
+  background:transparent;color:rgba(255,255,255,.7);
+  padding:15px 32px;
+  font-family:var(--font-display);font-weight:600;font-size:13px;
+  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  border:1px solid rgba(255,255,255,.3);
+  transition:all .15s;
+}
+.btn-outline-w:hover{border-color:var(--white);color:var(--white)}
+.hero-micro{
+  text-align:center;margin-top:10px;
+  font-size:12px;color:rgba(255,255,255,.35);letter-spacing:.06em;
+}
+/* hero right panel */
+.hero-panel{
+  background:rgba(255,255,255,.1);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.2);
+  padding:36px;
+}
+.hero-quote{
+  font-family:var(--font-body);font-style:italic;
+  font-size:19px;color:var(--white);line-height:1.5;
+  margin-bottom:12px;
+}
+.hero-quote-by{
+  font-family:var(--font-display);font-weight:600;font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);
+  margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.15);
+}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.hs-n{
+  font-family:var(--font-display);font-weight:900;
+  font-size:44px;color:var(--white);line-height:1;margin-bottom:4px;
+}
+.hs-l{font-size:12px;color:rgba(255,255,255,.5);line-height:1.4}
+@media(max-width:900px){.hero-body{grid-template-columns:1fr}.hero-panel{display:none}}
+
+/* ── UTILS ── */
+.sec{padding:100px 0}
+.sec-warm{background:var(--warm)}
+.sec-red{background:var(--red)}
+.sec-light{background:var(--gray-light)}
+.sec-redwash{background:var(--red-wash)}
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
+.container-n{max-width:860px;margin:0 auto;padding:0 32px}
+.center{text-align:center}
+.center .sec-sub{margin-left:auto;margin-right:auto}
+
+/* eyebrow */
+.eyebrow{
+  display:inline-block;
+  font-family:var(--font-display);font-weight:700;font-size:11px;
+  letter-spacing:.22em;text-transform:uppercase;
+  background:var(--red);color:var(--white);
+  padding:5px 14px;margin-bottom:24px;
+}
+.sec-red .eyebrow{background:var(--white);color:var(--red)}
+.sec-redwash .eyebrow{background:var(--red);color:var(--white)}
+
+/* headings */
+.h2{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(42px,5.5vw,80px);
+  line-height:.93;letter-spacing:-.015em;text-transform:uppercase;
+  color:var(--ink);margin-bottom:24px;
+}
+.sec-red .h2{color:var(--white)}
+.sec-sub{
+  font-size:17px;color:var(--gray);line-height:1.65;
+  max-width:580px;margin-bottom:56px;
+}
+.sec-red .sec-sub{color:rgba(255,255,255,.75)}
+
+/* divider */
+.stripe{height:4px;background:var(--red)}
+.stripe-w{height:4px;background:var(--white)}
+
+/* ── PROBLEM ── */
+.prob-items{margin:56px 0}
+.prob-row{
+  display:flex;align-items:baseline;gap:20px;
+  padding:28px 0;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+.prob-row:first-child{border-top:1px solid rgba(255,255,255,.15)}
+.prob-n{
+  font-family:var(--font-display);font-weight:700;font-size:12px;
+  color:rgba(255,255,255,.4);letter-spacing:.12em;flex-shrink:0;width:30px;
+}
+.prob-t{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(26px,3.5vw,48px);
+  text-transform:uppercase;color:var(--white);
+  line-height:1;letter-spacing:-.01em;
+}
+.prob-close{
+  margin-top:48px;padding:36px 40px;
+  background:rgba(255,255,255,.1);
+  border-left:4px solid var(--white);
+}
+.prob-close p{font-size:17px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:10px}
+.prob-close strong{
+  font-family:var(--font-display);font-weight:900;font-size:26px;
+  text-transform:uppercase;color:var(--white);display:block;margin-top:14px;
+}
+
+/* ── THREE GRID ── */
+.three-g{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:3px;margin-top:56px;
+}
+@media(max-width:768px){.three-g{grid-template-columns:1fr}}
+.tg-card{padding:40px 32px;background:var(--white);border-top:3px solid var(--red)}
+.sec-warm .tg-card{background:var(--gray-light)}
+.tg-num{
+  font-family:var(--font-display);font-weight:900;font-size:56px;
+  color:var(--red);opacity:.15;line-height:1;margin-bottom:16px;
+}
+.tg-card h3{
+  font-family:var(--font-display);font-weight:800;font-size:21px;
+  text-transform:uppercase;letter-spacing:.02em;
+  color:var(--ink);margin-bottom:14px;
+}
+.tg-card p{font-size:15px;color:var(--gray);line-height:1.65}
+.tg-footer{
+  margin-top:3px;padding:36px 32px;
+  background:var(--red);grid-column:1/-1;
+  display:flex;align-items:center;gap:20px;
+}
+.tg-footer-t{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(18px,2vw,26px);
+  text-transform:uppercase;color:var(--white);line-height:1.2;
+}
+.tg-footer-t em{font-style:normal;opacity:.55}
+
+/* ── WHAT IS ── */
+.what-g{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3px;margin-top:56px;
+}
+@media(max-width:768px){.what-g{grid-template-columns:1fr}}
+.wc{
+  padding:48px 40px;
+  background:var(--gray-light);
+  position:relative;overflow:hidden;
+  border-top:3px solid transparent;
+  transition:border-color .25s,background .25s;
+}
+.wc:hover{border-top-color:var(--red);background:var(--red-light)}
+.wc-bg{
+  position:absolute;bottom:-10px;right:-10px;
+  font-family:var(--font-display);font-weight:900;font-size:100px;
+  color:rgba(0,0,0,.04);text-transform:uppercase;line-height:1;
+  pointer-events:none;
+}
+.wc h3{
+  font-family:var(--font-display);font-weight:800;font-size:24px;
+  text-transform:uppercase;color:var(--ink);margin-bottom:14px;
+  position:relative;z-index:1;
+}
+.wc p{font-size:15px;color:var(--gray);line-height:1.65;position:relative;z-index:1}
+.wc-full{grid-column:1/-1}
+
+/* ── TIMELINE ── */
+.tl{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin-top:56px;border:2px solid var(--border);
+}
+@media(max-width:900px){.tl{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.tl{grid-template-columns:1fr}}
+.tl-item{
+  padding:36px 28px;
+  border-right:2px solid var(--border);
+  position:relative;
+}
+.tl-item::before{
+  content:'';position:absolute;top:-2px;left:-2px;right:0;height:4px;
+  background:var(--red);
+}
+.tl-item:last-child{border-right:none}
+.tl-week{
+  font-family:var(--font-display);font-weight:700;font-size:10px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--red);
+  margin-bottom:14px;
+}
+.tl-item h3{
+  font-family:var(--font-display);font-weight:800;font-size:19px;
+  text-transform:uppercase;color:var(--ink);margin-bottom:10px;
+}
+.tl-item p{font-size:14px;color:var(--gray);line-height:1.6}
+.tl-close{
+  margin-top:3px;padding:32px 36px;
+  background:var(--red-light);
+  border-left:4px solid var(--red);
+  font-family:var(--font-body);font-style:italic;
+  font-size:17px;color:var(--red-dark);line-height:1.55;
+}
+
+/* ── FEATURES ── */
+.feat-list{max-width:800px;margin:56px auto 0}
+.feat-item{
+  display:grid;grid-template-columns:52px 1fr;
+  border-bottom:1px solid var(--border);
+}
+.feat-item:first-child{border-top:1px solid var(--border)}
+.feat-arr{
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:900;font-size:18px;
+  color:var(--white);background:var(--red);
+  flex-shrink:0;
+}
+.feat-c{padding:22px 26px}
+.feat-c h4{
+  font-family:var(--font-display);font-weight:700;font-size:16px;
+  text-transform:uppercase;letter-spacing:.03em;
+  color:var(--ink);margin-bottom:4px;
+}
+.feat-c p{font-size:13px;color:var(--gray);line-height:1.5}
+.feat-note{
+  text-align:center;margin-top:36px;
+  font-style:italic;font-size:15px;color:var(--gray);
+}
+
+/* ── FOR WHOM ── */
+.for-g{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:56px}
+@media(max-width:768px){.for-g{grid-template-columns:1fr}}
+.for-card{padding:48px 40px}
+.for-yes{background:var(--red)}
+.for-no{background:var(--gray-light)}
+.for-title{
+  font-family:var(--font-display);font-weight:900;font-size:28px;
+  text-transform:uppercase;margin-bottom:28px;
+  padding-bottom:14px;border-bottom:3px solid;
+}
+.for-yes .for-title{color:var(--white);border-color:rgba(255,255,255,.3)}
+.for-no .for-title{color:var(--ink);border-color:var(--border)}
+.for-card ul{list-style:none}
+.for-card li{
+  padding:11px 0 11px 26px;position:relative;
+  font-size:15px;line-height:1.5;
+  border-bottom:1px solid;
+}
+.for-yes li{color:rgba(255,255,255,.88);border-color:rgba(255,255,255,.1)}
+.for-no li{color:var(--ink);border-color:rgba(0,0,0,.07)}
+.for-card li::before{position:absolute;left:0;font-weight:700;font-family:var(--font-display)}
+.for-yes li::before{content:'✓';color:var(--white)}
+.for-no li::before{content:'×';color:var(--gray)}
+
+/* ── FOUNDER ── */
+.found-grid{
+  display:grid;grid-template-columns:280px 1fr;
+  gap:72px;align-items:start;margin-top:56px;
+}
+@media(max-width:900px){.found-grid{grid-template-columns:1fr}}
+.found-photo{
+  background:var(--red-light);
+  aspect-ratio:4/5;
+  display:flex;align-items:flex-end;
+  padding:20px;position:relative;overflow:hidden;
+  border:2px solid var(--red-light);
+}
+.found-photo-bg{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--font-display);font-weight:900;font-size:140px;
+  color:rgba(192,24,42,.12);text-transform:uppercase;line-height:1;letter-spacing:-.05em;
+  pointer-events:none;
+}
+.found-badge{
+  font-family:var(--font-display);font-weight:700;font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;
+  background:var(--red);color:var(--white);
+  padding:6px 14px;position:relative;z-index:1;
+}
+.found-text p{
+  font-size:16px;color:var(--gray);line-height:1.75;margin-bottom:18px;
+}
+.found-sig{
+  margin-top:28px;padding-top:22px;
+  border-top:2px solid var(--border);
+}
+.found-name{
+  font-family:var(--font-display);font-weight:900;font-size:20px;
+  text-transform:uppercase;color:var(--ink);
+}
+.found-role{font-size:13px;color:var(--gray);margin-bottom:10px}
+.found-sig a{
+  font-family:var(--font-display);font-weight:600;font-size:12px;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--red);text-decoration:none;
+  border-bottom:1px solid var(--red);padding-bottom:2px;
+  transition:opacity .15s;
+}
+.found-sig a:hover{opacity:.65}
+
+/* ── STATS ── */
+.stats-g{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:3px;margin-top:56px;
+}
+@media(max-width:768px){.stats-g{grid-template-columns:repeat(2,1fr)}}
+.stat-c{padding:36px 28px;background:rgba(255,255,255,.12)}
+.stat-n{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(44px,5vw,68px);
+  color:var(--white);line-height:1;margin-bottom:10px;
+}
+.stat-l{font-size:12px;color:rgba(255,255,255,.6);line-height:1.45}
+.stat-disc{
+  text-align:center;margin-top:28px;
+  font-size:12px;font-style:italic;color:rgba(255,255,255,.35);
+}
+
+/* ── TESTIMONIALS ── */
+.test-g{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:56px}
+@media(max-width:768px){.test-g{grid-template-columns:1fr}}
+.test-c{
+  padding:36px 30px;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-top:3px solid var(--red);
+  position:relative;
+}
+.test-mark{
+  font-family:var(--font-display);font-weight:900;font-size:80px;
+  color:var(--red);opacity:.12;line-height:1;
+  position:absolute;top:8px;left:20px;pointer-events:none;
+}
+.test-q{
+  font-size:14px;line-height:1.7;color:var(--ink);
+  font-style:italic;margin-bottom:24px;position:relative;z-index:1;
+}
+.test-auth{display:flex;align-items:center;gap:10px}
+.test-av{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--red-light);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:13px;
+  color:var(--red);flex-shrink:0;
+}
+.test-nm{font-weight:600;font-size:13px;color:var(--ink)}
+.test-rl{font-size:12px;color:var(--gray)}
+
+/* ── PRICING ── */
+.price-g{
+  display:grid;grid-template-columns:1.25fr 1fr;
+  gap:3px;max-width:940px;margin:56px auto 0;
+}
+@media(max-width:768px){.price-g{grid-template-columns:1fr}}
+.price-card{
+  padding:44px 38px;
+  position:relative;
+}
+.price-main{
+  background:var(--white);
+  border:2px solid var(--ink);
+}
+.price-coming{
+  background:var(--gray-light);
+  border:1px solid var(--border);
+}
+.p-badge{
+  display:inline-block;
+  font-family:var(--font-display);font-weight:700;font-size:11px;
+  letter-spacing:.15em;text-transform:uppercase;
+  background:var(--red);color:var(--white);
+  padding:5px 14px;margin-bottom:18px;
+}
+.p-badge-grey{
+  display:inline-block;
+  font-family:var(--font-display);font-weight:700;font-size:11px;
+  letter-spacing:.15em;text-transform:uppercase;
+  background:var(--gray);color:var(--white);
+  padding:5px 14px;margin-bottom:18px;
+}
+.price-card h3{
+  font-family:var(--font-display);font-weight:800;font-size:22px;
+  text-transform:uppercase;color:var(--ink);margin-bottom:4px;
+}
+.price-amt{
+  font-family:var(--font-display);font-weight:900;
+  font-size:64px;line-height:1;color:var(--ink);
+  margin:18px 0;letter-spacing:-.02em;
+}
+.price-amt sub{font-size:20px;vertical-align:middle;font-weight:400;opacity:.5}
+.price-amt .per{font-size:15px;font-weight:400;opacity:.45;vertical-align:baseline}
+.price-tag{font-size:14px;color:var(--gray);line-height:1.6;margin-bottom:26px}
+.price-feats{list-style:none;margin-bottom:32px}
+.price-feats li{
+  padding:9px 0 9px 22px;position:relative;
+  font-size:13px;border-bottom:1px solid var(--border);color:var(--ink);
+}
+.price-coming .price-feats li{color:var(--gray)}
+.price-feats li::before{
+  content:'✓';position:absolute;left:0;
+  color:var(--red);font-weight:700;
+}
+.price-coming .price-feats li::before{color:var(--gray)}
+.btn-price{
+  display:block;text-align:center;padding:15px;
+  font-family:var(--font-display);font-weight:700;font-size:15px;
+  letter-spacing:.08em;text-transform:uppercase;text-decoration:none;
+  transition:all .15s;
+}
+.btn-price-red{background:var(--red);color:var(--white);border:2px solid var(--red)}
+.btn-price-red:hover{background:var(--red-dark);border-color:var(--red-dark)}
+.btn-price-out{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-price-out:hover{background:var(--ink);color:var(--white)}
+.price-note{
+  text-align:center;margin-top:14px;
+  font-size:12px;line-height:1.55;color:var(--gray);
+}
+
+/* ── MENTORCLASS ── */
+.mc{
+  background:var(--red-wash);
+  padding:100px 0;
+  position:relative;overflow:hidden;
+}
+.mc::before{
+  content:'MC';
+  position:absolute;right:-20px;top:50%;transform:translateY(-50%);
+  font-family:var(--font-display);font-weight:900;font-size:360px;
+  color:rgba(192,24,42,.06);line-height:1;letter-spacing:-.05em;
+  pointer-events:none;
+}
+.mc-in{
+  max-width:780px;margin:0 auto;padding:0 32px;
+  text-align:center;position:relative;z-index:1;
+}
+.mc-in h2{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(42px,6.5vw,88px);
+  text-transform:uppercase;color:var(--red);
+  line-height:.93;margin-bottom:22px;
+}
+.mc-in p{
+  font-size:17px;color:var(--gray);line-height:1.65;
+  margin-bottom:38px;max-width:600px;
+  margin-left:auto;margin-right:auto;
+}
+.btn-mc{
+  display:inline-block;
+  background:var(--red);color:var(--white);
+  padding:17px 44px;
+  font-family:var(--font-display);font-weight:700;font-size:15px;
+  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  transition:all .15s;
+  border:2px solid var(--red);
+}
+.btn-mc:hover{background:transparent;color:var(--red)}
+
+/* ── FAQ ── */
+.faq{max-width:720px;margin:56px auto 0}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{
+  width:100%;padding:22px 0;
+  display:flex;justify-content:space-between;align-items:center;
+  background:none;border:none;cursor:pointer;
+  font-family:var(--font-display);font-weight:700;font-size:17px;
+  text-align:left;text-transform:uppercase;letter-spacing:.02em;
+  color:var(--ink);transition:color .15s;
+}
+.faq-q:hover{color:var(--red)}
+.faq-tog{
+  font-size:26px;font-weight:300;color:var(--red);
+  flex-shrink:0;margin-left:12px;
+  transition:transform .25s;
+}
+.faq-item.open .faq-tog{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease}
+.faq-item.open .faq-a{max-height:400px;padding-bottom:22px}
+.faq-a p{font-size:15px;line-height:1.7;color:var(--gray)}
+
+/* ── FINAL CTA ── */
+.final{
+  background:var(--red);
+  padding:120px 0;text-align:center;
+  position:relative;overflow:hidden;
+}
+.final::before{
+  content:'EMPRENDE';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--font-display);font-weight:900;font-size:clamp(80px,14vw,200px);
+  color:rgba(255,255,255,.05);letter-spacing:-.04em;
+  white-space:nowrap;pointer-events:none;
+}
+.final h2{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(44px,6.5vw,96px);
+  text-transform:uppercase;color:var(--white);
+  line-height:.93;margin-bottom:16px;position:relative;z-index:1;
+}
+.final .tag{
+  font-family:var(--font-body);font-style:italic;
+  font-size:19px;color:rgba(255,255,255,.6);
+  margin-bottom:44px;position:relative;z-index:1;
+}
+.final-btns{
+  display:flex;flex-direction:column;align-items:center;
+  gap:10px;max-width:440px;margin:0 auto;
+  position:relative;z-index:1;
+}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:60px 0 28px}
+.foot-g{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:36px;margin-bottom:44px;
+}
+@media(max-width:768px){.foot-g{grid-template-columns:repeat(2,1fr)}}
+footer h4{
+  font-family:var(--font-display);font-weight:700;font-size:10px;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--white);margin-bottom:14px;
+}
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+footer a{
+  font-size:13px;color:rgba(255,255,255,.45);
+  text-decoration:none;transition:color .15s;
+}
+footer a:hover{color:var(--white)}
+.foot-bottom{
+  padding-top:28px;border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;font-size:11px;color:rgba(255,255,255,.2);
+  letter-spacing:.06em;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="nav-inner">
+    <a class="logo-wrap" href="#">
+      <div class="logo-mark"><span>uH</span></div>
+      <span class="logo-name">Emprende Diario</span>
+    </a>
+    <nav>
+      <a href="#producto">Producto</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#precio">Precio</a>
+      <a href="#faq">FAQ</a>
+      <a href="#precio" class="nav-cta">Únete · $499/mes</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text">EMPRENDE DIARIO</div>
+  <div class="hero-bar">
+    <div class="hero-bar-dot"></div>
+    <span>uHub · Emprende Diario · Membresía activa</span>
+  </div>
+  <div class="hero-body">
+    <div class="reveal-l">
+      <p class="hero-kicker">Una membresía de uHub</p>
+      <h1 class="hero-h1">Emprende.<br>Ya te<br><em>urge.</em></h1>
+      <p class="hero-desc">Emprende Diario es la membresía de uHub para quien ya intentó y quiere volver — con <strong>sistema, ritmo y acompañamiento real</strong>. No es otro curso. Es la estructura que no tuviste la primera vez.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-w">Quiero entrar · $499/mes</a>
+        <a href="#mentorclass" class="btn-outline-w">O ven primero a la MentorClass gratuita →</a>
+        <p class="hero-micro">Sin permanencia · Cancelas cuando quieras</p>
+      </div>
+    </div>
+    <div class="reveal-r d2">
+      <div class="hero-panel">
+        <p class="hero-quote">"Lo que nadie te dio fue el sistema para sostenerlo todos los días."</p>
+        <p class="hero-quote-by">— Rodrigo Campillo, Fundador uHub</p>
+        <div class="hero-stats">
+          <div><div class="hs-n">+550</div><div class="hs-l">emprendedores acompañados</div></div>
+          <div><div class="hs-n">10+</div><div class="hs-l">años validando la metodología</div></div>
+          <div><div class="hs-n">76%</div><div class="hs-l">graduados con actividad económica activa</div></div>
+          <div><div class="hs-n">70%</div><div class="hs-l">reporta incremento en ingresos</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stripe-w"></div>
+
+<!-- PROBLEM -->
+<section class="sec sec-red">
+  <div class="container">
+    <span class="eyebrow reveal">El problema</span>
+    <h2 class="h2 reveal">Probablemente<br>te suena<br>algo de esto.</h2>
+    <div class="prob-items">
+      <div class="prob-row reveal d1">
+        <span class="prob-n">01</span>
+        <p class="prob-t">Sabes qué hacer. No lo haces.</p>
+      </div>
+      <div class="prob-row reveal d2">
+        <span class="prob-n">02</span>
+        <p class="prob-t">Empezaste. Te perdiste en el camino.</p>
+      </div>
+      <div class="prob-row reveal d3">
+        <span class="prob-n">03</span>
+        <p class="prob-t">Quieres volver. No sabes por dónde.</p>
+      </div>
+    </div>
+    <div class="prob-close reveal">
+      <p>Esto no es falta de talento. No es falta de ideas. No es falta de motivación.</p>
+      <strong>Es falta de sistema. Y de alguien que te acompañe.</strong>
+    </div>
+  </div>
+</section>
+<div class="stripe"></div>
+
+<!-- WHY NOTHING WORKED -->
+<section class="sec sec-warm">
+  <div class="container">
+    <span class="eyebrow reveal">Por qué nada funcionó</span>
+    <h2 class="h2 reveal">El problema<br>con lo que<br>probaste antes.</h2>
+    <div class="three-g">
+      <div class="tg-card reveal d1">
+        <div class="tg-num">01</div>
+        <h3>Los cursos te dieron información.</h3>
+        <p>Pero la información sin ejecución se olvida en 72 horas.</p>
+      </div>
+      <div class="tg-card reveal d2">
+        <div class="tg-num">02</div>
+        <h3>Los gurús te dieron motivación.</h3>
+        <p>Pero la motivación se apaga cuando cambia el contexto.</p>
+      </div>
+      <div class="tg-card reveal d3">
+        <div class="tg-num">03</div>
+        <h3>Los libros te dieron teoría.</h3>
+        <p>Pero la teoría sin acompañamiento no construye hábitos.</p>
+      </div>
+      <div class="tg-footer reveal">
+        <div class="tg-footer-t"><em>Lo que nadie te dio fue</em> el sistema para sostenerlo todos los días.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS -->
+<section id="producto" class="sec">
+  <div class="container">
+    <span class="eyebrow reveal">Qué es esto</span>
+    <h2 class="h2 reveal">Qué es<br>Emprende<br>Diario.</h2>
+    <p class="sec-sub reveal">Tres cosas que lo hacen distinto a todo lo que probaste antes.</p>
+    <div class="what-g">
+      <div class="wc reveal-l">
+        <div class="wc-bg">01</div>
+        <h3>Sistema, no curso.</h3>
+        <p>Una estructura mensual diseñada y validada con la metodología uHub. No vienes a ver videos. Vienes a ejecutar.</p>
+      </div>
+      <div class="wc reveal-r">
+        <div class="wc-bg">02</div>
+        <h3>Acompañamiento, no contenido.</h3>
+        <p>No estás solo. Mentores, comunidad y un ritmo que te obliga a mostrarte cada mes.</p>
+      </div>
+      <div class="wc wc-full reveal">
+        <div class="wc-bg">03</div>
+        <h3>Cambio sostenido, no arranque pasajero.</h3>
+        <p>Diseñado para que emprender deje de ser un evento y se vuelva parte de quién eres.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stripe"></div>
+
+<!-- HOW IT WORKS -->
+<section id="como-funciona" class="sec sec-warm">
+  <div class="container">
+    <span class="eyebrow reveal">Cómo funciona</span>
+    <h2 class="h2 reveal">Así es un mes<br>dentro de<br>Emprende Diario.</h2>
+    <p class="sec-sub reveal">Tres encuentros al mes. Un ciclo. Resultados visibles.</p>
+    <div class="tl reveal">
+      <div class="tl-item">
+        <div class="tl-week">Semana 1</div>
+        <h3>Claridad y dirección</h3>
+        <p>Sesión grupal para diagnosticar dónde estás, definir tu enfoque del mes y aterrizar tu próximo paso real.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-week">Semana 2</div>
+        <h3>MentorClass</h3>
+        <p>Rodrigo aborda un tema central del mes con framework aplicable, casos resueltos y conexión con la comunidad.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-week">Semana 3</div>
+        <h3>Mentoría e intercambio</h3>
+        <p>Espacio de mentoría grupal con un mentor invitado y casos reales de los miembros. Networking activo.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-week">Semana 4</div>
+        <h3>Reflexión y cierre</h3>
+        <p>Revisión de avances, ajustes, accountability y preparación para el siguiente ciclo.</p>
+      </div>
+    </div>
+    <div class="tl-close reveal">
+      Cada mes sales con un avance concreto, una idea nueva, una conexión real y un ajuste en tu modelo.
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec">
+  <div class="container">
+    <span class="eyebrow reveal center">Lo que incluye</span>
+    <h2 class="h2 reveal center">Lo que vives<br>cada mes.</h2>
+    <p class="sec-sub reveal center">Lo esencial está aquí. El resto, lo descubres adentro.</p>
+    <div class="feat-list">
+      <div class="feat-item reveal d1">
+        <div class="feat-arr">→</div>
+        <div class="feat-c"><h4>3 encuentros mensuales en vivo</h4><p>1 sesión de claridad + 1 MentorClass + 1 mentoría grupal con invitado</p></div>
+      </div>
+      <div class="feat-item reveal d1">
+        <div class="feat-arr">→</div>
+        <div class="feat-c"><h4>Comunidad activa</h4><p>WhatsApp + plataforma — cerca todo el mes</p></div>
+      </div>
+      <div class="feat-item reveal d2">
+        <div class="feat-arr">→</div>
+        <div class="feat-c"><h4>Herramienta Emprende Diario</h4><p>La que estructura tu ejecución día a día — puedes usarla sola, pero su poder real está en cómo se conecta con el acompañamiento.</p></div>
+      </div>
+      <div class="feat-item reveal d2">
+        <div class="feat-arr">→</div>
+        <div class="feat-c"><h4>Journey Map Ruta uHub</h4><p>Tu mapa de formación a través de las cuatro etapas de la metodología.</p></div>
+      </div>
+      <div class="feat-item reveal d3">
+        <div class="feat-arr">→</div>
+        <div class="feat-c"><h4>Replay de MentorClass</h4><p>Acceso a sesiones grabadas, exclusivo para miembros.</p></div>
+      </div>
+      <div class="feat-item reveal d3">
+        <div class="feat-arr">→</div>
+        <div class="feat-c"><h4>Tema del mes para superar</h4><p>Cada mes un foco distinto: lo que evitas, lo que te incomoda, lo que ya sabes pero no haces.</p></div>
+      </div>
+      <div class="feat-item reveal d4">
+        <div class="feat-arr">→</div>
+        <div class="feat-c"><h4>Acceso a la metodología uHub aplicada</h4><p>Frameworks, ejemplos, casos reales de la metodología completa.</p></div>
+      </div>
+    </div>
+    <p class="feat-note reveal">Y algunas cosas más que vamos a dejar que descubras adentro.</p>
+  </div>
+</section>
+<div class="stripe"></div>
+
+<!-- FOR WHOM -->
+<section class="sec sec-warm">
+  <div class="container">
+    <span class="eyebrow reveal">¿Es para mí?</span>
+    <h2 class="h2 reveal">Esto no es<br>para todos.<br>Y está bien.</h2>
+    <div class="for-g">
+      <div class="for-card for-yes reveal-l">
+        <div class="for-title">Es para ti si:</div>
+        <ul>
+          <li>Ya intentaste algo antes y quieres volver sin empezar de cero.</li>
+          <li>Sabes qué hacer pero no lo estás haciendo.</li>
+          <li>Buscas disciplina acompañada, no más información.</li>
+          <li>Estás dispuesto a mostrarte en comunidad y ejecutar cada semana.</li>
+          <li>Crees que la persona se construye antes que el negocio.</li>
+        </ul>
+      </div>
+      <div class="for-card for-no reveal-r">
+        <div class="for-title">No es para ti si:</div>
+        <ul>
+          <li>Buscas una fórmula rápida o una solución mágica.</li>
+          <li>Quieres consumir contenido sin ejecutarlo.</li>
+          <li>No estás dispuesto a aparecer en sesiones ni mostrar avances.</li>
+          <li>Buscas un curso técnico de finanzas, marketing o ventas.</li>
+          <li>Esperas que alguien emprenda por ti.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="sec">
+  <div class="container">
+    <span class="eyebrow reveal">El fundador</span>
+    <h2 class="h2 reveal">Por qué existe<br>Emprende Diario.</h2>
+    <div class="found-grid">
+      <div class="found-photo reveal-l">
+        <div class="found-photo-bg">RC</div>
+        <div class="found-badge">Rodrigo Campillo · Fundador uHub</div>
+      </div>
+      <div class="reveal-r">
+        <div class="found-text">
+          <p>No vengo de la versión exitosa del emprendimiento. Vengo de la que fracasa, se reinicia y sigue.</p>
+          <p>Crecí en una familia que emprendió múltiples veces — quebró, reinició, y volvió a empezar con lo que tenía. Aprendí algo que no enseña ningún curso: lo que sostiene un negocio no es una gran idea. Es una persona que no se abandona a sí misma.</p>
+          <p>Llevo más de 10 años acompañando emprendedores en México. He visto a más de 550 personas atravesar este camino. Y el patrón siempre es el mismo: los que sostienen lo que empiezan no tienen más talento, ni más suerte, ni más dinero. Tienen un sistema y una comunidad que los sostiene.</p>
+          <p>Por eso construí Emprende Diario. Para que eso deje de ser un accidente.</p>
+          <div class="found-sig">
+            <div class="found-name">Rodrigo Campillo</div>
+            <div class="found-role">Fundador de uHub</div>
+            <a href="https://www.linkedin.com/in/rodrigocampillo/" target="_blank" rel="noopener">→ Conoce más sobre Rodrigo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stripe"></div>
+
+<!-- STATS -->
+<section class="sec sec-red">
+  <div class="container">
+    <span class="eyebrow reveal">Resultados</span>
+    <h2 class="h2 reveal">La metodología<br>detrás de<br>Emprende Diario.</h2>
+    <p class="sec-sub reveal">10 años acompañando emprendedores. Estos son los números:</p>
+    <div class="stats-g">
+      <div class="stat-c reveal d1"><div class="stat-n">+550</div><div class="stat-l">emprendedores acompañados a lo largo de 10 años</div></div>
+      <div class="stat-c reveal d2"><div class="stat-n">10+</div><div class="stat-l">años desarrollando y validando la metodología</div></div>
+      <div class="stat-c reveal d3"><div class="stat-n">76%</div><div class="stat-l">de graduados con actividad económica activa</div></div>
+      <div class="stat-c reveal d4"><div class="stat-n">70%</div><div class="stat-l">de graduados reporta incremento en ingresos</div></div>
+    </div>
+    <p class="stat-disc reveal">*Datos acumulados de los programas y proyectos uHub desde 2015.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec">
+  <div class="container">
+    <span class="eyebrow reveal">Testimonios</span>
+    <h2 class="h2 reveal">Lo que dicen<br>quienes ya<br>están dentro.</h2>
+    <div class="test-g">
+      <div class="test-c reveal d1">
+        <div class="test-mark">"</div>
+        <p class="test-q">"Espacio para testimonio real de un miembro o graduado de uHub. Reemplazar este texto con la cita y los datos reales cuando estén disponibles."</p>
+        <div class="test-auth"><div class="test-av">MR</div><div><div class="test-nm">Miembro 1</div><div class="test-rl">Reemprendedor · Chihuahua</div></div></div>
+      </div>
+      <div class="test-c reveal d2">
+        <div class="test-mark">"</div>
+        <p class="test-q">"Espacio para testimonio real de un miembro o graduado de uHub. Reemplazar este texto con la cita y los datos reales cuando estén disponibles."</p>
+        <div class="test-auth"><div class="test-av">JG</div><div><div class="test-nm">Miembro 2</div><div class="test-rl">Intraemprendedor · CDMX</div></div></div>
+      </div>
+      <div class="test-c reveal d3">
+        <div class="test-mark">"</div>
+        <p class="test-q">"Espacio para testimonio real de un miembro o graduado de uHub. Reemplazar este texto con la cita y los datos reales cuando estén disponibles."</p>
+        <div class="test-auth"><div class="test-av">AM</div><div><div class="test-nm">Miembro 3</div><div class="test-rl">Graduada uHub AC · Juárez</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stripe"></div>
+
+<!-- PRICING -->
+<section id="precio" class="sec sec-warm">
+  <div class="container">
+    <span class="eyebrow reveal center">Precio</span>
+    <h2 class="h2 reveal center">Un solo precio.<br>Cero<br>complicaciones.</h2>
+    <div class="price-g">
+      <div class="price-card price-main reveal-l">
+        <div class="p-badge">Disponible ahora</div>
+        <h3>Emprende Diario · Ritmo</h3>
+        <div class="price-amt"><sub>$</sub>499<span class="per"> MXN/mes</span></div>
+        <p class="price-tag">Lo esencial incluido. El resto, lo descubres adentro.</p>
+        <ul class="price-feats">
+          <li>3 encuentros mensuales en vivo</li>
+          <li>Comunidad activa en WhatsApp y plataforma</li>
+          <li>Herramienta Emprende Diario</li>
+          <li>Journey Map Ruta uHub</li>
+          <li>Replay de MentorClass</li>
+          <li>Sin permanencia · Cancelas cuando quieras</li>
+          <li>Facturación disponible</li>
+        </ul>
+        <a href="#" class="btn-price btn-price-red">Quiero entrar</a>
+        <p class="price-note">¿Eres graduado de un programa uHub AC? Tienes un precio especial el primer año. Escríbenos antes de inscribirte.</p>
+      </div>
+      <div class="price-card price-coming reveal-r">
+        <div class="p-badge-grey">Próximamente</div>
+        <h3>Emprende Diario · Momentum</h3>
+        <p class="price-tag" style="margin-top:14px">Para quien ya está en Ritmo y busca cercanía, mentoría 1:1 y masterminds exclusivos.</p>
+        <ul class="price-feats">
+          <li>Todo lo de Ritmo</li>
+          <li>Mentoría 1:1 mensual</li>
+          <li>Masterminds exclusivos</li>
+          <li>Acceso anticipado a productos nuevos</li>
+        </ul>
+        <p style="margin-bottom:22px;font-size:13px;color:var(--gray)">Se abre por invitación en las próximas semanas.</p>
+        <a href="#" class="btn-price btn-price-out">Notifícame cuando abra</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTORCLASS -->
+<section id="mentorclass" class="mc">
+  <div class="mc-in">
+    <span class="eyebrow reveal" style="background:var(--red)">MentorClass gratuita</span>
+    <h2 class="reveal">¿Quieres conocernos<br>antes de inscribirte?</h2>
+    <p class="reveal">Una vez al mes hago una MentorClass gratuita. Una hora en vivo: un framework aplicable, casos resueltos en tiempo real, y cero relleno. Si todavía no estás listo para la membresía, ven a la MentorClass primero. Es la mejor forma de ver cómo trabajamos.</p>
+    <a href="#" class="btn-mc reveal">Ver próxima MentorClass →</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec">
+  <div class="container-n">
+    <span class="eyebrow reveal">Preguntas frecuentes</span>
+    <h2 class="h2 reveal">FAQ.</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Cuándo empiezo si me inscribo hoy?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>En cuanto confirmas pago tienes acceso a la plataforma, al grupo de comunidad y a las próximas sesiones del mes en curso. No esperas a una fecha específica.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Qué pasa si no puedo asistir a las sesiones en vivo?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>Todas las sesiones se graban y quedan disponibles en la plataforma. La comunidad y el acompañamiento en WhatsApp están activos todo el mes.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Necesito tener un negocio ya funcionando?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>No. Emprende Diario acompaña desde el que está validando una idea hasta el que ya factura y busca sostener el ritmo. También funciona si estás atorado, en crisis o quieres hacer un cambio importante en tu proyecto. Lo que sí necesitas es disposición a ejecutar.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Qué diferencia hay entre Emprende Diario y un curso?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>Un curso te da información. Emprende Diario te da estructura mensual, acompañamiento directo y una comunidad que te obliga a mostrarte. Pero también es algo más: te ayudamos a aterrizar y aplicar lo que has visto en otros cursos, incubadoras o programas que ya tomaste.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Puedo cancelar cuando quiera?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>Sí. Sin permanencia, sin penalizaciones. Cancelas desde la plataforma o escribiéndonos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Ofrecen factura?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>Sí, facturación disponible. Solicítala al momento del pago o después.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Cuál es la diferencia con el programa uHub AC?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>El programa uHub AC es un acompañamiento de 12 meses financiado por fundaciones, dirigido a emprendedores en contextos vulnerables. Emprende Diario es la membresía abierta para cualquier emprendedor que quiera estructura y comunidad, sin las restricciones del programa social.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Qué es la MentorClass y cuándo es?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>La MentorClass es una sesión gratuita mensual de 1 hora donde Rodrigo trabaja un tema concreto con framework aplicable y casos en vivo. Es la mejor forma de conocer cómo trabajamos antes de inscribirte a la membresía.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Qué es Emprende Diario · Momentum y cuándo abre?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a"><p>Es el siguiente nivel de la membresía. Incluye todo lo de Ritmo más mentoría 1:1 mensual, masterminds y acceso anticipado a productos nuevos. Abre por invitación en las próximas semanas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stripe"></div>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="container-n reveal">
+    <h2>Emprender no<br>es un evento.<br>Es un hábito.</h2>
+    <p class="tag">Deja de empezar de cero cada vez.</p>
+    <div class="final-btns">
+      <a href="#" class="btn-w">Quiero entrar · $499/mes</a>
+      <a href="#mentorclass" class="btn-outline-w">O ven primero a la MentorClass gratuita →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-g">
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#producto">Emprende Diario</a></li>
+          <li><a href="#mentorclass">MentorClass mensual</a></li>
+          <li><a href="#precio">Precio</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>uHub</h4>
+        <ul>
+          <li><a href="#">Sobre uHub</a></li>
+          <li><a href="#">uHub AC (impacto social)</a></li>
+          <li><a href="https://www.linkedin.com/in/rodrigocampillo/" target="_blank" rel="noopener">Rodrigo en LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Conecta</h4>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="mailto:hola@uhub.mx">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 uHub · Emprende Diario es una membresía de uHub</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(b=>{
+  b.addEventListener('click',()=>b.parentElement.classList.toggle('open'));
+});
+const obs=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
