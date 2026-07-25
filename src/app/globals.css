@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  /* uHub brand tokens — Manual de Marca v1.3 */
+  --red-uhub: #b81632;
+  --red-uhub-hover: #9c1229;
+  --red-uhub-active: #7f0e21;
+  --gray-dark: #474855;
+  --gray-medium: #8c8f94;
+  --gray-light: #f2f2f2;
+  --white: #ffffff;
+  --orange-accent: #f26d3d;
+  --burgundy: #6d1f30;
+  --pink-soft: #f0d3d8;
+  --blue-accent: #1b809e;
+  --border-subtle: #e3e3e5;
+  --overlay-dark: rgba(71, 72, 85, 0.72);
+
+  --background: var(--white);
+  --foreground: var(--gray-dark);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-red-uhub: var(--red-uhub);
+  --color-red-uhub-hover: var(--red-uhub-hover);
+  --color-red-uhub-active: var(--red-uhub-active);
+  --color-gray-dark: var(--gray-dark);
+  --color-gray-medium: var(--gray-medium);
+  --color-gray-light: var(--gray-light);
+  --color-orange-accent: var(--orange-accent);
+  --color-burgundy: var(--burgundy);
+  --color-pink-soft: var(--pink-soft);
+  --color-blue-accent: var(--blue-accent);
+  --color-border-subtle: var(--border-subtle);
+
+  --font-display: var(--font-montserrat), "Avenir Next Fallback", Helvetica, Arial, sans-serif;
+  --font-body: var(--font-inter), "Avenir Next Fallback", Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "Avenir Next Fallback";
+  src: local("Avenir Next"), local("Avenir");
+  font-weight: 400;
+  font-display: swap;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}

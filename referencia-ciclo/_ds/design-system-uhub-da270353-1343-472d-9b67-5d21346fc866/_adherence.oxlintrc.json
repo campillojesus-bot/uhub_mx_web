@@ -1,0 +1,349 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "components/marketing/**",
+              "components/navigation/**",
+              "ui_kits/emprende-diario/**",
+              "ui_kits/uhub-ac/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Montserrat|Inter|Avenir Next Fallback))/i]",
+        "message": "Font not provided by the design system. Available: Montserrat, Inter, Avenir Next Fallback."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|children|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: tone, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:orange|red|neutral|blue)$/]",
+        "message": "<Badge> tone must be one of 'orange' | 'red' | 'neutral' | 'blue'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|disabled|type|onClick|children|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, disabled, type, onClick, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|ghost|onDark)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'ghost' | 'onDark'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:padded|children|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: padded, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CierreInstitucional'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|body|ctaLabel|key|ref|className|style|children)$/]",
+        "message": "<CierreInstitucional> doesn't accept that prop. Declared props: title, body, ctaLabel."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CircunstanciaCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:color|title|description|key|ref|className|style|children)$/]",
+        "message": "<CircunstanciaCard> doesn't accept that prop. Declared props: color, title, description."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CredibilityBand'] > JSXAttribute > JSXIdentifier[name!=/^(?:items|key|ref|className|style|children)$/]",
+        "message": "<CredibilityBand> doesn't accept that prop. Declared props: items."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='DiferenciadorCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:notTitle|notItems|isTitle|isItems|key|ref|className|style|children)$/]",
+        "message": "<DiferenciadorCard> doesn't accept that prop. Declared props: notTitle, notItems, isTitle, isItems."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FAQItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:q|a|key|ref|className|style|children)$/]",
+        "message": "<FAQItem> doesn't accept that prop. Declared props: q, a."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Hero'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|subtitle|ctaPrimary|ctaSecondary|imageSrc|align|key|ref|className|style|children)$/]",
+        "message": "<Hero> doesn't accept that prop. Declared props: title, subtitle, ctaPrimary, ctaSecondary, imageSrc, align."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Hero'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center)$/]",
+        "message": "<Hero> align must be one of 'left' | 'center'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Input'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|placeholder|type|value|onChange|required|key|ref|className|style|children)$/]",
+        "message": "<Input> doesn't accept that prop. Declared props: label, placeholder, type, value, onChange, required."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LineaTematicaCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:color|title|description|aliados|key|ref|className|style|children)$/]",
+        "message": "<LineaTematicaCard> doesn't accept that prop. Declared props: color, title, description, aliados."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PricingCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:badge|badgeTone|title|price|priceNote|description|features|ctaLabel|emphasized|note|key|ref|className|style|children)$/]",
+        "message": "<PricingCard> doesn't accept that prop. Declared props: badge, badgeTone, title, price, priceNote, description, features, ctaLabel, emphasized, note."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PricingCard'] > JSXAttribute[name.name='badgeTone'] > Literal[value!=/^(?:red|neutral)$/]",
+        "message": "<PricingCard> badgeTone must be one of 'red' | 'neutral'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProcessStep'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|subtitle|key|ref|className|style|children)$/]",
+        "message": "<ProcessStep> doesn't accept that prop. Declared props: name, subtitle."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SiteHeaderLink'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|href|key|ref|className|style|children)$/]",
+        "message": "<SiteHeaderLink> doesn't accept that prop. Declared props: label, href."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatCallout'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|label|tone|key|ref|className|style|children)$/]",
+        "message": "<StatCallout> doesn't accept that prop. Declared props: value, label, tone."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatCallout'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:red|orange)$/]",
+        "message": "<StatCallout> tone must be one of 'red' | 'orange'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TestimonioCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:initials|name|business|quote|results|key|ref|className|style|children)$/]",
+        "message": "<TestimonioCard> doesn't accept that prop. Declared props: initials, name, business, quote, results."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "CierreInstitucional": {
+        "replaces": []
+      },
+      "CircunstanciaCard": {
+        "replaces": []
+      },
+      "CredibilityBand": {
+        "replaces": []
+      },
+      "DiferenciadorCard": {
+        "replaces": []
+      },
+      "FAQItem": {
+        "replaces": []
+      },
+      "Hero": {
+        "replaces": []
+      },
+      "Input": {
+        "replaces": []
+      },
+      "LineaTematicaCard": {
+        "replaces": []
+      },
+      "PricingCard": {
+        "replaces": []
+      },
+      "ProcessStep": {
+        "replaces": []
+      },
+      "SiteHeaderLink": {
+        "replaces": []
+      },
+      "StatCallout": {
+        "replaces": []
+      },
+      "TestimonioCard": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--blue-accent",
+      "--border-medium",
+      "--border-subtle",
+      "--border-width",
+      "--burgundy",
+      "--cta-primary-bg",
+      "--cta-primary-bg-active",
+      "--cta-primary-bg-hover",
+      "--cta-primary-fg",
+      "--font-body",
+      "--font-display",
+      "--gray-dark",
+      "--gray-light",
+      "--gray-medium",
+      "--leading-normal",
+      "--leading-snug",
+      "--leading-tight",
+      "--max-content-width",
+      "--orange-accent",
+      "--overlay-dark",
+      "--pink-soft",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--red-uhub",
+      "--red-uhub-active",
+      "--red-uhub-hover",
+      "--shadow-card",
+      "--shadow-card-hover",
+      "--space-1",
+      "--space-10",
+      "--space-12",
+      "--space-16",
+      "--space-2",
+      "--space-20",
+      "--space-24",
+      "--space-3",
+      "--space-32",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-8",
+      "--surface-accent-soft",
+      "--surface-dark",
+      "--surface-muted",
+      "--surface-page",
+      "--text-body",
+      "--text-body-lg",
+      "--text-body-sm",
+      "--text-caption",
+      "--text-display-lg",
+      "--text-display-md",
+      "--text-display-xl",
+      "--text-link",
+      "--text-link-hover",
+      "--text-on-dark",
+      "--text-primary",
+      "--text-secondary",
+      "--text-stat",
+      "--text-title",
+      "--touch-min",
+      "--tracking-tight",
+      "--tracking-wide",
+      "--weight-body",
+      "--weight-body-medium",
+      "--weight-body-semibold",
+      "--weight-display",
+      "--weight-display-heavy",
+      "--white"
+    ],
+    "tokenKinds": {
+      "--red-uhub": "color",
+      "--red-uhub-hover": "color",
+      "--red-uhub-active": "color",
+      "--gray-dark": "color",
+      "--gray-medium": "color",
+      "--gray-light": "color",
+      "--white": "color",
+      "--orange-accent": "color",
+      "--burgundy": "color",
+      "--pink-soft": "color",
+      "--blue-accent": "color",
+      "--text-primary": "font",
+      "--text-secondary": "font",
+      "--text-on-dark": "font",
+      "--text-link": "font",
+      "--text-link-hover": "font",
+      "--surface-page": "color",
+      "--surface-muted": "color",
+      "--surface-dark": "color",
+      "--surface-accent-soft": "color",
+      "--border-subtle": "color",
+      "--border-medium": "color",
+      "--cta-primary-bg": "color",
+      "--cta-primary-bg-hover": "color",
+      "--cta-primary-bg-active": "color",
+      "--cta-primary-fg": "color",
+      "--overlay-dark": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--weight-display": "font",
+      "--weight-display-heavy": "font",
+      "--weight-body": "font",
+      "--weight-body-medium": "font",
+      "--weight-body-semibold": "font",
+      "--text-display-xl": "font",
+      "--text-display-lg": "font",
+      "--text-display-md": "font",
+      "--text-title": "font",
+      "--text-body-lg": "font",
+      "--text-body": "font",
+      "--text-body-sm": "font",
+      "--text-caption": "font",
+      "--text-stat": "font",
+      "--leading-tight": "font",
+      "--leading-snug": "font",
+      "--leading-normal": "font",
+      "--tracking-tight": "font",
+      "--tracking-wide": "font",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-10": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing",
+      "--space-20": "spacing",
+      "--space-24": "spacing",
+      "--space-32": "spacing",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-pill": "radius",
+      "--touch-min": "spacing",
+      "--shadow-card": "shadow",
+      "--shadow-card-hover": "shadow",
+      "--border-width": "spacing",
+      "--max-content-width": "spacing"
+    },
+    "fontFamilies": [
+      "Avenir Next Fallback",
+      "Inter",
+      "Montserrat"
+    ]
+  }
+}
