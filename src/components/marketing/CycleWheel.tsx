@@ -7,17 +7,22 @@ import { useState } from "react";
  * construido en /referencia-ciclo (misma paleta, tokens e interacción:
  * clic en cada segmento para ver el detalle). No es un diagrama nuevo.
  */
+const ACTIVE_COLOR = "#B81632";
+const INACTIVE_COLOR = "#6D1F30";
+
 const stages = [
   {
     name: "Descubrir",
     el: "Fuego",
     work: "Mentalidad y propósito",
     desc: "Encuentras el porqué que sostiene todo lo demás. Sin propósito claro, el negocio no aguanta.",
-    color: "#B81632",
     icon: (
       <path
         d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"
-        style={{ fill: "none", stroke: "#B81632", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
       />
     ),
   },
@@ -26,11 +31,13 @@ const stages = [
     el: "Tierra",
     work: "Habilidades y modelo de negocio",
     desc: "Conviertes la idea en un modelo que funciona. Aprendes lo que hay que aprender, sin adornos.",
-    color: "#6D1F30",
     icon: (
       <path
         d="M7 20h10 M10 20c5.5-2.5.8-6.4 3-10 M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"
-        style={{ fill: "none", stroke: "#6D1F30", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
       />
     ),
   },
@@ -39,11 +46,13 @@ const stages = [
     el: "Agua",
     work: "Disciplina y hábitos",
     desc: "Sostienes el movimiento cuando la motivación baja. Emprender no es un evento: es un hábito.",
-    color: "#B81632",
     icon: (
       <path
         d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
-        style={{ fill: "none", stroke: "#B81632", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
       />
     ),
   },
@@ -52,11 +61,13 @@ const stages = [
     el: "Aire",
     work: "Liderazgo y crecimiento",
     desc: "Escalas lo que ya funciona y empiezas a guiar a otros. Creces sin perder el propósito.",
-    color: "#6D1F30",
     icon: (
       <path
         d="M12.8 19.6A2 2 0 1 0 14 16H2 M17.5 8a2.5 2.5 0 1 1 2 4H2 M9.8 4.4A2 2 0 1 1 11 8H2"
-        style={{ fill: "none", stroke: "#6D1F30", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
       />
     ),
   },
@@ -98,6 +109,7 @@ export function CycleWheel() {
         >
           {stages.map((stage, i) => {
             const isActive = i === active;
+            const stageColor = isActive ? ACTIVE_COLOR : INACTIVE_COLOR;
             const icon = iconCircle[i];
             return (
               <g
@@ -121,17 +133,18 @@ export function CycleWheel() {
                 }}
               >
                 {/*
-                  Opacity dims only the wedge fill, never the group: group-level
-                  opacity forces an offscreen compositing buffer that clips to the
-                  SVG viewport, silently cutting off the trailing letters of the
-                  longer labels (e.g. "Aterrizar") where they overhang the wedge.
+                  Solid fill only, never opacity: the active wedge is solid
+                  red and every inactive wedge is solid burgundy — group-level
+                  opacity forced an offscreen compositing buffer that clipped
+                  to the SVG viewport, cutting off the trailing letters of the
+                  longer labels (e.g. "Aterrizar"), and it washed the red out
+                  to an off-brand pink instead of solid burgundy.
                 */}
                 <path
                   d={segmentPaths[i]}
                   style={{
-                    fill: stage.color,
-                    opacity: isActive ? 1 : 0.48,
-                    transition: "opacity .28s ease",
+                    fill: stageColor,
+                    transition: "fill .28s ease",
                   }}
                 />
                 <text
@@ -162,7 +175,10 @@ export function CycleWheel() {
                   r={20}
                   style={{ fill: "#fff", stroke: "#E3E3E5", strokeWidth: 1.5 }}
                 />
-                <g transform={`translate(${icon.cx - 11.4},${icon.cy - 11.4}) scale(0.95)`}>
+                <g
+                  transform={`translate(${icon.cx - 11.4},${icon.cy - 11.4}) scale(0.95)`}
+                  style={{ stroke: stageColor, transition: "stroke .28s ease" }}
+                >
                   {stage.icon}
                 </g>
               </g>
@@ -230,21 +246,21 @@ export function CycleWheel() {
         <div className="flex items-baseline gap-3.5">
           <span
             className="font-display text-[2.6rem] font-black leading-none"
-            style={{ color: current.color }}
+            style={{ color: ACTIVE_COLOR }}
           >
             0{active + 1}
           </span>
           <span className="inline-flex items-center gap-2 font-body text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-gray-dark/80">
             <span
               className="inline-block h-[9px] w-[9px] rounded-full"
-              style={{ background: current.color }}
+              style={{ background: ACTIVE_COLOR }}
             />
             {current.el}
           </span>
         </div>
         <h3
           className="mt-1 font-display text-[2rem] font-black leading-[1.05]"
-          style={{ color: current.color }}
+          style={{ color: ACTIVE_COLOR }}
         >
           {current.name}
         </h3>
@@ -262,7 +278,7 @@ export function CycleWheel() {
               onClick={() => setActive(i)}
               aria-label={stage.name}
               className="h-2 flex-1 rounded-sm border-0 p-0 transition-colors duration-200"
-              style={{ background: i === active ? stage.color : "#E3E3E5" }}
+              style={{ background: i === active ? ACTIVE_COLOR : "#E3E3E5" }}
             />
           ))}
         </div>

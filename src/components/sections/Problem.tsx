@@ -6,6 +6,9 @@ export function Problem() {
     <section className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-[760px] px-6 text-center">
         <Kicker>¿Te suena?</Kicker>
+        <h2 className="text-balance mt-4 font-display text-[clamp(1.75rem,1.25rem+1.5vw,2.25rem)] font-black leading-tight tracking-tight text-gray-dark">
+          El problema no es arrancar. Es volver.
+        </h2>
         <p className="mt-6 text-pretty text-lg leading-relaxed text-gray-dark">
           Empiezas la semana con energía… y a media semana lo dejas. Ves otro
           video, tomas otro curso, guardas otro reel de &ldquo;5 pasos&rdquo;…

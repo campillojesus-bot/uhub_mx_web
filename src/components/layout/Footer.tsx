@@ -1,7 +1,9 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
+import { whatsappLink } from "@/lib/whatsapp";
+
+const contactWhatsapp = whatsappLink(
+  "Hola, llegué desde uhub.mx y quiero más información"
+);
 
 const siteLinks = [
   { href: "/test", label: "Test del cuadrante" },
@@ -12,8 +14,6 @@ const siteLinks = [
 ];
 
 export function Footer() {
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <footer className="bg-gray-dark text-white">
       <div className="mx-auto grid max-w-[1200px] gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4">
@@ -71,45 +71,34 @@ export function Footer() {
             </li>
           </ul>
           <p className="mt-4 text-sm text-white/70">
-            Contacto: <span className="italic text-white/50">[PENDIENTE: correo de contacto]</span>
+            <a
+              href={contactWhatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-white/85 no-underline hover:text-white"
+            >
+              Escríbenos por WhatsApp
+            </a>
+          </p>
+          <p className="mt-1 text-sm text-white/70">
+            Correo: <span className="italic text-white/50">[PENDIENTE: correo de contacto]</span>
           </p>
         </div>
 
         <div>
           <h3 className="font-display text-sm font-extrabold uppercase tracking-[0.1em] text-white/50">
-            Newsletter
+            Emprender es humano
           </h3>
-          <p className="mt-4 text-sm text-white/70">
-            Ideas y sistema para sostener tu emprendimiento, directo a tu correo.
+          <p className="mt-4 text-sm leading-relaxed text-white/70">
+            Estructura, hábitos y honestidad para sostener lo que empiezas —
+            directo a tu correo.
           </p>
-          {submitted ? (
-            <p className="mt-4 text-sm font-semibold text-white">Gracias por suscribirte.</p>
-          ) : (
-            <form
-              className="mt-4 flex gap-2"
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
-            >
-              <label htmlFor="newsletter-email" className="sr-only">
-                Correo electrónico
-              </label>
-              <input
-                id="newsletter-email"
-                type="email"
-                required
-                placeholder="tu@correo.com"
-                className="min-h-[44px] w-full min-w-0 rounded-lg border border-white/20 bg-white/5 px-3 text-sm text-white placeholder:text-white/40 focus:border-white/50 focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="min-h-[44px] shrink-0 rounded-lg bg-red-uhub px-4 font-display text-sm font-bold text-white hover:bg-red-uhub-hover"
-              >
-                Suscribirme
-              </button>
-            </form>
-          )}
+          <Link
+            href="/#newsletter"
+            className="mt-4 inline-flex font-display text-sm font-bold text-white no-underline hover:underline"
+          >
+            Suscribirme ↓
+          </Link>
         </div>
       </div>
 

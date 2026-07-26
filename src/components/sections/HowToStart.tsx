@@ -20,7 +20,7 @@ const steps = [
 
 export function HowToStart() {
   return (
-    <section className="bg-gray-light py-20 sm:py-28">
+    <section className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-[900px] px-6 text-center">
         <h2 className="text-balance font-display text-[clamp(1.75rem,1.25rem+1.5vw,2.25rem)] font-black leading-tight tracking-tight text-gray-dark">
           Empezar es más simple de lo que crees
