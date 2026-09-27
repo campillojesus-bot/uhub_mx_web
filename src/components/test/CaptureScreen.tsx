@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Profile } from "@/lib/testProfiles";
+import { buildGoogleFormData } from "@/lib/testGoogleForm";
 
 const FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSdUPlk8DBoN4UoD5bHQnLtCzQiK690rrQ1HWEWwQummP4oVqg/formResponse";
@@ -11,10 +12,7 @@ const FORM_URL =
  * Los IDs de entry.* corresponden a los campos Nombre / Correo / Perfil.
  */
 async function sendToForm(name: string, email: string, profile: Profile) {
-  const formData = new FormData();
-  formData.append("entry.1896278279", name);
-  formData.append("entry.1896578092", email);
-  formData.append("entry.536002554", profile.name);
+  const formData = buildGoogleFormData(name, email, profile.key);
 
   try {
     await fetch(FORM_URL, { method: "POST", body: formData, mode: "no-cors" });
@@ -81,8 +79,7 @@ export function CaptureScreen({
             Tu resultado está listo
           </h2>
           <p className="mx-auto mt-2.5 max-w-[420px] text-pretty leading-relaxed text-gray-dark">
-            Déjanos tu correo y te mandamos tu perfil completo con la guía
-            específica para tu tipo de emprendedor.
+            Comparte tu nombre y correo para ver tu perfil y sus siguientes pasos.
           </p>
 
           <form onSubmit={handleSubmit} className="mt-6">
@@ -131,7 +128,7 @@ export function CaptureScreen({
               Ver mi resultado →
             </button>
             <p className="mx-auto mt-3.5 max-w-[400px] text-xs text-gray-dark/80">
-              Te enviamos tu perfil + guía de acción. Sin spam. Un click para
+              Verás tu perfil al continuar. Sin spam. Un clic para
               salirte.
             </p>
           </form>

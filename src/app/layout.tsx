@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
+import "./preview-styles.css";
+import "./root-home.css";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -21,23 +21,25 @@ const siteUrl = "https://uhub.mx";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "uHub · Sistema de acompañamiento para emprendedores",
+    default: "uHub · Centro de Desarrollo Emprendedor",
     template: "%s · uHub",
   },
   description:
-    "uHub es el sistema y el acompañamiento para sostener el cambio que emprender exige. Sistema, mentores y comunidad para emprendedores en transición. Descubre qué tipo de emprendedor eres.",
+    "uHub es un modelo de desarrollo emprendedor con la persona al centro. Práctica, mentores y comunidad para iniciar, rehacer o sostener proyectos.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "uHub · Sistema de acompañamiento para emprendedores",
+    title: "uHub · Centro de Desarrollo Emprendedor",
     description:
-      "El cambio que emprender exige no ocurre solo. Sistema, mentores y comunidad para sostener tu emprendimiento.",
+      "El centro eres tú. Alrededor, personas, hábitos y acompañamiento para seguir emprendiendo.",
     url: siteUrl,
     siteName: "uHub",
     locale: "es_MX",
     type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "uHub · Centro de Desarrollo Emprendedor" }],
   },
+  icons: { icon: "/favicon.svg", apple: "/favicon.svg" },
 };
 
 export const viewport = {
@@ -52,11 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-MX" className={`${montserrat.variable} ${inter.variable}`}>
-      <body className="min-h-full flex flex-col antialiased">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
