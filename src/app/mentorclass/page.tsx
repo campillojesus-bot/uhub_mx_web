@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
+import { SiteHeader, SiteFooter } from "../components";
 import Link from "next/link";
 import { Kicker } from "@/components/ui/Kicker";
 
 export const metadata: Metadata = {
   title: "MentorClass",
   description:
-    "MentorClass: una clase mensual en vivo con Rodrigo Campillo, práctica y aplicable el mismo día, sin costo. Conoce el sistema uHub antes de comprometerte.",
+    "MentorClass: conversaciones abiertas con Rodrigo Campillo para explorar un reto emprendedor. Conoce el modelo de uHub y registra tu interés.",
   alternates: { canonical: "/mentorclass" },
 };
 
 const bullets = [
-  "Una hora en vivo con Rodrigo, una vez al mes.",
+  "Un encuentro abierto con Rodrigo; la próxima fecha se anunciará cuando esté confirmada.",
   "Un tema práctico que puedes aplicar el mismo día — no teoría suelta.",
-  "Una primera probada del sistema uHub, sin costo y sin compromiso.",
+  "Una forma de conocer el modelo uHub, sin compromiso.",
 ];
 
 export default function MentorClassPage() {
   return (
-    <>
+    <><SiteHeader /><main id="contenido">
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-[720px] px-6 text-center">
           <Kicker>Empieza gratis</Kicker>
@@ -25,8 +26,8 @@ export default function MentorClassPage() {
             MentorClass
           </h1>
           <p className="text-pretty mt-5 text-lg leading-relaxed text-gray-dark">
-            Una clase mensual en vivo con Rodrigo. Práctica, aplicable el
-            mismo día, sin costo.
+            Estamos preparando conversaciones abiertas con Rodrigo para trabajar
+            un reto real. Aún no hay una fecha de registro confirmada.
           </p>
         </div>
       </section>
@@ -50,7 +51,7 @@ export default function MentorClassPage() {
           </h2>
           <p className="mt-4 leading-relaxed text-gray-dark">
             Tienes ganas pero no has dado el paso, o quieres conocer el
-            sistema antes de comprometerte.
+            modelo antes de comprometerte.
           </p>
         </div>
       </section>
@@ -58,8 +59,9 @@ export default function MentorClassPage() {
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[720px] px-6">
           <h2 className="text-center font-display text-xl font-extrabold text-gray-dark">
-            Reserva tu lugar
+            Registra tu interés
           </h2>
+          <p className="mt-3 text-center text-sm text-gray-dark">Conservamos el formulario de interés de MentorClass. El registro no confirma una fecha ni reserva una plaza.</p>
           <div className="mt-6 overflow-hidden rounded-xl border border-border-subtle">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdC4WOKeJooBTObICpTnqrhW_4K-W8wcO4HKMpvFykLa9l7_g/viewform?embedded=true"
@@ -87,6 +89,7 @@ export default function MentorClassPage() {
           </Link>
         </div>
       </section>
-    </>
+    </main>
+    <SiteFooter /></>
   );
 }
