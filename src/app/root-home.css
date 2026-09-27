@@ -1904,3 +1904,8 @@ html {
 
 .institutional-route-note { padding: 24px 0; margin: 0; border-top: 1px solid var(--root-border); }
 .institutional-route-note a { color: var(--red); font-weight: 600; text-underline-offset: 4px; }
+
+/* Approved content clarification; the broader visual rebuild remains a proposal. */
+.root-practice-summary { max-width: 850px; margin: 28px 0 40px; padding: 28px 0; border-block: 1px solid var(--root-border); }
+.root-practice-summary h3 { font-size: 26px; margin: 0 0 14px; }
+.root-practice-summary p { font-size: 17px; line-height: 1.75; margin: 0 0 16px; }

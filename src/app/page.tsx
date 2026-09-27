@@ -10,14 +10,14 @@ const doors = [
     destination: "Emprende Diario",
   },
   {
-    name: "Soy empresa o institución",
-    text: "Quiero que mi equipo proponga mejoras y las lleve a la práctica. Talleres y acompañamiento.",
+    name: "Soy empresa o cámara",
+    text: "Quiero desarrollar a mi equipo o a los negocios que represento.",
     href: "/organizaciones",
     destination: "Talleres y organizaciones",
   },
   {
     name: "Soy universidad",
-    text: "Quiero desarrollar capacidades emprendedoras para la vida, con docentes que sepan acompañarlas.",
+    text: "Quiero desarrollar habilidades emprendedoras para la vida y el trabajo.",
     href: "/universidades",
     destination: "Universidades",
   },
@@ -44,13 +44,12 @@ export default function Home() {
               uHub · Centro de Desarrollo Emprendedor
             </p>
             <h1 id="home-title">
-              Nadie emprende solo. <em>Todos necesitamos un ecosistema.</em>
+              Nadie emprende solo.
             </h1>
             <p className="root-hero-lead">
-              uHub es un modelo de desarrollo emprendedor con la persona al centro.
-              Te ayudamos a iniciar, rehacer y sostener proyectos en tu negocio,
-              trabajo o comunidad, con práctica, mentores y personas con quienes
-              revisar lo que haces.
+              uHub te ayuda a construir tu propio ecosistema —mentores, comunidad,
+              hábitos y un método— para iniciar, rehacer o sostener lo que
+              emprendes, con negocio o sin él.
             </p>
             <div className="root-hero-actions"><a className="root-button" href="#modelo">Conoce el modelo <span aria-hidden="true">↓</span></a><a className="root-hero-secondary" href="#caminos">Encuentra tu camino ↗</a></div>
           </div>
@@ -142,8 +141,8 @@ export default function Home() {
                 <span>02 /</span> Por qué existe uHub
               </p>
               <h2 id="why-title">
-                La idea importa. <br />
-                <em>Tu entorno también.</em>
+                El talento está repartido. <br />
+                <em>El ecosistema, no.</em>
               </h2>
             </div>
             <div className="root-prose">
@@ -153,9 +152,8 @@ export default function Home() {
                 proyecto o cambiar de rumbo cuando algo deja de funcionar.
               </p>
               <p>
-                En esas transiciones importan tu tiempo, tus recursos, lo que
-                sabes hacer y las personas con quienes puedes apoyarte. Una
-                idea necesita encontrar lugar en tu vida real.
+                Para empezar y sostener un proyecto también necesitas práctica,
+                apoyo y un entorno que te ayude a avanzar.
               </p>
               <p>
                 Te acompañamos a convertir lo que quieres hacer en una acción
@@ -164,33 +162,34 @@ export default function Home() {
                 falta, el apoyo o la forma de organizarte.
               </p>
               <p>uHub nació para replicar, de forma estructurada, lo que yo tuve de forma natural. <span>— Rodrigo Campillo</span></p>
+              <a className="root-text-link" href="/nosotros">Conoce nuestra historia <Arrow /></a>
             </div>
           </div>
         </section>
 
         <section className="root-model root-container root-section" id="modelo" aria-labelledby="model-title">
           <p className="root-eyebrow"><span>03 /</span> El Modelo uHub</p>
-          <div className="root-heading-row"><h2 id="model-title">El centro eres tú.<br /><em>Alrededor, lo que necesitas.</em></h2><p>El modelo reúne tres cosas: capacidades que desarrollas, personas y hábitos que te sostienen, y un camino al que puedes volver cuando tu situación cambia.</p></div>
+          <div className="root-heading-row"><h2 id="model-title">El centro eres tú.<br /><em>Alrededor, lo que necesitas para lograrlo.</em></h2><p>El modelo reúne las capacidades que desarrollas, el ecosistema que construyes y las instituciones que acompañan ese desarrollo.</p></div>
           <div className="root-model-layers">
             <article><span>01 · La persona</span><h3>Lo que crece en ti</h3><p>Mentalidad y propósito, habilidades, disciplina y liderazgo. No tienes que dominarlo todo antes de empezar.</p></article>
             <article><span>02 · Tu ecosistema</span><h3>Con quién avanzas</h3><p>Mentores para revisar decisiones, especialistas según el reto, comunidad para compartir y hábitos que caben en tu semana.</p></article>
-            <article><span>03 · El camino</span><h3>Qué haces después</h3><p>Ubicas tu punto de partida, pruebas una acción real, revisas lo ocurrido y ajustas. El recorrido se repite cuando emprendes algo nuevo.</p></article>
+            <article><span>03 · Quienes necesitan que avances</span><h3>Las instituciones</h3><p>Trabajamos con instituciones para que lo aprendido se convierta en acciones y mejoras concretas.</p></article>
           </div>
           <a className="root-text-link" href="/como-lo-hacemos">Explora el acompañamiento paso a paso <Arrow /></a>
         </section>
 
         <section
           className="root-cycle root-container root-section"
-          id="ciclo"
+          id="como-lo-hacemos"
           aria-labelledby="cycle-title"
         >
+          <span id="ciclo" aria-hidden="true" />
           <p className="root-eyebrow">
             <span>04 /</span> El recorrido
           </p>
           <div className="root-heading-row">
             <h2 id="cycle-title">
-              Un camino al <br />
-              que puedes volver.
+              Un camino que recorres con práctica, acompañamiento y seguimiento.
             </h2>
             <p>
               Explora dónde estás, cómo te acompañamos y qué avance puedes
@@ -198,15 +197,17 @@ export default function Home() {
             </p>
           </div>
           <CycleWheel />
+          <div className="root-practice-summary">
+            <h3>La práctica</h3>
+            <p>Eliges un reto real, acuerdas tres acciones, lo revisas con alguien y dejas evidencia. Prototipos, no ideas.</p>
+            <p>La frecuencia y el alcance del acompañamiento dependen de cada oferta.</p>
+            <a className="root-text-link" href="/como-lo-hacemos">Ver cómo lo hacemos <Arrow /></a>
+          </div>
           <div className="root-cycle-takeaway" id="resultado">
             <strong>Emprender no es lo que haces. Es en quién te conviertes.</strong>
             <p>El objetivo es que puedas seguir emprendiendo durante tu vida: con un negocio, dentro de una organización o en tu comunidad. El proyecto puede cambiar; lo aprendido va contigo.</p>
           </div>
-          <details className="root-consolidar">
-            <summary>¿Y la etapa Consolidar?</summary>
-            <p>Consolidar es una etapa complementaria de formación técnica para profesionalizar un proyecto cuando lo necesita. Puede realizarse con aliados especializados y forma parte del programa anual de uHub A.C.; no es un paso obligatorio de todas las rutas.</p>
-            <a className="root-text-link" href="/como-lo-hacemos">Cómo se articula con el recorrido <Arrow /></a>
-          </details>
+
         </section>
 
         <section className="root-origin root-section" id="trayectoria" aria-labelledby="origin-title">
