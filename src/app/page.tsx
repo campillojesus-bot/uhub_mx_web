@@ -1,5 +1,7 @@
 import { Arrow, SiteFooter, SiteHeader } from "./components";
 import { CycleWheel, ChangeStories } from "./home-interactions";
+import { ModelExplorer } from "./model-explorer";
+import type { Metadata } from "next";
 import { NewsletterForm } from "./newsletter-form";
 
 const doors = [
@@ -29,11 +31,17 @@ const doors = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: { absolute: "uHub · Nadie emprende solo" },
+  description: "uHub es un modelo de desarrollo emprendedor con la persona al centro: mentores, comunidad, hábitos y un método para iniciar, rehacer o sostener lo que emprendes.",
+  alternates: { canonical: "/" },
+  openGraph: { title: "uHub · Nadie emprende solo", description: "uHub te ayuda a construir tu propio ecosistema: mentores, comunidad, hábitos y un método.", url: "https://uhub.mx", images: [{ url: "/og.png", width: 1200, height: 630, alt: "uHub · Centro de Desarrollo Emprendedor" }] },
+};
+
 export default function Home() {
-  return (
-    <>
-      <SiteHeader />
-      <main className="root-home" id="contenido">
+  return <>
+    <SiteHeader />
+    <main className="root-home root-v11" id="contenido">
         <section
           className="root-hero root-container"
           id="inicio"
@@ -90,17 +98,98 @@ export default function Home() {
         </div>
 
         <section
+          className="root-why root-section"
+          id="por-que"
+          aria-labelledby="why-title"
+        >
+          <div className="root-container root-why-layout">
+            <div>
+              <p className="root-eyebrow">
+                <span>02 /</span> Por qué existe uHub
+              </p>
+              <h2 id="why-title">
+                El talento está repartido. <br />{" "}
+                <em>El ecosistema, no.</em>
+              </h2>
+            </div>
+            <div className="root-prose">
+              <p>
+                Decidirte a emprender, hacer una primera prueba y sostenerla
+                en tu semana son retos distintos. También lo es retomar un
+                proyecto o cambiar de rumbo cuando algo deja de funcionar.
+              </p>
+              <p>
+                Para empezar y sostener un proyecto también necesitas práctica,
+                apoyo y un entorno que te ayude a avanzar.
+              </p>
+              <p>
+                Te acompañamos a convertir lo que quieres hacer en una acción
+                posible, probarla y revisar lo que pasó. Si algo se atora,
+                buscamos qué cambiar: el tamaño del paso, la habilidad que
+                falta, el apoyo o la forma de organizarte.
+              </p>
+              <p>uHub nació para replicar, de forma estructurada, lo que yo tuve de forma natural. <span>— Rodrigo Campillo</span></p>
+              <a className="root-text-link" href="/nosotros">Conoce nuestra historia <Arrow /></a>
+            </div>
+          </div>
+          <div className="root-container">            <div className="root-founder-strip">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/rodrigo-retrato.webp" alt="Rodrigo Campillo, fundador de uHub." width="273" height="273" loading="lazy" />
+              <div><span>Rodrigo Campillo · Fundador de uHub</span><p>En su familia y en sus propios proyectos, Rodrigo aprendió a empezar, equivocarse y reiniciar. Esa experiencia y los retos que observó en mentoría fueron dando forma al modelo de uHub.</p><a href="/nosotros">Lee la historia completa <Arrow /></a></div>
+            </div></div>
+        </section>
+
+        <section className="root-model root-container root-section" id="modelo" aria-labelledby="model-title">
+          <p className="root-eyebrow"><span>03 /</span> El Modelo uHub</p>
+          <h2 id="model-title">El centro eres tú.<br />{" "}<em>Alrededor, lo que necesitas para lograrlo.</em></h2>
+          <ModelExplorer />
+          <p className="model-principle">No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué abandona y por qué.</p>
+          <div className="model-human-note" id="mentores">
+            <div><h3>Personas que escuchan. Y te ayudan a avanzar.</h3><p>Un mentor base te ayuda a definir acciones y revisar avances. Un especialista aporta experiencia cuando aparece un reto concreto. La comunidad comparte aprendizajes y contactos.</p></div>
+            <a className="root-text-link" href="/mentores">Conoce la Red uHub <Arrow /></a>
+          </div>
+        </section>
+        <section className="root-cycle root-container root-section" id="como-lo-hacemos" aria-labelledby="cycle-title">
+          <span id="ciclo" aria-hidden="true" />
+          <p className="root-eyebrow"><span>04 /</span> Cómo lo hacemos</p>
+          <h2 id="cycle-title">Un camino que recorres con práctica, acompañamiento y seguimiento.</h2>
+          <CycleWheel />
+          <div className="practice-loop">
+            <div className="practice-loop-heading"><p className="root-eyebrow">La práctica</p><h3>Prototipos, no ideas.</h3><p>La frecuencia y el alcance del acompañamiento dependen de cada oferta.</p></div>
+            <ol>{["Eliges un reto real", "Acuerdas tres acciones", "Lo revisas con alguien", "Dejas evidencia"].map((step,i)=><li key={step}><span>0{i+1}</span><strong>{step}</strong><span aria-hidden="true">{i===3?"↺":"→"}</span></li>)}</ol>
+          </div>
+          <div className="practice-footer"><p>Mismo modelo, distintas formas: membresía, programas, talleres y acompañamiento dentro de instituciones.</p><a className="root-text-link" href="/como-lo-hacemos">Ver cómo lo hacemos <Arrow /></a></div>
+        </section>
+        <section className="root-for root-section" id="para-quien" aria-labelledby="for-title"><div className="root-container">
+          <p className="root-eyebrow"><span>05 /</span> Para quién</p><h2 id="for-title">Para ti, y para quienes necesitan que avances.</h2>
+          <div className="root-for-columns"><article><span>01 / La persona</span><h3>La persona</h3><p>Quien quiere iniciar, rehacer o sostener un proyecto, una iniciativa o un negocio: porque empieza, porque vuelve, porque innova dentro de su trabajo o porque emprende sin soltar lo seguro.</p></article>
+          <article><span>02 / Las instituciones</span><h3>Las instituciones</h3><p>Empresas que quieren equipos que innoven. Cámaras con socios que necesitan reinventarse. Universidades que buscan desarrollar habilidades emprendedoras para la vida y el trabajo. A.C. que necesitan ingresos propios.</p></article></div>
+          <p className="root-for-takeaway">Trabajamos con instituciones para que lo aprendido se convierta en acciones y mejoras concretas.</p>
+        </div></section>
+        <section className="root-result root-container root-section" id="resultado" aria-labelledby="result-title">
+          <p className="root-eyebrow"><span>06 /</span> El resultado</p>
+          <h2 id="result-title">Emprender no es lo que haces.<br />{" "}<em>Es en quién te conviertes.</em></h2>
+          <p className="root-result-intro">Es un proceso, y cada quien va a su ritmo. Con el tiempo cambias cómo piensas, ganas habilidades, sostienes lo que empiezas y aprendes a guiar a otros. El objetivo no es emprender una vez: es seguir emprendiendo toda la vida, con negocio propio, dentro de una empresa, en tu comunidad o con tu familia.</p>
+          <div className="root-stories-heading" id="historias"><h3>Historias de cambio.</h3><p className="root-story-context">Experiencias de programas de uHub A.C. Cada historia tiene su propio punto de partida y recorrido.</p></div>
+          <ChangeStories />
+          <a className="root-video-story" href="https://www.youtube.com/watch?v=j0g-MtBuOWM" target="_blank" rel="noreferrer">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/diana-gonzalez-video.jpg" alt="Diana González durante el video de su experiencia con uHub." width="480" height="360" loading="lazy" />
+            <span><small>También en su voz</small><strong>Diana González · Yo Soy SAAM</strong><span>Conoce su experiencia en uHub. Ver testimonio en YouTube <Arrow /></span></span>
+          </a>
+        </section>
+        <section
           className="root-paths root-container root-section"
           id="caminos"
           aria-labelledby="paths-title"
         >
           <div className="root-section-heading">
             <p className="root-eyebrow">
-              <span>01 /</span> Encuentra tu camino
+              <span>07 /</span> Encuentra tu camino
             </p>
             <div className="root-heading-row">
               <h2 id="paths-title">
-                ¿Por dónde <br />
+                ¿Por dónde <br />{" "}
                 quieres empezar?
               </h2>
               <p>Elige lo que necesitas hoy. Conoce cómo podemos ayudarte y qué opciones tienes para empezar.</p>
@@ -131,162 +220,6 @@ export default function Home() {
         </section>
 
         <section
-          className="root-why root-section"
-          id="por-que"
-          aria-labelledby="why-title"
-        >
-          <div className="root-container root-why-layout">
-            <div>
-              <p className="root-eyebrow">
-                <span>02 /</span> Por qué existe uHub
-              </p>
-              <h2 id="why-title">
-                El talento está repartido. <br />
-                <em>El ecosistema, no.</em>
-              </h2>
-            </div>
-            <div className="root-prose">
-              <p>
-                Decidirte a emprender, hacer una primera prueba y sostenerla
-                en tu semana son retos distintos. También lo es retomar un
-                proyecto o cambiar de rumbo cuando algo deja de funcionar.
-              </p>
-              <p>
-                Para empezar y sostener un proyecto también necesitas práctica,
-                apoyo y un entorno que te ayude a avanzar.
-              </p>
-              <p>
-                Te acompañamos a convertir lo que quieres hacer en una acción
-                posible, probarla y revisar lo que pasó. Si algo se atora,
-                buscamos qué cambiar: el tamaño del paso, la habilidad que
-                falta, el apoyo o la forma de organizarte.
-              </p>
-              <p>uHub nació para replicar, de forma estructurada, lo que yo tuve de forma natural. <span>— Rodrigo Campillo</span></p>
-              <a className="root-text-link" href="/nosotros">Conoce nuestra historia <Arrow /></a>
-            </div>
-          </div>
-        </section>
-
-        <section className="root-model root-container root-section" id="modelo" aria-labelledby="model-title">
-          <p className="root-eyebrow"><span>03 /</span> El Modelo uHub</p>
-          <div className="root-heading-row"><h2 id="model-title">El centro eres tú.<br /><em>Alrededor, lo que necesitas para lograrlo.</em></h2><p>El modelo reúne las capacidades que desarrollas, el ecosistema que construyes y las instituciones que acompañan ese desarrollo.</p></div>
-          <div className="root-model-layers">
-            <article><span>01 · La persona</span><h3>Lo que crece en ti</h3><p>Mentalidad y propósito, habilidades, disciplina y liderazgo. No tienes que dominarlo todo antes de empezar.</p></article>
-            <article><span>02 · Tu ecosistema</span><h3>Con quién avanzas</h3><p>Mentores para revisar decisiones, especialistas según el reto, comunidad para compartir y hábitos que caben en tu semana.</p></article>
-            <article><span>03 · Quienes necesitan que avances</span><h3>Las instituciones</h3><p>Trabajamos con instituciones para que lo aprendido se convierta en acciones y mejoras concretas.</p></article>
-          </div>
-          <a className="root-text-link" href="/como-lo-hacemos">Explora el acompañamiento paso a paso <Arrow /></a>
-        </section>
-
-        <section
-          className="root-cycle root-container root-section"
-          id="como-lo-hacemos"
-          aria-labelledby="cycle-title"
-        >
-          <span id="ciclo" aria-hidden="true" />
-          <p className="root-eyebrow">
-            <span>04 /</span> El recorrido
-          </p>
-          <div className="root-heading-row">
-            <h2 id="cycle-title">
-              Un camino que recorres con práctica, acompañamiento y seguimiento.
-            </h2>
-            <p>
-              Explora dónde estás, cómo te acompañamos y qué avance puedes
-              buscar. Cuatro etapas a las que puedes volver cuando tu proyecto lo necesite.
-            </p>
-          </div>
-          <CycleWheel />
-          <div className="root-practice-summary">
-            <h3>La práctica</h3>
-            <p>Eliges un reto real, acuerdas tres acciones, lo revisas con alguien y dejas evidencia. Prototipos, no ideas.</p>
-            <p>La frecuencia y el alcance del acompañamiento dependen de cada oferta.</p>
-            <a className="root-text-link" href="/como-lo-hacemos">Ver cómo lo hacemos <Arrow /></a>
-          </div>
-          <div className="root-cycle-takeaway" id="resultado">
-            <strong>Emprender no es lo que haces. Es en quién te conviertes.</strong>
-            <p>El objetivo es que puedas seguir emprendiendo durante tu vida: con un negocio, dentro de una organización o en tu comunidad. El proyecto puede cambiar; lo aprendido va contigo.</p>
-          </div>
-
-        </section>
-
-        <section className="root-origin root-section" id="trayectoria" aria-labelledby="origin-title">
-          <div className="root-container">
-            <p className="root-eyebrow"><span>04 /</span> Cómo llegamos hasta aquí</p>
-            <div className="root-origin-heading">
-              <h2 id="origin-title">Todo empezó<br />por conectar personas.</h2>
-              <p>Algunas personas contrataban la mentoría sin usar el coworking. Esa señal nos llevó a poner el acompañamiento en el centro: entender a la persona, probar ideas y revisar sus avances.</p>
-            </div>
-            <ol className="root-timeline">
-              <li><span>2013–2014</span><h3>La comunidad abre el camino.</h3><p>Lean Startup Machine conecta a Rodrigo con nuevos referentes. En enero de 2014 coordina la primera sesión de Emprendedores Anónimos en Chihuahua.</p></li>
-              <li><span>Agosto de 2015</span><h3>Construir con lo que había.</h3><p>Diez personas se reúnen para acondicionar un edificio, conseguir muebles y abrir uHub Coworking. Después, las mentorías toman su propio lugar.</p></li>
-              <li><span>2019</span><h3>El acompañamiento se organiza.</h3><p>Se constituye uHub A.C. Los programas dan estructura al aprendizaje, la mentoría y la comunidad.</p></li>
-              <li><span>Hoy</span><h3>Dar continuidad. Compartir lo aprendido.</h3><p>Emprende Diario acompaña a egresados; la formación de mentores y los nodos abren nuevas posibilidades de colaboración.</p></li>
-            </ol>
-            <div className="root-founder-strip">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/rodrigo-retrato.webp" alt="Rodrigo Campillo, fundador de uHub." width="273" height="273" loading="lazy" />
-              <div><span>Rodrigo Campillo · Fundador de uHub</span><p>En su familia y en sus propios proyectos, Rodrigo aprendió a empezar, equivocarse y reiniciar. Esa experiencia y los retos que observó en mentoría fueron dando forma al modelo de uHub.</p><a href="/nosotros">Lee la historia completa <Arrow /></a></div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="root-people root-section"
-          id="mentores"
-          aria-labelledby="people-title"
-        >
-          <div className="root-container root-people-layout">
-            <div className="root-people-copy">
-              <p className="root-eyebrow">
-                <span>05 /</span> Quién te acompaña
-              </p>
-              <h2 id="people-title">
-                Personas que escuchan.<br />
-                <em>Y te ayudan a avanzar.</em>
-              </h2>
-              <p>
-                Un mentor base te ayuda a definir acciones y revisar avances.
-                Un especialista aporta experiencia cuando aparece un reto
-                concreto. La comunidad comparte aprendizajes y contactos.
-              </p>
-              <p>La combinación y frecuencia dependen del programa. Algunas personas que comenzaron como participantes hoy también acompañan a otras.</p>
-              <a className="root-text-link" href="/mentores">
-                Conoce la Red uHub <Arrow />
-              </a>
-            </div>
-          </div>
-          <div className="root-container root-mentor-feature">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/cynthia-pinon.webp" alt="Cynthia Piñón, emprendedora y mentora en programas de uHub A.C." width="160" height="160" loading="lazy" />
-            <p><strong>Cynthia Piñón</strong><span>Emprendedora editorial y mentora. Tras participar en AWE/uHub, comparte su experiencia en temas financieros y de negocio con nuevas generaciones.</span></p>
-            <a className="root-text-link" href="/mentores">Así puedes sumarte <Arrow /></a>
-          </div>
-        </section>
-
-        <section
-          className="root-stories root-container root-section"
-          id="historias"
-          aria-labelledby="stories-title"
-        >
-          <div className="root-stories-heading">
-            <div>
-              <p className="root-eyebrow">
-                <span>06 /</span> Historias de cambio
-              </p>
-              <h2 id="stories-title">Historias de cambio.</h2>
-            </div>
-            <p className="root-story-context">Experiencias de programas de uHub A.C. Cada historia tiene su propio punto de partida y recorrido.</p>
-          </div>
-          <ChangeStories />
-          <a className="root-video-story" href="https://www.youtube.com/watch?v=j0g-MtBuOWM" target="_blank" rel="noreferrer">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/diana-gonzalez-video.jpg" alt="Diana González durante el video de su experiencia con uHub." width="480" height="360" loading="lazy" />
-            <span><small>También en su voz</small><strong>Diana González · Yo Soy SAAM</strong><span>Conoce su experiencia en uHub. Ver testimonio en YouTube <Arrow /></span></span>
-          </a>
-        </section>
-
-        <section
           className="root-stay root-section"
           id="lunes"
           aria-labelledby="stay-title"
@@ -294,15 +227,15 @@ export default function Home() {
           <div className="root-container root-stay-layout">
             <div>
               <p className="root-eyebrow">
-                <span>07 /</span> Sigue en contacto
+                <span>08 /</span> Sigue en contacto
               </p>
               <h2 id="stay-title">
-                ¿Todavía <br />
+                ¿Todavía <br />{" "}
                 explorando?
               </h2>
               <p>
-                Cada lunes te mando una historia, un reto y una pregunta para
-                llevar el emprendimiento a tu semana.
+                Déjame tu correo y recibe una historia, un reto y una pregunta
+                para dar el siguiente paso en lo que estás emprendiendo.
               </p>
               <NewsletterForm />
             </div>
@@ -339,8 +272,7 @@ export default function Home() {
             </a>
           </div>
         </section>
-      </main>
-      <SiteFooter />
-    </>
-  );
+    </main>
+    <SiteFooter />
+  </>;
 }

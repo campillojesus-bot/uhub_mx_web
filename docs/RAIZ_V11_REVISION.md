@@ -31,3 +31,14 @@ La referencia externa no es una evaluación de uHub ni garantiza resultados. Se 
 
 ## Publicación
 PR hacia v2-modelo. Sin cambios a main ni producción. Permanecen los pendientes de privacidad, Stripe y confirmación de captura real de formularios del documento MIGRACION_V2.md.
+
+
+## Actualización — reconstrucción autorizada y recuperada el 28 de septiembre
+
+Tras la autorización posterior de Rodrigo ("ya está todo? pues aplícalo"), se implementaron el modelo SVG de tres capas, el ciclo circular de cuatro etapas con controles de teclado y contexto por audiencia, la dinámica práctica entre sesiones y el orden de ocho bloques. Se mantuvieron la historia del fundador y los testimonios contextualizados, y se amplió la jerarquía del hero. El retrato de Sarahi permanece provisionalmente; no se atribuye como foto de acompañamiento.
+
+Los cambios permanecían en los archivos del proyecto sin subir al PR, por lo que el enlace de revisión aún mostraba la entrega anterior. Se recuperan y guardan ahora en GitHub. Las indicaciones anteriores de este documento sobre reconstrucción pendiente son antecedentes de la primera entrega, no el estado actual.
+
+Validación: compilación de producción y lint correctos. La revisión visual e interactiva en navegador se registra por separado; no darla por realizada sin evidencia.
+
+Validación visual posterior: Chromium local, escritorio de 1440 px y móvil de 390/320 px. Capas mediante clic y flechas; etapas mediante clic, End y regreso al inicio; cambio de contexto a universidad; sin errores de página ni desbordamiento horizontal. Se corrigieron contraste del título sobre gris y ajuste de título a 320 px. La preview remota conserva la protección de Vercel.

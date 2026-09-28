@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import "./preview-styles.css";
 import "./root-home.css";
+import "./root-interactive.css";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",

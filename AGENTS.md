@@ -265,11 +265,11 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 ## Alcance de esta revisión y referencia visual (27 de septiembre de 2026)
 
-Rodrigo aprobó las cinco observaciones de contenido y la actualización de este documento. La propuesta de reconstrucción visual y la imagen del modelo A.C. se reciben **como referencias para evaluar**, no como orden de sustituir toda la interfaz ahora. Las correcciones aprobadas aquí prevalecen sobre el copy literal del prompt anterior.
+Rodrigo aprobó las cinco observaciones de contenido y la actualización de este documento. La imagen A.C. se evaluó como referencia. Rodrigo autorizó después aplicar la reconstrucción visual e interactiva (27 de septiembre, 13:40 Chihuahua). Las correcciones aprobadas aquí prevalecen sobre el copy literal del prompt anterior.
 
 - Conservar presencia humana: fundador, historia local en Nosotros y testimonios contextualizados. La fotografía actual de Sarahi es un retrato de emprendedora, no una escena de acompañamiento. La selección del nuevo hero y sus permisos siguen pendientes; no falsear el pie ni usar stock o una escena generada como evidencia.
 - El diagrama de A.C. combina cuatro niveles de información: persona/capacidades, etapas, apoyos y resultados. La versión comercial debe distinguirlos. Las instituciones del nuevo diagrama son contextos de aplicación, no una etapa ni un apoyo presente en todos los recorridos.
 - El **cuadrante** orienta el contexto actual de la persona; el **ciclo** describe cuatro etapas recurrentes; la **ruta** adapta actividades y acompañamiento; el **ecosistema** reúne apoyos. No son sinónimos ni una secuencia obligatoria de roles.
-- La reconstrucción visual y el orden completo de ocho bloques quedan pendientes. Cuando se implementen: texto legible sin rotación, interacción por toque/teclado además de hover, controles etiquetados y soporte de movimiento reducido. Nada esencial debe depender de una animación.
+- La reconstrucción visual sigue el orden de ocho bloques. Requisitos: texto legible sin rotación, interacción por toque/teclado además de hover, controles etiquetados y soporte de movimiento reducido. Nada esencial debe depender de una animación.
 - Mantener decisiones resueltas de repositorio y etapa complementaria al actualizar versiones del rector. No reintroducir pendientes antiguos.
 - Todo cambio mediante rama y PR. Esta revisión apunta a `v2-modelo`; no fusionar ni publicar en producción sin aprobación.
