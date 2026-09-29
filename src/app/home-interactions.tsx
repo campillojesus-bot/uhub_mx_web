@@ -49,7 +49,7 @@ export function CycleWheel() {
   }
   return <div className="route-explorer">
     <div className="route-audiences" role="group" aria-label="Ver el modelo según tu contexto">
-      <span>Quiero verlo</span>
+      <span>Explora el recorrido según tu contexto</span>
       {audiences.map((name, i) => <button type="button" key={name} aria-pressed={audience === i} onClick={() => setAudience(i)}>{name}</button>)}
     </div>
     <div className="journey-layout">
@@ -78,20 +78,20 @@ export function CycleWheel() {
           <span className="journey-stage-number" aria-hidden="true">0{i+1}</span><p className="journey-context">{audiences[audience]} / {item.element}</p><h3>{item.title}</h3>
           <dl className="journey-details" aria-live="polite" aria-atomic="true">
             <div><dt>Dónde entras</dt><dd>{item.variants[audience][0]}</dd></div>
-            <div><dt>Qué pone uHub</dt><dd>{item.variants[audience][1]}</dd></div>
+            <div><dt>Qué pone uHüb</dt><dd>{item.variants[audience][1]}</dd></div>
             <div><dt>Qué avance buscamos</dt><dd>{item.variants[audience][2]}</dd></div>
           </dl>
         </section>)}
       </div>
     </div>
-    <div className="route-explorer-bottom"><p>Estos avances orientan el proceso. El punto de entrada y el acompañamiento se acuerdan según cada persona o programa.</p><button type="button" onClick={() => { const next = (stage + 1) % 4; setStage(next); refs.current[next]?.focus(); }}>{stage === 3 ? "Volver a descubrir" : `Explorar ${cycle[stage + 1].name.toLowerCase()}`} <span aria-hidden="true">→</span></button></div>
+    <div className="route-explorer-bottom"><p>El recorrido es cíclico: puedes volver a descubrir, aterrizar, adaptar o crecer según lo que necesites. Volver no es retroceder.</p><button type="button" onClick={() => { const next = (stage + 1) % 4; setStage(next); refs.current[next]?.focus(); }}>{`Explorar la etapa ${cycle[(stage + 1) % cycle.length].name}`} <span aria-hidden="true">→</span></button></div>
   </div>;
 }
 
 const stories = [
-  { name: "Cynthia Piñón", project: "Ediciones Algoritmo 524", program: "Programa AWE / uHub", photo: "/images/cynthia-pinon.webp", before: "Buscaba dirección para replantear su negocio editorial.", practice: "Probó ideas y revisó su modelo con acompañamiento.", change: "Desarrolló una propuesta editorial distinta y hoy también colabora como mentora.", href: "https://www.uhub.org.mx/historias/cynthia-pinon" },
+  { name: "Cynthia Piñón", project: "Ediciones Algoritmo 524", program: "Programa AWE / uHüb", photo: "/images/cynthia-pinon.webp", before: "Buscaba dirección para replantear su negocio editorial.", practice: "Probó ideas y revisó su modelo con acompañamiento.", change: "Desarrolló una propuesta editorial distinta y hoy también colabora como mentora.", href: "https://www.uhub.org.mx/historias/cynthia-pinon" },
   { name: "Mary Torres", project: "V&T Distribuidores", program: "Programa Emprendedores Líderes Sociales", photo: "/images/mary-torres.webp", before: "Necesitaba dar más estructura a la operación de su negocio de productos regionales.", practice: "Trabajó costos, organización y decisiones de negocio con mentores y compañeras.", change: "Fortaleció su red de colaboración y aplicó herramientas para organizar su emprendimiento.", href: "https://youtu.be/C282laMlz00" },
-  { name: "Irma Griselda Ávila", project: "Cosecha que Alimenta al Corazón", program: "Programa anual de uHub A.C.", photo: "/images/griselda-avila.webp", before: "Quería dar mayor dirección y difusión a sus talleres de huertos urbanos.", practice: "Aplicó herramientas de promoción, administración y capacitación tecnológica.", change: "Desarrolló manuales para sus talleres y sumó colaboración para ofrecer sistemas de riego.", href: "https://www.uhub.org.mx/historias/irma-griselda" },
+  { name: "Irma Griselda Ávila", project: "Cosecha que Alimenta al Corazón", program: "Programa anual de uHüb A.C.", photo: "/images/griselda-avila.webp", before: "Quería dar mayor dirección y difusión a sus talleres de huertos urbanos.", practice: "Aplicó herramientas de promoción, administración y capacitación tecnológica.", change: "Desarrolló manuales para sus talleres y sumó colaboración para ofrecer sistemas de riego.", href: "https://www.uhub.org.mx/historias/irma-griselda" },
 ];
 
 export function ChangeStories() {
@@ -110,7 +110,7 @@ export function ChangeStories() {
           >
             <span>0{index + 1}</span>
             <strong>{story.name}</strong>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">→</span>
           </button>
         ))}
       </div>

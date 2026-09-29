@@ -1,7 +1,7 @@
 import { pageMetadata } from "../institutional";
 import { Arrow, SiteFooter, SiteHeader } from "../components";
 
-export const metadata = pageMetadata("Red uHub · Mentores y comunidad", "Comparte tu experiencia como mentor base o especializado. Conoce la Red uHub y las formas de acompañar a otros emprendedores.", "/mentores");
+export const metadata = pageMetadata("Red uHüb · Mentores y comunidad", "Comparte tu experiencia como mentor base o especializado. Conoce la Red uHub y las formas de acompañar a otros emprendedores.", "/mentores");
 
 export default function MentoresPage() {
   return (
@@ -10,10 +10,10 @@ export default function MentoresPage() {
       <main id="contenido" className="service-page">
         <section className="inner-hero" id="inicio">
           <div>
-            <p className="eyebrow">Red uHub</p>
+            <p className="eyebrow">Red uHüb</p>
             <h1>Quien fue acompañado, hoy puede acompañar.</h1>
             <p>
-              Estamos preparando un primer grupo piloto de la Red uHub.
+              Estamos preparando un primer grupo piloto de la Red uHüb.
               Buscamos personas con experiencia emprendedora, egresados y
               especialistas que quieran acompañar a otras personas y compartir
               lo que saben.
@@ -24,7 +24,7 @@ export default function MentoresPage() {
               target="_blank"
               rel="noreferrer"
             >
-              Quiero acompañar <Arrow />
+              Quiero acompañar <Arrow external />
             </a>
           </div>
           <aside className="inner-quote"><span>La red en construcción</span><strong>Mentores base para la continuidad. Especialistas para el reto que tienes enfrente.</strong></aside>
@@ -46,7 +46,7 @@ export default function MentoresPage() {
             <p>
               Ya contamos con un primer módulo de formación para ser mentor.
               El segundo, dedicado a aplicar las etapas y el seguimiento del
-              modelo uHub, está en preparación. La incorporación comienza con
+              modelo uHüb, está en preparación. La incorporación comienza con
               un grupo pequeño; dedicación, responsabilidades y condiciones se
               acuerdan según el rol y el programa.
             </p>
@@ -56,7 +56,7 @@ export default function MentoresPage() {
                 className="text-link"
                 href="mailto:rodrigo@uhub.mx?subject=Quiero%20ser%20parte%20de%20la%20Red%20uHub"
               >
-                Cuéntanos tu experiencia <Arrow />
+                Cuéntanos tu experiencia <Arrow external />
               </a>
               <a
                 className="text-link"
@@ -64,7 +64,7 @@ export default function MentoresPage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Mentores del programa A.C. <Arrow />
+                Mentores del programa A.C. <Arrow external />
               </a>
             </div>
           </div>

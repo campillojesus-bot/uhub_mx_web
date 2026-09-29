@@ -5,7 +5,7 @@ import { SiteHeader, SiteFooter } from "../components";
 export const metadata: Metadata = {
   title: "¿Qué tipo de emprendedor eres?",
   description:
-    "Diagnóstico de 10 preguntas que identifica tu perfil: Autoemprendedor, Reemprendedor, Intraemprendedor o Interemprendedor.",
+    "uHub: diagnóstico de 10 preguntas que identifica tu perfil: Autoemprendedor, Reemprendedor, Intraemprendedor o Interemprendedor.",
   alternates: { canonical: "/test" },
 };
 

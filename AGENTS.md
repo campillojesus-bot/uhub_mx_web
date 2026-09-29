@@ -1,12 +1,12 @@
 # Documento rector — uhub.mx
 
-**Versión 1.1 · 27 de septiembre de 2026** (con las cinco observaciones aprobadas por Rodrigo)
+**Versión 1.1 · Actualizada el 29 de septiembre de 2026** (incluye las diez correcciones aprobadas por Rodrigo)
 **Responsable:** Rodrigo Campillo
 
-Este documento registra decisiones de uHub. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
+Este documento registra decisiones de uHüb. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
 
 **Jerarquía de documentos**
-1. Este documento rector: qué es uHub, el modelo, la arquitectura del sitio y las reglas.
+1. Este documento rector: qué es uHüb, el modelo, la arquitectura del sitio y las reglas.
 2. Manual de marca: voz, tono e identidad visual. No puede contradecir a este documento.
 3. Guiones, prompts y prototipos: se construyen a partir de los dos anteriores.
 
@@ -14,11 +14,11 @@ Este documento registra decisiones de uHub. Las instrucciones explícitas y post
 
 ---
 
-## 1. Qué es uHub
+## 1. Qué es uHüb
 
-**uHub es un modelo de desarrollo emprendedor con la persona al centro.** Ayuda a que cada persona construya el ecosistema que necesita para iniciar, rehacer o sostener cualquier proyecto, trayectoria, iniciativa o negocio, con negocio o sin él.
+**uHüb es un modelo de desarrollo emprendedor con la persona al centro.** Ayuda a que cada persona construya el ecosistema que necesita para iniciar, rehacer o sostener cualquier proyecto, trayectoria, iniciativa o negocio, con negocio o sin él.
 
-El nombre lo dice: **uHub, tu hub.** El centro eres tú; alrededor, lo que necesitas para lograrlo.
+El nombre lo dice: **uHüb, tu hub.** El centro eres tú; alrededor, lo que necesitas para lograrlo.
 
 No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué abandona y por qué.
 
@@ -30,17 +30,17 @@ No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué
 
 **Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.** Las barreras varían según la persona, sus recursos y su contexto. No atribuir universalmente el abandono a la soledad, la falta de disciplina o la flojera.
 
-**El cambio sistémico que falta es el de la persona.** Se habla mucho de cambiar el ecosistema emprendedor a nivel macro: alinear universidades, gobierno, empresas. Es necesario. Pero ¿y la persona? Ella también tiene que cambiar su propio sistema. uHub trabaja ahí: en lo micro, de adentro hacia afuera. Es complementario al trabajo de las instituciones, nunca en contra.
+**El cambio sistémico que falta es el de la persona.** Se habla mucho de cambiar el ecosistema emprendedor a nivel macro: alinear universidades, gobierno, empresas. Es necesario. Pero ¿y la persona? Ella también tiene que cambiar su propio sistema. uHüb trabaja ahí: en lo micro, de adentro hacia afuera. Es complementario al trabajo de las instituciones, nunca en contra.
 
 **Frase de origen (literal, no se edita):**
-> "uHub nació para replicar, de forma estructurada, lo que yo tuve de forma natural."
+> "uHüb nació para replicar, de forma estructurada, lo que yo tuve de forma natural."
 > — Rodrigo Campillo
 
 **Cómo nació (resumen):** agosto de 2015, un coworking en un edificio viejo, diez socios, muebles reciclados. Descubrimos que la gente no pagaba por un escritorio: pagaba por acompañamiento. De ahí salieron las mentorías con seguimiento, y de los problemas que se repetían salió el método. Historia completa: página Nosotros y documento "Historia y origen del modelo".
 
 ---
 
-## 3. El Modelo uHub (cómo lo hacemos)
+## 3. El Modelo uHüb (cómo lo hacemos)
 
 El modelo articula persona, ecosistema y recorrido. Para la visualización de la raíz, las tres capas son **La persona**, **Tu ecosistema** y **Quienes necesitan que avances** (empresas, universidades, cámaras, A.C. y fundaciones). El ciclo de etapas se explica por separado: no es el tercer anillo institucional.
 
@@ -54,7 +54,7 @@ Los cuatro elementos son lo que la persona desarrolla con el tiempo:
 | Agua | Disciplina y hábitos |
 | Aire | Liderazgo |
 
-### 3.2 Su ecosistema: lo que uHub ayuda a construir
+### 3.2 Su ecosistema: lo que uHüb ayuda a construir
 - **Comunidad:** gente en su mismo camino.
 - **Mentores y acompañamiento:** mentor base, especialistas por reto, facilitadores.
 - **Hábitos:** acción diaria con estructura.
@@ -149,7 +149,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 ### 6.4 Páginas de profundidad
 - **Cómo lo hacemos:** el método recorrible (etapas, semana, mismo modelo en distintos lugares).
-- **Nosotros:** el camino de uHub desde 2015 y Rodrigo.
+- **Nosotros:** el camino de uHüb desde 2015 y Rodrigo.
 
 ---
 
@@ -157,7 +157,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 | Se dice | No se dice |
 |---|---|
-| Modelo uHub; modelo de acompañamiento | "Sistema uHub" en público (sistema es término interno) |
+| Modelo uHüb; modelo de acompañamiento | "Sistema uHüb" en público (sistema es término interno) |
 | Mentores, formación de mentores | "Mentores certificados" (la certificación está en construcción) |
 | Tres formas de trabajar juntos; "en desarrollo" | "Licencia", "franquicia" (instrumento legal hasta 2027) |
 | Ecosistema, siempre explicado con cosas concretas (comunidad, mentores, hábitos) | Metáforas que obliguen a preguntar "¿a qué te refieres?" (ej. "el agua en la que nadas") |
@@ -170,7 +170,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 ## 8. Reglas que no se rompen
 
-- **Entidades separadas:** uHub A.C. (programa social) y la parte comercial nunca se mezclan en mensaje, marca ni finanzas. Nada de lenguaje de donación ni Círculo uHub en el sitio comercial.
+- **Entidades separadas:** uHüb A.C. (programa social) y la parte comercial nunca se mezclan en mensaje, marca ni finanzas. Nada de lenguaje de donación ni Círculo uHüb en el sitio comercial.
 - **Cifras separadas, nunca fusionadas:** +2,000 activados en comunidad · +550 acompañados (global). "Desde 2015", sin contador de años. Las cifras del programa A.C. (76%, 70%, 9 de 10, +381) solo con atribución explícita y en su contexto.
 - **Vulnerabilidad:** sin porcentajes; máximo una mención de contexto por pieza.
 - **No inventar:** testimonios, nombres, cifras, fechas, logos de aliados ni precios. Donde falte, placeholder marcado.
@@ -187,21 +187,21 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 | Bloque | Copy aprobado |
 |---|---|
 | Hero | Nadie emprende solo. |
-| Subtítulo | uHub te ayuda a construir tu propio ecosistema —mentores, comunidad, hábitos y un método— para iniciar, rehacer o sostener lo que emprendes, con negocio o sin él. |
+| Subtítulo | uHüb te ayuda a construir tu propio ecosistema —mentores, comunidad, hábitos y un método— para iniciar, rehacer o sostener lo que emprendes, con negocio o sin él. |
 | Por qué existe | El talento está repartido. El ecosistema, no. |
 | El modelo | El centro eres tú. Alrededor, lo que necesitas para lograrlo. |
 | Cómo lo hacemos | Un camino que recorres con práctica, acompañamiento y seguimiento. |
 | Resultado | Emprender no es lo que haces. Es en quién te conviertes. |
 | Puerta universitaria | Quiero desarrollar habilidades emprendedoras para la vida y el trabajo. |
 
-**Cifras externas:** SCORE publica la afirmación de cinco veces más probabilidades de iniciar un negocio en su comunicado del 9 de enero de 2024: https://www.score.org/press-releases/mentorship-improves-odds-success-entrepreneurs/. Si se usa, identificar fuente, fecha y contexto de EE. UU.; no presentarla como resultado de uHub, garantía individual o prueba causal de nuestro modelo. Priorizar explicación del acompañamiento e historias propias verificadas. Esta revisión no añade esa cifra a la raíz. No usar el dato de supervivencia a cinco años ni afirmaciones neurológicas no verificadas.
+**Cifras externas:** SCORE publica la afirmación de cinco veces más probabilidades de iniciar un negocio en su comunicado del 9 de enero de 2024: https://www.score.org/press-releases/mentorship-improves-odds-success-entrepreneurs/. Si se usa, identificar fuente, fecha y contexto de EE. UU.; no presentarla como resultado de uHüb, garantía individual o prueba causal de nuestro modelo. Priorizar explicación del acompañamiento e historias propias verificadas. Esta revisión no añade esa cifra a la raíz. No usar el dato de supervivencia a cinco años ni afirmaciones neurológicas no verificadas.
 
 ### Frases bloqueadas (no se reescriben)
 - *Nadie emprende solo.*
 - *El talento está repartido. El ecosistema, no.*
 - *Emprender no es lo que haces. Es en quién te conviertes.*
 - *Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.*
-- *uHub nació para replicar, de forma estructurada, lo que yo tuve de forma natural.*
+- *uHüb nació para replicar, de forma estructurada, lo que yo tuve de forma natural.*
 - *Volver no es retroceder.*
 - *No teníamos dinero, pero éramos muchos.* (Nosotros)
 
@@ -239,7 +239,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 | Documento | Qué cambia |
 |---|---|
-| Manual de marca v1.4 | Pasa a v1.5: "Modelo uHub" en vez de "sistema" en público; la tesis de la raíz; decisión de P2. |
+| Manual de marca v1.4 | Pasa a v1.5: "Modelo uHüb" en vez de "sistema" en público; la tesis de la raíz; decisión de P2. |
 | Prompt de landings (Astra) | La raíz se reescribe según la sección 6.2; las landings por audiencia se conservan. |
 | Prototipo Cómo lo hacemos | "Sistema" → "modelo"; etapas según P2; hitos reales según P8. |
 | Prototipo Nosotros | Validar etapa de cada parada, fechas y citas. |
@@ -273,3 +273,26 @@ Rodrigo aprobó las cinco observaciones de contenido y la actualización de este
 - La reconstrucción visual sigue el orden de ocho bloques. Requisitos: texto legible sin rotación, interacción por toque/teclado además de hover, controles etiquetados y soporte de movimiento reducido. Nada esencial debe depender de una animación.
 - Mantener decisiones resueltas de repositorio y etapa complementaria al actualizar versiones del rector. No reintroducir pendientes antiguos.
 - Todo cambio mediante rama y PR. Esta revisión apunta a `v2-modelo`; no fusionar ni publicar en producción sin aprobación.
+
+
+## Correcciones autorizadas de la raíz (29 de septiembre de 2026)
+
+- **Marca de presentación:** escribir `uHüb` en todo texto visible, títulos de navegador, textos alternativos y etiquetas accesibles. Esta normalización de marca también se aplica a las frases bloqueadas sin reescribirlas. No hacer sustituciones indiscriminadas: conservar URLs, rutas, dominios, correos, nombres de archivo, identificadores y valores enviados a Kit, formularios, Stripe u otras integraciones. Respetar denominaciones legales verificadas. Cada meta descripción debe contener `uHub` sin diéresis al menos una vez.
+- **Origen:** conservar título, cita de Rodrigo, retrato y acceso a Nosotros. Los cuatro párrafos aprobados son:
+
+> Hay quien crece rodeado de personas que emprenden: una familia que se arriesga, amigos con quienes compartir ideas, alguien a quien preguntarle cuando algo sale mal. Otras personas tienen las mismas ganas, pero menos ejemplos, contactos o apoyo para empezar.
+>
+> Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.
+>
+> Las universidades, empresas y organizaciones forman parte del ecosistema emprendedor. Pero cada persona también necesita construir el suyo: mentores con quienes revisar decisiones, una comunidad donde compartir lo que está viviendo y hábitos para convertir sus intenciones en acciones.
+>
+> Ahí trabaja uHüb. Te acompañamos a convertir lo que quieres hacer en una acción posible, probarla y revisar lo que pasó. Si algo se atora, buscamos qué cambiar: el tamaño del paso, la habilidad que falta, el apoyo o la forma de organizarte.
+
+- **Instituciones y cifras:** el texto de Para quién se conserva. SCORE solo en `/como-lo-hacemos`, junto a mentoría, con fuente y fecha, identificado como referencia externa de EE. UU., nunca como resultado o garantía de uHüb. No añadir SCORE a la raíz.
+- **Recorrido:** conservar las cuatro etapas e interacción. Añadir literalmente: «El recorrido es cíclico: puedes volver a descubrir, aterrizar, adaptar o crecer según lo que necesites. Volver no es retroceder.» Usar «Explora el recorrido según tu contexto» y «Explorar la etapa [nombre]». Las condiciones de frecuencia y alcance se explican en cada landing; las dos notas generales retiradas no vuelven a la raíz.
+- **Capas:** conservar pestañas accesibles, una seleccionada, fila completa clicable y navegación por teclado. Mostrar invitación, «Ver qué incluye» y «Capa [n] de 3». El control de Tu ecosistema pulsa dos veces solo en su primera entrada en pantalla; respetar movimiento reducido.
+- **Títulos:** palabras completas, sin guionado automático ni cortes interiores. Equilibrar líneas y comprobar 360 px, 390 px y escritorio.
+- **Fotos opcionales:** espacios preparados para mentor con una persona, sesión de práctica y aula o grupo de empresarios. Solo material real aprobado y sin marca A.C. Si falta, no renderizar figura, hueco ni aviso público.
+- **Flechas:** → para navegación interna y anclas; ↗ para enlaces externos.
+- **Privacidad:** revisión de las 16 revisiones alcanzables tras actualizar ramas y etiquetas. No se encontró una página ni texto de aviso; solo enlaces `#` y marcadores pendientes. Detalle en `docs/REVISION_2026-09-29.md`. Nombre legal y domicilio por confirmar: no redactar ni publicar aviso.
+- **Entrega:** rama `ajustes-raiz-v11`, PR hacia `v2-modelo`, con vista previa, antes/después de cada texto y conteo de sustituciones de marca por archivo. No tocar `main` ni publicar en producción.
