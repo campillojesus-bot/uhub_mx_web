@@ -1641,7 +1641,7 @@ html {
 .service-page .button { font-size: 15px; }
 .service-page .inner-hero { align-items: center; }
 .service-page .inner-hero > *, .service-offer > *, .service-life-paths li > *, .service-evidence > * { min-width: 0; }
-.service-page h1, .service-page h2, .service-page h3 { overflow-wrap: anywhere; hyphens: auto; }
+.service-page h1, .service-page h2, .service-page h3 { overflow-wrap: normal; hyphens: none; word-break: normal; text-wrap: balance; }
 .service-page .button, .service-page .text-link { max-width: 100%; }
 .service-page .inner-hero h1 { font-size: clamp(38px, 4.5vw, 64px); letter-spacing: -0.05em; }
 .service-hero-photo { margin: 0; }
@@ -1904,3 +1904,8 @@ html {
 
 .institutional-route-note { padding: 24px 0; margin: 0; border-top: 1px solid var(--root-border); }
 .institutional-route-note a { color: var(--red); font-weight: 600; text-underline-offset: 4px; }
+
+/* Approved content clarification; the broader visual rebuild remains a proposal. */
+.root-practice-summary { max-width: 850px; margin: 28px 0 40px; padding: 28px 0; border-block: 1px solid var(--root-border); }
+.root-practice-summary h3 { font-size: 26px; margin: 0 0 14px; }
+.root-practice-summary p { font-size: 17px; line-height: 1.75; margin: 0 0 16px; }
