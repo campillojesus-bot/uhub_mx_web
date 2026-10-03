@@ -1,6 +1,6 @@
 # Documento rector — uhub.mx
 
-**Versión 1.1 · Actualizada el 29 de septiembre de 2026** (incluye las diez correcciones aprobadas por Rodrigo)
+**Versión 1.1 · Actualizada el 3 de octubre de 2026** (incluye las diez correcciones y el recorrido interactivo aprobados por Rodrigo)
 **Responsable:** Rodrigo Campillo
 
 Este documento registra decisiones de uHüb. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
@@ -296,3 +296,17 @@ Rodrigo aprobó las cinco observaciones de contenido y la actualización de este
 - **Flechas:** → para navegación interna y anclas; ↗ para enlaces externos.
 - **Privacidad:** revisión de las 16 revisiones alcanzables tras actualizar ramas y etiquetas. No se encontró una página ni texto de aviso; solo enlaces `#` y marcadores pendientes. Detalle en `docs/REVISION_2026-09-29.md`. Nombre legal y domicilio por confirmar: no redactar ni publicar aviso.
 - **Entrega:** rama `ajustes-raiz-v11`, PR hacia `v2-modelo`, con vista previa, antes/después de cada texto y conteo de sustituciones de marca por archivo. No tocar `main` ni publicar en producción.
+
+## Recorrido interactivo autorizado (3 de octubre de 2026)
+
+Rodrigo aprobó desarrollar la propuesta de recorrido en `/como-lo-hacemos` y una muestra breve con enlace desde la raíz. Se mantiene la raíz de ocho bloques y su rueda; el zigzag se desarrolla en profundidad.
+
+- Distinguir **la ruta que orienta el aprendizaje**, **el reto sobre el que se trabaja** y **el acompañamiento que se recibe**. A tu ritmo puede ser con acompañamiento. No asignar plan o precio por perfil, etapa o elección del explorador.
+- Se puede seguir la ruta sugerida, trabajar sobre un reto propio o retomar cualquier etapa. Cuatro etapas comunes y retorno libre; Consolidar sigue siendo complementaria, fuera del mapa común.
+- Las situaciones y acciones de la experiencia web son **ejemplos ilustrativos**, no hitos de egreso, requisitos, currículum nuevo ni resultados garantizados. El ejemplo interactivo de seguimiento no registra avances, ni sustituye la herramienta o una mentoría real.
+- Mentor base: da continuidad al proceso. Rodrigo confirmó que **actualmente él es el mentor base de la membresía**. Los mentores invitados aportan experiencia especializada. No prometer mentoría individual ilimitada ni asignación de especialistas a todos los miembros.
+- Comunidad y vinculación: compartir experiencia, preparar conversaciones, ampliar contactos y dar seguimiento. No garantizar contactos, alianzas ni ventas.
+- Registro de práctica: herramienta Emprende Diario en membresía y carpeta de accionables en el programa A.C.; convertir intenciones en acciones y revisar lo ocurrido. La plataforma a medida continúa como idea futura, no como un producto ya disponible.
+- Dos vistas informativas, membresía y programa A.C., con nombres y destinos claramente identificados. Comparten estructura de acompañamiento, no condiciones comerciales, de acceso ni calendarios. Ritmo sigue con ingreso por confirmar; el programa remite a su convocatoria.
+- Ejemplos explorables por clic/toque y teclado; semántica de pestañas, grupos de elección etiquetados, un panel activo y movimiento reducido. No avance automático, bloqueo de etapas, captura nueva ni simulación presentada como seguimiento real.
+- Esta autorización no cambia el H1 ni los textos bloqueados de la raíz, las cifras, testimonios, fotografías, pagos, privacidad ni integraciones.

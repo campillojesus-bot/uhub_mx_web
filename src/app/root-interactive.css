@@ -153,3 +153,5 @@
 .mentoring-evidence-context { font-size:13px; }
 h1,h2,h3,h4,h5,h6 { hyphens:none; overflow-wrap:normal; word-break:normal; text-wrap:balance; }
 @media(prefers-reduced-motion:reduce) { .model-ecosystem-hint { animation:none!important; } }
+/* A concrete invitation to the interactive journey; approved October 3. */
+.root-v11 .practice-footer .practice-preview-note { margin-top: 12px; font-size: 14px; line-height: 1.7; }

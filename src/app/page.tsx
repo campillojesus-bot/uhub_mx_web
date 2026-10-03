@@ -149,7 +149,7 @@ export default function Home() {
             <ol>{["Eliges un reto real", "Acuerdas tres acciones", "Lo revisas con alguien", "Dejas evidencia"].map((step,i)=><li key={step}><span>0{i+1}</span><strong>{step}</strong><span aria-hidden="true">{i===3?"↺":"→"}</span></li>)}</ol>
           </div>
           <EditorialPhoto slot="practice" />
-          <div className="practice-footer"><p>Mismo modelo, distintas formas: membresía, programas, talleres y acompañamiento dentro de instituciones.</p><a className="root-text-link" href="/como-lo-hacemos">Ver cómo lo hacemos <Arrow /></a></div>
+          <div className="practice-footer"><div><p>Mismo modelo, distintas formas: membresía, programas, talleres y acompañamiento dentro de instituciones.</p><p className="practice-preview-note">Explora una etapa, una acción posible y qué harías si te atoras. Puedes seguir la ruta o trabajar sobre tu reto actual.</p></div><a className="root-text-link" href="/como-lo-hacemos#etapas">Explora cómo sería tu recorrido <Arrow /></a></div>
         </section>
         <section className="root-for root-section" id="para-quien" aria-labelledby="for-title"><div className="root-container">
           <p className="root-eyebrow"><span>05 /</span> Para quién</p><h2 id="for-title">Para ti, y para quienes necesitan que avances.</h2>
