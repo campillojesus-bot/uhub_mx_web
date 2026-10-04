@@ -94,6 +94,12 @@ export default function AboutPage() {
               <div>
                 <h2>{chapter.title}</h2>
                 {chapter.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {chapter.id === "programas" && (
+                  <figure className="history-photo-wide">
+                    <img src="/images/archivo-awe.jpg" alt="Grupo reunido en un encuentro de AWE, sonriendo y levantando las manos." width="960" height="720" loading="lazy" />
+                    <figcaption>Del archivo de uHüb · Un encuentro de AWE, parte de nuestra historia de acompañamiento.</figcaption>
+                  </figure>
+                )}
                 {chapter.id === "acompanamiento" && (
                   <figure className="history-photo-wide"><img src="/images/encuentro-coworking.webp" alt="Participantes reunidos alrededor de las mesas del coworking de uHüb." width="1600" height="900" loading="lazy" /><figcaption>2016 · Compartir preguntas, experiencias y siguientes pasos.</figcaption></figure>
                 )}
