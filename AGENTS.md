@@ -1,12 +1,12 @@
 # Documento rector — uhub.mx
 
-**Versión 1.0 · 27 de septiembre de 2026**
+**Versión 1.1 · Actualizada el 4 de octubre de 2026** (incluye las diez correcciones, el recorrido interactivo y la distinción entre modelo, ciclo y ruta aprobados por Rodrigo)
 **Responsable:** Rodrigo Campillo
 
-Este documento registra decisiones de uHub. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
+Este documento registra decisiones de uHüb. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
 
 **Jerarquía de documentos**
-1. Este documento rector: qué es uHub, el modelo, la arquitectura del sitio y las reglas.
+1. Este documento rector: qué es uHüb, el modelo, la arquitectura del sitio y las reglas.
 2. Manual de marca: voz, tono e identidad visual. No puede contradecir a este documento.
 3. Guiones, prompts y prototipos: se construyen a partir de los dos anteriores.
 
@@ -14,11 +14,11 @@ Este documento registra decisiones de uHub. Las instrucciones explícitas y post
 
 ---
 
-## 1. Qué es uHub
+## 1. Qué es uHüb
 
-**uHub es un modelo de desarrollo emprendedor con la persona al centro.** Ayuda a que cada persona construya el ecosistema que necesita para iniciar, rehacer o sostener cualquier proyecto, trayectoria, iniciativa o negocio, con negocio o sin él.
+**uHüb es un modelo de desarrollo emprendedor con la persona al centro.** Ayuda a que cada persona construya el ecosistema que necesita para iniciar, rehacer o sostener cualquier proyecto, trayectoria, iniciativa o negocio, con negocio o sin él.
 
-El nombre lo dice: **uHub, tu hub.** El centro eres tú; alrededor, lo que necesitas para lograrlo.
+El nombre lo dice: **uHüb, tu hub.** El centro eres tú; alrededor, lo que necesitas para lograrlo.
 
 No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué abandona y por qué.
 
@@ -26,23 +26,25 @@ No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué
 
 ## 2. Por qué existe (la tesis)
 
-**Nadie llega solo.** Rodrigo creció en una familia que emprendió, quebró y volvió a empezar muchas veces. Llegó hasta donde está gracias a un ecosistema: familia, amigos, educación, hábitos, ejemplos. Otra persona, con las mismas ganas y el mismo talento, crece donde nadie emprende y le dicen "mejor busca algo seguro". La diferencia no es el talento. Es el ecosistema.
+**Nadie llega solo.** Rodrigo creció en una familia que emprendió, quebró y volvió a empezar muchas veces. Llegó hasta donde está gracias a un ecosistema: familia, amigos, educación, hábitos, ejemplos. Otra persona, con las mismas ganas y el mismo talento, crece donde nadie emprende y le dicen "mejor busca algo seguro". El entorno y el acceso a apoyos también influyen en las oportunidades de avanzar.
 
-**La gente no se detiene por falta de información.** Se detiene porque alrededor hay barreras (familia, amigos, entorno, hábitos, falta de habilidades emprendedoras para la vida) y porque lo intenta sola. Sin estructura, no hace las cosas: por miedo, por flojera, porque nadie le pregunta cómo va.
+**Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.** Las barreras varían según la persona, sus recursos y su contexto. No atribuir universalmente el abandono a la soledad, la falta de disciplina o la flojera.
 
-**El cambio sistémico que falta es el de la persona.** Se habla mucho de cambiar el ecosistema emprendedor a nivel macro: alinear universidades, gobierno, empresas. Es necesario. Pero ¿y la persona? Ella también tiene que cambiar su propio sistema. uHub trabaja ahí: en lo micro, de adentro hacia afuera. Es complementario al trabajo de las instituciones, nunca en contra.
+**El cambio sistémico que falta es el de la persona.** Se habla mucho de cambiar el ecosistema emprendedor a nivel macro: alinear universidades, gobierno, empresas. Es necesario. Pero ¿y la persona? Ella también tiene que cambiar su propio sistema. uHüb trabaja ahí: en lo micro, de adentro hacia afuera. Es complementario al trabajo de las instituciones, nunca en contra.
 
 **Frase de origen (literal, no se edita):**
-> "uHub nació para replicar, de forma estructurada, lo que yo tuve de forma natural."
+> "uHüb nació para replicar, de forma estructurada, lo que yo tuve de forma natural."
 > — Rodrigo Campillo
 
 **Cómo nació (resumen):** agosto de 2015, un coworking en un edificio viejo, diez socios, muebles reciclados. Descubrimos que la gente no pagaba por un escritorio: pagaba por acompañamiento. De ahí salieron las mentorías con seguimiento, y de los problemas que se repetían salió el método. Historia completa: página Nosotros y documento "Historia y origen del modelo".
 
 ---
 
-## 3. El Modelo uHub (cómo lo hacemos)
+## 3. El Modelo uHüb (cómo lo hacemos)
 
-Tres capas, de adentro hacia afuera:
+El modelo es el conjunto del acompañamiento. **El modelo de acompañamiento de uHüb conecta tu situación y tus objetivos con mentores, comunidad, acciones y seguimiento para ayudarte a iniciar, ajustar y sostener lo que emprendes.**
+
+Para la visualización de la raíz, las tres capas son **La persona**, **Tu ecosistema** y **Quienes necesitan que avances** (empresas, universidades, cámaras, A.C. y fundaciones). El diagrama muestra la relación entre la persona, sus apoyos y el entorno institucional; no representa por sí solo todo el modelo. El ciclo de etapas se explica por separado: no es el tercer anillo institucional.
 
 ### 3.1 La persona: lo que crece en ti
 Los cuatro elementos son lo que la persona desarrolla con el tiempo:
@@ -54,14 +56,16 @@ Los cuatro elementos son lo que la persona desarrolla con el tiempo:
 | Agua | Disciplina y hábitos |
 | Aire | Liderazgo |
 
-### 3.2 Su ecosistema: lo que uHub ayuda a construir
+### 3.2 Su ecosistema: lo que uHüb ayuda a construir
 - **Comunidad:** gente en su mismo camino.
 - **Mentores y acompañamiento:** mentor base, especialistas por reto, facilitadores.
 - **Hábitos:** acción diaria con estructura.
 - **Guías y método:** la ruta de etapas.
 
 ### 3.3 El camino: las etapas
-Cíclico, no lineal. Cada quien va a su ritmo. Cada proyecto nuevo o cambio de circunstancias te regresa a una etapa. **Volver no es retroceder.**
+Las etapas ayudan a ubicar qué se necesita trabajar. El recorrido es cíclico porque se puede volver a ellas cuando cambia el proyecto o la situación. Cada quien va a su ritmo. No hay obligación de volver a Descubrir al llegar a Crecer ni de repetir toda la ruta al retomar una etapa. **Volver no es retroceder.**
+
+La **ruta guiada** propone una secuencia de actividades, recursos y acciones para trabajar las etapas. También se puede trabajar directamente sobre un reto propio, con acompañamiento. Dejar de necesitar la ruta guiada no implica dejar de encontrar valor en mentoría, comunidad y seguimiento.
 
 | Etapa | Elemento | El problema que atiende (salió del campo) |
 |---|---|---|
@@ -72,7 +76,7 @@ Cíclico, no lineal. Cada quien va a su ritmo. Cada proyecto nuevo o cambio de c
 | Consolidar (complementaria) | — | Formación técnica para profesionalizar el proyecto cuando haga falta, con aliados especializados. No es obligatoria ni parte del ciclo común de cuatro etapas. |
 
 ### 3.4 La semana de acompañamiento
-El primer paso ocurre al inicio; los otros cuatro se repiten cada semana:
+El primer paso ocurre al inicio; los otros cuatro se repiten durante el acompañamiento. La frecuencia depende de cada oferta: no prometer mentoría semanal en todos los talleres, programas o servicios. En las ofertas que sí incluyen seguimiento semanal, se explica como la semana de acompañamiento:
 1. **Partimos de tu situación:** pasado, presente y futuro.
 2. **Eliges un reto real:** tu proyecto, no un caso de libro.
 3. **Acuerdas tres acciones:** concretas, que caben en tu semana.
@@ -83,7 +87,7 @@ El primer paso ocurre al inicio; los otros cuatro se repiten cada semana:
 
 ### 3.5 Mismo modelo, diferentes formas, temas y personas
 - **Formas:** membresía, programa, taller, nodo.
-- **Temas (rutas):** autoemprender, reemprender, intraemprender, interemprender, autosostenibilidad.
+- **Enfoques según el contexto:** autoemprender, reemprender, intraemprender, interemprender, autosostenibilidad. El perfil orienta el contexto; no equivale a una etapa ni a la ruta guiada.
 - **Personas:** emprendedores, equipos de empresa, socios de cámaras, estudiantes y docentes, asociaciones civiles, ganadores de premios.
 
 ---
@@ -105,10 +109,10 @@ El perfil orienta; no decide el servicio ni el precio. Una persona puede cambiar
 ### 4.2 Alrededor: quienes necesitan que esa persona sobresalga
 - **Empresas:** equipos que innovan.
 - **Cámaras:** socios que tienen que reinventar su negocio.
-- **Universidades:** estudiantes que exploran sus primeros proyectos; detectar a quienes quieren emprender o innovar.
+- **Universidades:** desarrollar habilidades emprendedoras para la vida y el trabajo. Incluye a quienes después emprenderán y a quienes innovarán dentro de una organización.
 - **A.C. y fundaciones:** organizaciones que necesitan ingresos propios; seguimiento a quienes apoyan.
 
-**Mensaje para instituciones:** ninguna nos contrata para dar un curso. Nos contrata para que su gente construya el ecosistema que le permita seguir avanzando.
+**Mensaje para instituciones:** Trabajamos con instituciones para que lo aprendido se convierta en acciones y mejoras concretas.
 
 ---
 
@@ -130,12 +134,12 @@ Emprendedores · Empresas y cámaras · A.C. y fundaciones · Universidades · C
 ### 6.2 La raíz (uhub.mx)
 Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. No es la landing de Emprende Diario.
 
-1. **Hero:** titular (ver pendiente P1) + qué es uHub + dos accesos: *Conoce el modelo* / *Encuentra tu camino*.
-2. **Por qué existe:** la tesis del ecosistema y el cambio desde lo micro.
+1. **Hero:** *Nadie emprende solo.* + subtítulo aprobado + dos accesos: *Conoce el modelo* / *Encuentra tu camino*.
+2. **Por qué existe:** *El talento está repartido. El ecosistema, no.* La tesis del entorno, la frase de origen y presencia del fundador con acceso a la historia completa.
 3. **El modelo:** diagrama de tres capas (persona, ecosistema, quienes necesitan que avance).
-4. **Cómo lo hacemos:** resumen del camino y la semana; enlace a Cómo lo hacemos.
+4. **Cómo lo hacemos:** cuatro etapas y dinámica práctica de acciones, revisión y evidencia, con frecuencia según la oferta; enlace a Cómo lo hacemos. Consolidar solo se explica en profundidad y en los programas que lo incluyen, no en la raíz.
 5. **Para quién:** la persona y las instituciones.
-6. **El resultado:** seguir emprendiendo toda la vida + frase madre.
+6. **El resultado:** seguir emprendiendo toda la vida + frase madre; historia real autorizada y atribuida a su programa. No sustituir evidencia propia por una cifra externa.
 7. **Encuentra tu camino:** las cuatro puertas.
 8. **Cierre:** Lunes 1‑1‑1 para quien sigue explorando.
 
@@ -149,7 +153,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 ### 6.4 Páginas de profundidad
 - **Cómo lo hacemos:** el método recorrible (etapas, semana, mismo modelo en distintos lugares).
-- **Nosotros:** el camino de uHub desde 2015 y Rodrigo.
+- **Nosotros:** el camino de uHüb desde 2015 y Rodrigo.
 
 ---
 
@@ -157,7 +161,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 | Se dice | No se dice |
 |---|---|
-| Modelo uHub | "Sistema uHub" en público (sistema es término interno) |
+| Modelo uHüb; modelo de acompañamiento | "Sistema uHüb" en público (sistema es término interno) |
 | Mentores, formación de mentores | "Mentores certificados" (la certificación está en construcción) |
 | Tres formas de trabajar juntos; "en desarrollo" | "Licencia", "franquicia" (instrumento legal hasta 2027) |
 | Ecosistema, siempre explicado con cosas concretas (comunidad, mentores, hábitos) | Metáforas que obliguen a preguntar "¿a qué te refieres?" (ej. "el agua en la que nadas") |
@@ -170,7 +174,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 ## 8. Reglas que no se rompen
 
-- **Entidades separadas:** uHub A.C. (programa social) y la parte comercial nunca se mezclan en mensaje, marca ni finanzas. Nada de lenguaje de donación ni Círculo uHub en el sitio comercial.
+- **Entidades separadas:** uHüb A.C. (programa social) y la parte comercial nunca se mezclan en mensaje, marca ni finanzas. Nada de lenguaje de donación ni Círculo uHüb en el sitio comercial.
 - **Cifras separadas, nunca fusionadas:** +2,000 activados en comunidad · +550 acompañados (global). "Desde 2015", sin contador de años. Las cifras del programa A.C. (76%, 70%, 9 de 10, +381) solo con atribución explícita y en su contexto.
 - **Vulnerabilidad:** sin porcentajes; máximo una mención de contexto por pieza.
 - **No inventar:** testimonios, nombres, cifras, fechas, logos de aliados ni precios. Donde falte, placeholder marcado.
@@ -182,10 +186,26 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 - **Tipografía:** Avenir Next como ideal; en web, Montserrat (títulos) + Inter (cuerpo).
 - **Un CTA principal por página.** Móvil primero.
 
+### Escalera de mensajes aprobada para la raíz
+
+| Bloque | Copy aprobado |
+|---|---|
+| Hero | Nadie emprende solo. |
+| Subtítulo | uHüb te ayuda a construir tu propio ecosistema —mentores, comunidad, hábitos y un método— para iniciar, rehacer o sostener lo que emprendes, con negocio o sin él. |
+| Por qué existe | El talento está repartido. El ecosistema, no. |
+| El modelo | El centro eres tú. Alrededor, lo que necesitas para lograrlo. |
+| Cómo lo hacemos | Un camino que recorres con práctica, acompañamiento y seguimiento. |
+| Resultado | Emprender no es lo que haces. Es en quién te conviertes. |
+| Puerta universitaria | Quiero desarrollar habilidades emprendedoras para la vida y el trabajo. |
+
+**Cifras externas:** SCORE publica la afirmación de cinco veces más probabilidades de iniciar un negocio en su comunicado del 9 de enero de 2024: https://www.score.org/press-releases/mentorship-improves-odds-success-entrepreneurs/. Si se usa, identificar fuente, fecha y contexto de EE. UU.; no presentarla como resultado de uHüb, garantía individual o prueba causal de nuestro modelo. Priorizar explicación del acompañamiento e historias propias verificadas. Esta revisión no añade esa cifra a la raíz. No usar el dato de supervivencia a cinco años ni afirmaciones neurológicas no verificadas.
+
 ### Frases bloqueadas (no se reescriben)
+- *Nadie emprende solo.*
+- *El talento está repartido. El ecosistema, no.*
 - *Emprender no es lo que haces. Es en quién te conviertes.*
-- *Casi nadie se rinde por falta de información. Se rinde por hacerlo solo.*
-- *uHub nació para replicar, de forma estructurada, lo que yo tuve de forma natural.*
+- *Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.*
+- *uHüb nació para replicar, de forma estructurada, lo que yo tuve de forma natural.*
 - *Volver no es retroceder.*
 - *No teníamos dinero, pero éramos muchos.* (Nosotros)
 
@@ -207,8 +227,8 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 | # | Pendiente | Recomendación |
 |---|---|---|
-| P1 | Titular de la raíz | "Nadie emprende solo. Todos necesitamos un ecosistema." Subtítulo del diagrama: "El centro eres tú. Alrededor, lo que necesitas para lograrlo." |
-| P2 | **Resuelto el 27 de septiembre de 2026:** cuatro etapas comunes; Consolidar se explica como complemento técnico, disponible según el programa y los aliados. | — |
+| P1 | **Resuelto:** escalera de mensajes de la sección 8, con las cinco observaciones aprobadas. | Hero: "Nadie emprende solo." |
+| P2 | **Resuelto el 27 de septiembre de 2026:** cuatro etapas comunes; Consolidar se explica como complemento técnico en Cómo lo hacemos y los programas que lo incluyen; disponible según el programa y los aliados, fuera de la raíz. | — |
 | P3 | **Resuelto:** base `campillojesus-bot/uhub_mx_web`, rama de revisión `v2-modelo`; se portan piezas de la versión de revisión. | — |
 | P4 | Conectar uhub.mx al proyecto correcto en Vercel | Bloquea publicar. |
 | P5 | Foto real de acompañamiento para la raíz y fotos de archivo para Nosotros | Sin marca de la A.C. |
@@ -223,7 +243,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 | Documento | Qué cambia |
 |---|---|
-| Manual de marca v1.4 | Pasa a v1.5: "Modelo uHub" en vez de "sistema" en público; la tesis de la raíz; decisión de P2. |
+| Manual de marca v1.4 | Pasa a v1.5: "Modelo uHüb" en vez de "sistema" en público; la tesis de la raíz; decisión de P2. |
 | Prompt de landings (Astra) | La raíz se reescribe según la sección 6.2; las landings por audiencia se conservan. |
 | Prototipo Cómo lo hacemos | "Sistema" → "modelo"; etapas según P2; hitos reales según P8. |
 | Prototipo Nosotros | Validar etapa de cada parada, fechas y citas. |
@@ -246,3 +266,69 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 - El enlace de Stripe de Ritmo existe, pero Rodrigo lo enviará durante la construcción. Hasta entonces, orientar por contacto; no fabricar un enlace de pago.
 - El aviso de privacidad no está en el árbol de `main` revisado el 27 de septiembre. Solicitar el texto autorizado antes de publicar un formulario propio nuevo.
 - El formulario Google de MentorClass y el test de 10 preguntas se conservan. La captura del test necesita una prueba de recepción real para afirmar que registra en Sheets.
+
+## Alcance de esta revisión y referencia visual (27 de septiembre de 2026)
+
+Rodrigo aprobó las cinco observaciones de contenido y la actualización de este documento. La imagen A.C. se evaluó como referencia. Rodrigo autorizó después aplicar la reconstrucción visual e interactiva (27 de septiembre, 13:40 Chihuahua). Las correcciones aprobadas aquí prevalecen sobre el copy literal del prompt anterior.
+
+- Conservar presencia humana: fundador, historia local en Nosotros y testimonios contextualizados. La fotografía actual de Sarahi es un retrato de emprendedora, no una escena de acompañamiento. La selección del nuevo hero y sus permisos siguen pendientes; no falsear el pie ni usar stock o una escena generada como evidencia.
+- El diagrama de A.C. combina cuatro niveles de información: persona/capacidades, etapas, apoyos y resultados. La versión comercial debe distinguirlos. Las instituciones del nuevo diagrama son contextos de aplicación, no una etapa ni un apoyo presente en todos los recorridos.
+- El **cuadrante** orienta el contexto actual de la persona; el **ciclo** describe cuatro etapas recurrentes; la **ruta** adapta actividades y acompañamiento; el **ecosistema** reúne apoyos. No son sinónimos ni una secuencia obligatoria de roles.
+- La reconstrucción visual sigue el orden de ocho bloques. Requisitos: texto legible sin rotación, interacción por toque/teclado además de hover, controles etiquetados y soporte de movimiento reducido. Nada esencial debe depender de una animación.
+- Mantener decisiones resueltas de repositorio y etapa complementaria al actualizar versiones del rector. No reintroducir pendientes antiguos.
+- Todo cambio mediante rama y PR. Esta revisión apunta a `v2-modelo`; no fusionar ni publicar en producción sin aprobación.
+
+
+## Correcciones autorizadas de la raíz (29 de septiembre de 2026)
+
+- **Marca de presentación:** escribir `uHüb` en todo texto visible, títulos de navegador, textos alternativos y etiquetas accesibles. Esta normalización de marca también se aplica a las frases bloqueadas sin reescribirlas. No hacer sustituciones indiscriminadas: conservar URLs, rutas, dominios, correos, nombres de archivo, identificadores y valores enviados a Kit, formularios, Stripe u otras integraciones. Respetar denominaciones legales verificadas. Cada meta descripción debe contener `uHub` sin diéresis al menos una vez.
+- **Origen:** conservar título, cita de Rodrigo, retrato y acceso a Nosotros. Los cuatro párrafos aprobados son:
+
+> Hay quien crece rodeado de personas que emprenden: una familia que se arriesga, amigos con quienes compartir ideas, alguien a quien preguntarle cuando algo sale mal. Otras personas tienen las mismas ganas, pero menos ejemplos, contactos o apoyo para empezar.
+>
+> Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.
+>
+> Las universidades, empresas y organizaciones forman parte del ecosistema emprendedor. Pero cada persona también necesita construir el suyo: mentores con quienes revisar decisiones, una comunidad donde compartir lo que está viviendo y hábitos para convertir sus intenciones en acciones.
+>
+> Ahí trabaja uHüb. Te acompañamos a convertir lo que quieres hacer en una acción posible, probarla y revisar lo que pasó. Si algo se atora, buscamos qué cambiar: el tamaño del paso, la habilidad que falta, el apoyo o la forma de organizarte.
+
+- **Instituciones y cifras:** el texto de Para quién se conserva. SCORE solo en `/como-lo-hacemos`, junto a mentoría, con fuente y fecha, identificado como referencia externa de EE. UU., nunca como resultado o garantía de uHüb. No añadir SCORE a la raíz.
+- **Recorrido:** conservar las cuatro etapas e interacción. Añadir literalmente: «El recorrido es cíclico: puedes volver a descubrir, aterrizar, adaptar o crecer según lo que necesites. Volver no es retroceder.» Usar «Explora el recorrido según tu contexto» y «Explorar la etapa [nombre]». Las condiciones de frecuencia y alcance se explican en cada landing; las dos notas generales retiradas no vuelven a la raíz.
+- **Capas:** conservar pestañas accesibles, una seleccionada, fila completa clicable y navegación por teclado. Mostrar invitación, «Ver qué incluye» y «Capa [n] de 3». El control de Tu ecosistema pulsa dos veces solo en su primera entrada en pantalla; respetar movimiento reducido.
+- **Títulos:** palabras completas, sin guionado automático ni cortes interiores. Equilibrar líneas y comprobar 360 px, 390 px y escritorio.
+- **Fotos opcionales:** espacios preparados para mentor con una persona, sesión de práctica y aula o grupo de empresarios. Solo material real aprobado y sin marca A.C. Si falta, no renderizar figura, hueco ni aviso público.
+- **Flechas:** → para navegación interna y anclas; ↗ para enlaces externos.
+- **Privacidad:** revisión de las 16 revisiones alcanzables tras actualizar ramas y etiquetas. No se encontró una página ni texto de aviso; solo enlaces `#` y marcadores pendientes. Detalle en `docs/REVISION_2026-09-29.md`. Nombre legal y domicilio por confirmar: no redactar ni publicar aviso.
+- **Entrega:** rama `ajustes-raiz-v11`, PR hacia `v2-modelo`, con vista previa, antes/después de cada texto y conteo de sustituciones de marca por archivo. No tocar `main` ni publicar en producción.
+
+## Recorrido interactivo autorizado (3 de octubre de 2026)
+
+Rodrigo aprobó desarrollar la propuesta de recorrido en `/como-lo-hacemos` y una muestra breve con enlace desde la raíz. Se mantiene la raíz de ocho bloques y su rueda; el zigzag se desarrolla en profundidad.
+
+- Distinguir **la ruta que orienta el aprendizaje**, **el reto sobre el que se trabaja** y **el acompañamiento que se recibe**. A tu ritmo puede ser con acompañamiento. No asignar plan o precio por perfil, etapa o elección del explorador.
+- Se puede seguir la ruta sugerida, trabajar sobre un reto propio o retomar cualquier etapa. Cuatro etapas comunes y retorno libre; Consolidar sigue siendo complementaria, fuera del mapa común.
+- Las situaciones y acciones de la experiencia web son **ejemplos ilustrativos**, no hitos de egreso, requisitos, currículum nuevo ni resultados garantizados. El ejemplo interactivo de seguimiento no registra avances, ni sustituye la herramienta o una mentoría real.
+- Mentor base: da continuidad al proceso. Rodrigo confirmó que **actualmente él es el mentor base de la membresía**. Los mentores invitados aportan experiencia especializada. No prometer mentoría individual ilimitada ni asignación de especialistas a todos los miembros.
+- Comunidad y vinculación: compartir experiencia, preparar conversaciones, ampliar contactos y dar seguimiento. No garantizar contactos, alianzas ni ventas.
+- Registro de práctica: herramienta Emprende Diario en membresía y carpeta de accionables en el programa A.C.; convertir intenciones en acciones y revisar lo ocurrido. La plataforma a medida continúa como idea futura, no como un producto ya disponible.
+- Dos vistas informativas, membresía y programa A.C., con nombres y destinos claramente identificados. Comparten estructura de acompañamiento, no condiciones comerciales, de acceso ni calendarios. Ritmo sigue con ingreso por confirmar; el programa remite a su convocatoria.
+- Ejemplos explorables por clic/toque y teclado; semántica de pestañas, grupos de elección etiquetados, un panel activo y movimiento reducido. No avance automático, bloqueo de etapas, captura nueva ni simulación presentada como seguimiento real.
+- Esta autorización no cambia el H1 ni los textos bloqueados de la raíz, las cifras, testimonios, fotografías, pagos, privacidad ni integraciones.
+
+## Distinción de modelo, ciclo y ruta (4 de octubre de 2026)
+
+Rodrigo aprobó aclarar la relación entre las partes, conservando el diseño y las interacciones.
+
+| Concepto | Función |
+|---|---|
+| Modelo de acompañamiento | El conjunto: persona, contexto, apoyos, práctica y seguimiento. Explica cómo ayuda uHüb. |
+| Etapas | Descubrir, Aterrizar, Adaptar y Crecer. Orientan qué se necesita trabajar ahora. |
+| Ciclo | La posibilidad de volver a las etapas según las necesidades; no una oferta independiente ni una secuencia obligatoria. |
+| Ruta guiada | Actividades, recursos y acciones sugeridas para recorrer las etapas. |
+| Cuadrante | Contexto de quien emprende (auto, re, intra, inter). No determina etapa, plan ni precio. |
+
+- Antes del diagrama en la raíz: definición explícita del conjunto. Junto a cada visual: explicar qué parte muestra.
+- La raíz conserva título, orden de ocho bloques, tres capas y rueda. El zigzag de profundidad permite explorar ejemplos de práctica; no es otro modelo.
+- Opciones visibles: **Seguir la ruta guiada** y **Trabajar sobre mi reto actual**. Ambas pueden tener acompañamiento. No cambiar valores internos ni integraciones por un ajuste de etiqueta.
+- Una persona puede dejar de necesitar la ruta guiada y seguir aprovechando mentoría, comunidad, conexiones y seguimiento.
+- No se autorizan en esta ronda cambios adicionales de hero, CTA principal, ofertas, cifras, pagos, test o condiciones de acceso.

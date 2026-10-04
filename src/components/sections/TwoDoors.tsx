@@ -79,7 +79,7 @@ export function TwoDoors() {
 
         <p className="mt-10 text-center text-gray-dark/80">
           ¿Diriges una empresa, cámara, universidad u organización? Llevamos
-          el sistema uHub a tu gente —{" "}
+          el sistema uHüb a tu gente —{" "}
           <Link href="/organizaciones" className="font-semibold text-red-uhub no-underline hover:underline">
             conoce Organizaciones
           </Link>

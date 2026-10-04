@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const bullets = [
   "Un encuentro abierto con Rodrigo; la próxima fecha se anunciará cuando esté confirmada.",
   "Un tema práctico que puedes aplicar el mismo día — no teoría suelta.",
-  "Una forma de conocer el modelo uHub, sin compromiso.",
+  "Una forma de conocer el modelo uHüb, sin compromiso.",
 ];
 
 export default function MentorClassPage() {

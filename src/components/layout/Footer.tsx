@@ -97,14 +97,14 @@ export function Footer() {
             href="/#newsletter"
             className="mt-4 inline-flex font-display text-sm font-bold text-white no-underline hover:underline"
           >
-            Suscribirme ↓
+            Suscribirme →
           </Link>
         </div>
       </div>
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-3 px-6 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} uHub. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} uHüb. Todos los derechos reservados.</p>
           <p className="italic">[PENDIENTE: URL o texto del aviso de privacidad]</p>
         </div>
       </div>
