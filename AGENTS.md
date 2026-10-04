@@ -1,6 +1,6 @@
 # Documento rector — uhub.mx
 
-**Versión 1.1 · Actualizada el 3 de octubre de 2026** (incluye las diez correcciones y el recorrido interactivo aprobados por Rodrigo)
+**Versión 1.1 · Actualizada el 4 de octubre de 2026** (incluye las diez correcciones, el recorrido interactivo y la distinción entre modelo, ciclo y ruta aprobados por Rodrigo)
 **Responsable:** Rodrigo Campillo
 
 Este documento registra decisiones de uHüb. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
@@ -42,7 +42,9 @@ No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué
 
 ## 3. El Modelo uHüb (cómo lo hacemos)
 
-El modelo articula persona, ecosistema y recorrido. Para la visualización de la raíz, las tres capas son **La persona**, **Tu ecosistema** y **Quienes necesitan que avances** (empresas, universidades, cámaras, A.C. y fundaciones). El ciclo de etapas se explica por separado: no es el tercer anillo institucional.
+El modelo es el conjunto del acompañamiento. **El modelo de acompañamiento de uHüb conecta tu situación y tus objetivos con mentores, comunidad, acciones y seguimiento para ayudarte a iniciar, ajustar y sostener lo que emprendes.**
+
+Para la visualización de la raíz, las tres capas son **La persona**, **Tu ecosistema** y **Quienes necesitan que avances** (empresas, universidades, cámaras, A.C. y fundaciones). El diagrama muestra la relación entre la persona, sus apoyos y el entorno institucional; no representa por sí solo todo el modelo. El ciclo de etapas se explica por separado: no es el tercer anillo institucional.
 
 ### 3.1 La persona: lo que crece en ti
 Los cuatro elementos son lo que la persona desarrolla con el tiempo:
@@ -61,7 +63,9 @@ Los cuatro elementos son lo que la persona desarrolla con el tiempo:
 - **Guías y método:** la ruta de etapas.
 
 ### 3.3 El camino: las etapas
-Cíclico, no lineal. Cada quien va a su ritmo. Cada proyecto nuevo o cambio de circunstancias te regresa a una etapa. **Volver no es retroceder.**
+Las etapas ayudan a ubicar qué se necesita trabajar. El recorrido es cíclico porque se puede volver a ellas cuando cambia el proyecto o la situación. Cada quien va a su ritmo. No hay obligación de volver a Descubrir al llegar a Crecer ni de repetir toda la ruta al retomar una etapa. **Volver no es retroceder.**
+
+La **ruta guiada** propone una secuencia de actividades, recursos y acciones para trabajar las etapas. También se puede trabajar directamente sobre un reto propio, con acompañamiento. Dejar de necesitar la ruta guiada no implica dejar de encontrar valor en mentoría, comunidad y seguimiento.
 
 | Etapa | Elemento | El problema que atiende (salió del campo) |
 |---|---|---|
@@ -83,7 +87,7 @@ El primer paso ocurre al inicio; los otros cuatro se repiten durante el acompañ
 
 ### 3.5 Mismo modelo, diferentes formas, temas y personas
 - **Formas:** membresía, programa, taller, nodo.
-- **Temas (rutas):** autoemprender, reemprender, intraemprender, interemprender, autosostenibilidad.
+- **Enfoques según el contexto:** autoemprender, reemprender, intraemprender, interemprender, autosostenibilidad. El perfil orienta el contexto; no equivale a una etapa ni a la ruta guiada.
 - **Personas:** emprendedores, equipos de empresa, socios de cámaras, estudiantes y docentes, asociaciones civiles, ganadores de premios.
 
 ---
@@ -310,3 +314,21 @@ Rodrigo aprobó desarrollar la propuesta de recorrido en `/como-lo-hacemos` y un
 - Dos vistas informativas, membresía y programa A.C., con nombres y destinos claramente identificados. Comparten estructura de acompañamiento, no condiciones comerciales, de acceso ni calendarios. Ritmo sigue con ingreso por confirmar; el programa remite a su convocatoria.
 - Ejemplos explorables por clic/toque y teclado; semántica de pestañas, grupos de elección etiquetados, un panel activo y movimiento reducido. No avance automático, bloqueo de etapas, captura nueva ni simulación presentada como seguimiento real.
 - Esta autorización no cambia el H1 ni los textos bloqueados de la raíz, las cifras, testimonios, fotografías, pagos, privacidad ni integraciones.
+
+## Distinción de modelo, ciclo y ruta (4 de octubre de 2026)
+
+Rodrigo aprobó aclarar la relación entre las partes, conservando el diseño y las interacciones.
+
+| Concepto | Función |
+|---|---|
+| Modelo de acompañamiento | El conjunto: persona, contexto, apoyos, práctica y seguimiento. Explica cómo ayuda uHüb. |
+| Etapas | Descubrir, Aterrizar, Adaptar y Crecer. Orientan qué se necesita trabajar ahora. |
+| Ciclo | La posibilidad de volver a las etapas según las necesidades; no una oferta independiente ni una secuencia obligatoria. |
+| Ruta guiada | Actividades, recursos y acciones sugeridas para recorrer las etapas. |
+| Cuadrante | Contexto de quien emprende (auto, re, intra, inter). No determina etapa, plan ni precio. |
+
+- Antes del diagrama en la raíz: definición explícita del conjunto. Junto a cada visual: explicar qué parte muestra.
+- La raíz conserva título, orden de ocho bloques, tres capas y rueda. El zigzag de profundidad permite explorar ejemplos de práctica; no es otro modelo.
+- Opciones visibles: **Seguir la ruta guiada** y **Trabajar sobre mi reto actual**. Ambas pueden tener acompañamiento. No cambiar valores internos ni integraciones por un ajuste de etiqueta.
+- Una persona puede dejar de necesitar la ruta guiada y seguir aprovechando mentoría, comunidad, conexiones y seguimiento.
+- No se autorizan en esta ronda cambios adicionales de hero, CTA principal, ofertas, cifras, pagos, test o condiciones de acceso.

@@ -3,6 +3,7 @@ import { pageMetadata } from "../institutional";
 import Link from "next/link";
 import { AccompanimentExplorer, JourneyExplorer } from "./journey-explorer";
 import "./journey.css";
+import { modelDefinition } from "../model-language";
 
 export const metadata = pageMetadata(
   "Cómo lo hacemos · Modelo uHüb",
@@ -22,7 +23,7 @@ export default function HowPage() {
   return <><SiteHeader /><main id="contenido" className="journey-page">
     <section className="jr-hero jr-section">
       <div><p className="jr-eyebrow">El Modelo uHüb / Un recorrido que puedes explorar</p><h1>Tu camino puede cambiar. <em>El acompañamiento también.</em></h1><p className="jr-hero-intro">Empezamos por entender a la persona, su contexto y el proyecto que quiere mover. Alrededor construimos una red de mentores, comunidad y hábitos para probar acciones y sostenerlas.</p><a className="button button-primary" href="#etapas">Explora las etapas <Arrow /></a></div>
-      <aside className="jr-hero-aside"><span className="jr-eyebrow">Tu punto de partida</span><p>Puedes seguir la ruta, trabajar sobre lo que hoy necesitas o volver a una etapa.</p><div className="jr-hero-thread" aria-hidden="true"><span>Tu situación</span><i /><span>Tu siguiente acción</span><i /><span>Lo que aprendes</span><b>↺</b></div><small>El punto de partida cambia; la práctica y el acompañamiento le dan continuidad.</small></aside>
+      <aside className="jr-hero-aside"><span className="jr-eyebrow">El modelo de acompañamiento</span><p>{modelDefinition}</p><div className="jr-hero-thread" aria-hidden="true"><span>Tu situación</span><i /><span>Tu siguiente acción</span><i /><span>Lo que aprendes</span><b>↺</b></div><small>El ciclo describe cómo puedes volver a las etapas. La ruta guiada orienta qué hacer en ellas.</small></aside>
     </section>
     <JourneyExplorer />
     <AccompanimentExplorer />

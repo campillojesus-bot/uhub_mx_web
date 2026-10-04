@@ -27,16 +27,17 @@ export function JourneyExplorer() {
   }
 
   return <section className="jr-section jr-explorer" id="etapas" aria-labelledby="journey-heading">
-    <div className="jr-section-heading"><p className="jr-eyebrow">01 / Elige tu recorrido</p><h2 id="journey-heading">Cuatro etapas a las que puedes volver.</h2><p>Descubrir, Aterrizar, Adaptar y Crecer describen el momento del proyecto. Volver no es retroceder.</p></div>
+    <div className="jr-section-heading"><p className="jr-eyebrow">01 / Elige tu recorrido</p><h2 id="journey-heading">Cuatro etapas a las que puedes volver.</h2><p>Descubrir, Aterrizar, Adaptar y Crecer te ayudan a ubicar qué necesitas trabajar. El recorrido es cíclico porque puedes volver a estas etapas cuando cambia tu proyecto o tu situación. Volver no es retroceder.</p></div>
+    <div className="jr-route-definition"><strong>La ruta guiada te orienta en la práctica.</strong><p>Propone una secuencia de actividades, recursos y acciones para trabajar las etapas. En este mapa puedes explorar ejemplos de cómo sería seguirla o trabajar sobre un reto propio.</p></div>
     <fieldset className="jr-mode-picker"><legend>¿Cómo quieres recorrerlo?</legend>
       <div className="jr-mode-options">{([
-        ["route", "Seguir la ruta", "Quiero una guía para empezar o retomar."],
-        ["challenge", "Trabajar mi reto actual", "Ya tengo algo en marcha y sé qué quiero revisar."],
+        ["route", "Seguir la ruta guiada", "Quiero una guía para empezar o retomar."],
+        ["challenge", "Trabajar sobre mi reto actual", "Ya tengo algo en marcha y sé qué quiero revisar."],
       ] as const).map(([value, title, detail]) => <label key={value} className={mode === value ? "is-active" : ""}>
         <input type="radio" name="journey-mode" value={value} checked={mode === value} onChange={() => { setMode(value); setOutcome(null); }} />
         <span><strong>{title}</strong><small>{detail}</small></span>
       </label>)}</div>
-      <p className="jr-mode-note">{mode === "route" ? "Las actividades te orientan. Puedes entrar en la etapa que necesitas y regresar cuando haga falta." : "Partes de un reto propio. Puedes apoyarte en la ruta para revisar una habilidad o retomar una práctica."} <strong>A tu ritmo también puede ser con acompañamiento.</strong></p>
+      <p className="jr-mode-note">{mode === "route" ? "Puedes retomar solo la parte que necesitas; volver a una etapa no exige repetir toda la ruta." : "Partes de un reto propio. Puedes apoyarte en la ruta guiada para revisar una habilidad o retomar una práctica."} <strong>A tu ritmo también puede ser con acompañamiento.</strong></p>
     </fieldset>
 
     <div className="jr-workspace">
@@ -61,7 +62,7 @@ export function JourneyExplorer() {
         <div className="jr-panel-copy" key={`${active}-${mode}`}>
           <p className="jr-eyebrow">{stage.name} / {stage.capacity}</p>
           <h3>{stage.question}</h3><p className="jr-situation">{stage.situation}</p>
-          <div className="jr-stage-work"><span className="jr-label">{mode === "route" ? "Si sigues la ruta" : "Si trabajas tu reto"}</span><p>{stage[mode]}</p></div>
+          <div className="jr-stage-work"><span className="jr-label">{mode === "route" ? "Si sigues la ruta guiada" : "Si trabajas sobre tu reto actual"}</span><p>{stage[mode]}</p></div>
           <div className="jr-action-example"><span className="jr-label">Una acción posible</span><p>{mode === "route" ? stage.action : stage.ownAction}</p><div><span aria-hidden="true">↳</span><p><strong>Qué registrarías</strong>{stage.evidence}</p></div></div>
           <div className="jr-support-note"><span className="jr-label">Con acompañamiento</span><p>{stage.mentor}</p></div>
           <details className="jr-connection"><summary>¿Qué conexión podrías buscar? <span aria-hidden="true">+</span></summary><p>{stage.connection}</p><p>Prepara qué quieres preguntar, qué puedes aportar y cómo darás seguimiento.</p></details>
@@ -92,7 +93,7 @@ export function AccompanimentExplorer() {
     setContext(next); tabs.current[next]?.focus();
   }
   return <section className="jr-section jr-accompaniment" id="acompanamiento" aria-labelledby="accompaniment-title">
-    <div className="jr-section-heading"><p className="jr-eyebrow">03 / Quién camina contigo</p><h2 id="accompaniment-title">Una estructura compartida.<br />Distintas formas de vivirla.</h2><p>El recorrido que eliges y el acompañamiento que recibes son dos decisiones distintas. Mira cómo se trabaja en cada contexto.</p></div>
+    <div className="jr-section-heading"><p className="jr-eyebrow">03 / Quién camina contigo</p><h2 id="accompaniment-title">Una estructura compartida.<br />Distintas formas de vivirla.</h2><p>Puedes dejar de necesitar la ruta guiada y seguir encontrando valor en el acompañamiento: revisar decisiones, sostener acciones y construir conexiones. Mira cómo se trabaja en cada contexto.</p></div>
     <div className="jr-context-tabs" role="tablist" aria-label="Contexto del acompañamiento">{contexts.map((title, i) => <button role="tab" id={`context-tab-${i}`} aria-selected={context === i} aria-controls="context-panel" tabIndex={context === i ? 0 : -1} ref={el => { tabs.current[i] = el; }} onKeyDown={navigate} onClick={() => setContext(i)} key={title}>{title}<span aria-hidden="true">→</span></button>)}</div>
     <div className="jr-context-panel" id="context-panel" role="tabpanel" aria-labelledby={`context-tab-${context}`} tabIndex={0}>
       <article className="jr-base-mentor">

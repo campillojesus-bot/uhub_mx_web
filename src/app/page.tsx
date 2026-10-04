@@ -4,6 +4,7 @@ import { ModelExplorer } from "./model-explorer";
 import type { Metadata } from "next";
 import { EditorialPhoto } from "./editorial-photos";
 import { NewsletterForm } from "./newsletter-form";
+import { modelDefinition } from "./model-language";
 
 const doors = [
   {
@@ -132,6 +133,8 @@ export default function Home() {
         <section className="root-model root-container root-section" id="modelo" aria-labelledby="model-title">
           <p className="root-eyebrow"><span>03 /</span> El Modelo uHüb</p>
           <h2 id="model-title">El centro eres tú.<br />{" "}<em>Alrededor, lo que necesitas para lograrlo.</em></h2>
+          <p className="model-definition">{modelDefinition}</p>
+          <p className="model-diagram-context">En este diagrama exploras una parte del modelo: tú, los apoyos que construyes y las instituciones que forman parte de tu entorno.</p>
           <ModelExplorer />
           <p className="model-principle">No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué abandona y por qué.</p>
           <div className="model-human-note" id="mentores">
@@ -143,13 +146,14 @@ export default function Home() {
           <span id="ciclo" aria-hidden="true" />
           <p className="root-eyebrow"><span>04 /</span> Cómo lo hacemos</p>
           <h2 id="cycle-title">Un camino que recorres con práctica, acompañamiento y seguimiento.</h2>
+          <p className="cycle-context">Las etapas te ayudan a ubicar qué necesitas trabajar ahora. La rueda muestra cómo puedes volver a ellas; la ruta guiada propone actividades y acciones para recorrerlas.</p>
           <CycleWheel />
           <div className="practice-loop">
             <div className="practice-loop-heading"><p className="root-eyebrow">La práctica</p><h3>Prototipos, no ideas.</h3></div>
             <ol>{["Eliges un reto real", "Acuerdas tres acciones", "Lo revisas con alguien", "Dejas evidencia"].map((step,i)=><li key={step}><span>0{i+1}</span><strong>{step}</strong><span aria-hidden="true">{i===3?"↺":"→"}</span></li>)}</ol>
           </div>
           <EditorialPhoto slot="practice" />
-          <div className="practice-footer"><div><p>Mismo modelo, distintas formas: membresía, programas, talleres y acompañamiento dentro de instituciones.</p><p className="practice-preview-note">Explora una etapa, una acción posible y qué harías si te atoras. Puedes seguir la ruta o trabajar sobre tu reto actual.</p></div><a className="root-text-link" href="/como-lo-hacemos#etapas">Explora cómo sería tu recorrido <Arrow /></a></div>
+          <div className="practice-footer"><div><p>Mismo modelo, distintas formas: membresía, programas, talleres y acompañamiento dentro de instituciones.</p><p className="practice-preview-note">Explora una etapa, una acción posible y qué harías si te atoras. Puedes seguir la ruta guiada o trabajar sobre tu reto actual.</p></div><a className="root-text-link" href="/como-lo-hacemos#etapas">Explora cómo sería tu recorrido <Arrow /></a></div>
         </section>
         <section className="root-for root-section" id="para-quien" aria-labelledby="for-title"><div className="root-container">
           <p className="root-eyebrow"><span>05 /</span> Para quién</p><h2 id="for-title">Para ti, y para quienes necesitan que avances.</h2>

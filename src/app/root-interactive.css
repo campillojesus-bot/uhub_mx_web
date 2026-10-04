@@ -155,3 +155,8 @@ h1,h2,h3,h4,h5,h6 { hyphens:none; overflow-wrap:normal; word-break:normal; text-
 @media(prefers-reduced-motion:reduce) { .model-ecosystem-hint { animation:none!important; } }
 /* A concrete invitation to the interactive journey; approved October 3. */
 .root-v11 .practice-footer .practice-preview-note { margin-top: 12px; font-size: 14px; line-height: 1.7; }
+
+/* Clarify the whole model before exploring its individual representations. */
+.root-v11 .model-definition { max-width: 850px; margin: 28px 0 18px; font-size: clamp(17px, 1.65vw, 21px); line-height: 1.7; }
+.root-v11 .model-diagram-context { max-width: 760px; padding-left: 18px; border-left: 2px solid var(--pink-soft); font-size: 14px; line-height: 1.7; }
+.root-v11 .cycle-context { max-width: 780px; margin-top: 24px; font-size: 16px; line-height: 1.7; }
