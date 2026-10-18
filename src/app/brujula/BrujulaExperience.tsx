@@ -81,7 +81,7 @@ function Compass({ values }: { values: { id: Axis; score: number }[] }) {
   const y = (id: Axis, sign: number) => 180 + sign * (score(id) / 5) * 101;
   const pts = "180," + y("fuego", -1) + " " + x("tierra", 1) + ",180 180," + y("agua", 1) + " " + x("aire", -1) + ",180";
   return (
-    <svg viewBox="0 0 360 360" role="img" aria-label={"Gráfico radar de los cuatro elementos: " + values.map(v => v.id + " " + v.score.toFixed(1) + " de 5").join(", ")}}>
+    <svg viewBox="0 0 360 360" role="img" aria-label={"Gráfico radar de los cuatro elementos: " + values.map(v => v.id + " " + v.score.toFixed(1) + " de 5").join(", ")}>
       <defs>
         <linearGradient id="br-fill" x1="0" x2="1" y1="0" y2="1">
           <stop stopColor="#B81632" stopOpacity=".28" />
