@@ -32,7 +32,7 @@ const DIMENSIONS: Dimension[] = [
     interpretation: "Es momento de trabajar la claridad personal y la capacidad de aprender sin abandonar tu intención.",
   },
   {
-    id: "tierra", name: "Tierra", stage: "Aterrizar", capacity: "Habilidades y herramientas", color: "#94734F",
+    id: "tierra", name: "Tierra", stage: "Aterrizar", capacity: "Habilidades y herramientas", color: "#8C8F94",
     questions: {
       idea: ["Identifico las habilidades que necesito desarrollar para llevar mi idea a la práctica.", "Sé transformar mi idea en una prueba sencilla que pueda realizar con los recursos que tengo."],
       ventas: ["Identifico las habilidades que necesito fortalecer para mejorar mi negocio.", "Sé elegir una mejora concreta y qué aprendizaje o herramienta necesito para aplicarla."],
@@ -44,7 +44,7 @@ const DIMENSIONS: Dimension[] = [
     interpretation: "Aterrizar no es aprenderlo todo: es desarrollar la habilidad precisa para dar el siguiente paso real.",
   },
   {
-    id: "agua", name: "Agua", stage: "Adaptar", capacity: "Mercado, acción y hábitos", color: "#1B809E",
+    id: "agua", name: "Agua", stage: "Adaptar", capacity: "Mercado, acción y hábitos", color: "#6D1F30",
     questions: {
       idea: ["Puedo identificar a quién podría servir mi idea y conversar con esas personas.", "Estoy pasando de las ideas a acciones y reviso lo que aprendo para ajustar mi propuesta."],
       ventas: ["Conozco a mis clientes prioritarios y escucho lo que realmente necesitan.", "Doy seguimiento a mis acciones y a mis clientes, y ajusto mi forma de trabajar según los resultados."],
@@ -56,7 +56,7 @@ const DIMENSIONS: Dimension[] = [
     interpretation: "El aprendizaje ocurre en contacto con el mercado, al actuar, observar y volver a intentarlo con ajustes.",
   },
   {
-    id: "aire", name: "Aire", stage: "Crecer", capacity: "Liderazgo y colaboración", color: "#388777",
+    id: "aire", name: "Aire", stage: "Crecer", capacity: "Liderazgo y colaboración", color: "#474855",
     questions: {
       idea: ["Me animo a pedir apoyo y aprender con personas que tienen experiencias distintas.", "Puedo explicar mi idea con claridad y escuchar otras perspectivas."],
       ventas: ["Sé buscar colaboración o apoyo para avanzar en mis retos.", "Puedo compartir responsabilidades, construir acuerdos y darles seguimiento."],
@@ -85,7 +85,7 @@ function Compass({ values }: { values: { id: Axis; score: number }[] }) {
       <defs>
         <linearGradient id="br-fill" x1="0" x2="1" y1="0" y2="1">
           <stop stopColor="#B81632" stopOpacity=".28" />
-          <stop offset="1" stopColor="#1B809E" stopOpacity=".21" />
+          <stop offset="1" stopColor="#6D1F30" stopOpacity=".18" />
         </linearGradient>
       </defs>
       {[1, 2, 3, 4, 5].map(n => (
@@ -95,18 +95,18 @@ function Compass({ values }: { values: { id: Axis; score: number }[] }) {
       <polygon points={pts} fill="url(#br-fill)" stroke="#B81632" strokeWidth="2.6" strokeLinejoin="round"/>
       {[
         { cx: 180, cy: y("fuego", -1), color: "#B81632" },
-        { cx: x("tierra", 1), cy: 180, color: "#94734F" },
-        { cx: 180, cy: y("agua", 1), color: "#1B809E" },
-        { cx: x("aire", -1), cy: 180, color: "#388777" },
+        { cx: x("tierra", 1), cy: 180, color: "#8C8F94" },
+        { cx: 180, cy: y("agua", 1), color: "#6D1F30" },
+        { cx: x("aire", -1), cy: 180, color: "#474855" },
       ].map((p,i) => <circle key={i} cx={p.cx} cy={p.cy} r="5.5" fill={p.color} stroke="#FFFFFF" strokeWidth="2"/>)}
       <g fontFamily="Arial, sans-serif" textAnchor="middle" fontSize="13" fontWeight="700">
         <text x="180" y="33" fill="#B81632">FUEGO</text>
         <text x="180" y="50" fontSize="11" fill="#474855">{score("fuego").toFixed(1)} / 5</text>
-        <text x="318" y="176" fill="#94734F">TIERRA</text>
+        <text x="318" y="176" fill="#8C8F94">TIERRA</text>
         <text x="318" y="192" fontSize="11" fill="#474855">{score("tierra").toFixed(1)} / 5</text>
-        <text x="180" y="314" fill="#1B809E">AGUA</text>
+        <text x="180" y="314" fill="#6D1F30">AGUA</text>
         <text x="180" y="330" fontSize="11" fill="#474855">{score("agua").toFixed(1)} / 5</text>
-        <text x="42" y="176" fill="#388777">AIRE</text>
+        <text x="42" y="176" fill="#474855">AIRE</text>
         <text x="42" y="192" fontSize="11" fill="#474855">{score("aire").toFixed(1)} / 5</text>
       </g>
       <circle cx="180" cy="180" r="9" fill="#B81632" />
@@ -120,14 +120,19 @@ export function BrujulaExperience() {
   const [answers, setAnswers] = useState<Answers>(blankAnswers);
   const [screen, setScreen] = useState<"questions" | "results">("questions");
   const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
+  const [chosenPriority, setChosenPriority] = useState<Axis | null>(null);
 
   const filled = DIMENSIONS.reduce((total, d) => total + answers[d.id].filter(v => v !== null).length, 0);
   const scored = DIMENSIONS.map(d => ({
     id: d.id, score: answers[d.id].reduce<number>((total, current) => total + (current ?? 0), 0) / 2,
   }));
   const sorted = [...scored].sort((a,b)=>a.score - b.score);
-  const priority = DIMENSIONS.find(d => d.id === sorted[0].id) ?? DIMENSIONS[0];
-  const strength = DIMENSIONS.find(d => d.id === sorted[sorted.length - 1].id) ?? DIMENSIONS[0];
+  const tied = sorted.filter(item => item.score === sorted[0].score);
+  const chosenAxis = tied.some(item => item.id === chosenPriority) ? chosenPriority : tied[0].id;
+  const priority = DIMENSIONS.find(d => d.id === chosenAxis) ?? DIMENSIONS[0];
+  const highest = sorted[sorted.length - 1].score;
+  const strongest = sorted.filter(item => item.score === highest);
+  const strengthLabel = strongest.length === 4 ? "Las cuatro áreas están al mismo nivel" : strongest.map(item => DIMENSIONS.find(d => d.id === item.id)?.name).join(", ");
   const topScore = sorted[0].score.toFixed(1);
   const selectedContext = context === "idea" ? "Estoy desarrollando una idea" : "Ya tengo clientes o ventas";
 
@@ -137,6 +142,7 @@ export function BrujulaExperience() {
     setAnswers(blankAnswers());
     setScreen("questions");
     setCopyState("idle");
+    setChosenPriority(null);
   }
   function answer(axis: Axis, index: 0 | 1, value: number) {
     setAnswers(previous => ({
@@ -144,12 +150,18 @@ export function BrujulaExperience() {
       [axis]: previous[axis].map((old, i) => i === index ? value : old) as AnswerPair,
     }));
     setCopyState("idle");
+    setChosenPriority(null);
+  }
+  function jumpToTop() {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduced ? "instant" : "smooth" });
   }
   const summary = [
     "BRÚJULA EMPRENDEDORA · uHüb",
     selectedContext,
     ...DIMENSIONS.map(d => d.name + " (" + d.capacity + "): " + (scored.find(s => s.id === d.id)?.score ?? 0).toFixed(1) + "/5"),
     "Prioridad orientativa: " + priority.name + " · " + priority.capacity,
+    tied.length > 1 ? "Prioridades empatadas: " + tied.map(v => DIMENSIONS.find(d => d.id === v.id)?.name).join(", ") : "",
     "Mi reto de los próximos 7 días:",
     ...priority.actions[context].map((action,i) => (i + 1) + ". " + action),
     "Resultado de autopercepción; no es una evaluación validada.",
@@ -231,7 +243,7 @@ export function BrujulaExperience() {
             </div>
             <div className="br-complete">
               <div><strong>{filled === 8 ? "Ya puedes ver tu brújula." : "Responde las ocho afirmaciones."}</strong><p>Tu resultado orienta una conversación y una primera práctica; no te pone una etiqueta.</p></div>
-              <button className="br-primary" type="button" disabled={filled !== 8} onClick={() => { setScreen("results"); setCopyState("idle"); window.scrollTo({top: 0, behavior: "smooth"}); }}>Ver mi brújula <span aria-hidden="true">→</span></button>
+              <button className="br-primary" type="button" disabled={filled !== 8} onClick={() => { setScreen("results"); setCopyState("idle"); jumpToTop(); }}>Ver mi brújula <span aria-hidden="true">→</span></button>
             </div>
           </>
         ) : (
@@ -255,14 +267,25 @@ export function BrujulaExperience() {
                     <div className="br-scorebar"><span style={{width: value / 5 * 100 + "%",background: d.color}}/></div>
                   </div>;
                 })}
-                <p className="br-score-caption">La menor puntuación señala una oportunidad de trabajo, no una deficiencia personal. Si hay empate, mostramos una de las prioridades posibles.</p>
+                <p className="br-score-caption">La puntuación más baja señala una oportunidad de práctica, no una deficiencia personal. No determina tu perfil emprendedor ni un plan de pago.</p>
               </div>
             </div>
             <div className="br-insight">
-              <p className="br-eyebrow">Tu prioridad de acompañamiento</p>
+              <p className="br-eyebrow">Tu prioridad orientativa</p>
+              {tied.length > 1 && (
+                <div className="br-ties">
+                  <p>Hay {tied.length} áreas con la misma puntuación. ¿Cuál quieres trabajar primero?</p>
+                  <div role="group" aria-label="Elegir área empatada">
+                    {tied.map(item => {
+                      const option = DIMENSIONS.find(d => d.id === item.id)!;
+                      return <button key={option.id} type="button" aria-pressed={priority.id === option.id} onClick={() => { setChosenPriority(option.id); setCopyState("idle"); }}>{option.name}</button>;
+                    })}
+                  </div>
+                </div>
+              )}
               <h3 style={{color: priority.color}}>{priority.name} <span>· {priority.stage}</span></h3>
               <p>{priority.interpretation}</p>
-              <div className="br-insight-meta"><span>Autopercepción en esta área: {topScore} / 5</span><span>Fortaleza relativa: {strength.name}</span></div>
+              <div className="br-insight-meta"><span>Autopercepción en esta área: {topScore} / 5</span><span>Fortaleza relativa: {strengthLabel}</span></div>
             </div>
             <div className="br-action-plan">
               <div><p className="br-eyebrow">Emprende Diario / Un paso a la vez</p><h3>Tres acciones para tus próximos 7 días</h3><p>Estas propuestas son ejemplos para iniciar. Puedes ajustarlas a tu situación y revisarlas con alguien que te acompañe.</p></div>
@@ -270,8 +293,9 @@ export function BrujulaExperience() {
             </div>
             <div className="br-results-actions">
               <button type="button" className="br-primary" onClick={copySummary}>{copyState === "copied" ? "Resultado copiado ✓" : "Copiar diagnóstico y acciones"}</button>
-              <button type="button" className="br-secondary" onClick={() => { setScreen("questions"); window.scrollTo({top:0,behavior:"smooth"}); }}>Modificar respuestas</button>
+              <button type="button" className="br-secondary" onClick={() => { setScreen("questions"); jumpToTop(); }}>Modificar respuestas</button>
             </div>
+            {copyState === "copied" && <p role="status" className="br-copy-success">Se copiaron tus cuatro puntuaciones y las tres acciones para esta semana.</p>}
             {copyState === "failed" && <p role="status" className="br-copy-failure">No se pudo copiar automáticamente. Tu navegador puede necesitar permisos de portapapeles.</p>}
           </>
         )}
@@ -281,7 +305,7 @@ export function BrujulaExperience() {
         <div><p className="br-eyebrow">El siguiente paso no lo das solo</p><h2>La brújula señala una dirección.<br/><em>El acompañamiento te ayuda a avanzar.</em></h2></div>
         <Link href="/emprende-diario">Conoce Emprende Diario <span aria-hidden="true">→</span></Link>
       </footer>
-      <p className="br-disclaimer">Prototipo orientativo de autopercepción, no un instrumento psicométrico validado ni una medición de impacto. Tus respuestas no se envían ni se guardan en un servidor desde esta página. La brújula no sustituye la conversación con un mentor.</p>
+      <p className="br-disclaimer">Prototipo orientativo de autopercepción, no un instrumento psicométrico validado ni una medición de impacto. Tus respuestas no se envían ni se guardan en un servidor desde esta página. La brújula no sustituye /test ni la conversación con un mentor.</p>
     </div>
   );
 }
