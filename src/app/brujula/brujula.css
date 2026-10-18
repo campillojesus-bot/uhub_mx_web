@@ -61,7 +61,7 @@
 .br-primary:hover:not(:disabled) { background:#9C1229; }
 .br-primary:disabled { background:#C8B9BD;border-color:#C8B9BD;cursor:not-allowed; }
 .br-secondary { border:1px solid #C8C4C4;background:#FFF;color:#474855; }
-.br-page button:focus-visible,.br-page a:focus-visible { outline:3px solid #1B809E;outline-offset:3px; }
+.br-page button:focus-visible,.br-page a:focus-visible { outline:3px solid #6D1F30;outline-offset:3px; }
 .br-results-heading h2 { font-size:clamp(1.6rem,3.7vw,2.9rem);line-height:1.16;margin:11px 0 14px; }
 .br-results-heading>p:last-child { color:#74757D;max-width:650px;line-height:1.65;font-size:.94rem; }
 .br-result-layout { display:grid;grid-template-columns:1fr .95fr;gap:26px;align-items:center;margin:22px 0; }
