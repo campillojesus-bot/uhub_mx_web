@@ -332,3 +332,10 @@ Rodrigo aprobó aclarar la relación entre las partes, conservando el diseño y 
 - Opciones visibles: **Seguir la ruta guiada** y **Trabajar sobre mi reto actual**. Ambas pueden tener acompañamiento. No cambiar valores internos ni integraciones por un ajuste de etiqueta.
 - Una persona puede dejar de necesitar la ruta guiada y seguir aprovechando mentoría, comunidad, conexiones y seguimiento.
 - No se autorizan en esta ronda cambios adicionales de hero, CTA principal, ofertas, cifras, pagos, test o condiciones de acceso.
+
+## Historia de la A.C. y video (18 de octubre de 2026)
+
+- Rodrigo confirmó: Pablo, entonces socio, había propuesto tener una A.C. y una S.C.; en 2018 les aceptaron un grant y les indicaron que necesitaban una A.C. para recibirlo; la constitución de uHüb A.C. ocurrió en 2019. No afirmar que también se constituyó una S.C. ni inventar mes o fecha de inicio de AWE.
+- El nacimiento de la A.C. tiene un hito propio en `/nosotros#asociacion-civil`. El capítulo de alianzas conserva `/nosotros#programas` y la fotografía histórica de AWE.
+- Video original autorizado por Rodrigo: https://youtu.be/SQEgU2qCA3M . Participación en American Express Leadership Academy, en inglés, 4:36 con comentarios del público. Trata del cambio de opinión sobre crear la A.C., la adaptación y el valor de habilidades y mentores. No llamarlo TED Talk ni presentarlo como historia completa o aval institucional a las ofertas actuales.
+- La miniatura es un fotograma real del archivo enviado por Rodrigo. Enlace a YouTube con flecha externa; sin reproducción automática.

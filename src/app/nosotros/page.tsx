@@ -39,9 +39,17 @@ const chapters = [
     ],
   },
   {
-    date: "2019 en adelante", id: "programas", title: "El acompañamiento tomó estructura.",
+    date: "2018–2019", id: "asociacion-civil", title: "Nace uHüb A.C.",
     paragraphs: [
-      "En 2019 se constituyó uHüb A.C. La colaboración con el Consulado de Estados Unidos y AWE abrió una primera oportunidad para ampliar la formación y las mentorías. Después se sumaron otras alianzas, entre ellas FECHAC, y programas para personas con distintos contextos y barreras para emprender.",
+      "La idea de contar con una asociación civil ya estaba sobre la mesa. Pablo, entonces socio de uHüb, había propuesto tener una A.C. y una S.C.",
+      "En 2018 nos aceptaron para recibir un apoyo económico, un grant. Para poder recibirlo, nos indicaron que necesitábamos constituirnos como asociación civil. Aquella oportunidad impulsó una decisión que ya habíamos conversado.",
+      "En 2019 se constituyó uHüb A.C. Esa es la fecha de nacimiento de la asociación; la comunidad y el coworking ya tenían su propio recorrido.",
+    ],
+  },
+  {
+    date: "Las alianzas y los programas", id: "programas", title: "El acompañamiento tomó estructura.",
+    paragraphs: [
+      "La colaboración con el Consulado de Estados Unidos y AWE abrió una oportunidad para ampliar la formación y las mentorías. Después se sumaron otras alianzas, entre ellas FECHAC, y programas para personas con distintos contextos y barreras para emprender.",
       "La pandemia volvió a poner a prueba el proyecto. Cambiaron la operación, las relaciones y el equipo. De los diez socios iniciales fuimos pasando a otra estructura; también vivimos la pérdida de un socio. Mantener uHüb implicó revisar decisiones y adaptar la forma de trabajar.",
       "El acompañamiento a organizaciones, como el trabajo de intraemprendimiento con FICOSEC, amplió el campo de aplicación: personas que quieren innovar y generar recursos desde una institución también necesitan probar ideas, aprender y darles seguimiento.",
     ],
@@ -83,6 +91,7 @@ export default function AboutPage() {
         <nav className="history-chapter-nav" aria-label="Capítulos de nuestra historia">
           <a href="#origen">El origen</a>
           <a href="#coworking">El coworking</a>
+          <a href="#asociacion-civil">Nace la A.C.</a>
           <a href="#modelo">Cómo nació el modelo</a>
           <a href="#hoy">Dónde estamos hoy</a>
         </nav>
@@ -94,6 +103,21 @@ export default function AboutPage() {
               <div>
                 <h2>{chapter.title}</h2>
                 {chapter.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {chapter.id === "asociacion-civil" && (
+                  <a className="history-archive history-talk" href="https://youtu.be/SQEgU2qCA3M" target="_blank" rel="noreferrer">
+                    <span className="history-talk-media">
+                      <img src="/images/rodrigo-american-express.webp" alt="Rodrigo Campillo compartiendo su historia en American Express Leadership Academy." width="1280" height="720" loading="lazy" />
+                      <span className="history-talk-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg></span>
+                    </span>
+                    <span>
+                      <small>American Express Leadership Academy</small>
+                      <strong>No estaba en el plan.</strong>
+                      <span>Rodrigo cuenta por qué cambió de opinión sobre crear una asociación civil y qué aprendió al hacerlo.</span>
+                      <span className="history-talk-meta">En inglés · 4:36 · Incluye comentarios del público</span>
+                      <span className="history-talk-link">Ver la charla en YouTube <Arrow external /></span>
+                    </span>
+                  </a>
+                )}
                 {chapter.id === "programas" && (
                   <figure className="history-photo-wide">
                     <img src="/images/archivo-awe.jpg" alt="Grupo reunido en un encuentro de AWE, sonriendo y levantando las manos." width="960" height="720" loading="lazy" />
