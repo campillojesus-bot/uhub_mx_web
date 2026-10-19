@@ -22,7 +22,7 @@ export function WhoWeAre() {
               </strong>
             </p>
             <p className="mt-4 leading-relaxed text-gray-dark">
-              Por eso llevo 11 años construyendo uHub: para que tener
+              Por eso llevo 11 años construyendo uHüb: para que tener
               estructura, hábitos y acompañamiento deje de ser un accidente
               de nacimiento.
             </p>
@@ -31,7 +31,7 @@ export function WhoWeAre() {
 
         <div className="mx-auto mt-20 max-w-[680px] border-t border-border-subtle pt-16">
           <h3 className="font-display text-xl font-extrabold text-gray-dark">
-            Por qué se llama uHub
+            Por qué se llama uHüb
           </h3>
           <p className="mt-4 leading-relaxed text-gray-dark">
             Un hub es un punto de conexión: el centro desde el que una red se
@@ -39,7 +39,7 @@ export function WhoWeAre() {
             porque el centro no es nuestro, es tuyo.
           </p>
           <p className="mt-4 leading-relaxed text-gray-dark">
-            uHub no es una plataforma a la que te conectas. Es el trabajo de
+            uHüb no es una plataforma a la que te conectas. Es el trabajo de
             construir tu propio centro — saber qué te mueve, qué estás
             dispuesto a sostener, con quién te conectas — para que todo lo
             que inicies salga de ahí.

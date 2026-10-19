@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import "./preview-styles.css";
 import "./root-home.css";
+import "./root-interactive.css";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -21,8 +22,8 @@ const siteUrl = "https://uhub.mx";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "uHub · Centro de Desarrollo Emprendedor",
-    template: "%s · uHub",
+    default: "uHüb · Centro de Desarrollo Emprendedor",
+    template: "%s · uHüb",
   },
   description:
     "uHub es un modelo de desarrollo emprendedor con la persona al centro. Práctica, mentores y comunidad para iniciar, rehacer o sostener proyectos.",
@@ -30,14 +31,14 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "uHub · Centro de Desarrollo Emprendedor",
+    title: "uHüb · Centro de Desarrollo Emprendedor",
     description:
       "El centro eres tú. Alrededor, personas, hábitos y acompañamiento para seguir emprendiendo.",
     url: siteUrl,
-    siteName: "uHub",
+    siteName: "uHüb",
     locale: "es_MX",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "uHub · Centro de Desarrollo Emprendedor" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "uHüb · Centro de Desarrollo Emprendedor" }],
   },
   icons: { icon: "/favicon.svg", apple: "/favicon.svg" },
 };

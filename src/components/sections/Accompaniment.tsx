@@ -1,7 +1,7 @@
 const items = [
   {
     title: "Alguien que te lleva por el camino.",
-    body: "Un facilitador-mentor formado en el sistema uHub. Conoce las cuatro etapas, sabe dónde estás y qué toca ahora. Le da seguimiento a tu avance — y te regresa cuando te sales.",
+    body: "Un facilitador-mentor formado en el sistema uHüb. Conoce las cuatro etapas, sabe dónde estás y qué toca ahora. Le da seguimiento a tu avance — y te regresa cuando te sales.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden>
         <circle cx="12" cy="12" r="9" stroke="#B81632" strokeWidth="2" />

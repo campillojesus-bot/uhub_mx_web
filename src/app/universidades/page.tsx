@@ -1,7 +1,7 @@
 import { pageMetadata } from "../institutional";
 import { Arrow, SiteFooter, SiteHeader } from "../components";
 
-export const metadata = pageMetadata("Capacidades emprendedoras para la vida · Universidades", "Formación práctica para docentes: dos días para experimentar y facilitar actividades que desarrollen iniciativa y capacidades emprendedoras en estudiantes.", "/universidades");
+export const metadata = pageMetadata("Capacidades emprendedoras para la vida · Universidades", "uHub: Formación práctica para docentes: dos días para experimentar y facilitar actividades que desarrollen iniciativa y capacidades emprendedoras en estudiantes.", "/universidades");
 const contact = "https://wa.me/526142346499?text=Hola%2C%20represento%20una%20universidad%20y%20quiero%20conocer%20la%20formaci%C3%B3n%20docente%20de%20uHub";
 
 export default function UniversidadesPage() {
@@ -9,7 +9,7 @@ export default function UniversidadesPage() {
     <SiteHeader />
     <main id="contenido" className="service-page">
       <section className="inner-hero">
-        <div><p className="eyebrow">uHub para universidades</p><h1>Capacidades emprendedoras para toda la vida.</h1><p>Identificar oportunidades, probar ideas, colaborar y tomar decisiones son habilidades que tus estudiantes pueden usar en un negocio, en su trabajo o en su comunidad.</p><p>Acompañamos a los docentes para que lleven ese aprendizaje al aula, con experiencias prácticas y preguntas que despierten iniciativa.</p><a className="button button-primary" href={contact} target="_blank" rel="noreferrer">Solicita la propuesta para tus docentes <Arrow /></a></div>
+        <div><p className="eyebrow">uHüb para universidades</p><h1>Capacidades emprendedoras para toda la vida.</h1><p>Identificar oportunidades, probar ideas, colaborar y tomar decisiones son habilidades que tus estudiantes pueden usar en un negocio, en su trabajo o en su comunidad.</p><p>Acompañamos a los docentes para que lleven ese aprendizaje al aula, con experiencias prácticas y preguntas que despierten iniciativa.</p><a className="button button-primary" href={contact} target="_blank" rel="noreferrer">Solicita la propuesta para tus docentes <Arrow external /></a></div>
         <aside className="inner-quote"><span>Sembrar posibilidades</span><strong>Lo que aprenden hoy puede abrirles caminos años después.</strong></aside>
       </section>
       <section className="inner-section">
@@ -26,7 +26,7 @@ export default function UniversidadesPage() {
         <div className="service-evidence"><div><span className="service-evidence-label">Colaboración en preparación</span><h3>Tecnológico de Nuevo Casas Grandes.</h3><p>La actualización docente está prevista para diciembre de 2026. Esta primera colaboración busca llevar experiencias prácticas y herramientas de acompañamiento al aula. Los resultados se documentarán después de su realización.</p></div><div><span className="service-evidence-label">Posibilidad de continuidad</span><h3>Un nodo en tu universidad.</h3><p>La colaboración puede evolucionar hacia un nodo que conecte docentes, estudiantes y mentores. La operación acompañada se diseña con la universidad. La transferencia para que una institución opere el modelo por su cuenta sigue en desarrollo.</p></div></div>
       </section>
       <section className="inner-section"><div className="service-detail"><p className="eyebrow">Cómo se hace visible el aprendizaje</p><h2>Observar, probar y reflexionar.</h2><p>Al diseñar la colaboración acordamos qué evidencias recoger: problemas que los estudiantes identifican, experimentos que realizan, decisiones que pueden explicar y aprendizajes que llevan a nuevos contextos.</p><p>La creación de un negocio es una posible trayectoria. El desarrollo de capacidades también se expresa en su trabajo, sus proyectos y su participación en la comunidad.</p><a className="text-link" href="/nosotros">Conoce de dónde viene nuestro modelo <Arrow /></a></div></section>
-      <section className="inner-closing"><div><p className="eyebrow">Empecemos con tus docentes</p><h2>¿Qué oportunidades quieres abrir para tus estudiantes?</h2></div><a className="button button-primary" href={contact} target="_blank" rel="noreferrer">Solicita la propuesta para tus docentes <Arrow /></a></section>
+      <section className="inner-closing"><div><p className="eyebrow">Empecemos con tus docentes</p><h2>¿Qué oportunidades quieres abrir para tus estudiantes?</h2></div><a className="button button-primary" href={contact} target="_blank" rel="noreferrer">Solicita la propuesta para tus docentes <Arrow external /></a></section>
     </main><SiteFooter />
   </>;
 }

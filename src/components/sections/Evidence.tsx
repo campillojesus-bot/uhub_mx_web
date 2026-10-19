@@ -18,7 +18,7 @@ export function Evidence() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {testimonios.map((quote) => (
-            <TestimonioCard key={quote} quote={quote} attribution="Graduada uHub" />
+            <TestimonioCard key={quote} quote={quote} attribution="Graduada uHüb" />
           ))}
         </div>
 

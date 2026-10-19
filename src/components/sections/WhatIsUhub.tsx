@@ -7,7 +7,7 @@ export function WhatIsUhub() {
         </h2>
         <p className="text-pretty mt-6 text-lg leading-relaxed text-gray-dark">
           La mayoría no se detiene por falta de ideas. Se detiene porque
-          nadie construyó el sistema a su alrededor. Por eso uHub no es un
+          nadie construyó el sistema a su alrededor. Por eso uHüb no es un
           curso que termina — es un ciclo acompañado.
         </p>
         <p className="mt-8 text-sm font-medium text-gray-dark/80">

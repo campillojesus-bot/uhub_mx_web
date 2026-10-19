@@ -77,7 +77,7 @@ export function SiteNavigation() {
         ))}
       </nav>
       <Link className="uhub-header-cta" href="/#caminos">
-        Encuentra tu camino <span aria-hidden="true">↗</span>
+        Encuentra tu camino <span aria-hidden="true">→</span>
       </Link>
       <button
         type="button"
@@ -112,7 +112,7 @@ export function SiteNavigation() {
             </Link>
           ))}
           <Link className="uhub-mobile-path" href="/#caminos">
-            Encuentra tu camino <span aria-hidden="true">↗</span>
+            Encuentra tu camino <span aria-hidden="true">→</span>
           </Link>
         </nav>
       )}

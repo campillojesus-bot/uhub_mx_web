@@ -105,7 +105,7 @@ export function CycleWheel() {
           viewBox="-24 -24 488 488"
           className="block h-auto w-full overflow-visible"
           role="img"
-          aria-label="Rueda del Ciclo de Cambio Emprendedor uHub"
+          aria-label="Rueda del Ciclo de Cambio Emprendedor uHüb"
         >
           {stages.map((stage, i) => {
             const isActive = i === active;
@@ -221,7 +221,7 @@ export function CycleWheel() {
               dominantBaseline: "central",
             }}
           >
-            uHub
+            uHüb
           </text>
           <text
             x={220}

@@ -7,7 +7,7 @@ import {
   lunesSubscription,
 } from "../components";
 
-export const metadata = pageMetadata("Emprende Diario · Acompañamiento para seguir", "Una membresía para convertir prioridades en acciones y sostenerlas con mentores y comunidad. Conoce Ritmo, solicita ingreso o empieza con Lunes 1-1-1.", "/emprende-diario");
+export const metadata = pageMetadata("Emprende Diario · Acompañamiento para seguir", "uHub: Una membresía para convertir prioridades en acciones y sostenerlas con mentores y comunidad. Conoce Ritmo, solicita ingreso o empieza con Lunes 1-1-1.", "/emprende-diario");
 
 export default function EmprendeDiarioPage() {
   return (
@@ -16,11 +16,11 @@ export default function EmprendeDiarioPage() {
       <main id="contenido" className="service-page membership-page">
       <section className="inner-hero membership-hero" id="inicio">
         <div>
-          <p className="eyebrow">Emprende Diario · Una membresía de uHub</p>
+          <p className="eyebrow">Emprende Diario · Una membresía de uHüb</p>
           <h1>Emprender no es un evento. Es un hábito que se sostiene.</h1>
           <p>Planeación, práctica y seguimiento para iniciar, retomar o sostener un proyecto. Por tu cuenta, junto con otras personas o desde tu trabajo: avanzas con el tiempo y los recursos que tienes.</p>
-          <div className="route-actions"><a className="button button-primary" href={whatsappMembership} target="_blank" rel="noreferrer">Solicitar ingreso a Ritmo <Arrow /></a></div>
-          <p className="membership-entry-note">Ritmo · $399 MXN/mes. La comunidad actual está formada por egresados de uHub A.C. Si eres nuevo, conversemos para confirmar tu opción de ingreso, la ruta y las condiciones antes de inscribirte.</p>
+          <div className="route-actions"><a className="button button-primary" href={whatsappMembership} target="_blank" rel="noreferrer">Solicitar ingreso a Ritmo <Arrow external /></a></div>
+          <p className="membership-entry-note">Ritmo · $399 MXN/mes. La comunidad actual está formada por egresados de uHüb A.C. Si eres nuevo, conversemos para confirmar tu opción de ingreso, la ruta y las condiciones antes de inscribirte.</p>
         </div>
         <aside className="inner-quote">
           <span>No vendemos contenido</span>
@@ -67,7 +67,7 @@ export default function EmprendeDiarioPage() {
         <div className="section-kicker">
           <p className="eyebrow">Voces de Emprende Diario</p>
           <h2>El acompañamiento continúa.</h2>
-          <p>Omar y Mary participaron primero en programas de uHub A.C. Hoy cuentan qué encuentran en la membresía.</p>
+          <p>Omar y Mary participaron primero en programas de uHüb A.C. Hoy cuentan qué encuentran en la membresía.</p>
         </div>
         <figure className="membership-voice">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -75,7 +75,7 @@ export default function EmprendeDiarioPage() {
           <div>
             <span className="eyebrow">Seguimiento y disciplina</span>
             <blockquote>“Las reuniones grupales mensuales, además de los constantes seguimientos semanales, contribuyen a mantener una disciplina personal que se ve reflejada en los avances que vamos adquiriendo en nuestras iniciativas y en el transcurrir del tiempo.”</blockquote>
-            <figcaption><strong>Omar Gómez</strong><span>Miembro de Emprende Diario · Egresado de uHub A.C.</span></figcaption>
+            <figcaption><strong>Omar Gómez</strong><span>Miembro de Emprende Diario · Egresado de uHüb A.C.</span></figcaption>
           </div>
         </figure>
         <figure className="membership-voice membership-voice-reverse">
@@ -84,7 +84,7 @@ export default function EmprendeDiarioPage() {
           <div>
             <span className="eyebrow">Retos, comunidad y decisiones</span>
             <blockquote>“Cuando empecé a involucrarme más en la membresía y ser constante, volví a sentirme acompañada y orientada. Escuchar experiencias de otros emprendedores y hacer los retos me ayudó a tener más visión y tomar mejores decisiones para mi proyecto.”</blockquote>
-            <figcaption><strong>Mary Torres · V&amp;T Distribuidores</strong><span>Miembro de Emprende Diario · Egresada de uHub A.C.</span></figcaption>
+            <figcaption><strong>Mary Torres · V&amp;T Distribuidores</strong><span>Miembro de Emprende Diario · Egresada de uHüb A.C.</span></figcaption>
           </div>
         </figure>
       </section>
@@ -116,7 +116,7 @@ export default function EmprendeDiarioPage() {
               target="_blank"
               rel="noreferrer"
             >
-              Solicitar ingreso a Ritmo <Arrow />
+              Solicitar ingreso a Ritmo <Arrow external />
             </a>
           </article>
           <article className="featured-option">
@@ -136,7 +136,7 @@ export default function EmprendeDiarioPage() {
         </div>
       </section>
 
-      <section className="inner-closing"><div><p className="eyebrow">Si primero quieres conocernos</p><h2>Una historia, un reto y una pregunta cada lunes.</h2><p>Lunes 1-1-1 es gratuito. Empieza con una acción para tu semana.</p></div><a className="text-link" href={lunesSubscription}>Recibir Lunes 1-1-1 <Arrow /></a></section>
+      <section className="inner-closing"><div><p className="eyebrow">Si primero quieres conocernos</p><h2>Una historia, un reto y una pregunta cada lunes.</h2><p>Lunes 1-1-1 es gratuito. Empieza con una acción para tu semana.</p></div><a className="text-link" href={lunesSubscription}>Recibir Lunes 1-1-1 <Arrow external /></a></section>
       </main>
       <SiteFooter />
     </>

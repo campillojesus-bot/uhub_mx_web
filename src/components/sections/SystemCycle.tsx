@@ -22,7 +22,7 @@ export function SystemCycle() {
       <div className="mx-auto mt-14 max-w-[820px] px-6">
         <div className="rounded-xl bg-red-uhub px-8 py-7 text-center">
           <div className="font-display text-[0.82rem] font-black uppercase tracking-[0.16em] text-white/85">
-            Sistema uHub
+            Sistema uHüb
           </div>
           <p className="text-balance mx-auto mt-2 max-w-[640px] font-display text-xl font-extrabold leading-snug text-white">
             El ciclo no termina. Cada vez que inicias algo nuevo, vuelves a

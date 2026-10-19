@@ -10,8 +10,8 @@ export const whatsappOrganizations =
 export const lunesSubscription =
   "https://uhub.kit.com/b3786d63e8";
 
-export function Arrow() {
-  return <span aria-hidden="true">↗</span>;
+export function Arrow({ external = false }: { external?: boolean }) {
+  return <span aria-hidden="true">{external ? "↗" : "→"}</span>;
 }
 
 export function Logo({ compact = false }: { compact?: boolean }) {
@@ -21,7 +21,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
     <img
       className={`brand-logo${compact ? " brand-logo-compact" : ""}`}
       src="/uhub-logo-original.png"
-      alt="uHub, Centro de Desarrollo Emprendedor"
+      alt="uHüb, Centro de Desarrollo Emprendedor"
       width="2048"
       height="908"
     />
@@ -35,7 +35,7 @@ export function SiteHeader() {
         Saltar al contenido
       </a>
       <header className="uhub-header" id="cabecera">
-        <Link href="/" className="logo-link" aria-label="uHub, inicio">
+        <Link href="/" className="logo-link" aria-label="uHüb, inicio">
           <Logo compact />
         </Link>
         <SiteNavigation />
@@ -49,7 +49,7 @@ export function SiteFooter() {
     <footer className="uhub-footer">
       <div className="uhub-footer-top">
         <div className="uhub-footer-brand">
-          <Link href="/" aria-label="uHub, inicio">
+          <Link href="/" aria-label="uHüb, inicio">
             <Logo />
           </Link>
           <p>
@@ -68,13 +68,13 @@ export function SiteFooter() {
           <Link href="/organizaciones#talleres">Talleres y capacitación</Link>
           <Link href="/universidades">Universidades</Link>
           <Link href="/como-lo-hacemos">Cómo lo hacemos</Link>
-          <Link href="/programa">Programa uHub A.C.</Link>
+          <Link href="/programa">Programa uHüb A.C.</Link>
         </div>
         <div className="uhub-footer-column">
-          <span>Conecta con uHub</span>
+          <span>Conecta con uHüb</span>
           <Link href="/mentorclass">MentorClass</Link>
           <Link href="/test">Test del cuadrante</Link>
-          <Link href="/mentores">Red uHub</Link>
+          <Link href="/mentores">Red uHüb</Link>
           <Link href="/nosotros">Nosotros</Link>
           <a href={lunesSubscription}>Lunes 1-1-1</a>
         </div>
@@ -82,7 +82,7 @@ export function SiteFooter() {
           <span>Hablemos</span>
           <a href="mailto:rodrigo@uhub.mx">rodrigo@uhub.mx</a>
           <a href={whatsappGeneral} target="_blank" rel="noreferrer">
-            WhatsApp <Arrow />
+            WhatsApp <Arrow external />
           </a>
           <a href="mailto:rodrigo@uhub.mx?subject=Consulta%20de%20avisos%20legales">
             Consultar avisos legales
@@ -90,9 +90,9 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="uhub-footer-bottom">
-        <span>© {new Date().getFullYear()} uHub</span>
+        <span>© {new Date().getFullYear()} uHüb</span>
         <span>Emprender es humano.</span>
-        <a href="#cabecera">Volver arriba ↑</a>
+        <a href="#cabecera">Volver arriba →</a>
       </div>
     </footer>
   );

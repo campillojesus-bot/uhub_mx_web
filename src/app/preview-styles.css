@@ -491,10 +491,11 @@ footer {
 .inner-closing h2 { max-width: 940px; }
 
 .membership-options { background: var(--light); }
-.option-grid { margin-top: 70px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.option-grid article { min-height: 620px; padding: clamp(40px, 5vw, 70px); display: flex; flex-direction: column; align-items: flex-start; background: white; }
+.option-grid { margin-top: 70px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.option-grid article { min-width: 0; min-height: 620px; padding: clamp(40px, 5vw, 70px); display: flex; flex-direction: column; align-items: flex-start; background: white; }
 .option-grid article > span { color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
 .option-grid h3 { margin: 70px 0 14px; font-size: clamp(38px, 4vw, 62px); letter-spacing: -0.05em; line-height: 1; }
+.option-grid .featured-option h3 { font-size: clamp(24px, 2.3vw, 36px); max-width: 100%; }
 .option-grid h3 small { font-family: "Inter", sans-serif; font-size: 13px; letter-spacing: 0; }
 .option-grid p { margin: 0; color: #696b76; line-height: 1.7; }
 .option-grid ul { margin: 38px 0 50px; padding-left: 19px; color: #5e606b; line-height: 2; }
@@ -861,7 +862,7 @@ footer {
   font-family: var(--font-montserrat), Arial, sans-serif;
   font-size: 16px;
   letter-spacing: -0.03em;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
 }
 .test-matrix-summary > span:nth-child(3) {
   margin-top: 8px;

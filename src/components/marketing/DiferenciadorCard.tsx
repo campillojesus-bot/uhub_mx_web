@@ -17,7 +17,7 @@ export function DiferenciadorCard() {
     <div className="grid gap-6 rounded-xl border border-border-subtle bg-white p-6 shadow-[0_1px_3px_rgba(71,72,85,0.12),0_1px_2px_rgba(71,72,85,0.08)] sm:grid-cols-2 sm:p-8">
       <div>
         <h3 className="font-display text-sm font-extrabold uppercase tracking-[0.1em] text-gray-dark/80">
-          uHub NO es
+          uHüb NO es
         </h3>
         <ul className="mt-4 space-y-3">
           {noEs.map((item) => (
@@ -35,7 +35,7 @@ export function DiferenciadorCard() {
       </div>
       <div>
         <h3 className="font-display text-sm font-extrabold uppercase tracking-[0.1em] text-red-uhub">
-          uHub SÍ es
+          uHüb SÍ es
         </h3>
         <ul className="mt-4 space-y-3">
           {siEs.map((item) => (
