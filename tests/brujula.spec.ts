@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.use({ baseURL: "http://127.0.0.1:3000" });
+test.use({ baseURL: "http://127.0.0.1:3000", screenshot: "only-on-failure", trace: "retain-on-failure" });
 
 const cases = [
   { name: "idea en móvil 360", context: "idea", width: 360, values: [5,5,2,2,1,1,4,4], priority: "Agua" },
@@ -31,11 +31,12 @@ for (const scenario of cases) {
     await answerAll(page, scenario.values);
     await expect(resultsButton).toBeEnabled();
     await resultsButton.click();
+    await expect(page.locator("#br-experience-title")).toBeFocused();
     await expect(page.locator(".br-insight h3")).toContainText(scenario.priority);
     await expect(page.locator(".br-action-plan li")).toHaveCount(3);
     await expect(page.locator(".br-radar svg")).toBeVisible();
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-    await page.getByRole("button", {name:/Copiar diagnóstico y acciones/}).click();
+    await page.getByRole("button", {name:/Copiar resultado y acciones/}).click();
     await expect(page.getByRole("status")).toContainText("Se copiaron");
     const copied = await page.evaluate(() => navigator.clipboard.readText());
     expect(copied).toContain("BRÚJULA EMPRENDEDORA · uHüb");
@@ -62,7 +63,7 @@ test("empate: el usuario elige el área y el plan/copiar reflejan la selección"
   await page.getByRole("group",{name:"Elegir área empatada"}).getByRole("button",{name:"Tierra"}).click();
   await expect(page.locator(".br-insight h3")).toContainText("Tierra");
   await expect(page.locator(".br-action-plan")).toContainText("Anota dos habilidades");
-  await page.getByRole("button",{name:/Copiar diagnóstico y acciones/}).click();
+  await page.getByRole("button",{name:/Copiar resultado y acciones/}).click();
   const copied = await page.evaluate(() => navigator.clipboard.readText());
   expect(copied).toContain("Prioridad orientativa: Tierra");
   expect(copied).toContain("Prioridades empatadas: Fuego, Tierra");
@@ -77,8 +78,8 @@ test("movimiento reducido al avanzar y regresar; cambiar situación limpia respu
   await page.emulateMedia({reducedMotion:"reduce"});
   await page.goto("/brujula");
   await page.evaluate(()=>{
-    window.scrollTo = (options: ScrollToOptions | number) => {
-      document.documentElement.setAttribute("data-scroll-behavior",typeof options==="number"?"numeric":options.behavior??"none");
+    Element.prototype.scrollIntoView = (options?: ScrollIntoViewOptions | boolean) => {
+      document.documentElement.setAttribute("data-scroll-behavior",typeof options === "object" ? options.behavior ?? "none" : "numeric");
     };
   });
   await answerAll(page,[3,3,3,3,3,3,3,3]);

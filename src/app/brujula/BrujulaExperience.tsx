@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { lunesSubscription } from "../components";
+import { journeyHref, supports, type SupportId } from "@/lib/journey-context";
 
 type Context = "idea" | "ventas";
 type Axis = "fuego" | "tierra" | "agua" | "aire";
@@ -73,7 +75,7 @@ function blankAnswers(): Answers {
   return { fuego: [null, null], tierra: [null, null], agua: [null, null], aire: [null, null] };
 }
 
-const labels = ["Nada", "Poco", "A veces", "Bastante", "Mucho"] as const;
+const labels = ["Nada", "Poco", "Algo", "Bastante", "Mucho"] as const;
 
 function Compass({ values }: { values: { id: Axis; score: number }[] }) {
   const score = (id: Axis) => values.find((v) => v.id === id)?.score ?? 0;
@@ -121,6 +123,16 @@ export function BrujulaExperience() {
   const [screen, setScreen] = useState<"questions" | "results">("questions");
   const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
   const [chosenPriority, setChosenPriority] = useState<Axis | null>(null);
+  const [supportId, setSupportId] = useState<SupportId | undefined>();
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const previousScreen = useRef(screen);
+  useEffect(() => {
+    if (previousScreen.current === screen) return;
+    previousScreen.current = screen;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    headingRef.current?.focus({ preventScroll: true });
+    headingRef.current?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+  }, [screen]);
 
   const filled = DIMENSIONS.reduce((total, d) => total + answers[d.id].filter(v => v !== null).length, 0);
   const scored = DIMENSIONS.map(d => ({
@@ -135,6 +147,8 @@ export function BrujulaExperience() {
   const strengthLabel = strongest.length === 4 ? "Las cuatro áreas están al mismo nivel" : strongest.map(item => DIMENSIONS.find(d => d.id === item.id)?.name).join(", ");
   const topScore = sorted[0].score.toFixed(1);
   const selectedContext = context === "idea" ? "Estoy desarrollando una idea" : "Ya tengo clientes o ventas";
+  const selectedSupport = supports.find(item => item.id === supportId);
+  const nextContext = { stage: priority.id, situation: context, support: supportId, source: "brujula" as const };
 
   function chooseContext(next: Context) {
     if (next === context) return;
@@ -143,6 +157,7 @@ export function BrujulaExperience() {
     setScreen("questions");
     setCopyState("idle");
     setChosenPriority(null);
+    setSupportId(undefined);
   }
   function answer(axis: Axis, index: 0 | 1, value: number) {
     setAnswers(previous => ({
@@ -152,10 +167,6 @@ export function BrujulaExperience() {
     setCopyState("idle");
     setChosenPriority(null);
   }
-  function jumpToTop() {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
-  }
   const summary = [
     "BRÚJULA EMPRENDEDORA · uHüb",
     selectedContext,
@@ -164,6 +175,7 @@ export function BrujulaExperience() {
     tied.length > 1 ? "Prioridades empatadas: " + tied.map(v => DIMENSIONS.find(d => d.id === v.id)?.name).join(", ") : "",
     "Mi reto de los próximos 7 días:",
     ...priority.actions[context].map((action,i) => (i + 1) + ". " + action),
+    ...(selectedSupport ? ["Apoyo que me interesa: " + selectedSupport.label + ".", selectedSupport.suggestion] : []),
     "Resultado de autopercepción; no es una evaluación validada.",
   ].join("\n");
 
@@ -202,7 +214,7 @@ export function BrujulaExperience() {
         {screen === "questions" ? (
           <>
             <div className="br-panel-heading">
-              <div><p className="br-eyebrow">Antes de comenzar</p><h2 id="br-experience-title">¿En qué momento te encuentras?</h2><p>Las preguntas se adaptan a tu situación. Si cambias de opción, tus respuestas se reiniciarán.</p></div>
+              <div><p className="br-eyebrow">Antes de comenzar</p><h2 id="br-experience-title" ref={headingRef} tabIndex={-1}>¿En qué momento te encuentras?</h2><p>Las preguntas se adaptan a tu situación. Si cambias de opción, tus respuestas se reiniciarán.</p></div>
               <div className="br-progress"><strong>{filled}<small> / 8</small></strong><span>respondidas</span></div>
             </div>
             <div className="br-context" role="group" aria-label="Momento de tu proyecto">
@@ -243,14 +255,14 @@ export function BrujulaExperience() {
             </div>
             <div className="br-complete">
               <div><strong>{filled === 8 ? "Ya puedes ver tu brújula." : "Responde las ocho afirmaciones."}</strong><p>Tu resultado orienta una conversación y una primera práctica; no te pone una etiqueta.</p></div>
-              <button className="br-primary" type="button" disabled={filled !== 8} onClick={() => { setScreen("results"); setCopyState("idle"); jumpToTop(); }}>Ver mi brújula <span aria-hidden="true">→</span></button>
+              <button className="br-primary" type="button" disabled={filled !== 8} onClick={() => { setScreen("results"); setCopyState("idle"); }}>Ver mi brújula <span aria-hidden="true">→</span></button>
             </div>
           </>
         ) : (
           <>
             <div className="br-results-heading">
               <p className="br-eyebrow">Tu punto de partida / {selectedContext}</p>
-              <h2 id="br-experience-title">No necesitas hacerlo todo.<br/><em>Necesitas saber qué trabajar primero.</em></h2>
+              <h2 id="br-experience-title" ref={headingRef} tabIndex={-1}>No necesitas hacerlo todo.<br/><em>Necesitas saber qué trabajar primero.</em></h2>
               <p>Esta es tu fotografía de hoy, basada en lo que tú mismo respondiste. Puedes regresar y cambiar tus respuestas.</p>
             </div>
             <div className="br-result-layout">
@@ -286,14 +298,17 @@ export function BrujulaExperience() {
               <h3 style={{color: priority.color}}>{priority.name} <span>· {priority.stage}</span></h3>
               <p>{priority.interpretation}</p>
               <div className="br-insight-meta"><span>Autopercepción en esta área: {topScore} / 5</span><span>Fortaleza relativa: {strengthLabel}</span></div>
+              <details className="br-explanation"><summary>¿Por qué aparece esta área?</summary><p>Promediamos tus dos respuestas de cada área. Esta tiene {tied.length > 1 ? "una de las puntuaciones más bajas, empatada con otras áreas" : "la puntuación más baja de tus respuestas"}. La usamos para proponer una práctica; no para medir tu capacidad ni asignarte un plan.</p><ul>{priority.questions[context].map((question, index) => <li key={question}><span>{question}</span><strong>{answers[priority.id][index]} / 5</strong></li>)}</ul><p>Si todas las áreas tienen la misma puntuación, no hay una prioridad diferenciada: elige cuál te resulta útil trabajar. Puedes explorar cualquier etapa del recorrido.</p></details>
             </div>
             <div className="br-action-plan">
               <div><p className="br-eyebrow">Emprende Diario / Un paso a la vez</p><h3>Tres acciones para tus próximos 7 días</h3><p>Estas propuestas son ejemplos para iniciar. Puedes ajustarlas a tu situación y revisarlas con alguien que te acompañe.</p></div>
               <ol>{priority.actions[context].map((action,i)=><li key={action}><span>0{i+1}</span><p>{action}</p></li>)}</ol>
             </div>
+            <fieldset className="br-support-picker"><legend>¿Qué te ayudaría a ponerlo en práctica?</legend><p>Opcional. Esta elección no cambia tus puntuaciones.</p><div>{supports.map(item => <button type="button" key={item.id} aria-pressed={supportId === item.id} onClick={() => { setSupportId(supportId === item.id ? undefined : item.id); setCopyState("idle"); }}>{item.label}</button>)}</div><p aria-live="polite">{selectedSupport?.suggestion ?? "Puedes continuar sin elegir un apoyo."}</p></fieldset>
+            <div className="br-continue"><div><h3>Prueba cómo sería trabajar esta prioridad.</h3><p>El recorrido se abrirá en {priority.stage}. Podrás explorar una acción, qué registrar y cómo revisar lo que ocurra con acompañamiento.</p></div><Link className="br-primary" href={journeyHref("/como-lo-hacemos", nextContext, "etapas")}>Explorar mi siguiente paso <span aria-hidden="true">→</span></Link></div>
             <div className="br-results-actions">
-              <button type="button" className="br-primary" onClick={copySummary}>{copyState === "copied" ? "Resultado copiado ✓" : "Copiar diagnóstico y acciones"}</button>
-              <button type="button" className="br-secondary" onClick={() => { setScreen("questions"); jumpToTop(); }}>Modificar respuestas</button>
+              <button type="button" className="br-secondary" onClick={copySummary}>{copyState === "copied" ? "Resultado copiado ✓" : "Copiar resultado y acciones"}</button>
+              <button type="button" className="br-secondary" onClick={() => setScreen("questions")}>Modificar respuestas</button>
             </div>
             {copyState === "copied" && <p role="status" className="br-copy-success">Se copiaron tus cuatro puntuaciones y las tres acciones para esta semana.</p>}
             {copyState === "failed" && <p role="status" className="br-copy-failure">No se pudo copiar automáticamente. Tu navegador puede necesitar permisos de portapapeles.</p>}
@@ -303,9 +318,9 @@ export function BrujulaExperience() {
 
       <footer className="br-outro">
         <div><p className="br-eyebrow">El siguiente paso no lo das solo</p><h2>La brújula señala una dirección.<br/><em>El acompañamiento te ayuda a avanzar.</em></h2></div>
-        <Link href="/emprende-diario">Conoce Emprende Diario <span aria-hidden="true">→</span></Link>
+        <div className="br-outro-links"><Link href={screen === "results" ? journeyHref("/emprende-diario", nextContext, "ingreso") : "/emprende-diario#ingreso"}>Conocer las opciones de ingreso <span aria-hidden="true">→</span></Link><a href={lunesSubscription}>Primero quiero recibir Lunes 1-1-1 <span aria-hidden="true">↗</span></a><small>Gratis, por correo. La suscripción es opcional y se completa en Kit.</small></div>
       </footer>
-      <p className="br-disclaimer">Prototipo orientativo de autopercepción, no un instrumento psicométrico validado ni una medición de impacto. Tus respuestas no se envían ni se guardan en un servidor desde esta página. La brújula no sustituye /test ni la conversación con un mentor.</p>
+      <p className="br-disclaimer">Es un punto de partida basado en tus respuestas, no una evaluación validada ni una medición de impacto. Tus respuestas y puntuaciones se calculan en este navegador y no se envían ni guardan en un servidor. Si continúas al recorrido, llevamos solo el área, la situación y el apoyo elegidos; no tus respuestas ni puntuaciones. El resultado no determina tu perfil ni un plan de pago.</p>
     </div>
   );
 }

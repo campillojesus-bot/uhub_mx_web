@@ -1,5 +1,6 @@
-import { pageMetadata } from "../institutional";
-import { Arrow, SiteFooter, SiteHeader, whatsappOrganizations } from "../components";
+import { pageMetadata, contactFor, InstitutionalNextStep } from "../institutional";
+import { Arrow, SiteFooter, SiteHeader } from "../components";
+const whatsappOrganizations = contactFor("Hola, represento una empresa y quiero solicitar una propuesta de uHüb para mi equipo.");
 
 export const metadata = pageMetadata("Talleres y acompañamiento para organizaciones", "Talleres uHub × Biné, innovación empresarial para cámaras, autosostenibilidad de OSC y seguimiento para fundaciones.", "/organizaciones");
 
@@ -24,7 +25,7 @@ export default function OrganizationsPage() {
           <h1>Las próximas mejoras pueden empezar en tu equipo.</h1>
           <p>Ayudamos a las personas a detectar oportunidades, proponer soluciones y llevarlas a la práctica. Con talleres, capacitación y acompañamiento sobre los retos reales de tu organización.</p>
           <div className="route-actions">
-            <a className="button button-primary" href={whatsappOrganizations} target="_blank" rel="noreferrer">Cuéntanos qué necesita tu equipo <Arrow external /></a>
+            <a className="button button-primary" href={whatsappOrganizations} target="_blank" rel="noreferrer">Solicitar una propuesta <Arrow external /></a>
             <a className="text-link" href="#talleres">Explorar talleres →</a>
           </div>
         </div>
@@ -91,7 +92,7 @@ export default function OrganizationsPage() {
         </div>
         <p className="service-source-note">Fuente: Reporte de intraemprendimiento FICOSEC–uHüb, casos de Mujeres Resilientes, Casa Amiga Esther y Tenda de Cristo. Son resultados de esa experiencia; cada nueva colaboración acuerda su propio alcance.</p>
       </section>
-      <section className="inner-closing"><div><p className="eyebrow">Una conversación para empezar</p><h2>¿Qué te gustaría que tu equipo pudiera hacer mejor?</h2></div><a className="button button-primary" href={whatsappOrganizations} target="_blank" rel="noreferrer">Hablar con uHüb <Arrow external /></a></section>
+      <section className="inner-closing"><div><p className="eyebrow">Una conversación para empezar</p><h2>¿Qué te gustaría que tu equipo pudiera hacer mejor?</h2><InstitutionalNextStep /></div><a className="button button-primary" href={whatsappOrganizations} target="_blank" rel="noreferrer">Solicitar una propuesta <Arrow external /></a></section>
     </main>
     <SiteFooter />
   </>;

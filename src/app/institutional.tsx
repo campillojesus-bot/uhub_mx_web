@@ -1,12 +1,16 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Arrow, SiteFooter, SiteHeader } from "./components";
+import "./next-steps.css";
 
 export const siteOrigin = "https://uhub.mx";
 export function pageMetadata(title: string, description: string, path: string): Metadata {
   return { title, description, alternates: { canonical: path }, openGraph: { title: `${title} · uHüb`, description, url: path, siteName: "uHüb", locale: "es_MX", type: "website", images: [{ url: `${siteOrigin}/og.png`, width: 1200, height: 630, alt: "uHüb · Emprender es en quién te conviertes" }] }, twitter: { card: "summary_large_image", title: `${title} · uHüb`, description, images: [`${siteOrigin}/og.png`] } };
 }
-export const contactFor = (message: string) => `https://wa.me/526142346499?text=${encodeURIComponent(message)}`;
+export const contactFor = (message: string) => `https://wa.me/526142346499?text=${encodeURIComponent(message + "\n\nInstitución:\nReto que queremos trabajar:\nQuiénes participarían:\nCalendario que tenemos en mente:\n\nQueremos confirmar el alcance, el formato y la inversión antes de decidir.")}`;
+export function InstitutionalNextStep() {
+  return <p className="institutional-next-step">El botón abre un mensaje que puedes completar con tu institución, el reto, las personas participantes y tu calendario. Esa información permite preparar la conversación sobre alcance, formato e inversión.</p>;
+}
 export function InstitutionalShell({ children }: { children: ReactNode }) {
   return <><SiteHeader /><main id="contenido" className="institutional-page">{children}</main><SiteFooter /></>;
 }
@@ -14,5 +18,5 @@ export function InstitutionalHero({ label, title, intro, contact, cta, facts, st
   return <section className="institutional-hero"><div><a className="institutional-back" href="/organizaciones">uHüb para organizaciones /</a><p className="eyebrow">{label}</p><h1>{title}</h1><p className="institutional-intro">{intro}</p><a className="button button-primary" href={contact} target="_blank" rel="noreferrer">{cta} <Arrow external /></a></div><aside className="institutional-facts"><span>El formato de referencia</span><dl>{facts.map(([n,t]) => <div key={n}><dt>{n}</dt><dd>{t}</dd></div>)}</dl><p>{status}</p></aside></section>;
 }
 export function InstitutionalClosing({ title, text, contact, cta, pdf }: { title: string; text: string; contact: string; cta: string; pdf: string }) {
-  return <section className="institutional-closing"><div><p className="eyebrow">La siguiente conversación</p><h2>{title}</h2><p>{text}</p></div><div><a className="button button-primary" href={contact} target="_blank" rel="noreferrer">{cta} <Arrow external /></a><a className="text-link" href={pdf} target="_blank" rel="noreferrer">Descargar ficha para compartir · PDF <Arrow /></a><a className="institutional-email" href="mailto:rodrigo@uhub.mx">También puedes escribir a rodrigo@uhub.mx</a></div></section>;
+  return <section className="institutional-closing"><div><p className="eyebrow">La siguiente conversación</p><h2>{title}</h2><p>{text}</p><InstitutionalNextStep /></div><div><a className="button button-primary" href={contact} target="_blank" rel="noreferrer">{cta} <Arrow external /></a><a className="text-link" href={pdf} target="_blank" rel="noreferrer">Descargar ficha para compartir · PDF <Arrow /></a><a className="institutional-email" href="mailto:rodrigo@uhub.mx">También puedes escribir a rodrigo@uhub.mx</a></div></section>;
 }

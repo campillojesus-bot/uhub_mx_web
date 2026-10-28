@@ -141,4 +141,25 @@
 @media (min-width: 680px) { .jr-section { width: min(1220px, calc(100% - 80px)); } .jr-mode-options { grid-template-columns: 1fr 1fr; } .jr-stage-symbol { width: 53px; height: 53px; } .jr-stage-symbol svg { width: 30px; height: 30px; } .jr-stage-meta { font-size: 11px; } .jr-stage-indicator { font-size: 11px; } .jr-map { padding: 30px; } .jr-stage-panel { padding: 35px 32px 0; } .jr-notebook { padding: 30px; } .jr-context-tabs button { padding: 20px; font-size: 14px; } .jr-context-panel { grid-template-columns: .9fr 1.1fr; gap: 32px; } .jr-context-footer { grid-column: 1 / -1; } .jr-complement { gap: 35px; } }
 @media (min-width: 1020px) { .jr-section { padding-block: 85px; } .jr-hero { grid-template-columns: minmax(0, 1.65fr) minmax(0, .8fr); align-items: center; gap: 70px; padding-block: 88px 78px; } .jr-hero-aside { margin-top: 45px; } .jr-hero-intro { font-size: 17px; } .jr-workspace { grid-template-columns: .9fr 1.1fr; } .jr-map { min-height: 740px; } .jr-trail { max-height: 620px; } .jr-stage-panel { padding: 36px 40px 0; } .jr-rehearsal { grid-template-columns: .9fr 1.1fr; gap: 65px; padding-top: 85px; } .jr-context-panel { gap: 45px; } .jr-base-mentor { padding: 38px; } .jr-context-footer { flex-direction: row; justify-content: space-between; align-items: center; } .jr-context-footer .jr-link { max-width: 285px; flex-shrink: 0; } .jr-continuity { grid-template-columns: 1fr 1fr; column-gap: 60px; align-items: start; } .jr-evidence { grid-column: 1 / -1; max-width: 900px; } .jr-complement { padding-block: 0 85px; } .jr-closing { flex-direction: row; align-items: center; justify-content: space-between; } }
 @keyframes jr-reveal { from { opacity: .6; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+.jr-challenge-picker { border: 0; margin: 28px 0 0; padding: 0; min-width: 0; scroll-margin-top: 110px; }
+.jr-challenge-picker legend { font-family: var(--font-display); font-weight: 800; font-size: clamp(21px,2.5vw,30px); margin-bottom: 10px; }
+.jr-challenge-picker > p { font-size: 14px; max-width: 660px; }
+.jr-challenge-options { display: grid; margin-top: 24px; border-top: 1px solid var(--jr-line); }
+.jr-challenge-options button { display: flex; align-items: center; gap: 16px; text-align: left; background: white; border: 0; border-bottom: 1px solid var(--jr-line); padding: 20px 12px; min-height: 88px; }
+.jr-challenge-options button > span:first-child { color: var(--red-uhub); font-size: 11px; align-self: flex-start; padding-top: 4px; }
+.jr-challenge-options button > span:nth-child(2) { flex: 1; }
+.jr-challenge-options strong { display: block; font-size: 15px; font-weight: 700; line-height: 1.4; }
+.jr-challenge-options small { display: block; font-size: 12px; line-height: 1.6; margin-top: 6px; }
+.jr-challenge-options button[aria-pressed=true] { background: var(--pink-soft); box-shadow: inset 3px 0 var(--red-uhub); }
+.jr-challenge-options button:hover { box-shadow: inset 3px 0 var(--red-uhub); }
+.jr-starting-point { padding: 20px; background: var(--gray-light); margin: 18px 0 26px; font-size: 14px; }
+.jr-starting-point p + p { margin-top: 12px; }
+.jr-starting-point > strong + p { margin-top: 8px; }
+.jr-next-step { border-top: 1px solid var(--jr-line); padding-top: 32px; margin-top: 45px; display: grid; gap: 24px; }
+.jr-next-step h3 { font-size: clamp(22px,2.6vw,30px); font-weight: 800; margin: 10px 0 15px; }
+.jr-next-step p { font-size: 14px; max-width: 580px; }
+.jr-next-step > div:last-child { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; justify-content: center; }
+.jr-next-step .button { white-space: normal; font-size: 14px; }
+.jr-next-step small { font-size: 12px; }
+@media(min-width: 760px) { .jr-challenge-options { grid-template-columns: 1fr 1fr; }.jr-challenge-options button:nth-child(odd) { border-right: 1px solid var(--jr-line); }.jr-next-step { grid-template-columns: 1.2fr 1fr; gap: 40px; } }
 @media (prefers-reduced-motion: reduce) { .journey-page *, .journey-page *::before, .journey-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

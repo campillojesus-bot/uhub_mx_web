@@ -1,0 +1,23 @@
+.membership-entry { scroll-margin-top: 110px; }
+.entry-steps { list-style: none; padding: 0; margin: 32px 0; display: grid; gap: 24px; }
+.entry-steps li { border-top: 1px solid var(--border-subtle); padding-top: 18px; }
+.entry-steps span { color: var(--red-uhub); font-size: .8rem; font-weight: 800; }
+.entry-steps h3 { font-size: 1.15rem; font-weight: 800; margin: 10px 0; }
+.entry-steps p { font-size: .94rem; line-height: 1.65; }
+.entry-request { padding: clamp(20px,4vw,40px); background: var(--gray-light); display: grid; gap: 24px; border-left: 4px solid var(--red-uhub); }
+.entry-request h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 12px; }
+.entry-request p { line-height: 1.65; }
+.entry-share { display: flex; align-items: center; gap: 12px; min-height: 48px; margin: 15px 0; cursor: pointer; font-size: .9rem; }
+.entry-share input { flex: none; width: 20px; height: 20px; accent-color: var(--red-uhub); }
+.entry-message { white-space: pre-line; padding: 20px; border: 1px solid var(--border-subtle); background: white; margin: 18px 0 0; font-size: .9rem; line-height: 1.8; }
+.entry-request-action { align-self: center; }
+.entry-request-action .button { white-space: normal; text-align: center; }
+.entry-request-action p { font-size: .8rem; margin-top: 14px; }
+.entry-faq { border-block: 1px solid var(--border-subtle); padding: 20px 0; margin-top: 28px; }
+.entry-faq summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.entry-faq summary::after { content: "+"; margin-left: auto; color: var(--red-uhub); font-size: 1.5rem; }
+.entry-faq[open] summary::after { content: "−"; }
+.entry-faq p { margin: 12px 0 16px; max-width: 700px; line-height: 1.7; }
+.institutional-next-step { margin-top: 18px; font-size: .9rem; line-height: 1.7; max-width: 650px; }
+.entry-share:has(input:focus-visible), .entry-faq summary:focus-visible { outline: 3px solid var(--burgundy); outline-offset: 4px; }
+@media(min-width: 760px) { .entry-steps { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px; } .entry-request { grid-template-columns: 1.5fr 1fr; gap: 40px; } }
