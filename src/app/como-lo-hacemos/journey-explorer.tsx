@@ -1,8 +1,12 @@
 "use client";
 
 import { useRef, useState, type KeyboardEvent } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { Arrow } from "../components";
+import { lunesSubscription } from "../components";
 import { journeyStages, type JourneyMode } from "./journey-data";
+import { challenges, supports, stageKeys, readJourneyContext, journeyHref, type JourneyContext, type ChallengeId } from "@/lib/journey-context";
 
 function StageGlyph({ index }: { index: number }) {
   const paths = [
@@ -15,12 +19,29 @@ function StageGlyph({ index }: { index: number }) {
 }
 
 export function JourneyExplorer() {
-  const [active, setActive] = useState(0);
-  const [mode, setMode] = useState<JourneyMode>("route");
+  const params = useSearchParams();
+  return <JourneyContent key={params.toString()} initialContext={readJourneyContext(params)} />;
+}
+
+function JourneyContent({ initialContext }: { initialContext: JourneyContext }) {
+  const firstChallenge = challenges.find(item => item.id === initialContext.challenge);
+  const firstStage = initialContext.stage ?? firstChallenge?.stage;
+  const [active, setActive] = useState(firstStage ? stageKeys.indexOf(firstStage) : 0);
+  const [mode, setMode] = useState<JourneyMode>(firstChallenge ? "challenge" : "route");
+  const [challengeId, setChallengeId] = useState<ChallengeId | undefined>(initialContext.challenge);
   const [outcome, setOutcome] = useState<"done" | "stuck" | null>(null);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const stage = journeyStages[active];
+  const challenge = challenges.find(item => item.id === challengeId);
+  const support = supports.find(item => item.id === initialContext.support);
+  const currentContext = { ...initialContext, stage: stageKeys[active], challenge: challengeId };
   const selectStage = (index: number) => { setActive(index); setOutcome(null); };
+  function chooseChallenge(id: ChallengeId) {
+    const selected = challenges.find(item => item.id === id)!;
+    setChallengeId(id);
+    setMode("challenge");
+    selectStage(stageKeys.indexOf(selected.stage));
+  }
   function navigate(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     const keys: Record<string, number> = { ArrowRight: (index + 1) % 4, ArrowDown: (index + 1) % 4, ArrowLeft: (index + 3) % 4, ArrowUp: (index + 3) % 4, Home: 0, End: 3 };
     if (event.key in keys) { event.preventDefault(); const next = keys[event.key]; selectStage(next); buttons.current[next]?.focus(); }
@@ -28,6 +49,15 @@ export function JourneyExplorer() {
 
   return <section className="jr-section jr-explorer" id="etapas" aria-labelledby="journey-heading">
     <div className="jr-section-heading"><p className="jr-eyebrow">01 / Elige tu recorrido</p><h2 id="journey-heading">Cuatro etapas a las que puedes volver.</h2><p>Descubrir, Aterrizar, Adaptar y Crecer te ayudan a ubicar qué necesitas trabajar. El recorrido es cíclico porque puedes volver a estas etapas cuando cambia tu proyecto o tu situación. Volver no es retroceder.</p></div>
+    <fieldset className="jr-challenge-picker" id="tu-reto">
+      <legend>¿Qué quieres resolver hoy?</legend>
+      <p>Elige una situación para explorar un ejemplo. También puedes recorrer las etapas directamente.</p>
+      <div className="jr-challenge-options">{challenges.map((item, index) => <button type="button" key={item.id} aria-pressed={challengeId === item.id} onClick={() => chooseChallenge(item.id)}><span aria-hidden="true">0{index + 1}</span><span><strong>{item.title}</strong><small>{item.detail}</small></span><span aria-hidden="true">→</span></button>)}</div>
+    </fieldset>
+    <div className="jr-starting-point" aria-live="polite" aria-atomic="true">
+      {challenge ? <><strong>Tu reto: {challenge.title}.</strong><p>{challenge.reason} Abrimos una etapa como punto de partida; puedes explorar cualquiera de las cuatro.</p></> : initialContext.source === "brujula" ? <><strong>Retomamos el área que elegiste en tu Brújula.</strong><p>Abajo puedes explorar una acción y el acompañamiento en esa etapa. Tu resultado orienta la exploración; puedes cambiar de etapa cuando lo necesites.</p></> : <p>Este mapa muestra ejemplos de práctica. Elegir un reto no determina tu perfil, tu plan ni una etapa obligatoria.</p>}
+      {support && <p><strong>El apoyo que elegiste: {support.label}.</strong> {support.suggestion}</p>}
+    </div>
     <div className="jr-route-definition"><strong>La ruta guiada te orienta en la práctica.</strong><p>Propone una secuencia de actividades, recursos y acciones para trabajar las etapas. En este mapa puedes explorar ejemplos de cómo sería seguirla o trabajar sobre un reto propio.</p></div>
     <fieldset className="jr-mode-picker"><legend>¿Cómo quieres recorrerlo?</legend>
       <div className="jr-mode-options">{([
@@ -78,6 +108,10 @@ export function JourneyExplorer() {
         <div className="jr-reflection" aria-live="polite" aria-atomic="true">{outcome ? <><span className="jr-label">{outcome === "done" ? "Ahora revisas lo que aprendiste" : "Ahora ajustas el paso"}</span><p>{stage[outcome]}</p><p className="jr-reflection-record">Ese aprendizaje vuelve a tu registro de acciones y a la siguiente revisión.</p></> : <p>Elige una respuesta para ver cómo continuarías con el acompañamiento.</p>}</div>
         {outcome && <button className="jr-reset" onClick={() => setOutcome(null)}>Volver a explorar el ejemplo ↺</button>}
       </div>
+    </div>
+    <div className="jr-next-step">
+      <div><p className="jr-eyebrow">De explorar a acompañarte</p><h3>¿Quieres trabajar esto con continuidad?</h3><p>Conoce cómo se vive en Emprende Diario. Conservaremos el reto y la etapa que elegiste para preparar tu solicitud de ingreso, si decides continuar.</p></div>
+      <div><Link className="button button-primary" href={journeyHref("/emprende-diario", currentContext, "ingreso")}>Conocer mis opciones de ingreso <Arrow /></Link><a className="jr-link" href={lunesSubscription}>Primero quiero recibir Lunes 1-1-1 <Arrow external /></a><small>La suscripción es opcional y se completa en Kit.</small></div>
     </div>
   </section>;
 }

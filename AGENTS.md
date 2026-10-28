@@ -339,3 +339,19 @@ Rodrigo aprobó aclarar la relación entre las partes, conservando el diseño y 
 - El nacimiento de la A.C. tiene un hito propio en `/nosotros#asociacion-civil`. El capítulo de alianzas conserva `/nosotros#programas` y la fotografía histórica de AWE.
 - Video original autorizado por Rodrigo: https://youtu.be/SQEgU2qCA3M . Participación en American Express Leadership Academy, en inglés, 4:36 con comentarios del público. Trata del cambio de opinión sobre crear la A.C., la adaptación y el valor de habilidades y mentores. No llamarlo TED Talk ni presentarlo como historia completa o aval institucional a las ofertas actuales.
 - La miniatura es un fotograma real del archivo enviado por Rodrigo. Enlace a YouTube con flecha externa; sin reproducción automática.
+
+
+## Retos y continuidad (28 de octubre de 2026)
+
+Rodrigo aprobó conectar los retos con el recorrido existente, explicar la orientación de la Brújula y aclarar las acciones disponibles por audiencia.
+
+- Conservar el hero, sus accesos, las cuatro puertas, la rueda, el zigzag, las cifras y los testimonios. No convertir todos los enlaces en un único contacto ni añadir otro diagnóstico.
+- El selector de retos es una entrada opcional al explorador. Sugiere una etapa de ejemplo y permite cambiarla libremente. No asigna perfil, plan, precio ni una secuencia obligatoria.
+- La Brújula conserva ocho preguntas, cálculo y elección de empates. Explicar el resultado, ofrecer un apoyo opcional sin puntuación y abrir el recorrido correspondiente. Resultado abierto, sin captura obligatoria.
+- Diferenciar: cuadrante = contexto emprendedor; Brújula = prioridad orientativa; reto = qué quieres trabajar hoy; recorrido = ejemplos de cómo trabajarlo. Ninguna de estas piezas es una evaluación validada.
+- Continuidad por URL con valores permitidos: reto, etapa, situación, apoyo y origen. Nunca transportar respuestas, puntuaciones, nombres, correos o texto libre. La persona puede excluir su selección del mensaje de solicitud. No guardar selecciones en una base de datos ni en almacenamiento persistente.
+- Emprende Diario: se puede solicitar ingreso aunque la comunidad actual sea de egresados. Es una solicitud sujeta a confirmar condiciones, no inscripción automática. Ritmo conserva $399 MXN/mes; no inventar horarios, acceso abierto, pago, cancelación ni onboarding. Momentum no se convierte en contratación disponible.
+- Una acción principal por landing; Kit es continuidad opcional. Solicitar información por WhatsApp no suscribe a correos. Los botones abren mensajes editables: no se envían automáticamente ni garantizan una cita.
+- Instituciones: conservar sus landings y canales; ayudar a preparar reto, participantes y calendario antes de conversar sobre una propuesta. No publicar un formulario propio nuevo sin aviso autorizado.
+- No modificar el test del cuadrante, Google Forms de MentorClass, Kit ni Stripe. La recepción en Sheets y la conexión con Kit siguen sin verificarse de extremo a extremo.
+- Implementación en rama `mejora-retos-continuidad`, PR hacia `ajustes-raiz-v11` para revisar este cambio sobre la versión actual. No fusionar ni publicar en producción. Registrar antes/después y pendientes en el PR.

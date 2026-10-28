@@ -1,9 +1,11 @@
 import { pageMetadata } from "../institutional";
+import { Suspense } from "react";
+import { MembershipEntry } from "./membership-entry";
+import "../next-steps.css";
 import {
   Arrow,
   SiteFooter,
   SiteHeader,
-  whatsappMembership,
   lunesSubscription,
 } from "../components";
 
@@ -19,7 +21,7 @@ export default function EmprendeDiarioPage() {
           <p className="eyebrow">Emprende Diario · Una membresía de uHüb</p>
           <h1>Emprender no es un evento. Es un hábito que se sostiene.</h1>
           <p>Planeación, práctica y seguimiento para iniciar, retomar o sostener un proyecto. Por tu cuenta, junto con otras personas o desde tu trabajo: avanzas con el tiempo y los recursos que tienes.</p>
-          <div className="route-actions"><a className="button button-primary" href={whatsappMembership} target="_blank" rel="noreferrer">Solicitar ingreso a Ritmo <Arrow external /></a></div>
+          <div className="route-actions"><a className="button button-primary" href="#ingreso">Solicitar ingreso a Ritmo <Arrow /></a></div>
           <p className="membership-entry-note">Ritmo · $399 MXN/mes. La comunidad actual está formada por egresados de uHüb A.C. Si eres nuevo, conversemos para confirmar tu opción de ingreso, la ruta y las condiciones antes de inscribirte.</p>
         </div>
         <aside className="inner-quote">
@@ -112,11 +114,9 @@ export default function EmprendeDiarioPage() {
             </ul>
             <a
               className="button button-secondary"
-              href={whatsappMembership}
-              target="_blank"
-              rel="noreferrer"
+              href="#ingreso"
             >
-              Solicitar ingreso a Ritmo <Arrow external />
+              Solicitar ingreso a Ritmo <Arrow />
             </a>
           </article>
           <article className="featured-option">
@@ -136,6 +136,7 @@ export default function EmprendeDiarioPage() {
         </div>
       </section>
 
+      <Suspense fallback={<section className="inner-section" id="ingreso"><h2>Preparando tus opciones de ingreso…</h2></section>}><MembershipEntry /></Suspense>
       <section className="inner-closing"><div><p className="eyebrow">Si primero quieres conocernos</p><h2>Una historia, un reto y una pregunta cada lunes.</h2><p>Lunes 1-1-1 es gratuito. Empieza con una acción para tu semana.</p></div><a className="text-link" href={lunesSubscription}>Recibir Lunes 1-1-1 <Arrow external /></a></section>
       </main>
       <SiteFooter />
