@@ -55,34 +55,31 @@ export function SiteFooter() {
           <p>
             Centro de Desarrollo Emprendedor.
             <br />
-            Desde 2015.
+            Mentores, práctica y comunidad.
           </p>
         </div>
         <div className="uhub-footer-column">
           <span>Encuentra tu camino</span>
           <Link href="/emprende-diario">Emprende Diario</Link>
           <Link href="/organizaciones">Empresas y cámaras</Link>
-          <Link href="/organizaciones/camaras">Cámaras empresariales</Link>
-          <Link href="/organizaciones/osc">A.C. y OSC</Link>
-          <Link href="/fundaciones">Fundaciones</Link>
-          <Link href="/organizaciones#talleres">Talleres y capacitación</Link>
+          <Link href="/organizaciones/osc">A.C. y fundaciones</Link>
           <Link href="/universidades">Universidades</Link>
           <Link href="/como-lo-hacemos">Cómo lo hacemos</Link>
-          <Link href="/programa">Programa uHüb A.C.</Link>
-        </div>
-        <div className="uhub-footer-column">
-          <span>Conecta con uHüb</span>
-          <Link href="/mentorclass">MentorClass</Link>
-          <Link href="/test">Test del cuadrante</Link>
-          <Link href="/mentores">Red uHüb</Link>
           <Link href="/nosotros">Nosotros</Link>
-          <a href={lunesSubscription}>Lunes 1-1-1</a>
+          <a href="#contacto">Contacto</a>
         </div>
-        <div className="uhub-footer-column">
+        <div className="uhub-footer-column" id="mentores">
+          <span>Comparte tu experiencia</span>
+          <Link href="/mentores">¿Quieres acompañar a otros como mentor? <Arrow /></Link>
+          <span className="footer-ac-label">Programas de la asociación civil</span>
+          <a href="https://uhub.org.mx" target="_blank" rel="noreferrer">uHüb A.C. <Arrow external /></a>
+          <p className="footer-ac-note">Programas financiados por fundaciones en Chihuahua y Ciudad Juárez.</p>
+        </div>
+        <div className="uhub-footer-column" id="contacto">
           <span>Hablemos</span>
           <a href="mailto:rodrigo@uhub.mx">rodrigo@uhub.mx</a>
           <a href={whatsappGeneral} target="_blank" rel="noreferrer">
-            WhatsApp <Arrow external />
+            WhatsApp · (614) 234-6499 <Arrow external />
           </a>
           <a href="mailto:rodrigo@uhub.mx?subject=Consulta%20de%20avisos%20legales">
             Consultar avisos legales

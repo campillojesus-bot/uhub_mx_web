@@ -1,6 +1,6 @@
 # Documento rector — uhub.mx
 
-**Versión 1.1 · Actualizada el 4 de octubre de 2026** (incluye las diez correcciones, el recorrido interactivo y la distinción entre modelo, ciclo y ruta aprobados por Rodrigo)
+**Versión 2.0 · Actualizada el 29 de octubre de 2026** — portada paraguas aprobada por Rodrigo. Las secciones 1–12 y la adenda del 29 de octubre son la política vigente; los registros fechados anteriores conservan contexto y quedan superados donde contradigan esta versión.
 **Responsable:** Rodrigo Campillo
 
 Este documento registra decisiones de uHüb. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
@@ -20,7 +20,7 @@ Este documento registra decisiones de uHüb. Las instrucciones explícitas y pos
 
 El nombre lo dice: **uHüb, tu hub.** El centro eres tú; alrededor, lo que necesitas para lograrlo.
 
-No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué abandona y por qué.
+El acompañamiento conecta aprendizaje con práctica y revisión. Los talleres y la capacitación desarrollan habilidades concretas; los programas y la membresía acompañan su puesta en práctica. No negar servicios que sí existen ni caracterizar otros cursos o consultorías como inferiores.
 
 ---
 
@@ -44,7 +44,7 @@ No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué
 
 El modelo es el conjunto del acompañamiento. **El modelo de acompañamiento de uHüb conecta tu situación y tus objetivos con mentores, comunidad, acciones y seguimiento para ayudarte a iniciar, ajustar y sostener lo que emprendes.**
 
-Para la visualización de la raíz, las tres capas son **La persona**, **Tu ecosistema** y **Quienes necesitan que avances** (empresas, universidades, cámaras, A.C. y fundaciones). El diagrama muestra la relación entre la persona, sus apoyos y el entorno institucional; no representa por sí solo todo el modelo. El ciclo de etapas se explica por separado: no es el tercer anillo institucional.
+En la explicación de profundidad de `/como-lo-hacemos`, las tres capas son **La persona**, **Tu ecosistema** y **Quienes necesitan que avances** (empresas, universidades, cámaras, A.C. y fundaciones). El diagrama muestra la relación entre la persona, sus apoyos y el entorno institucional; no representa por sí solo todo el modelo. El ciclo de etapas se explica por separado: no es el tercer anillo institucional.
 
 ### 3.1 La persona: lo que crece en ti
 Los cuatro elementos son lo que la persona desarrolla con el tiempo:
@@ -73,7 +73,8 @@ La **ruta guiada** propone una secuencia de actividades, recursos y acciones par
 | Aterrizar | Tierra | Querer empezar demasiado grande |
 | Adaptar | Agua | No hacer el trabajo entre sesiones |
 | Crecer | Aire | No saber crecer cuando ya avanzaste |
-| Consolidar (complementaria) | — | Formación técnica para profesionalizar el proyecto cuando haga falta, con aliados especializados. No es obligatoria ni parte del ciclo común de cuatro etapas. |
+
+Consolidar pertenece únicamente a programas de 12 meses de uHüb A.C.; no se muestra en uhub.mx. La información de ese programa vive en uhub.org.mx.
 
 ### 3.4 La semana de acompañamiento
 El primer paso ocurre al inicio; los otros cuatro se repiten durante el acompañamiento. La frecuencia depende de cada oferta: no prometer mentoría semanal en todos los talleres, programas o servicios. En las ofertas que sí incluyen seguimiento semanal, se explica como la semana de acompañamiento:
@@ -122,7 +123,7 @@ Es un proceso. Con el tiempo, la persona cambia cómo piensa, gana habilidades, 
 
 **El objetivo no es emprender una vez. Es seguir emprendiendo toda la vida:** con negocio propio, dentro de una empresa, en su comunidad, con su familia.
 
-**Frase madre:** *Emprender no es lo que haces. Es en quién te conviertes.* (En la raíz va en el bloque de resultado, no en el hero.)
+**Frase madre:** *Emprender no es lo que haces. Es en quién te conviertes.* (Se conserva como frase de marca; la portada resumida no requiere un bloque adicional de resultado.)
 
 ---
 
@@ -131,17 +132,18 @@ Es un proceso. Con el tiempo, la persona cambia cómo piensa, gana habilidades, 
 ### 6.1 Menú (igual en todo el sitio)
 Emprendedores · Empresas y cámaras · A.C. y fundaciones · Universidades · Cómo lo hacemos · Nosotros
 
-### 6.2 La raíz (uhub.mx)
-Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. No es la landing de Emprende Diario.
+### 6.2 La raíz (uhub.mx): paraguas
+Explica qué es uHüb, muestra cómo ayuda y orienta hacia las ofertas. Presenta el conjunto sin fusionar entidades, condiciones ni resultados. Las páginas hijas desarrollan y venden cada oferta. Esta estructura sustituye la antigua portada de ocho bloques.
 
-1. **Hero:** *Nadie emprende solo.* + subtítulo aprobado + dos accesos: *Conoce el modelo* / *Encuentra tu camino*.
-2. **Por qué existe:** *El talento está repartido. El ecosistema, no.* La tesis del entorno, la frase de origen y presencia del fundador con acceso a la historia completa.
-3. **El modelo:** diagrama de tres capas (persona, ecosistema, quienes necesitan que avance).
-4. **Cómo lo hacemos:** cuatro etapas y dinámica práctica de acciones, revisión y evidencia, con frecuencia según la oferta; enlace a Cómo lo hacemos. Consolidar solo se explica en profundidad y en los programas que lo incluyen, no en la raíz.
-5. **Para quién:** la persona y las instituciones.
-6. **El resultado:** seguir emprendiendo toda la vida + frase madre; historia real autorizada y atribuida a su programa. No sustituir evidencia propia por una cifra externa.
-7. **Encuentra tu camino:** las cuatro puertas.
-8. **Cierre:** Lunes 1‑1‑1 para quien sigue explorando.
+1. **Hero y cuatro entradas:** «Nadie emprende solo.»; mentores, estructura y hábitos para la persona, su equipo y comunidad. «¿Qué te trae aquí?» lleva directamente a `/emprende-diario`, `/organizaciones`, `/universidades` y `/organizaciones/osc`. Sin página intermedia ni test obligatorio.
+2. **Banda de trayectoria:** Desde 2015 · 600 personas acompañadas en mentoría uno a uno · +2,000 personas alcanzadas · Chihuahua y Ciudad Juárez. Una sola banda; no confundir estos grupos con suscriptores o resultados de membresía.
+3. **Por qué existe:** «El talento está repartido. El ecosistema, no.»; argumento breve y concreto, sin atribuir el éxito o abandono a una sola causa. Enlace a `/nosotros`; fundador e historia completa allí.
+4. **Cómo acompaña:** «Un solo modelo. Distintas aplicaciones.»; situación → acción → prueba → revisión → siguiente acción. Explica talleres/capacitación y programas/membresía. Reutiliza `CycleWheel.tsx` en vista circular reducida sin controles; link al recorrido detallado. El modelo es el conjunto, el ciclo son etapas recurrentes, la ruta propone actividades.
+5. **Historia individual:** fuera hasta autorización escrita de Cynthia Piñón. No mostrar placeholders ni publicar sustitutos inventados.
+6. **Continuidad:** Lunes 1-1-1 principal (Kit existente, historia/reto/pregunta); test secundario dirigido a la persona. Brújula dentro de Emprende Diario, no en portada.
+7. **Pie:** navegación breve, contacto, red de mentores y puente A.C. con destino explícito. No crear `/historias` vacía ni aviso legal no autorizado.
+
+Fotos: hasta recibir una foto real de mentoría, hero sólido gris oscuro con título blanco. Sin retrato usado como si fuera una sesión, stock, foto generada o anuncio de pendiente.
 
 ### 6.3 Páginas por audiencia (una por puerta, un CTA principal cada una)
 | Página | Para quién | CTA principal |
@@ -165,7 +167,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 | Mentores, formación de mentores | "Mentores certificados" (la certificación está en construcción) |
 | Tres formas de trabajar juntos; "en desarrollo" | "Licencia", "franquicia" (instrumento legal hasta 2027) |
 | Ecosistema, siempre explicado con cosas concretas (comunidad, mentores, hábitos) | Metáforas que obliguen a preguntar "¿a qué te refieres?" (ej. "el agua en la que nadas") |
-| Acompañamiento, práctica, seguimiento | "Curso", "contenido", "desbloquea tu potencial", "libertad financiera" |
+| Acompañamiento, práctica, seguimiento; talleres y capacitación cuando corresponden | Negar cursos que sí se ofrecen, "desbloquea tu potencial", "libertad financiera" |
 | Complementamos a universidades, cámaras e incubadoras | Descalificar a otras instituciones o a los cursos |
 
 **Frase espejo** ("Sé lo que tengo que hacer. Sé que puedo. Pero no lo hago."): solo para hooks y para que la persona se reconozca. Nunca como titular ni como mensaje de marca.
@@ -174,28 +176,28 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 
 ## 8. Reglas que no se rompen
 
-- **Entidades separadas:** uHüb A.C. (programa social) y la parte comercial nunca se mezclan en mensaje, marca ni finanzas. Nada de lenguaje de donación ni Círculo uHüb en el sitio comercial.
-- **Cifras separadas, nunca fusionadas:** +2,000 activados en comunidad · +550 acompañados (global). "Desde 2015", sin contador de años. Las cifras del programa A.C. (76%, 70%, 9 de 10, +381) solo con atribución explícita y en su contexto.
+- **Paraguas con entidades identificadas:** uhub.mx orienta hacia el conjunto; uhub.org.mx explica los programas A.C. Distinguir operador, condiciones, testimonios y resultados. No botones de donar ni afirmaciones sobre equivalencia entre factura y recibo deducible. El paraguas no fusiona finanzas ni ofertas.
+- **Cifras separadas, nunca fusionadas:** el brief de Rodrigo del 29 de octubre actualiza a 600 personas acompañadas en mentoría uno a uno y +2,000 personas alcanzadas en talleres, eventos y programas. Sustituye +550 de la portada. Usar «Desde 2015» para la organización; 13 años de mentoría de Rodrigo es una cifra distinta, no usada en portada. No son suscriptores, clientes recurrentes ni prueba de causalidad. Las cifras de A.C. solo con atribución y contexto; no duplicarlas en la home.
 - **Vulnerabilidad:** sin porcentajes; máximo una mención de contexto por pieza.
-- **No inventar:** testimonios, nombres, cifras, fechas, logos de aliados ni precios. Donde falte, placeholder marcado.
+- **No inventar:** testimonios, nombres, cifras, fechas, logos de aliados ni precios. Pendientes solo en documentación interna; no renderizar placeholders públicos.
 - **Aliados:** se nombran solo con convenio firmado o autorización.
-- **Fotos:** reales, de acompañamiento. Nunca stock, nunca coworking posado, nunca fotos con la marca de la A.C. en el sitio comercial.
+- **Fotos:** reales y fieles al contexto. Hero: acompañamiento sin marca de agua de la A.C.; hasta recibirla, fondo sólido. Archivo histórico en Nosotros conserva fotos y atribución; no presentar una escena antigua como oferta actual.
 - **AWE:** solo en pasado, como historia.
 - **Precios:** Ritmo $399 MXN/mes. Momentum solo "por invitación", sin precio público.
-- **Colores:** rojo #B81632, gris oscuro #474855, gris medio #8C8F94, gris claro #F2F2F2. Acentos: burgundy #6D1F30, rosa #F0D3D8. **Prohibidos: #E30613 y #262A2E.**
-- **Tipografía:** Avenir Next como ideal; en web, Montserrat (títulos) + Inter (cuerpo).
-- **Un CTA principal por página.** Móvil primero.
+- **Colores:** rojo #B81632, gris oscuro #474855, gris medio #8C8F94, gris claro #F2F2F2. Acentos: burgundy #6D1F30, rosa #F0D3D8, naranja #F26D3D, azul #1B809E. **Prohibidos: #E30613 y #262A2E.**
+- **Tipografía:** Avenir Next si está instalada; fallback web Montserrat (títulos) + Inter (cuerpo). No distribuir fuentes sin licencia.
+- **Una decisión principal por página.** La portada permite cuatro entradas por intención; las landings tienen su acción principal. Móvil primero.
 
 ### Escalera de mensajes aprobada para la raíz
 
 | Bloque | Copy aprobado |
 |---|---|
 | Hero | Nadie emprende solo. |
-| Subtítulo | uHüb te ayuda a construir tu propio ecosistema —mentores, comunidad, hábitos y un método— para iniciar, rehacer o sostener lo que emprendes, con negocio o sin él. |
+| Subtítulo | Ni tú, ni tu equipo, ni tu comunidad. Acompañamos con mentores, estructura y hábitos para iniciar, retomar o sostener lo que emprendes. |
 | Por qué existe | El talento está repartido. El ecosistema, no. |
-| El modelo | El centro eres tú. Alrededor, lo que necesitas para lograrlo. |
-| Cómo lo hacemos | Un camino que recorres con práctica, acompañamiento y seguimiento. |
-| Resultado | Emprender no es lo que haces. Es en quién te conviertes. |
+| El modelo | Un solo modelo. Distintas aplicaciones. |
+| Cómo lo hacemos | Tu proyecto avanza con lo que haces entre una sesión y la siguiente. |
+| Frase madre (conservada; no obliga a un bloque en portada) | Emprender no es lo que haces. Es en quién te conviertes. |
 | Puerta universitaria | Quiero desarrollar habilidades emprendedoras para la vida y el trabajo. |
 
 **Cifras externas:** SCORE publica la afirmación de cinco veces más probabilidades de iniciar un negocio en su comunicado del 9 de enero de 2024: https://www.score.org/press-releases/mentorship-improves-odds-success-entrepreneurs/. Si se usa, identificar fuente, fecha y contexto de EE. UU.; no presentarla como resultado de uHüb, garantía individual o prueba causal de nuestro modelo. Priorizar explicación del acompañamiento e historias propias verificadas. Esta revisión no añade esa cifra a la raíz. No usar el dato de supervivencia a cinco años ni afirmaciones neurológicas no verificadas.
@@ -228,7 +230,7 @@ Explica el modelo y despacha. Le habla a la persona **y** a las instituciones. N
 | # | Pendiente | Recomendación |
 |---|---|---|
 | P1 | **Resuelto:** escalera de mensajes de la sección 8, con las cinco observaciones aprobadas. | Hero: "Nadie emprende solo." |
-| P2 | **Resuelto el 27 de septiembre de 2026:** cuatro etapas comunes; Consolidar se explica como complemento técnico en Cómo lo hacemos y los programas que lo incluyen; disponible según el programa y los aliados, fuera de la raíz. | — |
+| P2 | **Actualizado el 29 de octubre de 2026:** cuatro etapas en uhub.mx. Consolidar solo en programas de 12 meses A.C., explicados en uhub.org.mx. | — |
 | P3 | **Resuelto:** base `campillojesus-bot/uhub_mx_web`, rama de revisión `v2-modelo`; se portan piezas de la versión de revisión. | — |
 | P4 | Conectar uhub.mx al proyecto correcto en Vercel | Bloquea publicar. |
 | P5 | Foto real de acompañamiento para la raíz y fotos de archivo para Nosotros | Sin marca de la A.C. |
@@ -355,3 +357,16 @@ Rodrigo aprobó conectar los retos con el recorrido existente, explicar la orien
 - Instituciones: conservar sus landings y canales; ayudar a preparar reto, participantes y calendario antes de conversar sobre una propuesta. No publicar un formulario propio nuevo sin aviso autorizado.
 - No modificar el test del cuadrante, Google Forms de MentorClass, Kit ni Stripe. La recepción en Sheets y la conexión con Kit siguen sin verificarse de extremo a extremo.
 - Implementación en rama `mejora-retos-continuidad`, PR hacia `ajustes-raiz-v11` para revisar este cambio sobre la versión actual. No fusionar ni publicar en producción. Registrar antes/después y pendientes en el PR.
+
+
+## Portada paraguas autorizada (29 de octubre de 2026) — vigente
+
+Rodrigo autorizó ejecutar el brief v2 y adaptar contradicciones sin una nueva pausa de aprobación. El inventario se preparó antes del código en `docs/HOME_PARAGUAS_2026-10-29.md`; texto previo completo en `docs/archive/home-2026-10-28.tsx.txt`.
+
+- Esta decisión reemplaza las reglas históricas de ocho bloques, imagen obligatoria de hero, presencia de las tres capas en portada, antiguo subtítulo, cifra +550 y ubicación de Consolidar. No cambia las frases de marca, lógica del test ni condiciones de las ofertas.
+- La portada orienta por intención; el reto/Brújula orienta la práctica; el cuadrante refleja contexto. No convertir perfil en segmentación laboral ni precio.
+- Se conserva Brújula → etapa → solicitud editable, sin transportar datos personales ni respuestas. La Brújula pasa a estar enlazada en Emprende Diario; no se cambia su cálculo.
+- Test del cuadrante, Google Forms, Kit y Stripe conservan identificadores y lógica. No crear captura nueva ni simular suscripción. Lunes 1-1-1 mantiene su formulario real y su promesa historia/reto/pregunta.
+- La formulación legal del brief no está validada y contradice el historial. No publicar nombre del responsable, domicilio, condición fiscal o aviso inventado. Mantener consulta por correo.
+- Nuevo PR `home-paraguas-v2` hacia `mejora-retos-continuidad`, dependiente del PR #3. No fusionar, cambiar `main`, publicar producción, mover dominios ni eliminar proyectos Vercel.
+- Aceptación editorial pendiente: prueba de comprensión con tres personas externas. Build, navegador y pruebas automáticas comprueban funcionamiento, no conversión ni comprensión humana.

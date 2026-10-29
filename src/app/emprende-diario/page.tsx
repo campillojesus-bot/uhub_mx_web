@@ -25,7 +25,7 @@ export default function EmprendeDiarioPage() {
           <p className="membership-entry-note">Ritmo · $399 MXN/mes. La comunidad actual está formada por egresados de uHüb A.C. Si eres nuevo, conversemos para confirmar tu opción de ingreso, la ruta y las condiciones antes de inscribirte.</p>
         </div>
         <aside className="inner-quote">
-          <span>No vendemos contenido</span>
+          <span>Práctica y acompañamiento</span>
           <strong>Diseñamos una forma de volver.</strong>
         </aside>
       </section>
@@ -63,6 +63,13 @@ export default function EmprendeDiarioPage() {
             </p>
           </article>
         </div>
+      </section>
+
+      <section className="inner-section" aria-labelledby="brujula-invitation">
+        <p className="eyebrow">Si quieres ubicar un punto de partida</p>
+        <h2 id="brujula-invitation">¿Qué necesitas fortalecer ahora?</h2>
+        <p>La Brújula Emprendedora te propone tres acciones para tu semana a partir de tus respuestas. Es una orientación para explorar tu siguiente paso; no determina tu perfil ni tu plan.</p>
+        <a className="text-link" href="/brujula">Explorar mi Brújula Emprendedora <Arrow /></a>
       </section>
 
       <section className="inner-section membership-voices" id="experiencias">

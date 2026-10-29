@@ -94,42 +94,42 @@ const iconCircle = [
   { cx: 106, cy: 220 },
 ];
 
-export function CycleWheel() {
+export function CycleWheel({ compact = false }: { compact?: boolean }) {
   const [active, setActive] = useState(0);
   const current = stages[active];
 
   return (
-    <div className="mx-auto flex max-w-[1040px] flex-wrap items-center justify-center gap-12">
-      <div className="w-full min-w-[280px] max-w-[540px] flex-1">
+    <div className={compact ? "mx-auto max-w-[400px]" : "mx-auto flex max-w-[1040px] flex-wrap items-center justify-center gap-12"}>
+      <div className={compact ? "w-full" : "w-full min-w-[280px] max-w-[540px] flex-1"}>
         <svg
           viewBox="-24 -24 488 488"
           className="block h-auto w-full overflow-visible"
           role="img"
-          aria-label="Rueda del Ciclo de Cambio Emprendedor uHüb"
+          aria-label={compact ? "Ciclo uHüb: Fuego · Descubrir, Tierra · Aterrizar, Agua · Adaptar, Aire · Crecer. Puedes volver a cualquier etapa." : "Rueda del Ciclo de Cambio Emprendedor uHüb"}
         >
           {stages.map((stage, i) => {
-            const isActive = i === active;
+            const isActive = !compact && i === active;
             const stageColor = isActive ? ACTIVE_COLOR : INACTIVE_COLOR;
             const icon = iconCircle[i];
             return (
               <g
                 key={stage.name}
-                role="button"
-                tabIndex={0}
-                aria-label={stage.name}
-                aria-pressed={isActive}
-                onClick={() => setActive(i)}
-                onKeyDown={(e) => {
+                role={compact ? undefined : "button"}
+                tabIndex={compact ? undefined : 0}
+                aria-label={compact ? undefined : stage.name}
+                aria-pressed={compact ? undefined : isActive}
+                onClick={compact ? undefined : () => setActive(i)}
+                onKeyDown={compact ? undefined : (e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
                     setActive(i);
                   }
                 }}
                 style={{
-                  cursor: "pointer",
+                  cursor: compact ? "default" : "pointer",
                   transform: isActive ? "scale(1.045)" : "scale(1)",
                   transformOrigin: "220px 220px",
-                  transition: "transform .28s ease",
+                  transition: compact ? "none" : "transform .28s ease",
                 }}
               >
                 {/*
@@ -144,12 +144,12 @@ export function CycleWheel() {
                   d={segmentPaths[i]}
                   style={{
                     fill: stageColor,
-                    transition: "fill .28s ease",
+                    transition: compact ? "none" : "fill .28s ease",
                   }}
                 />
                 <text
-                  x={labelPos[i].x}
-                  y={labelPos[i].y}
+                  x={compact ? [220, 370, 220, 70][i] : labelPos[i].x}
+                  y={compact ? [45, 220, 395, 220][i] : labelPos[i].y}
                   style={{
                     fill: "#fff",
                     // "Aterrizar" (9 chars) is wider than its wedge at this
@@ -161,13 +161,13 @@ export function CycleWheel() {
                     paintOrder: "stroke fill",
                     fontFamily: "var(--font-display)",
                     fontWeight: 800,
-                    fontSize: 16,
+                    fontSize: compact ? 19 : 16,
                     letterSpacing: "0.01em",
                     textAnchor: "middle",
                     dominantBaseline: "central",
                   }}
                 >
-                  {stage.name}
+                  {compact ? <><tspan x={[220, 370, 220, 70][i]} dy="-7">{stage.el}</tspan><tspan x={[220, 370, 220, 70][i]} dy="23" fontSize="17">{stage.name}</tspan></> : stage.name}
                 </text>
                 <circle
                   cx={icon.cx}
@@ -221,7 +221,7 @@ export function CycleWheel() {
               dominantBaseline: "central",
             }}
           >
-            uHüb
+            {compact ? "Tu ciclo" : "uHüb"}
           </text>
           <text
             x={220}
@@ -236,13 +236,13 @@ export function CycleWheel() {
               dominantBaseline: "central",
             }}
           >
-            propósito · motor
+            {compact ? "Puedes volver." : "propósito · motor"}
           </text>
         </svg>
       </div>
 
       {/* Detail panel */}
-      <aside className="w-full min-w-[280px] max-w-[400px] flex-1">
+      {!compact && <aside className="w-full min-w-[280px] max-w-[400px] flex-1">
         <div className="flex items-baseline gap-3.5">
           <span
             className="font-display text-[2.6rem] font-black leading-none"
@@ -285,7 +285,7 @@ export function CycleWheel() {
         <p className="mt-3 text-xs tracking-wide text-gray-dark/70">
           Haz clic en cada etapa de la rueda.
         </p>
-      </aside>
+      </aside>}
     </div>
   );
 }

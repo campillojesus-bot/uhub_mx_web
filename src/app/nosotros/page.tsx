@@ -164,8 +164,7 @@ export default function AboutPage() {
           <div className="history-reflection">
             <h3>Por eso es un ciclo.</h3>
             <p>Yo mismo he emprendido, reemprendido y cambiado de proyecto. En cada ocasión he tenido que volver a descubrir, aterrizar, adaptarme o desarrollar nuevas capacidades. Volver a una etapa puede ser justo lo que necesitas cuando cambian tus circunstancias.</p>
-            <p>El programa anual de uHüb A.C. incorpora además <strong>Consolidar</strong>, una etapa de formación técnica para fortalecer la operación del emprendimiento.</p>
-            <Link className="text-link" href="/#ciclo">Explorar las cuatro etapas <Arrow /></Link>
+            <Link className="text-link" href="/como-lo-hacemos#etapas">Explorar las cuatro etapas <Arrow /></Link>
           </div>
         </section>
 

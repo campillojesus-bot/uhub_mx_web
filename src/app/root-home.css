@@ -1,4 +1,6 @@
 /* uHub raíz — editorial, human, and anchored in the original brand. */
+.footer-ac-note { font-size: 12px; line-height: 1.65; margin: 0; max-width: 260px; }
+.uhub-footer-column .footer-ac-label { margin-top: 20px; }
 :root {
   --paper: #fffdfa;
   --root-border: #d8d7d5;

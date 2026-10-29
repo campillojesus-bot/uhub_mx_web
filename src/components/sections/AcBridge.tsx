@@ -9,8 +9,7 @@ export function AcBridge() {
           A través de <strong>uHüb AC</strong>, nuestro brazo filantrópico,
           acompañamos gratuitamente a emprendedores en contextos adversos
           gracias al respaldo de fundaciones, empresas e instituciones. Es
-          el acompañamiento más profundo que damos: doce meses y una quinta
-          etapa —consolidar— para profesionalizar el proyecto.
+          un programa de doce meses, con condiciones y convocatorias propias.
         </p>
         <a
           href="https://uhub.org.mx"

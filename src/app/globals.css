@@ -36,8 +36,8 @@
   --color-blue-accent: var(--blue-accent);
   --color-border-subtle: var(--border-subtle);
 
-  --font-display: var(--font-montserrat), "Avenir Next Fallback", Helvetica, Arial, sans-serif;
-  --font-body: var(--font-inter), "Avenir Next Fallback", Helvetica, Arial, sans-serif;
+  --font-display: "Avenir Next", var(--font-montserrat), Helvetica, Arial, sans-serif;
+  --font-body: "Avenir Next", var(--font-inter), Helvetica, Arial, sans-serif;
 }
 
 @font-face {
