@@ -48,7 +48,7 @@
 .hub-stay .root-newsletter-capture { margin-top: 26px; }
 .hub-stay .root-button { background: var(--red-uhub); color: white; border-color: var(--red-uhub); font-size: 15px; min-height: 52px; }
 .hub-stay .root-button:hover { background: var(--burgundy); border-color: var(--burgundy); }
-.hub-stay .root-newsletter-privacy { color: white; font-size: 12px; line-height: 1.6; opacity: 1; }
+.hub-stay .root-newsletter-privacy { color: white; font-size: 12px; line-height: 1.6; opacity: 1; margin-top: 12px; }
 .hub-stay :focus-visible { outline-color: var(--pink-soft); }
 .hub-test { padding-top: 32px; border-top: 1px solid var(--gray-medium); align-self: center; }
 .hub-test h3 { font-size: 26px; line-height: 1.2; font-weight: 700; margin: 0 0 20px; }

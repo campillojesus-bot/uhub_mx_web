@@ -169,18 +169,18 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
                 >
                   {compact ? <><tspan x={[220, 370, 220, 70][i]} dy="-7">{stage.el}</tspan><tspan x={[220, 370, 220, 70][i]} dy="23" fontSize="17">{stage.name}</tspan></> : stage.name}
                 </text>
-                <circle
+                {!compact && <circle
                   cx={icon.cx}
                   cy={icon.cy}
                   r={20}
                   style={{ fill: "#fff", stroke: "#E3E3E5", strokeWidth: 1.5 }}
-                />
-                <g
+                />}
+                {!compact && <g
                   transform={`translate(${icon.cx - 11.4},${icon.cy - 11.4}) scale(0.95)`}
                   style={{ stroke: stageColor, transition: "stroke .28s ease" }}
                 >
                   {stage.icon}
-                </g>
+                </g>}
               </g>
             );
           })}

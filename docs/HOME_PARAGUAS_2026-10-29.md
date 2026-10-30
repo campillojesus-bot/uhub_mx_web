@@ -36,6 +36,10 @@ Fecha: 29 de octubre de 2026. Instrucción: `brief_astra_home_uhub_mx_v2.md`, au
 
 ## Validación y pendientes
 
-Se completará con resultados de build, lint, navegación y vistas a 360, 390 y escritorio. Las pruebas técnicas no sustituyen la prueba de comprensión con tres personas externas del brief.
+Build, lint y TypeScript correctos. La ejecución de GitHub Actions `40939587284` pasó 15 pruebas: navegación a las cuatro landings, layout sin desbordamientos en 360/390/1440 px, anclas anteriores, pestañas de las capas, ambos recorridos de la Brújula, empates, edición, selección de apoyo y solicitud editable sin datos personales en la URL. Los archivos de lógica de `/test`, Google Forms y cálculo de Brújula no cambiaron.
+
+La revisión visual de la vista previa detectó íconos encima de las etiquetas laterales del ciclo reducido: se ocultan solo en la variante compacta. La versión interactiva conserva sus íconos. Se comprobó también que el enlace Lunes 1-1-1 abre la página real de Kit con el campo de correo; no se envió una suscripción ni se afirma recepción de emails.
+
+Las pruebas técnicas no sustituyen la prueba de comprensión con tres personas externas del brief.
 
 Pendientes de contenido: foto real de mentoría y autorización de Cynthia. Pendientes de negocio: Stripe/condiciones de ingreso y aviso autorizado. Dominio y proyectos de Vercel no se modifican; la entrega será una vista previa.
