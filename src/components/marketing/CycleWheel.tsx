@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState, type KeyboardEvent } from "react";
 
 /**
  * Ciclo de Cambio Emprendedor uHub — porteado fiel del artefacto ya
  * construido en /referencia-ciclo (misma paleta, tokens e interacción:
  * clic en cada segmento para ver el detalle). No es un diagrama nuevo.
  */
-const ACTIVE_COLOR = "#B81632";
-const INACTIVE_COLOR = "#6D1F30";
+const ACTIVE_COLOR = "var(--surface-brand)";
+const INACTIVE_COLOR = "var(--surface-brand-deep)";
 
 const stages = [
   {
@@ -94,21 +94,39 @@ const iconCircle = [
   { cx: 106, cy: 220 },
 ];
 
-export function CycleWheel({ compact = false }: { compact?: boolean }) {
-  const [active, setActive] = useState(0);
+export function CycleWheel({ compact = false, selectedStage, onStageChange, panelPrefix = "home-cycle" }: {
+  compact?: boolean;
+  selectedStage?: number;
+  onStageChange?: (stage: number) => void;
+  panelPrefix?: string;
+}) {
+  const [localStage, setLocalStage] = useState(0);
+  const active = selectedStage ?? localStage;
+  const refs = useRef<(HTMLButtonElement | null)[]>([]);
+  const setActive = (stage: number) => { setLocalStage(stage); onStageChange?.(stage); };
+  function navigate(event: KeyboardEvent<HTMLButtonElement>, index: number) {
+    let next = index;
+    if (["ArrowRight", "ArrowDown"].includes(event.key)) next = (index + 1) % 4;
+    else if (["ArrowLeft", "ArrowUp"].includes(event.key)) next = (index + 3) % 4;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = 3;
+    else return;
+    event.preventDefault(); setActive(next); refs.current[next]?.focus();
+  }
   const current = stages[active];
 
   return (
     <div className={compact ? "mx-auto max-w-[400px]" : "mx-auto flex max-w-[1040px] flex-wrap items-center justify-center gap-12"}>
-      <div className={compact ? "w-full" : "w-full min-w-[280px] max-w-[540px] flex-1"}>
+      <div className={compact ? "cycle-mini-wheel" : "w-full min-w-[280px] max-w-[540px] flex-1"}>
         <svg
           viewBox="-24 -24 488 488"
           className="block h-auto w-full overflow-visible"
-          role="img"
+          role={compact ? undefined : "group"}
+          aria-hidden={compact || undefined}
           aria-label={compact ? "Ciclo uHüb: Fuego · Descubrir, Tierra · Aterrizar, Agua · Adaptar, Aire · Crecer. Puedes volver a cualquier etapa." : "Rueda del Ciclo de Cambio Emprendedor uHüb"}
         >
           {stages.map((stage, i) => {
-            const isActive = !compact && i === active;
+            const isActive = i === active;
             const stageColor = isActive ? ACTIVE_COLOR : INACTIVE_COLOR;
             const icon = iconCircle[i];
             return (
@@ -118,7 +136,7 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
                 tabIndex={compact ? undefined : 0}
                 aria-label={compact ? undefined : stage.name}
                 aria-pressed={compact ? undefined : isActive}
-                onClick={compact ? undefined : () => setActive(i)}
+                onClick={() => setActive(i)}
                 onKeyDown={compact ? undefined : (e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
@@ -126,10 +144,10 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
                   }
                 }}
                 style={{
-                  cursor: compact ? "default" : "pointer",
+                  cursor: "pointer",
                   transform: isActive ? "scale(1.045)" : "scale(1)",
                   transformOrigin: "220px 220px",
-                  transition: compact ? "none" : "transform .28s ease",
+                  transition: "transform .28s var(--motion-ease)",
                 }}
               >
                 {/*
@@ -144,10 +162,10 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
                   d={segmentPaths[i]}
                   style={{
                     fill: stageColor,
-                    transition: compact ? "none" : "fill .28s ease",
+                    transition: "fill .28s var(--motion-ease)",
                   }}
                 />
-                <text
+                {!compact && <text
                   x={compact ? [220, 370, 220, 70][i] : labelPos[i].x}
                   y={compact ? [45, 220, 395, 220][i] : labelPos[i].y}
                   style={{
@@ -168,12 +186,12 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
                   }}
                 >
                   {compact ? <><tspan x={[220, 370, 220, 70][i]} dy="-7">{stage.el}</tspan><tspan x={[220, 370, 220, 70][i]} dy="23" fontSize="17">{stage.name}</tspan></> : stage.name}
-                </text>
+                </text>}
                 {!compact && <circle
                   cx={icon.cx}
                   cy={icon.cy}
                   r={20}
-                  style={{ fill: "#fff", stroke: "#E3E3E5", strokeWidth: 1.5 }}
+                  style={{ fill: "#fff", stroke: "#e4e3e6", strokeWidth: 1.5 }}
                 />}
                 {!compact && <g
                   transform={`translate(${icon.cx - 11.4},${icon.cy - 11.4}) scale(0.95)`}
@@ -186,22 +204,22 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
           })}
 
           {/* Center hub */}
-          <circle cx={220} cy={220} r={92} style={{ fill: "#fff", stroke: "#E3E3E5", strokeWidth: 1.5 }} />
+          <circle cx={220} cy={220} r={92} style={{ fill: "#fff", stroke: "#e4e3e6", strokeWidth: 1.5 }} />
           <path
             d="M220,162 A58,58 0 0,1 277.1,209.9"
-            style={{ fill: "none", stroke: "#8C8F94", strokeWidth: 3, strokeLinecap: "round" }}
+            style={{ fill: "none", stroke: "#87838d", strokeWidth: 3, strokeLinecap: "round" }}
           />
-          <path d="M277.1,209.9 L271.3,203 L280.2,201.4 Z" style={{ fill: "#8C8F94" }} />
+          <path d="M277.1,209.9 L271.3,203 L280.2,201.4 Z" style={{ fill: "#87838d" }} />
           <path
             d="M270.2,249 A58,58 0 0,1 200.2,274.5"
-            style={{ fill: "none", stroke: "#8C8F94", strokeWidth: 3, strokeLinecap: "round" }}
+            style={{ fill: "none", stroke: "#87838d", strokeWidth: 3, strokeLinecap: "round" }}
           />
-          <path d="M200.2,274.5 L209.1,272.9 L206,281.4 Z" style={{ fill: "#8C8F94" }} />
+          <path d="M200.2,274.5 L209.1,272.9 L206,281.4 Z" style={{ fill: "#87838d" }} />
           <path
             d="M169.8,249 A58,58 0 0,1 182.7,175.6"
-            style={{ fill: "none", stroke: "#8C8F94", strokeWidth: 3, strokeLinecap: "round" }}
+            style={{ fill: "none", stroke: "#87838d", strokeWidth: 3, strokeLinecap: "round" }}
           />
-          <path d="M182.7,175.6 L179.6,184.1 L173.8,177.2 Z" style={{ fill: "#8C8F94" }} />
+          <path d="M182.7,175.6 L179.6,184.1 L173.8,177.2 Z" style={{ fill: "#87838d" }} />
           <g transform="translate(208,170) scale(1.05)">
             <path
               d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2 M12 3a4 4 0 0 1 0 8 4 4 0 0 1 0-8z"
@@ -227,7 +245,7 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
             x={220}
             y={230}
             style={{
-              fill: "#8C8F94",
+              fill: "#87838d",
               fontFamily: "var(--font-body)",
               fontWeight: 500,
               fontSize: 11,
@@ -239,6 +257,15 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
             {compact ? "Puedes volver." : "propósito · motor"}
           </text>
         </svg>
+        {compact && <div className="cycle-mini-controls" role="tablist" aria-label="Explorar las etapas del ciclo">
+          {stages.map((stage, i) => <button key={stage.name} type="button" role="tab"
+            className={`cycle-mini-control cycle-mini-control-${i}`}
+            id={`${panelPrefix}-tab-${i}`} aria-controls={`${panelPrefix}-panel-${i}`}
+            aria-selected={i === active} tabIndex={i === active ? 0 : -1}
+            title={`${stage.name} · ${stage.work}`} aria-label={`Explorar la etapa ${stage.name}`}
+            ref={node => { refs.current[i] = node; }} onKeyDown={event => navigate(event, i)}
+            onClick={() => setActive(i)}><span>{stage.el}</span><strong>{stage.name}</strong></button>)}
+        </div>}
       </div>
 
       {/* Detail panel */}
@@ -278,7 +305,7 @@ export function CycleWheel({ compact = false }: { compact?: boolean }) {
               onClick={() => setActive(i)}
               aria-label={stage.name}
               className="h-2 flex-1 rounded-sm border-0 p-0 transition-colors duration-200"
-              style={{ background: i === active ? ACTIVE_COLOR : "#E3E3E5" }}
+              style={{ background: i === active ? ACTIVE_COLOR : "#e4e3e6" }}
             />
           ))}
         </div>

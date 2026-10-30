@@ -1,0 +1,36 @@
+/* Semantic bridge: retained components consume the current uHüb palette. */
+:root {
+  --red: var(--text-brand); --red-dark: var(--uh-crimson-600);
+  --charcoal: var(--text-strong); --deep: var(--surface-brand-deep);
+  --gray: var(--text-muted); --light: var(--surface-page); --paper: var(--surface-page);
+  --orange: var(--uh-orange); --burgundy: var(--surface-brand-deep);
+  --rose: var(--uh-blush); --blue: var(--uh-blue);
+  --root-muted: var(--text-muted); --root-border: var(--uh-gray-300);
+}
+body { color: var(--text-body); font: 400 16px/1.6 var(--font-body); }
+h1, h2 { text-transform: uppercase; font-weight: 800; letter-spacing: -.02em; line-height: 1.22; }
+h3, h4 { font-weight: 800; line-height: 1.22; }
+h1, h2, h3, h4 { hyphens: none; word-break: normal; overflow-wrap: normal; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--text-brand); outline-offset: 4px; }
+button, .button, .root-button, .br-primary, .br-secondary, .br-outro a, .uhub-mobile-toggle, .uhub-mobile-path { border-radius: var(--radius-pill); }
+.button, .root-button, button { transition-timing-function: var(--motion-ease); }
+.button-primary:hover, .root-button:hover { background: var(--uh-crimson-600); }
+input, textarea, select { border-radius: var(--radius-md); border-color: var(--uh-gray-300); font: inherit; }
+.uhub-header { background: var(--surface-card); }
+.uhub-nav-dropdown summary { cursor: pointer; }
+.uhub-footer { background: var(--uh-grad-maroon); color: var(--text-on-brand); border: 0; }
+.uhub-footer-brand > a { display: inline-block; background: var(--surface-card); padding: 16px; border-radius: var(--radius-md); }
+.uhub-footer-brand > p, .uhub-footer-column > a, .uhub-footer-bottom { font-size: 14px; }
+.uhub-footer-column > span { color: var(--uh-blush); }
+.uhub-footer-column > a:hover, .uhub-footer-bottom a:hover { color: var(--text-on-brand); }
+.uhub-footer-bottom { border-color: color-mix(in srgb, var(--uh-white) 25%, transparent); }
+.uhub-footer :focus-visible { outline-color: var(--uh-white); }
+.footer-ac-note { color: var(--uh-blush); font-size: 14px; }
+/* Larger type, unchanged labels: long titles remain complete at 360 px. */
+@media (max-width: 480px) {
+  main h1 { font-size: clamp(26px, 7.6vw, 40px); }
+  main h2 { font-size: clamp(24px, 7vw, 32px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

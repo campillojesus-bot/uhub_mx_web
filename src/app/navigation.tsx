@@ -11,7 +11,7 @@ const mainLinks = [
   ["Nosotros", "/nosotros"],
 ];
 const personalLinks = [
-  ["Emprendedores", "/emprende-diario"],
+  ["Emprende Diario", "/emprende-diario"],
   ["MentorClass", "/mentorclass"],
   ["Test del cuadrante", "/test"],
 ];
@@ -52,7 +52,7 @@ export function SiteNavigation() {
           }}
         >
           <summary>
-            Emprendedores <span aria-hidden="true">⌄</span>
+            Personas <span aria-hidden="true">▾</span>
           </summary>
           <div>
             {personalLinks.map(([name, href]) => (
@@ -76,9 +76,6 @@ export function SiteNavigation() {
           </Link>
         ))}
       </nav>
-      <Link className="uhub-header-cta" href="/#caminos">
-        Encuentra tu camino <span aria-hidden="true">→</span>
-      </Link>
       <button
         type="button"
         ref={buttonRef}
@@ -99,7 +96,7 @@ export function SiteNavigation() {
             if ((event.target as Element).closest("a")) setMobileOpen(false);
           }}
         >
-          <span>Emprendedores</span>
+          <span>Personas</span>
           {personalLinks.map(([name, href]) => (
             <Link href={href} key={href}>
               {name}
@@ -111,9 +108,6 @@ export function SiteNavigation() {
               {name}
             </Link>
           ))}
-          <Link className="uhub-mobile-path" href="/#caminos">
-            Encuentra tu camino <span aria-hidden="true">→</span>
-          </Link>
         </nav>
       )}
     </div>

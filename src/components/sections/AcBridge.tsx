@@ -17,7 +17,7 @@ export function AcBridge() {
           rel="noopener noreferrer"
           className="mt-6 inline-flex font-display text-base font-bold text-red-uhub no-underline hover:underline"
         >
-          Conoce uHüb AC ↗
+          Conoce uHüb AC →
         </a>
       </div>
     </section>

@@ -1,6 +1,6 @@
 # Documento rector — uhub.mx
 
-**Versión 2.0 · Actualizada el 29 de octubre de 2026** — portada paraguas aprobada por Rodrigo. Las secciones 1–12 y la adenda del 29 de octubre son la política vigente; los registros fechados anteriores conservan contexto y quedan superados donde contradigan esta versión.
+**Versión 2.1 · Actualizada el 29 de octubre de 2026** — portada paraguas aprobada por Rodrigo. Las secciones 1–12 y la adenda del 29 de octubre son la política vigente; los registros fechados anteriores conservan contexto y quedan superados donde contradigan esta versión.
 **Responsable:** Rodrigo Campillo
 
 Este documento registra decisiones de uHüb. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
@@ -136,14 +136,14 @@ Emprendedores · Empresas y cámaras · A.C. y fundaciones · Universidades · C
 Explica qué es uHüb, muestra cómo ayuda y orienta hacia las ofertas. Presenta el conjunto sin fusionar entidades, condiciones ni resultados. Las páginas hijas desarrollan y venden cada oferta. Esta estructura sustituye la antigua portada de ocho bloques.
 
 1. **Hero y cuatro entradas:** «Nadie emprende solo.»; mentores, estructura y hábitos para la persona, su equipo y comunidad. «¿Qué te trae aquí?» lleva directamente a `/emprende-diario`, `/organizaciones`, `/universidades` y `/organizaciones/osc`. Sin página intermedia ni test obligatorio.
-2. **Banda de trayectoria:** Desde 2015 · 600 personas acompañadas en mentoría uno a uno · +2,000 personas alcanzadas · Chihuahua y Ciudad Juárez. Una sola banda; no confundir estos grupos con suscriptores o resultados de membresía.
+2. **Banda de trayectoria:** Desde 2015 · +1,300 participaciones en actividades abiertas desde 2016 · 953 sesiones de mentoría desde 2023 · Chihuahua y Ciudad Juárez. Datos de uHüb A.C., corte octubre 2026; son participaciones y sesiones, no personas únicas ni resultados de membresía.
 3. **Por qué existe:** «El talento está repartido. El ecosistema, no.»; argumento breve y concreto, sin atribuir el éxito o abandono a una sola causa. Enlace a `/nosotros`; fundador e historia completa allí.
-4. **Cómo acompaña:** «Un solo modelo. Distintas aplicaciones.»; situación → acción → prueba → revisión → siguiente acción. Explica talleres/capacitación y programas/membresía. Reutiliza `CycleWheel.tsx` en vista circular reducida sin controles; link al recorrido detallado. El modelo es el conjunto, el ciclo son etapas recurrentes, la ruta propone actividades.
-5. **Historia individual:** fuera hasta autorización escrita de Cynthia Piñón. No mostrar placeholders ni publicar sustitutos inventados.
+4. **Cómo acompaña:** «Un solo modelo. Distintas aplicaciones.»; situación → acción → prueba → revisión → siguiente acción. Explica talleres/capacitación y programas/membresía. Reutiliza `CycleWheel.tsx` en vista reducida interactiva: clic, toque y teclado; un panel por etapa, ejemplos por contexto y enlace que conserva la etapa en el recorrido detallado. El modelo es el conjunto, el ciclo son etapas recurrentes, la ruta propone actividades.
+5. **Historia individual:** Cynthia Piñón autorizada por Rodrigo en el addendum y solicitud del 29 de octubre. Tercera persona, sin inventar citas; identificar AWE / uHüb A.C. y usar el retrato existente.
 6. **Continuidad:** Lunes 1-1-1 principal (Kit existente, historia/reto/pregunta); test secundario dirigido a la persona. Brújula dentro de Emprende Diario, no en portada.
 7. **Pie:** navegación breve, contacto, red de mentores y puente A.C. con destino explícito. No crear `/historias` vacía ni aviso legal no autorizado.
 
-Fotos: hasta recibir una foto real de mentoría, hero sólido gris oscuro con título blanco. Sin retrato usado como si fuera una sesión, stock, foto generada o anuncio de pendiente.
+Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín y título blanco. Preparar picture condicional sin archivo inexistente. Sin retrato usado como si fuera una sesión, stock, foto generada o anuncio de pendiente.
 
 ### 6.3 Páginas por audiencia (una por puerta, un CTA principal cada una)
 | Página | Para quién | CTA principal |
@@ -177,15 +177,15 @@ Fotos: hasta recibir una foto real de mentoría, hero sólido gris oscuro con t�
 ## 8. Reglas que no se rompen
 
 - **Paraguas con entidades identificadas:** uhub.mx orienta hacia el conjunto; uhub.org.mx explica los programas A.C. Distinguir operador, condiciones, testimonios y resultados. No botones de donar ni afirmaciones sobre equivalencia entre factura y recibo deducible. El paraguas no fusiona finanzas ni ofertas.
-- **Cifras separadas, nunca fusionadas:** el brief de Rodrigo del 29 de octubre actualiza a 600 personas acompañadas en mentoría uno a uno y +2,000 personas alcanzadas en talleres, eventos y programas. Sustituye +550 de la portada. Usar «Desde 2015» para la organización; 13 años de mentoría de Rodrigo es una cifra distinta, no usada en portada. No son suscriptores, clientes recurrentes ni prueba de causalidad. Las cifras de A.C. solo con atribución y contexto; no duplicarlas en la home.
+- **Cifras separadas, nunca fusionadas:** el addendum del 29 de octubre corrige el brief anterior. Usar +1,300 participaciones en actividades abiertas desde 2016 y 953 sesiones de mentoría desde 2023, atribuidas a uHüb A.C., informe al Consejo octubre 2026. No publicar 600 personas ni +2,000 alcanzados: fueron retirados por Rodrigo. No sumarlas ni tratarlas como personas únicas. El 97% queda pendiente de denominador, población, cohorte y fecha de medición; el informe completo no se adjuntó en esta ronda.
 - **Vulnerabilidad:** sin porcentajes; máximo una mención de contexto por pieza.
 - **No inventar:** testimonios, nombres, cifras, fechas, logos de aliados ni precios. Pendientes solo en documentación interna; no renderizar placeholders públicos.
 - **Aliados:** se nombran solo con convenio firmado o autorización.
-- **Fotos:** reales y fieles al contexto. Hero: acompañamiento sin marca de agua de la A.C.; hasta recibirla, fondo sólido. Archivo histórico en Nosotros conserva fotos y atribución; no presentar una escena antigua como oferta actual.
+- **Fotos:** reales y fieles al contexto. Hero: acompañamiento sin marca de agua de la A.C.; hasta recibirla, degradado de marca sin fotografía. Archivo histórico en Nosotros conserva fotos y atribución; no presentar una escena antigua como oferta actual.
 - **AWE:** solo en pasado, como historia.
 - **Precios:** Ritmo $399 MXN/mes. Momentum solo "por invitación", sin precio público.
-- **Colores:** rojo #B81632, gris oscuro #474855, gris medio #8C8F94, gris claro #F2F2F2. Acentos: burgundy #6D1F30, rosa #F0D3D8, naranja #F26D3D, azul #1B809E. **Prohibidos: #E30613 y #262A2E.**
-- **Tipografía:** Avenir Next si está instalada; fallback web Montserrat (títulos) + Inter (cuerpo). No distribuir fuentes sin licencia.
+- **Colores:** carmín #B81632 (hover #9C1229), vino #781522 (oscuro #5A0F19), pizarra #474855 solo para texto fuerte, cuerpo #5B5C69, apoyo #87838D, bordes #D7D5DA / #E4E3E6, papel #F4F4F4, rosa #F1D4CF, naranja #EC6839, azul #0679AF, teal #00C4B4 y menta #E6F9F7. Componentes nuevos usan alias semánticos. No naranja/teal para texto sobre blanco; notas pequeñas usan pizarra/cuerpo para contraste. El logo original no se recolorea.
+- **Tipografía:** Mulish web (pesos 300–900 según uso); sustituye Avenir local, Montserrat e Inter. H1/H2 en mayúsculas mediante CSS, sin reescribir contenido ni marca uHüb. Escala display 2.6–4.25rem adaptable para no cortar palabras, h2 32px, cuerpo 16px, notas 14px. Botones píldora; foco visible; movimiento reducido.
 - **Una decisión principal por página.** La portada permite cuatro entradas por intención; las landings tienen su acción principal. Móvil primero.
 
 ### Escalera de mensajes aprobada para la raíz
@@ -370,3 +370,16 @@ Rodrigo autorizó ejecutar el brief v2 y adaptar contradicciones sin una nueva p
 - La formulación legal del brief no está validada y contradice el historial. No publicar nombre del responsable, domicilio, condición fiscal o aviso inventado. Mantener consulta por correo.
 - Nuevo PR `home-paraguas-v2` hacia `mejora-retos-continuidad`, dependiente del PR #3. No fusionar, cambiar `main`, publicar producción, mover dominios ni eliminar proyectos Vercel.
 - Aceptación editorial pendiente: prueba de comprensión con tres personas externas. Build, navegador y pruebas automáticas comprueban funcionamiento, no conversión ni comprensión humana.
+
+## Identidad y ciclo interactivo (29 de octubre de 2026) — última decisión vigente
+
+Rodrigo autorizó aplicar `prompt_astra_correcciones_design_system.md`, integrar lo disponible y actualizar fotos después. Señaló que el ciclo debe ayudar a explicar el acompañamiento en distintas situaciones. Esta solicitud prevalece sobre la indicación del adjunto de limitar la rueda a hover y sobre la versión estática anterior.
+
+- Portada con degradado vino/carmín, métricas blancas, origen en papel, modelo en menta, Cynthia en rosa y continuidad/pie en vino. Sin foto falsa ni pendiente visible; retrato real de Cynthia ya disponible.
+- Se conserva el subtítulo con «Ni tú, ni tu equipo, ni tu comunidad» y el objetivo concreto. No se reintroduce «porque primero cambia la persona, después el negocio» como secuencia causal universal. «Primero la persona. Luego el negocio.» es un principio de acompañamiento y cierra el footer.
+- La rueda permite elegir etapa con clic/toque/flechas/Home/End. Explica capacidad, práctica y un ejemplo para proyecto/trabajo, empresa/cámara, universidad u organización social. Un panel activo; sin autoplay, sin bloquear etapas ni convertir ejemplos en resultados garantizados. El enlace de continuidad lleva solo la etapa, nunca datos personales.
+- Interacción completa, tres capas, ruta guiada/reto actual, membresía/A.C., Brújula y test se conservan. No son herramientas equivalentes.
+- Header sin CTA duplicado. Se conserva la entrada de Personas, con el mismo peso que las otras audiencias; quitarla impediría llegar a Emprende Diario desde páginas internas. Flechas visibles unificadas en →; no se cambian destinos ni integraciones.
+- Cynthia: autorización de publicación confirmada por Rodrigo en este addendum. Narración en tercera persona y atribución al programa AWE / uHüb A.C.; no adjudicar el caso a Emprende Diario. La historia no se presenta como promesa de resultados.
+- Métricas: se aplica la corrección suministrada, no se afirma haber auditado el informe original. 97% y otras tasas quedan sin publicar hasta tener su base y periodo. La foto hero puede esperar; no se inventan el aviso legal, responsable, condiciones comerciales ni enlace de Stripe.
+- Cambios en `home-paraguas-v2`, PR #4 existente. No tocar main, dominios ni producción. Registrar el antes/después y las adaptaciones.

@@ -11,7 +11,7 @@ export const lunesSubscription =
   "https://uhub.kit.com/b3786d63e8";
 
 export function Arrow({ external = false }: { external?: boolean }) {
-  return <span aria-hidden="true">{external ? "↗" : "→"}</span>;
+  return <span aria-hidden="true" data-external={external || undefined}>→</span>;
 }
 
 export function Logo({ compact = false }: { compact?: boolean }) {
@@ -88,7 +88,7 @@ export function SiteFooter() {
       </div>
       <div className="uhub-footer-bottom">
         <span>© {new Date().getFullYear()} uHüb</span>
-        <span>Emprender es humano.</span>
+        <span>Primero la persona. Luego el negocio.</span>
         <a href="#cabecera">Volver arriba →</a>
       </div>
     </footer>

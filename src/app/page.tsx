@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Arrow, SiteFooter, SiteHeader } from "./components";
-import { CycleWheel } from "@/components/marketing/CycleWheel";
+import { HomeCycle } from "./home-cycle";
 import { NewsletterForm } from "./newsletter-form";
 import "./home-paraguas.css";
 
@@ -23,11 +23,18 @@ export const metadata: Metadata = {
   },
 };
 
+// Supply approved image paths here; absent assets never render broken images.
+const heroPhoto: { webp: string; jpg: string; alt: string } | null = null;
+
 export default function Home() {
   return <>
     <SiteHeader />
     <main className="hub-home" id="contenido">
-      <section className="hub-hero" id="inicio" aria-labelledby="home-title">
+      <section className={`hub-hero${heroPhoto ? " hub-hero-with-photo" : ""}`} id="inicio" aria-labelledby="home-title">
+        {heroPhoto && <picture className="hub-hero-photo">
+          <source srcSet={heroPhoto.webp} type="image/webp" />
+          <img src={heroPhoto.jpg} alt={heroPhoto.alt} width="2400" height="1030" loading="eager" fetchPriority="high" />
+        </picture>}
         <div className="hub-shell">
           <p className="hub-eyebrow">Centro de Desarrollo Emprendedor</p>
           <h1 id="home-title">Nadie emprende solo.</h1>
@@ -48,15 +55,15 @@ export default function Home() {
 
       <div className="hub-metrics" aria-label="Trayectoria de uHüb">
         <div className="hub-shell">
-          <span><strong>Desde 2015</strong></span>
-          <span><strong>600</strong> personas acompañadas en mentoría uno a uno</span>
-          <span><strong>+2,000</strong> personas alcanzadas</span>
-          <span>Chihuahua y Ciudad Juárez</span>
+          <div><strong>Desde 2015</strong><span>Construyendo comunidad</span></div>
+          <div><strong>+1,300</strong><span>participaciones en actividades abiertas desde 2016</span></div>
+          <div><strong>953</strong><span>sesiones de mentoría desde 2023</span></div>
+          <div><strong>Chihuahua</strong><span>y Ciudad Juárez</span></div>
         </div>
+        <p className="hub-metrics-source">Datos de uHüb A.C. · Informe al Consejo, octubre de 2026. Participaciones y sesiones, no personas únicas.</p>
       </div>
 
       <section className="hub-why hub-section" id="por-que" aria-labelledby="why-title">
-        <span className="hub-anchor" id="historias" aria-hidden="true" />
         <div className="hub-reading">
           <p className="hub-eyebrow">El punto de partida importa</p>
           <h2 id="why-title">El talento está repartido. <em>El ecosistema, no.</em></h2>
@@ -84,15 +91,30 @@ export default function Home() {
               </div>
               <a className="hub-link" href="/como-lo-hacemos">Ver el recorrido completo <Arrow /></a>
             </div>
-            <figure className="hub-cycle" id="ciclo">
-              <CycleWheel compact />
-              <figcaption>El ciclo reúne cuatro etapas a las que puedes volver cuando cambia tu proyecto o lo que necesitas. La ruta guiada propone actividades para trabajarlas. <strong>Volver no es retroceder.</strong></figcaption>
-            </figure>
+
           </div>
+          <HomeCycle />
         </div>
       </section>
 
-      {/* La historia de Cynthia se incorporará cuando exista autorización escrita. */}
+      <section className="hub-story hub-section" id="historias" aria-labelledby="cynthia-title">
+        <div className="hub-shell hub-story-layout">
+          <div>
+            <p className="hub-eyebrow">Quien fue acompañada, hoy acompaña</p>
+            <h2 id="cynthia-title">Así se ve cuando funciona.</h2>
+            <p className="hub-story-name">Cynthia Piñón</p>
+            <p className="hub-story-project">Ediciones Algoritmo 524 · Chihuahua</p>
+            <p className="hub-story-account">Llegó en 2022 con el negocio en quiebra. Hoy lo dirige — y acompaña a otras emprendedoras como mentora de uHüb.</p>
+            <p className="hub-story-attribution">Su recorrido comenzó en el programa AWE / uHüb A.C.</p>
+            <a className="hub-link" href="/nosotros#programas">Conoce la historia de estos programas <Arrow /></a>
+          </div>
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/cynthia-pinon.webp" alt="Cynthia Piñón, de Ediciones Algoritmo 524." width="1200" height="1200" loading="lazy" />
+            <figcaption>Emprendedora y mentora de uHüb.</figcaption>
+          </figure>
+        </div>
+      </section>
       <section className="hub-stay hub-section" id="lunes" aria-labelledby="stay-title">
         <div className="hub-shell hub-stay-layout">
           <div>

@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import { Mulish } from "next/font/google";
 import "./globals.css";
 import "./preview-styles.css";
 import "./root-home.css";
 import "./root-interactive.css";
+import "./design-system.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const mulish = Mulish({
+  variable: "--font-mulish",
   subsets: ["latin"],
-  weight: ["700", "800", "900"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 const siteUrl = "https://uhub.mx";
@@ -54,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es-MX" className={`${montserrat.variable} ${inter.variable}`}>
+    <html lang="es-MX" className={mulish.variable}>
       <body>{children}</body>
     </html>
   );

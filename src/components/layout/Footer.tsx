@@ -15,7 +15,7 @@ const siteLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-gray-dark text-white">
+    <footer className="bg-burgundy text-white">
       <div className="mx-auto grid max-w-[1200px] gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <span className="font-display text-2xl font-black tracking-tight">

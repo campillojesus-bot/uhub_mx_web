@@ -55,15 +55,15 @@ export function CycleWheel() {
     <div className="journey-layout">
       <div className="journey-wheel">
         <svg viewBox="0 0 500 500" aria-hidden="true">
-          <circle cx="250" cy="250" r="173" fill="none" stroke="#F0D3D8" strokeWidth="56" />
+          <circle cx="250" cy="250" r="173" fill="none" stroke="#f1d4cf" strokeWidth="56" />
           {cycle.map((item,i)=>{
             const start=(i*90+184)*Math.PI/180, end=(i*90+266)*Math.PI/180;
             const x1=250+173*Math.cos(start),y1=250+173*Math.sin(start),x2=250+173*Math.cos(end),y2=250+173*Math.sin(end);
             return <path key={item.name} d={`M ${x1} ${y1} A 173 173 0 0 1 ${x2} ${y2}`} fill="none" stroke={stage===i?"#B81632":"#474855"} strokeWidth="56" className="journey-arc" />;
           })}
-          <circle cx="250" cy="250" r="109" fill="white" stroke="#F0D3D8" />
-          <path d="M218 169 A86 86 0 0 1 332 271" fill="none" stroke="#8C8F94" strokeWidth="1.5" />
-          <path d="m325 263 7 9 7-9" fill="none" stroke="#8C8F94" strokeWidth="1.5" />
+          <circle cx="250" cy="250" r="109" fill="white" stroke="#f1d4cf" />
+          <path d="M218 169 A86 86 0 0 1 332 271" fill="none" stroke="#87838d" strokeWidth="1.5" />
+          <path d="m325 263 7 9 7-9" fill="none" stroke="#87838d" strokeWidth="1.5" />
           <text x="250" y="237" className="journey-center">Tu camino</text>
           <text x="250" y="270" className="journey-center-small">Volver no es</text><text x="250" y="290" className="journey-center-small">retroceder.</text>
         </svg>
@@ -142,7 +142,7 @@ export function ChangeStories() {
               <dd>{stories[activeStory].change}</dd>
             </div>
           </dl>
-          <a className="root-story-source" href={stories[activeStory].href} target="_blank" rel="noreferrer">Conoce su experiencia ↗</a>
+          <a className="root-story-source" href={stories[activeStory].href} target="_blank" rel="noreferrer">Conoce su experiencia →</a>
         </div>
       </article>
     </div>

@@ -138,7 +138,7 @@ html {
 }
 .uhub-header-cta:hover {
   color: white;
-  background: var(--charcoal);
+  background: var(--surface-brand-deep);
 }
 .uhub-header-cta > span {
   font-size: 22px;
@@ -155,7 +155,7 @@ html {
 .root-home h1,
 .root-home h2,
 .root-home h3 {
-  font-family: "Avenir Next", "Montserrat", Arial, sans-serif;
+  font-family: var(--font-display);
   font-weight: 900;
   letter-spacing: -0.052em;
   margin: 0;
@@ -331,7 +331,7 @@ html {
   line-height: 1.5;
 }
 .root-hero-visual figcaption strong {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-display);
   font-size: 19px;
   font-weight: 800;
   letter-spacing: -0.035em;
@@ -351,7 +351,7 @@ html {
   justify-content: center;
   flex-wrap: wrap;
   gap: 34px;
-  background: var(--charcoal);
+  background: var(--surface-brand-deep);
   color: white;
   padding: 24px 32px;
   font-size: 14px;
@@ -574,7 +574,7 @@ html {
 }
 .root-wheel-center > span,
 .root-wheel-center > strong {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(22px, 2.5vw, 33px);
   letter-spacing: -0.05em;
   line-height: 1.25;
@@ -615,7 +615,7 @@ html {
   font-weight: 500;
 }
 .root-wheel-node > strong {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-display);
   font-size: 15px;
   font-weight: 700;
 }
@@ -664,7 +664,7 @@ html {
 }
 .root-cycle-big-number {
   display: block;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-display);
   font-size: 82px;
   line-height: 1;
   font-weight: 800;
@@ -751,7 +751,7 @@ html {
   flex-direction: column;
   margin: auto 0;
   padding-block: 50px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(28px, 2.6vw, 39px);
   line-height: 1.25;
   font-weight: 800;
@@ -803,7 +803,7 @@ html {
   font-weight: 400;
 }
 .root-story-list button > strong {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 21px;
   letter-spacing: -0.035em;
@@ -888,7 +888,7 @@ html {
   transform: rotate(-3deg);
 }
 .root-monday-label {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-display);
   font-weight: 800;
   font-size: 30px;
   letter-spacing: -0.04em;
@@ -905,7 +905,7 @@ html {
   align-items: center;
 }
 .root-monday-numbers strong {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(62px, 8vw, 120px);
   font-weight: 900;
   line-height: 1.1;
@@ -1586,7 +1586,7 @@ html {
 .root-cycle-description { min-height: 375px; }
 .root-cycle-description p { max-width: none; }
 .root-cycle-takeaway { display: grid; grid-template-columns: 1fr 1fr; gap: 9%; border-top: 1px solid var(--root-border); padding-top: 30px; margin-top: 44px; }
-.root-cycle-takeaway strong { font-family: "Montserrat", sans-serif; font-size: 25px; line-height: 1.4; letter-spacing: -0.025em; }
+.root-cycle-takeaway strong { font-family: var(--font-display); font-size: 25px; line-height: 1.4; letter-spacing: -0.025em; }
 .root-cycle-takeaway p { margin: 0; font-size: 16px; line-height: 1.7; }
 .root-consolidar { margin-top: 32px; border-block: 1px solid var(--root-border); padding-block: 18px; }
 .root-consolidar summary { cursor: pointer; font-size: 16px; font-weight: 600; padding-block: 6px; }
@@ -1730,8 +1730,8 @@ html {
 .history-chapter > div { max-width: 830px; }
 .history-chapter h2 { font-size: clamp(30px, 3.2vw, 46px); line-height: 1.12; margin-bottom: 25px; }
 .history-chapter p:not(.history-date), .history-principles p:not(.eyebrow), .history-reflection p { font-size: 17px; line-height: 1.85; }
-.history-pullquote { margin: 32px 0 0; border-left: 3px solid var(--red); padding: 16px 28px; font-family: "Montserrat", sans-serif; font-size: clamp(24px, 3vw, 36px); font-weight: 700; letter-spacing: -.035em; }
-.history-pullquote cite { display: block; margin-top: 14px; font-family: "Inter", sans-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: 0; }
+.history-pullquote { margin: 32px 0 0; border-left: 3px solid var(--red); padding: 16px 28px; font-family: var(--font-display); font-size: clamp(24px, 3vw, 36px); font-weight: 700; letter-spacing: -.035em; }
+.history-pullquote cite { display: block; margin-top: 14px; font-family: var(--font-body); font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: 0; }
 .history-lessons { background: #fff; }
 .history-lesson-list { margin-top: 45px; }
 .history-lesson-list article { display: grid; grid-template-columns: .6fr 1fr 1fr; gap: 35px; border-top: 1px solid var(--line); padding: 30px 0; }
@@ -1774,7 +1774,7 @@ html {
 .history-archive:hover img, .root-video-story:hover img { filter:brightness(1.08); }
 .history-archive > span, .root-video-story > span { display:grid; gap:10px; }
 .history-archive small, .root-video-story small { text-transform:uppercase; font-size:11px; letter-spacing:.12em; font-weight:700; }
-.history-archive strong, .root-video-story strong { font-family:"Montserrat",sans-serif; font-size:24px; line-height:1.3; }
+.history-archive strong, .root-video-story strong { font-family:var(--font-display); font-size:24px; line-height:1.3; }
 .history-archive span span, .root-video-story span span { font-size:14px; line-height:1.7; }
 .history-archive svg, .root-video-story svg { width:18px; height:18px; display:inline-block; vertical-align:middle; }
 .history-talk { grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:24px; }
@@ -1804,7 +1804,7 @@ html {
 .route-audiences { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 22px 0; }
 .route-audiences > span { margin-right: 14px; font-size: 14px; }
 .route-audiences button { cursor: pointer; min-height: 44px; border: 1px solid var(--root-border); padding: 10px 17px; font-size: 14px; background: transparent; color: var(--charcoal); border-radius: 25px; }
-.route-audiences button[aria-pressed="true"] { background: var(--charcoal); color: white; border-color: var(--charcoal); }
+.route-audiences button[aria-pressed="true"] { background: var(--surface-brand-deep); color: white; border-color: var(--charcoal); }
 .route-stage-tabs { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); border: 1px solid var(--root-border); }
 .route-stage-tabs button { cursor: pointer; background: transparent; border: 0; border-right: 1px solid var(--root-border); min-height: 104px; display: flex; align-items: center; text-align: left; gap: 16px; padding: 22px; color: var(--charcoal); transition: background .2s, color .2s; }
 .route-stage-tabs button:last-child { border-right: 0; }
@@ -1815,7 +1815,7 @@ html {
 .route-tab-arrow { margin-left: auto; }
 .route-stage-panel:not([hidden]) { display: grid; grid-template-columns: .9fr 1.1fr; border: 1px solid var(--root-border); border-top: 0; min-height: 460px; }
 .route-stage-title { padding: clamp(28px,4vw,56px); background: var(--light); position: relative; }
-.route-stage-index { display: block; font: 800 clamp(62px,7vw,98px)/1 "Montserrat", sans-serif; letter-spacing: -.06em; color: var(--red); margin-bottom: 24px; }
+.route-stage-index { display: block; font: 800 clamp(62px,7vw,98px)/1 var(--font-display); letter-spacing: -.06em; color: var(--red); margin-bottom: 24px; }
 .route-stage-title > p { text-transform: uppercase; letter-spacing: .13em; font-size: 13px; font-weight: 700; margin-bottom: 18px; }
 .root-home .route-stage-title h3 { font-size: clamp(30px,3.4vw,46px); line-height: 1.1; max-width: 400px; }
 .route-context { display: block; margin-top: 25px; font-size: 14px; }
@@ -1840,7 +1840,7 @@ html {
 .institutional-facts > span { font-size: 14px; font-weight: 600; }
 .institutional-facts dl { margin: 24px 0; }
 .institutional-facts dl > div { padding: 18px 0; border-top: 1px solid var(--root-border); }
-.institutional-facts dt { font-family: "Montserrat",sans-serif; font-size: 25px; font-weight: 800; letter-spacing: -.035em; }
+.institutional-facts dt { font-family: var(--font-display); font-size: 25px; font-weight: 800; letter-spacing: -.035em; }
 .institutional-facts dd { margin: 4px 0 0; }
 .institutional-facts > p { font-size: 14px; margin-bottom: 0; }
 .institutional-section { padding: 65px 0; border-top: 1px solid var(--root-border); }
@@ -1856,7 +1856,7 @@ html {
 .institutional-sequence li:first-child { padding-left: 0; }
 .institutional-sequence li:last-child { border-right: 0; }
 .institutional-sequence span { font-size: 14px; color: var(--red); font-weight: 600; }
-.institutional-band { background: var(--charcoal); color: white; padding: 50px clamp(24px,5vw,70px); margin: 20px 0 60px; }
+.institutional-band { background: var(--surface-brand-deep); color: white; padding: 50px clamp(24px,5vw,70px); margin: 20px 0 60px; }
 .institutional-band > p, .institutional-band > ul { max-width: 850px; }
 .institutional-band .eyebrow, .institutional-band .text-link { color: white; }
 .institutional-band .institutional-checks li::before { color: white; }
@@ -1878,7 +1878,7 @@ html {
 .institutional-page .button { font-size: 14px; padding: 16px 24px; }
 .organization-destinations { border-top: 1px solid var(--root-border); margin-top: 34px; }
 .organization-destinations a { display: grid; grid-template-columns: .7fr 1fr 30px; gap: 24px; padding: 25px 0; border-bottom: 1px solid var(--root-border); text-decoration: none; }
-.organization-destinations strong { font: 800 24px/1.2 "Montserrat",sans-serif; letter-spacing: -.03em; }
+.organization-destinations strong { font: 800 24px/1.2 var(--font-display); letter-spacing: -.03em; }
 .organization-destinations span { font-size: 16px; line-height: 1.6; }
 .organization-destinations a:hover strong { color: var(--red); }
 .membership-situations { list-style: none; margin: 32px 0; padding: 0; border-top: 1px solid var(--root-border); }

@@ -6,7 +6,7 @@ const items = [
 
 export function CredibilityBand() {
   return (
-    <div className="bg-gray-dark py-4">
+    <div className="bg-burgundy py-4">
       <p className="mx-auto max-w-[1200px] px-6 text-center font-body text-sm font-medium tracking-wide text-white sm:text-base">
         {items.map((item, i) => (
           <span key={item}>

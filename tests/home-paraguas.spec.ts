@@ -16,8 +16,8 @@ for (const width of [360, 390, 1440]) {
       expect((await page.request.get(destinations[i])).status()).toBe(200);
     }
     await expect(page.locator("main a[href='/brujula']")).toHaveCount(0);
-    await expect(page.locator(".hub-cycle").getByRole("button")).toHaveCount(0);
-    await expect(page.locator(".hub-cycle")).toContainText("Volver no es retroceder.");
+    await expect(page.getByRole("tablist", { name: "Explorar las etapas del ciclo" }).getByRole("tab")).toHaveCount(4);
+    await expect(page.locator(".home-cycle-explorer")).toContainText("Volver no es retroceder.");
     await expect(page.locator("main")).not.toContainText(/Consolidar|PENDIENTE|por integrar|No vendemos contenido/);
     await expect(page.locator(".root-newsletter-capture a")).toHaveAttribute("href", "https://uhub.kit.com/b3786d63e8");
     await expect(page.locator(".hub-test a")).toHaveAttribute("href", "/test");
@@ -47,3 +47,36 @@ test("el modelo trasladado conserva pestañas y el recorrido", async ({ page }) 
   await expect(page.locator("#model-panel-1")).toBeHidden();
   await expect(page.getByRole("group", { name: "¿Qué quieres resolver hoy?" })).toBeVisible();
 });
+
+for (const width of [360, 390, 1440]) {
+  test(`el ciclo explica la práctica por contexto y conserva la etapa, ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/#ciclo");
+    const tabs = page.getByRole("tablist", { name: "Explorar las etapas del ciclo" });
+    const first = tabs.getByRole("tab", { name: "Explorar la etapa Descubrir", exact: true });
+    await first.focus();
+    await page.keyboard.press("ArrowRight");
+    await expect(tabs.getByRole("tab", { name: "Explorar la etapa Aterrizar" })).toBeFocused();
+    await expect(page.locator("#home-cycle-panel-1")).toBeVisible();
+    await expect(page.locator("#home-cycle-panel-0")).toBeHidden();
+    await page.getByLabel("Ver un ejemplo para").selectOption("2");
+    await expect(page.locator(".home-cycle-example")).toContainText("El docente acompaña");
+    await tabs.getByRole("tab", { name: "Explorar la etapa Adaptar" }).click();
+    await expect(page.locator(".home-cycle-example")).toContainText("El grupo compara");
+    await page.getByLabel("Ver un ejemplo para").selectOption("3");
+    await expect(page.locator(".home-cycle-example")).toContainText("carpeta de accionables");
+    await expect(page.locator(".hub-metrics")).toContainText("+1,300");
+    await expect(page.locator(".hub-metrics")).toContainText("953");
+    await expect(page.locator(".hub-metrics")).not.toContainText(/600|2,000|97%/);
+    await expect(page.locator(".hub-story")).toContainText("Cynthia Piñón");
+    const photo = page.locator(".hub-story img");
+    await photo.scrollIntoViewIfNeeded();
+    await expect.poll(() => photo.evaluate(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0)).toBe(true);
+    await expect(page.locator(".uhub-header-cta")).toHaveCount(0);
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.getByRole("link", { name: "Explorar esta etapa en el recorrido" }).click();
+    await expect(page).toHaveURL(/etapa=agua#etapas$/);
+    await expect(page.getByRole("tab", { name: /Adaptar/ }).first()).toHaveAttribute("aria-selected", "true");
+  });
+}
