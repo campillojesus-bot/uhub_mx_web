@@ -1,6 +1,6 @@
 # Documento rector — uhub.mx
 
-**Versión 2.1 · Actualizada el 29 de octubre de 2026** — portada paraguas aprobada por Rodrigo. Las secciones 1–12 y la adenda del 29 de octubre son la política vigente; los registros fechados anteriores conservan contexto y quedan superados donde contradigan esta versión.
+**Versión 2.2 · Actualizada el 31 de octubre de 2026** — portada paraguas aprobada por Rodrigo. Las secciones 1–12 y la adenda del 31 de octubre son la política vigente; los registros fechados anteriores conservan contexto y quedan superados donde contradigan esta versión.
 **Responsable:** Rodrigo Campillo
 
 Este documento registra decisiones de uHüb. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
@@ -148,7 +148,7 @@ Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín
 ### 6.3 Páginas por audiencia (una por puerta, un CTA principal cada una)
 | Página | Para quién | CTA principal |
 |---|---|---|
-| Emprendedores (Emprende Diario) | Personas; se divide por perfil (re, auto, intra, inter) | Inscríbete (Stripe) |
+| Emprendedores (Emprende Diario) | Personas; distintos contextos emprendedores | Solicitar ingreso (WhatsApp, sin pago directo) |
 | Empresas y cámaras | Empresas y cámaras | Solicita una propuesta |
 | A.C. y fundaciones | Organizaciones sociales y fundaciones | Agenda una conversación |
 | Universidades | Universidades y docentes | Solicita la propuesta para tu comité |
@@ -183,7 +183,7 @@ Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín
 - **Aliados:** se nombran solo con convenio firmado o autorización.
 - **Fotos:** reales y fieles al contexto. Hero: acompañamiento sin marca de agua de la A.C.; hasta recibirla, degradado de marca sin fotografía. Archivo histórico en Nosotros conserva fotos y atribución; no presentar una escena antigua como oferta actual.
 - **AWE:** solo en pasado, como historia.
-- **Precios:** Ritmo $399 MXN/mes. Momentum solo "por invitación", sin precio público.
+- **Membresía:** Emprende Diario $399 MXN/mes, fase cerrada por solicitud en grupos pequeños, sin permanencia y cancelable. No exige egreso A.C. Los niveles Ritmo/Momentum quedan sin desglose público hasta definir su alcance. No Stripe en esta etapa.
 - **Colores:** carmín #B81632 (hover #9C1229), vino #781522 (oscuro #5A0F19), pizarra #474855 solo para texto fuerte, cuerpo #5B5C69, apoyo #87838D, bordes #D7D5DA / #E4E3E6, papel #F4F4F4, rosa #F1D4CF, naranja #EC6839, azul #0679AF, teal #00C4B4 y menta #E6F9F7. Componentes nuevos usan alias semánticos. No naranja/teal para texto sobre blanco; notas pequeñas usan pizarra/cuerpo para contraste. El logo original no se recolorea.
 - **Tipografía:** Mulish web (pesos 300–900 según uso); sustituye Avenir local, Montserrat e Inter. H1/H2 en mayúsculas mediante CSS, sin reescribir contenido ni marca uHüb. Escala display 2.6–4.25rem adaptable para no cortar palabras, h2 32px, cuerpo 16px, notas 14px. Botones píldora; foco visible; movimiento reducido.
 - **Una decisión principal por página.** La portada permite cuatro entradas por intención; las landings tienen su acción principal. Móvil primero.
@@ -217,7 +217,7 @@ Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín
 
 - **Contacto:** WhatsApp 52 614 234 6499 · rodrigo@uhub.mx · Cotizaciones: Manuel Acosta, WhatsApp 52 614 198 9236.
 - **Lunes 1‑1‑1 (formulario Kit):** https://uhub.kit.com/b3786d63e8
-- **Pago Ritmo:** [LINK_STRIPE_RITMO]
+- **Ingreso Emprende Diario:** solicitud por WhatsApp; pago público fuera del alcance de esta etapa.
 - **Aliado técnico en programas institucionales:** Biné Educación (registro de Agente Capacitador Externo ante la STPS).
 - **Casos que se pueden nombrar hoy:** FICOSEC (autosostenibilidad con A.C.).
 - **En preparación o sin autorización para nombrar:** CANACO Servytur Chihuahua, CELIDERH/FECHAC, Tecnológico de Nuevo Casas Grandes (diciembre 2026), FEC Torreón.
@@ -235,7 +235,7 @@ Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín
 | P4 | Conectar uhub.mx al proyecto correcto en Vercel | Bloquea publicar. |
 | P5 | Foto real de acompañamiento para la raíz y fotos de archivo para Nosotros | Sin marca de la A.C. |
 | P6 | Autorización de las tres historias y de los aliados | Hasta tenerla, secciones ocultas. |
-| P7 | Emprende Diario: qué pasa después de pagar, condiciones de cancelación, tiempo semanal | Necesario antes de abrir Ritmo al público. |
+| P7 | Emprende Diario: niveles, acceso inicial, logística y procedimiento de cancelación | Solicitud activa; pago público pospuesto. |
 | P8 | Hitos reales de cada etapa (Journey Map) para reemplazar los ejemplos del prototipo | — |
 | P9 | Cifras del programa A.C. en la página de fundaciones | Con atribución, o esa página vive en uhub.org.mx. |
 
@@ -383,3 +383,19 @@ Rodrigo autorizó aplicar `prompt_astra_correcciones_design_system.md`, integrar
 - Cynthia: autorización de publicación confirmada por Rodrigo en este addendum. Narración en tercera persona y atribución al programa AWE / uHüb A.C.; no adjudicar el caso a Emprende Diario. La historia no se presenta como promesa de resultados.
 - Métricas: se aplica la corrección suministrada, no se afirma haber auditado el informe original. 97% y otras tasas quedan sin publicar hasta tener su base y periodo. La foto hero puede esperar; no se inventan el aviso legal, responsable, condiciones comerciales ni enlace de Stripe.
 - Cambios en `home-paraguas-v2`, PR #4 existente. No tocar main, dominios ni producción. Registrar el antes/después y las adaptaciones.
+
+
+## Ejecución del cierre y red de mentores (31 de octubre de 2026) — última decisión vigente
+
+Rodrigo autorizó priorizar las correcciones del nuevo prompt y aplicar `cierre_para_astra_uhub_mx.md` para la membresía. Preguntó cómo mantener vigente la cifra de mentores y evaluar la referencia Mike Michalowicz. Se conserva la base ya implementada, las cuatro puertas y la interacción completa del ciclo.
+
+- **Datos:** `src/data/uhub.ts` centraliza cifras, historias autorizadas, contacto y condiciones aprobadas. El reporte de mentores A.C. suministrado es 5 base + 8 especializados; total calculado, con entidad y corte visible. La solicitud de mentoría no aumenta el conteo. No es disponibilidad de trece mentores para la membresía. No conectar una API ni inventar expedientes: la actualización por ahora se revisa, modifica y despliega. El total puede subir o bajar. Animación de entrada decorativa una vez (700 ms); valor accesible y sin JS siempre real, movimiento reducido respetado.
+- **Encuesta:** la hoja primaria recibida tiene 36 respuestas: 32 Sí/4 No sobre seguir emprendiendo, 36 Sí sobre recomendar y 25 Sí/11 No sobre mentoría. Mezcla respuestas de marzo 2025 y octubre 2026. La otra hoja tiene 18 filas y no es una muestra adicional. No publicar 13/14, 32/33 ni 23/33 sin reconciliar filtros, población y fecha; tampoco sustituirlos automáticamente por tasas de los 36 registros. El año declarado es de participación, no una fecha de egreso. Se conservan +1,300 participaciones y 953 sesiones reportadas por Rodrigo. Los datos personales de la encuesta no entran al repositorio.
+- **Responsabilidades:** integrar «Tú haces el camino. Nosotros te acompañamos.» en el modelo. Se explica qué aporta uHüb y qué ejecuta la persona/equipo. No caricaturizar consultores, prometer quedarse indefinidamente, ni inferir duración/certificación para todas las ofertas. El B2B orienta a habilidades y aplicación, sin inventar 6–12 semanas.
+- **Red:** bloque después de Cynthia; formación, mentor base/especializado, desglose interactivo y `/mentores`. No quinta puerta; no prometer asignación automática ni coincidencia exacta con la experiencia. Mantener formación módulo 1 y módulo 2 en preparación hasta nueva confirmación.
+- **Contacto:** Hablemos en header sticky, visible en móvil; mismo WhatsApp en cierre. Mensaje editable, no envío automático ni promesa de respuesta en dos minutos.
+- **Historias:** conservar retrato/caso autorizado de Cynthia. Mosaico preparado desde la fuente central; publicar muro completo al contar con al menos seis retratos y permisos. No interpretar interés en compartir historia en redes como permiso comercial irrestricto ni publicar el listado de encuestados.
+- **Continuidad:** Lunes 1-1-1 conserva Kit e historia/reto/pregunta. Kit de Estructura queda sin activar hasta tener entregables y envío confirmado; no prometer un PDF inexistente. Se conserva test secundario.
+- **Emprende Diario:** $399 MXN/mes, sin permanencia, cancelas cuando quieras, acceso por solicitud en grupos pequeños; no requiere haber pasado por la A.C. Semana 1 mentoría grupal/planeación; 2 tema mensual; 3 mentoría grupal con invitado; 4 cierre/rendición de cuentas. No publicar todavía niveles Ritmo/Momentum, cobro, reembolsos, onboarding en 24 h, precio vitalicio ni otras recomendaciones del borrador legal como condiciones aprobadas. Preservar recorrido → solicitud editable y exclusión voluntaria de la selección.
+- **Privacidad:** recibido borrador; el cierre condiciona su publicación al domicilio del responsable. Mantener sin publicar y sin nuevo formulario propio. El nombre de la persona física recibido difiere del proporcionado antes: confirmar junto con domicilio. Revisar finalidades, proveedores y cookies frente al funcionamiento real antes de activar el aviso; no declarar revisión legal concluida.
+- **Entrega:** actualizar PR #4 (`home-paraguas-v2` → `mejora-retos-continuidad`) y preview, sin main, dominio, producción ni eliminación de proyectos Vercel. Documentar decisiones, antes/después y pruebas.

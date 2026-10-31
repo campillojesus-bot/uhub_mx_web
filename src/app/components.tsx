@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { SiteNavigation } from "./navigation";
+import { contacto, membresia } from "@/data/uhub";
 
-export const whatsappGeneral =
-  "https://wa.me/526142346499?text=Hola%2C%20llegu%C3%A9%20desde%20uhub.mx%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n";
-export const whatsappMembership =
-  "https://wa.me/526142346499?text=Hola%2C%20quiero%20solicitar%20mi%20ingreso%20a%20Ritmo%20de%20Emprende%20Diario%20y%20conocer%20las%20condiciones";
+export const whatsappGeneral = contacto.general;
+export const whatsappMembership = membresia.solicitudUrl;
 export const whatsappOrganizations =
   "https://wa.me/526142346499?text=Hola%2C%20represento%20una%20organizaci%C3%B3n%20y%20quiero%20conocer%20uHub";
 export const lunesSubscription =
@@ -39,6 +38,7 @@ export function SiteHeader() {
           <Logo compact />
         </Link>
         <SiteNavigation />
+        <a className="uhub-header-cta" href={whatsappGeneral} target="_blank" rel="noreferrer">Hablemos <Arrow external /></a>
       </header>
     </>
   );

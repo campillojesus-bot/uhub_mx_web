@@ -1,5 +1,6 @@
 import { pageMetadata } from "../institutional";
 import { Suspense } from "react";
+import { membresia } from "@/data/uhub";
 import { MembershipEntry } from "./membership-entry";
 import "../next-steps.css";
 import {
@@ -9,7 +10,7 @@ import {
   lunesSubscription,
 } from "../components";
 
-export const metadata = pageMetadata("Emprende Diario · Acompañamiento para seguir", "uHub: Una membresía para convertir prioridades en acciones y sostenerlas con mentores y comunidad. Conoce Ritmo, solicita ingreso o empieza con Lunes 1-1-1.", "/emprende-diario");
+export const metadata = pageMetadata("Emprende Diario · Acompañamiento para seguir", "uHub: Una membresía para convertir prioridades en acciones y sostenerlas con mentores y comunidad. Conoce el acompañamiento, solicita ingreso o empieza con Lunes 1-1-1.", "/emprende-diario");
 
 export default function EmprendeDiarioPage() {
   return (
@@ -21,8 +22,8 @@ export default function EmprendeDiarioPage() {
           <p className="eyebrow">Emprende Diario · Una membresía de uHüb</p>
           <h1>Emprender no es un evento. Es un hábito que se sostiene.</h1>
           <p>Planeación, práctica y seguimiento para iniciar, retomar o sostener un proyecto. Por tu cuenta, junto con otras personas o desde tu trabajo: avanzas con el tiempo y los recursos que tienes.</p>
-          <div className="route-actions"><a className="button button-primary" href="#ingreso">Solicitar ingreso a Ritmo <Arrow /></a></div>
-          <p className="membership-entry-note">Ritmo · $399 MXN/mes. La comunidad actual está formada por egresados de uHüb A.C. Si eres nuevo, conversemos para confirmar tu opción de ingreso, la ruta y las condiciones antes de inscribirte.</p>
+          <div className="route-actions"><a className="button button-primary" href="#ingreso">Solicitar ingreso <Arrow /></a></div>
+          <p className="membership-entry-note">${membresia.precio} {membresia.moneda}/{membresia.periodo} · {membresia.condiciones}. {membresia.elegibilidad}</p>
         </div>
         <aside className="inner-quote">
           <span>Práctica y acompañamiento</span>
@@ -98,49 +99,19 @@ export default function EmprendeDiarioPage() {
         </figure>
       </section>
 
-      <section className="membership-options">
-        <div className="section-kicker">
-          <p className="eyebrow">Opciones de acompañamiento</p>
-          <h2>Ritmo hoy. Momentum por invitación.</h2>
+      <section className="membership-options membership-month" aria-labelledby="month-title">
+        <div className="membership-month-intro">
+          <p className="eyebrow">Emprende Diario · Ingreso por solicitud</p>
+          <h2 id="month-title">Un mes para aprender, actuar y revisar.</h2>
+          <p>{membresia.acceso}</p>
+          <p className="membership-price"><strong>${membresia.precio}</strong> {membresia.moneda}/{membresia.periodo}</p>
+          <p>{membresia.condiciones}</p>
+          <a className="button button-primary" href="#ingreso">Solicitar ingreso <Arrow /></a>
+          <p className="membership-entry-note">{membresia.elegibilidad}</p>
         </div>
-        <div className="option-grid">
-          <article>
-            <span>Ritmo</span>
-            <h3>
-              $399 <small>MXN/mes</small>
-            </h3>
-            <p>
-              La modalidad grupal de Emprende Diario. Trabaja tus prioridades
-              con planeación, sesiones y comunidad. Confirmamos contigo el ingreso antes de inscribirte.
-            </p>
-            <ul>
-              <li>Ruta y planeación semanal</li>
-              <li>Retos mensuales</li>
-              <li>Sesiones grupales de acompañamiento</li>
-              <li>Comunidad activa</li>
-            </ul>
-            <a
-              className="button button-secondary"
-              href="#ingreso"
-            >
-              Solicitar ingreso a Ritmo <Arrow />
-            </a>
-          </article>
-          <article className="featured-option">
-            <span>Momentum · Por invitación</span>
-            <h3>Acompañamiento 1:1</h3>
-            <p>
-              Para quien necesita una mirada más cercana sobre su proceso y
-              decisiones.
-            </p>
-            <ul>
-              <li>Todo lo incluido en Ritmo</li>
-              <li>Seguimiento personal</li>
-              <li>Condiciones de ingreso por confirmar</li>
-            </ul>
-            <p className="membership-entry-note">La modalidad personalizada está en preparación. Todavía no hay contratación ni calendario confirmado.</p>
-          </article>
-        </div>
+        <ol className="membership-month-weeks" aria-label="El acompañamiento durante el mes">
+          {membresia.semanas.map((semana, index) => <li key={semana}><span>Semana {index + 1}</span><h3>{semana}</h3></li>)}
+        </ol>
       </section>
 
       <Suspense fallback={<section className="inner-section" id="ingreso"><h2>Preparando tus opciones de ingreso…</h2></section>}><MembershipEntry /></Suspense>
