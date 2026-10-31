@@ -37,13 +37,13 @@ export function ModelExplorer() {
   return <><p className="model-invitation">Explora cada capa y descubre cómo se conecta contigo.</p><div className="model-explorer" data-layer={active}>
     <div className="model-orbit">
       <svg viewBox="0 0 600 600" aria-hidden="true" className="model-orbit-svg">
-        <defs><radialGradient id="model-light"><stop stopColor="#F0D3D8" stopOpacity=".5" /><stop offset="1" stopColor="#F2F2F2" stopOpacity="0" /></radialGradient></defs>
+        <defs><radialGradient id="model-light"><stop stopColor="#f1d4cf" stopOpacity=".5" /><stop offset="1" stopColor="#f4f4f4" stopOpacity="0" /></radialGradient></defs>
         <circle cx="300" cy="300" r="296" fill="url(#model-light)" />
         {[2, 1, 0].map(i => <g key={i} className={`model-ring model-ring-${i} ${active === i ? "is-active" : ""}`} onClick={() => setActive(i)}>
           <circle cx="300" cy="300" r={[83, 157, 246][i]} fill={i === 0 ? "#fff" : "none"} strokeWidth={[3, 64, 54][i]} />
         </g>)}
-        <circle cx="300" cy="54" r="8" fill={active===2 ? "#B81632" : "#8C8F94"}/>
-        <circle cx="457" cy="300" r="8" fill={active===1 ? "#B81632" : "#8C8F94"}/>
+        <circle cx="300" cy="54" r="8" fill={active===2 ? "#B81632" : "#87838d"}/>
+        <circle cx="457" cy="300" r="8" fill={active===1 ? "#B81632" : "#87838d"}/>
         <text x="300" y="48" className="model-ring-label">03</text>
         <text x="300" y="148" className="model-ring-label">02</text>
         <text x="300" y="271" className="model-center-label">01 / LA PERSONA</text>

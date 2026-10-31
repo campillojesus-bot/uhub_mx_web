@@ -21,3 +21,14 @@
 .institutional-next-step { margin-top: 18px; font-size: .9rem; line-height: 1.7; max-width: 650px; }
 .entry-share:has(input:focus-visible), .entry-faq summary:focus-visible { outline: 3px solid var(--burgundy); outline-offset: 4px; }
 @media(min-width: 760px) { .entry-steps { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px; } .entry-request { grid-template-columns: 1.5fr 1fr; gap: 40px; } }
+.membership-month { display: grid; gap: 40px; }
+.membership-month-intro > p { max-width: 580px; }
+.membership-month .membership-price { color: var(--text-brand); font-size: 18px; }
+.membership-price strong { font-weight: 900; font-size: 48px; }
+.membership-month-weeks { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--uh-gray-300); }
+.membership-month-weeks li { position: relative; padding: 4px 0 28px 28px; }
+.membership-month-weeks li::before { position: absolute; content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--text-brand); left: -7px; top: 12px; }
+.membership-month-weeks li:last-child { padding-bottom: 0; }
+.membership-month-weeks span { font-size: 14px; color: var(--text-brand); font-weight: 800; }
+.membership-month-weeks h3 { font-size: 24px; margin: 6px 0 0; }
+@media (min-width: 900px) { .membership-month { grid-template-columns: 1fr 1fr; gap: 70px; } }

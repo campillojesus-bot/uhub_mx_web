@@ -3,7 +3,7 @@ on:
   push:
     branches: [ajustes-raiz-v11]
   pull_request:
-    branches: [ajustes-raiz-v11, v2-modelo]
+    branches: [ajustes-raiz-v11, v2-modelo, mejora-retos-continuidad]
   workflow_dispatch:
 jobs:
   quality-and-browser:
@@ -36,7 +36,7 @@ jobs:
           cat /tmp/uhub-next.log
           exit 1
       - name: Test both journeys, ties, edit, copy, mobile, desktop and reduced motion
-        run: npx playwright test tests/brujula.spec.ts tests/continuidad.spec.ts --reporter=line --workers=2
+        run: npx playwright test tests/brujula.spec.ts tests/continuidad.spec.ts tests/home-paraguas.spec.ts --reporter=line --workers=2
       - name: Attach Playwright diagnostics on failure
         if: failure()
         uses: actions/upload-artifact@v4

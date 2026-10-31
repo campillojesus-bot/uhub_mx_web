@@ -1,5 +1,7 @@
 import { pageMetadata } from "../institutional";
 import { Arrow, SiteFooter, SiteHeader } from "../components";
+import { contacto } from "@/data/uhub";
+import { NetworkStats } from "@/components/marketing/NetworkStats";
 
 export const metadata = pageMetadata("Red uHüb · Mentores y comunidad", "Comparte tu experiencia como mentor base o especializado. Conoce la Red uHub y las formas de acompañar a otros emprendedores.", "/mentores");
 
@@ -13,21 +15,20 @@ export default function MentoresPage() {
             <p className="eyebrow">Red uHüb</p>
             <h1>Quien fue acompañado, hoy puede acompañar.</h1>
             <p>
-              Estamos preparando un primer grupo piloto de la Red uHüb.
-              Buscamos personas con experiencia emprendedora, egresados y
+              La red reúne a personas con experiencia emprendedora, egresados y
               especialistas que quieran acompañar a otras personas y compartir
-              lo que saben.
+              lo que saben. Estamos preparando la incorporación de un nuevo grupo pequeño.
             </p>
             <a
               className="button button-primary"
-              href="https://wa.me/526142346499?text=Hola%2C%20me%20interesa%20colaborar%20como%20mentor%20en%20la%20Red%20uHub"
+              href={contacto.mentores}
               target="_blank"
               rel="noreferrer"
             >
               Quiero acompañar <Arrow external />
             </a>
           </div>
-          <aside className="inner-quote"><span>La red en construcción</span><strong>Mentores base para la continuidad. Especialistas para el reto que tienes enfrente.</strong></aside>
+          <aside className="inner-quote"><span>Dos formas de acompañar</span><strong>Mentores base para la continuidad. Especialistas para el reto que tienes enfrente.</strong></aside>
         </section>
         <section className="inner-section">
           <div className="route-overview">
@@ -51,6 +52,8 @@ export default function MentoresPage() {
               acuerdan según el rol y el programa.
             </p>
             <p>El mentor ayuda a preguntar, decidir y aprender de la práctica; las decisiones del proyecto siguen siendo del emprendedor. El apoyo entre egresados también forma parte de la comunidad. Es distinto al compromiso de un mentor asignado: cada forma de participar tiene su lugar.</p>
+            <p>Primero conversamos sobre tu experiencia y disponibilidad. Después acordamos la formación, el rol y las condiciones para el programa correspondiente. Solicitar participar no implica una incorporación ni una asignación automática.</p>
+            <NetworkStats />
             <div className="route-actions">
               <a
                 className="text-link"

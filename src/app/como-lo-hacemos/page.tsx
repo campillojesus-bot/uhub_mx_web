@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { AccompanimentExplorer, JourneyExplorer } from "./journey-explorer";
 import "./journey.css";
 import { modelDefinition } from "../model-language";
+import { ModelExplorer } from "../model-explorer";
 
 export const metadata = pageMetadata(
   "Cómo lo hacemos · Modelo uHüb",
@@ -26,6 +27,13 @@ export default function HowPage() {
       <div><p className="jr-eyebrow">El Modelo uHüb / Un recorrido que puedes explorar</p><h1>Tu camino puede cambiar. <em>El acompañamiento también.</em></h1><p className="jr-hero-intro">Empezamos por entender a la persona, su contexto y el proyecto que quiere mover. Alrededor construimos una red de mentores, comunidad y hábitos para probar acciones y sostenerlas.</p><a className="button button-primary" href="#etapas">Explora las etapas <Arrow /></a><p className="jr-hero-intro" style={{fontSize:"0.94rem",marginTop:"18px"}}>¿Quieres ubicar tu punto de partida? <Link href="/brujula" style={{color:"#B81632",fontWeight:700}}>Explora la Brújula Emprendedora →</Link></p></div>
       <aside className="jr-hero-aside"><span className="jr-eyebrow">El modelo de acompañamiento</span><p>{modelDefinition}</p><div className="jr-hero-thread" aria-hidden="true"><span>Tu situación</span><i /><span>Tu siguiente acción</span><i /><span>Lo que aprendes</span><b>↺</b></div><small>El ciclo describe cómo puedes volver a las etapas. La ruta guiada orienta qué hacer en ellas.</small></aside>
     </section>
+    <section className="jr-section" id="ecosistema" aria-label="Tu contexto y tus apoyos">
+      <details className="jr-practice-details">
+        <summary>Explora la persona y su ecosistema <span aria-hidden="true">+</span></summary>
+        <p className="model-diagram-context">Este diagrama muestra una parte del modelo: tú, los apoyos que construyes y las instituciones de tu entorno. Las etapas y la ruta se exploran más abajo.</p>
+        <ModelExplorer />
+      </details>
+    </section>
     <Suspense fallback={<p className="jr-section">Preparando el recorrido…</p>}><JourneyExplorer /></Suspense>
     <AccompanimentExplorer />
     <section className="jr-section jr-continuity"><div className="jr-continuity-heading"><p className="jr-eyebrow">La práctica se repite</p><h2>El avance se construye en tu semana.</h2><p>La forma y la frecuencia del acompañamiento dependen del programa o modalidad que elijas.</p></div>
@@ -37,7 +45,6 @@ export default function HowPage() {
         <a className="jr-link" href="https://www.score.org/press-releases/mentorship-improves-odds-success-entrepreneurs/" target="_blank" rel="noreferrer">Leer el comunicado de SCORE <Arrow external /></a>
       </aside>
     </section>
-    <section className="jr-section jr-complement"><span className="jr-complement-symbol" aria-hidden="true">+</span><div><p className="jr-eyebrow">Cuando hace falta especialización</p><h2>¿Y Consolidar?</h2><p>Es una etapa técnica complementaria para fortalecer la operación del proyecto. El programa anual de uHüb A.C. la integra con apoyo especializado. No es obligatoria en todas las rutas de uHüb.</p></div></section>
     <section className="jr-closing"><div><p className="jr-eyebrow">El mismo modelo, distintas puertas</p><h2>Encuentra la que corresponde a tu contexto.</h2></div><Link className="jr-link" href="/#caminos">Encuentra tu camino <Arrow /></Link></section>
   </main><SiteFooter /></>;
 }

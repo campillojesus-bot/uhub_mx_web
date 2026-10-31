@@ -12,7 +12,7 @@ export function PhotoBlock({
   className?: string;
 }) {
   const toneClasses = {
-    dark: "bg-gray-dark",
+    dark: "bg-burgundy",
     red: "bg-red-uhub",
     burgundy: "bg-burgundy",
   } as const;

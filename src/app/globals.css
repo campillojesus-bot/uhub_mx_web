@@ -1,23 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  /* uHub brand tokens — Manual de Marca v1.3 */
-  --red-uhub: #b81632;
-  --red-uhub-hover: #9c1229;
-  --red-uhub-active: #7f0e21;
-  --gray-dark: #474855;
-  --gray-medium: #8c8f94;
-  --gray-light: #f2f2f2;
-  --white: #ffffff;
-  --orange-accent: #f26d3d;
-  --burgundy: #6d1f30;
-  --pink-soft: #f0d3d8;
-  --blue-accent: #1b809e;
-  --border-subtle: #e3e3e5;
-  --overlay-dark: rgba(71, 72, 85, 0.72);
-
-  --background: var(--white);
-  --foreground: var(--gray-dark);
+  /* Design System uHüb — addendum autorizado, 29 octubre 2026. */
+  --uh-crimson: #B81632;
+  --uh-crimson-600: #9C1229;
+  --uh-maroon: #781522;
+  --uh-maroon-800: #5A0F19;
+  --uh-ink: #474855;
+  --uh-slate: #5B5C69;
+  --uh-gray-500: #87838D;
+  --uh-gray-300: #D7D5DA;
+  --uh-gray-200: #E4E3E6;
+  --uh-paper: #F4F4F4;
+  --uh-blush: #F1D4CF;
+  --uh-orange: #EC6839;
+  --uh-blue: #0679AF;
+  --uh-teal: #00C4B4;
+  --uh-mint: #E6F9F7;
+  --uh-white: #FFFFFF;
+  --uh-grad-hero: linear-gradient(105deg, #781522 0%, #B81632 62%, #C81B39 100%);
+  --uh-grad-crimson: linear-gradient(135deg, #B81632 0%, #781522 100%);
+  --uh-grad-fire: linear-gradient(135deg, #EC6839 0%, #B81632 100%);
+  --uh-grad-maroon: linear-gradient(160deg, #781522 0%, #5A0F19 100%);
+  --text-strong: var(--uh-ink);
+  --text-body: var(--uh-slate);
+  /* Gray-500 on white fails AA for small text; use slate for readable notes. */
+  --text-muted: var(--uh-slate);
+  --text-on-brand: var(--uh-white);
+  --text-brand: var(--uh-crimson);
+  --surface-page: var(--uh-paper);
+  --surface-card: var(--uh-white);
+  --surface-soft: var(--uh-mint);
+  --surface-brand: var(--uh-crimson);
+  --surface-brand-deep: var(--uh-maroon);
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(46,46,46,.06), 0 1px 3px rgba(46,46,46,.08);
+  --shadow-lg: 0 12px 32px rgba(46,46,46,.12), 0 4px 8px rgba(46,46,46,.06);
+  --shadow-brand: 0 10px 26px rgba(196,18,60,.28);
+  --motion-ease: cubic-bezier(.2,.7,.2,1);
+  --red-uhub: var(--text-brand);
+  --red-uhub-hover: var(--uh-crimson-600);
+  --red-uhub-active: var(--uh-crimson-600);
+  --gray-dark: var(--text-strong);
+  --gray-medium: var(--uh-gray-500);
+  --gray-light: var(--surface-page);
+  --white: var(--uh-white);
+  --orange-accent: var(--uh-orange);
+  --burgundy: var(--surface-brand-deep);
+  --pink-soft: var(--uh-blush);
+  --blue-accent: var(--uh-blue);
+  --border-subtle: var(--uh-gray-200);
+  --overlay-dark: rgba(120,21,34,.72);
+  --background: var(--surface-page);
+  --foreground: var(--text-strong);
 }
 
 @theme inline {
@@ -36,16 +76,10 @@
   --color-blue-accent: var(--blue-accent);
   --color-border-subtle: var(--border-subtle);
 
-  --font-display: var(--font-montserrat), "Avenir Next Fallback", Helvetica, Arial, sans-serif;
-  --font-body: var(--font-inter), "Avenir Next Fallback", Helvetica, Arial, sans-serif;
+  --font-display: var(--font-mulish), system-ui, sans-serif;
+  --font-body: var(--font-mulish), system-ui, sans-serif;
 }
 
-@font-face {
-  font-family: "Avenir Next Fallback";
-  src: local("Avenir Next"), local("Avenir");
-  font-weight: 400;
-  font-display: swap;
-}
 
 body {
   background: var(--background);

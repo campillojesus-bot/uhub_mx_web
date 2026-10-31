@@ -1,273 +1,145 @@
-import { Arrow, SiteFooter, SiteHeader } from "./components";
-import { CycleWheel, ChangeStories } from "./home-interactions";
-import { ModelExplorer } from "./model-explorer";
 import type { Metadata } from "next";
-import { EditorialPhoto } from "./editorial-photos";
+import { Arrow, SiteFooter, SiteHeader, whatsappGeneral } from "./components";
+import { HomeCycle } from "./home-cycle";
+import { HomeStories } from "./home-stories";
+import { cifras } from "@/data/uhub";
+import { CountUp } from "@/components/CountUp";
+import { NetworkStats } from "@/components/marketing/NetworkStats";
 import { NewsletterForm } from "./newsletter-form";
-import { modelDefinition } from "./model-language";
+import "./home-paraguas.css";
 
 const doors = [
-  {
-    name: "Soy emprendedor",
-    text: "Quiero iniciar, retomar o sostener un proyecto: por mi cuenta, junto con otros o desde mi trabajo.",
-    href: "/emprende-diario",
-    destination: "Emprende Diario",
-  },
-  {
-    name: "Soy empresa o cámara",
-    text: "Quiero desarrollar a mi equipo o a los negocios que represento.",
-    href: "/organizaciones",
-    destination: "Talleres y organizaciones",
-  },
-  {
-    name: "Soy universidad",
-    text: "Quiero desarrollar habilidades emprendedoras para la vida y el trabajo.",
-    href: "/universidades",
-    destination: "Universidades",
-  },
-  {
-    name: "Soy A.C. o fundación",
-    text: "Busco fortalecer mi organización o acompañar mejor a las personas y proyectos que apoyo.",
-    href: "/organizaciones/osc",
-    destination: "Organizaciones sociales",
-  },
+  { name: "Para mí", text: "Quiero iniciar, retomar o sostener una iniciativa — también desde mi trabajo.", href: "/emprende-diario" },
+  { name: "Para una empresa o cámara", text: "Buscamos desarrollar habilidades para que nuestro equipo o nuestros socios propongan y pongan mejoras en práctica.", href: "/organizaciones" },
+  { name: "Para una universidad", text: "Queremos desarrollar competencias emprendedoras en estudiantes o docentes.", href: "/universidades" },
+  { name: "Para una A.C. o fundación", text: "Queremos fortalecer nuestra organización o acompañar a quienes apoyamos.", href: "/organizaciones/osc" },
 ];
 
 export const metadata: Metadata = {
   title: { absolute: "uHüb · Nadie emprende solo" },
-  description: "uHub es un modelo de desarrollo emprendedor con la persona al centro: mentores, comunidad, hábitos y un método para iniciar, rehacer o sostener lo que emprendes.",
+  description: "uHub, Centro de Desarrollo Emprendedor: mentores, práctica y seguimiento para personas, empresas, universidades y organizaciones. Encuentra tu camino con uHüb.",
   alternates: { canonical: "/" },
-  openGraph: { title: "uHüb · Nadie emprende solo", description: "uHub te ayuda a construir tu propio ecosistema: mentores, comunidad, hábitos y un método.", url: "https://uhub.mx", images: [{ url: "/og.png", width: 1200, height: 630, alt: "uHüb · Centro de Desarrollo Emprendedor" }] },
+  openGraph: {
+    title: "uHüb · Nadie emprende solo",
+    description: "Mentores, estructura y hábitos para iniciar, retomar o sostener lo que emprendes. Para ti, tu equipo y tu comunidad.",
+    url: "https://uhub.mx",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "uHüb · Centro de Desarrollo Emprendedor" }],
+  },
 };
+
+// Supply approved image paths here; absent assets never render broken images.
+const heroPhoto: { webp: string; jpg: string; alt: string } | null = null;
 
 export default function Home() {
   return <>
     <SiteHeader />
-    <main className="root-home root-v11" id="contenido">
-        <section
-          className="root-hero root-container"
-          id="inicio"
-          aria-labelledby="home-title"
-        >
-          <div className="root-hero-copy">
-            <p className="root-eyebrow">
-              uHüb · Centro de Desarrollo Emprendedor
-            </p>
-            <h1 id="home-title">
-              Nadie emprende solo.
-            </h1>
-            <p className="root-hero-lead">
-              uHüb te ayuda a construir tu propio ecosistema —mentores, comunidad,
-              hábitos y un método— para iniciar, rehacer o sostener lo que
-              emprendes, con negocio o sin él.
-            </p>
-            <div className="root-hero-actions"><a className="root-button" href="#modelo">Conoce el modelo <span aria-hidden="true">→</span></a><a className="root-hero-secondary" href="#caminos">Encuentra tu camino →</a></div>
+    <main className="hub-home" id="contenido">
+      <section className={`hub-hero${heroPhoto ? " hub-hero-with-photo" : ""}`} id="inicio" aria-labelledby="home-title">
+        {heroPhoto && <picture className="hub-hero-photo">
+          <source srcSet={heroPhoto.webp} type="image/webp" />
+          <img src={heroPhoto.jpg} alt={heroPhoto.alt} width="2400" height="1030" loading="eager" fetchPriority="high" />
+        </picture>}
+        <div className="hub-shell">
+          <p className="hub-eyebrow">Centro de Desarrollo Emprendedor</p>
+          <h1 id="home-title">Nadie emprende solo.</h1>
+          <p className="hub-lead">Ni tú, ni tu equipo, ni tu comunidad. Acompañamos con mentores, estructura y hábitos para iniciar, retomar o sostener lo que emprendes.</p>
+          <div className="hub-paths" id="caminos">
+            <span className="hub-anchor" id="para-quien" aria-hidden="true" />
+            <h2 id="paths-title">¿Qué te trae aquí?</h2>
+            <nav className="hub-doors" aria-labelledby="paths-title">
+              {doors.map((door, index) => <a href={door.href} className="hub-door" key={door.href}>
+                <span className="hub-door-index" aria-hidden="true">0{index + 1}</span>
+                <span className="hub-door-copy"><strong>{door.name}</strong><span>{door.text}</span></span>
+                <Arrow />
+              </a>)}
+            </nav>
           </div>
-          <figure className="root-hero-visual">
-            <div className="root-photo-frame">
-              {/* Original portrait supplied by Rodrigo; Sarahi with her brushes and artwork. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/sarahi-loya.jpg"
-                width="1066"
-                height="1600"
-                alt="Sarahi Loya con sus pinceles y una de sus pinturas."
-                fetchPriority="high"
-              />
-            </div>
-            <figcaption>
-              <span>Sarahi Loya · Artista y emprendedora</span>
-              <strong>Lo que construyes también te construye.</strong>
-            </figcaption>
-            <span className="root-photo-index" aria-hidden="true">
-              uHüb / Desde 2015
-            </span>
-          </figure>
-        </section>
-
-        <div className="root-credibility" aria-label="Trayectoria de uHüb">
-          <span>
-            <strong>Desde 2015</strong>
-          </span>
-          <i aria-hidden="true">·</i>
-          <span>
-            <strong>+2,000</strong> activados en comunidad
-          </span>
-          <i aria-hidden="true">·</i>
-          <span>
-            <strong>+550</strong> acompañados
-          </span>
         </div>
+      </section>
 
-        <section
-          className="root-why root-section"
-          id="por-que"
-          aria-labelledby="why-title"
-        >
-          <div className="root-container root-why-layout">
-            <div>
-              <p className="root-eyebrow">
-                <span>02 /</span> Por qué existe uHüb
-              </p>
-              <h2 id="why-title">
-                El talento está repartido. <br />{" "}
-                <em>El ecosistema, no.</em>
-              </h2>
-            </div>
-            <div className="root-prose">
-              <p>Hay quien crece rodeado de personas que emprenden: una familia que se arriesga, amigos con quienes compartir ideas, alguien a quien preguntarle cuando algo sale mal. Otras personas tienen las mismas ganas, pero menos ejemplos, contactos o apoyo para empezar.</p>
-              <p>Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.</p>
-              <p>Las universidades, empresas y organizaciones forman parte del ecosistema emprendedor. Pero cada persona también necesita construir el suyo: mentores con quienes revisar decisiones, una comunidad donde compartir lo que está viviendo y hábitos para convertir sus intenciones en acciones.</p>
-              <p>Ahí trabaja uHüb. Te acompañamos a convertir lo que quieres hacer en una acción posible, probarla y revisar lo que pasó. Si algo se atora, buscamos qué cambiar: el tamaño del paso, la habilidad que falta, el apoyo o la forma de organizarte.</p>
-              <p>uHüb nació para replicar, de forma estructurada, lo que yo tuve de forma natural. <span>— Rodrigo Campillo</span></p>
-              <a className="root-text-link" href="/nosotros">Conoce nuestra historia <Arrow /></a>
-            </div>
-          </div>
-          <div className="root-container">            <div className="root-founder-strip">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/rodrigo-retrato.webp" alt="Rodrigo Campillo, fundador de uHüb." width="273" height="273" loading="lazy" />
-              <div><span>Rodrigo Campillo · Fundador de uHüb</span><p>En su familia y en sus propios proyectos, Rodrigo aprendió a empezar, equivocarse y reiniciar. Esa experiencia y los retos que observó en mentoría fueron dando forma al modelo de uHüb.</p><a href="/nosotros">Lee la historia completa <Arrow /></a></div>
-            </div></div>
-        </section>
+      <div className="hub-metrics" aria-label="Trayectoria de uHüb">
+        <div className="hub-shell">
+          <div><strong>Desde {cifras.desde}</strong><span>Construyendo comunidad</span></div>
+          <div><strong><CountUp value={cifras.participaciones.valor} prefix={cifras.participaciones.prefijo} /></strong><span>{cifras.participaciones.etiqueta}</span></div>
+          <div><strong><CountUp value={cifras.mentorias.valor} /></strong><span>{cifras.mentorias.etiqueta}</span></div>
+          <div><strong>{cifras.territorio.ciudad}</strong><span>{cifras.territorio.complemento}</span></div>
+        </div>
+        <p className="hub-metrics-source">Datos de {cifras.entidad} · {cifras.fuente}. Participaciones y sesiones, no personas únicas.</p>
+      </div>
 
-        <section className="root-model root-container root-section" id="modelo" aria-labelledby="model-title">
-          <p className="root-eyebrow"><span>03 /</span> El Modelo uHüb</p>
-          <h2 id="model-title">El centro eres tú.<br />{" "}<em>Alrededor, lo que necesitas para lograrlo.</em></h2>
-          <p className="model-definition">{modelDefinition}</p>
-          <p className="model-diagram-context">En este diagrama exploras una parte del modelo: tú, los apoyos que construyes y las instituciones que forman parte de tu entorno.</p>
-          <ModelExplorer />
-          <p className="model-principle">No vendemos contenido. Nos fijamos en cómo actúa la gente: qué sostiene, qué abandona y por qué.</p>
-          <div className="model-human-note" id="mentores">
-            <div><h3>Personas que escuchan. Y te ayudan a avanzar.</h3><p>Un mentor base te ayuda a definir acciones y revisar avances. Un especialista aporta experiencia cuando aparece un reto concreto. La comunidad comparte aprendizajes y contactos.</p></div>
-            <a className="root-text-link" href="/mentores">Conoce la Red uHüb <Arrow /></a>
-          </div>
-        </section>
-        <section className="root-cycle root-container root-section" id="como-lo-hacemos" aria-labelledby="cycle-title">
-          <span id="ciclo" aria-hidden="true" />
-          <p className="root-eyebrow"><span>04 /</span> Cómo lo hacemos</p>
-          <h2 id="cycle-title">Un camino que recorres con práctica, acompañamiento y seguimiento.</h2>
-          <p className="cycle-context">Las etapas te ayudan a ubicar qué necesitas trabajar ahora. La rueda muestra cómo puedes volver a ellas; la ruta guiada propone actividades y acciones para recorrerlas.</p>
-          <CycleWheel />
-          <div className="practice-loop">
-            <div className="practice-loop-heading"><p className="root-eyebrow">La práctica</p><h3>Prototipos, no ideas.</h3></div>
-            <ol>{["Eliges un reto real", "Acuerdas tres acciones", "Lo revisas con alguien", "Dejas evidencia"].map((step,i)=><li key={step}><span>0{i+1}</span><strong>{step}</strong><span aria-hidden="true">{i===3?"↺":"→"}</span></li>)}</ol>
-          </div>
-          <EditorialPhoto slot="practice" />
-          <div className="practice-footer"><div><p>Mismo modelo, distintas formas: membresía, programas, talleres y acompañamiento dentro de instituciones.</p><p className="practice-preview-note">Parte de lo que necesitas hoy: poner una idea a prueba, sostener tus acciones, retomar o colaborar. Explora una acción posible y qué harías si te atoras.</p><p className="practice-preview-note">¿No sabes qué necesitas fortalecer? <a href="/brujula">Explora tu brújula emprendedora →</a></p></div><a className="root-text-link" href="/como-lo-hacemos#tu-reto">Explora el recorrido desde tu reto <Arrow /></a></div>
-        </section>
-        <section className="root-for root-section" id="para-quien" aria-labelledby="for-title"><div className="root-container">
-          <p className="root-eyebrow"><span>05 /</span> Para quién</p><h2 id="for-title">Para ti, y para quienes necesitan que avances.</h2>
-          <div className="root-for-columns"><article><span>01 / La persona</span><h3>La persona</h3><p>Quien quiere iniciar, rehacer o sostener un proyecto, una iniciativa o un negocio: porque empieza, porque vuelve, porque innova dentro de su trabajo o porque emprende sin soltar lo seguro.</p></article>
-          <article><span>02 / Las instituciones</span><h3>Las instituciones</h3><p>Empresas que quieren equipos que innoven. Cámaras con socios que necesitan reinventarse. Universidades que buscan desarrollar habilidades emprendedoras para la vida y el trabajo. A.C. que necesitan ingresos propios.</p></article></div>
-          <EditorialPhoto slot="audience" />
-          <p className="root-for-takeaway">Trabajamos con instituciones para que lo aprendido se convierta en acciones y mejoras concretas.</p>
-        </div></section>
-        <section className="root-result root-container root-section" id="resultado" aria-labelledby="result-title">
-          <p className="root-eyebrow"><span>06 /</span> El resultado</p>
-          <h2 id="result-title">Emprender no es lo que haces.<br />{" "}<em>Es en quién te conviertes.</em></h2>
-          <p className="root-result-intro">Es un proceso, y cada quien va a su ritmo. Con el tiempo cambias cómo piensas, ganas habilidades, sostienes lo que empiezas y aprendes a guiar a otros. El objetivo no es emprender una vez: es seguir emprendiendo toda la vida, con negocio propio, dentro de una empresa, en tu comunidad o con tu familia.</p>
-          <div className="root-stories-heading" id="historias"><h3>Historias de cambio.</h3><p className="root-story-context">Experiencias de programas de uHüb A.C. Cada historia tiene su propio punto de partida y recorrido.</p></div>
-          <ChangeStories />
-          <a className="root-video-story" href="https://www.youtube.com/watch?v=j0g-MtBuOWM" target="_blank" rel="noreferrer">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/diana-gonzalez-video.jpg" alt="Diana González durante el video de su experiencia con uHüb." width="480" height="360" loading="lazy" />
-            <span><small>También en su voz</small><strong>Diana González · Yo Soy SAAM</strong><span>Conoce su experiencia en uHüb. Ver testimonio en YouTube <Arrow external /></span></span>
-          </a>
-        </section>
-        <section
-          className="root-paths root-container root-section"
-          id="caminos"
-          aria-labelledby="paths-title"
-        >
-          <div className="root-section-heading">
-            <p className="root-eyebrow">
-              <span>07 /</span> Encuentra tu camino
-            </p>
-            <div className="root-heading-row">
-              <h2 id="paths-title">
-                ¿Por dónde <br />{" "}
-                quieres empezar?
-              </h2>
-              <p>Elige lo que necesitas hoy. Conoce cómo podemos ayudarte y qué opciones tienes para empezar.</p>
-            </div>
-          </div>
-          <div className="root-doors">
-            {doors.map((door, index) => (
-              <a
-                href={door.href}
-                className={`root-door root-door-${index + 1}`}
-                key={door.href}
-              >
-                <div className="root-door-top">
-                  <span className="root-door-number">0{index + 1}</span>
-                  <span className="root-door-arrow">
-                    <Arrow />
-                  </span>
-                </div>
-                <h3>{door.name}</h3>
-                <p>{door.text}</p>
-                <span className="root-door-destination">
-                  {door.destination}
-                </span>
-              </a>
-            ))}
-          </div>
-          <p className="root-paths-note">¿Buscas el programa de acompañamiento de uHüb A.C.? <a href="/programa">Conoce el programa y sus convocatorias <Arrow /></a></p>
-        </section>
+      <section className="hub-why hub-section" id="por-que" aria-labelledby="why-title">
+        <div className="hub-reading">
+          <p className="hub-eyebrow">El punto de partida importa</p>
+          <h2 id="why-title">El talento está repartido. <em>El ecosistema, no.</em></h2>
+          <p>Hay gente con una idea buenísima que no llega a probarla. A veces le falta una habilidad, tiempo o recursos; otras, alguien a quien preguntarle cómo empezar.</p>
+          <p>Contar con ejemplos, contactos y apoyo puede abrir posibilidades. Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.</p>
+          <p>Por eso existe uHüb: para ayudarte a construir ese entorno y convertir tus intenciones en acciones posibles.</p>
+          <a className="hub-link" href="/nosotros">Cómo empezó esto <Arrow /></a>
+        </div>
+      </section>
 
-        <section
-          className="root-stay root-section"
-          id="lunes"
-          aria-labelledby="stay-title"
-        >
-          <div className="root-container root-stay-layout">
-            <div>
-              <p className="root-eyebrow">
-                <span>08 /</span> Sigue en contacto
-              </p>
-              <h2 id="stay-title">
-                ¿Todavía <br />{" "}
-                explorando?
-              </h2>
-              <p>
-                Déjame tu correo y recibe una historia, un reto y una pregunta
-                para dar el siguiente paso en lo que estás emprendiendo.
-              </p>
-              <NewsletterForm />
-            </div>
-            <div className="root-monday">
-              <span className="root-monday-label">Lunes</span>
-              <div
-                className="root-monday-numbers"
-                aria-label="1 historia, 1 reto, 1 pregunta"
-              >
-                <div>
-                  <strong>1</strong>
-                  <span>historia</span>
-                </div>
-                <i>—</i>
-                <div>
-                  <strong>1</strong>
-                  <span>reto</span>
-                </div>
-                <i>—</i>
-                <div>
-                  <strong>1</strong>
-                  <span>pregunta</span>
-                </div>
+      <section className="hub-method hub-section" id="modelo" aria-labelledby="model-title">
+        <div className="hub-shell">
+          <span className="hub-anchor" id="como-lo-hacemos" aria-hidden="true" />
+          <span className="hub-anchor" id="resultado" aria-hidden="true" />
+          <p className="hub-eyebrow">De la intención a la práctica</p>
+          <h2 id="model-title">Un solo modelo. <em>Distintas aplicaciones.</em></h2>
+          <p className="hub-method-opening">Tu proyecto avanza con lo que haces entre una sesión y la siguiente.</p>
+          <div className="hub-method-layout">
+            <div className="hub-method-copy">
+              <p>Empiezas desde una situación real: algo que quieres iniciar, retomar o mejorar. Eliges una acción posible, la pruebas y revisas qué pasó con alguien que te ayuda a ver otras posibilidades. De ahí sale la siguiente acción.</p>
+              <p>Entre sesiones, llevas lo acordado a la práctica y registras qué ocurrió para revisarlo después.</p>
+              <p>Mentores, comunidad, práctica y seguimiento se conectan con tu contexto. Ese es el Modelo uHüb.</p>
+              <div className="hub-working-agreement">
+                <h3>Tú haces el camino. Nosotros te acompañamos.</h3>
+                <p>Trabajamos contigo sobre un reto real. Te ayudamos a elegir acciones, desarrollar habilidades y revisar lo que ocurre al ponerlas en práctica. Tú o tu equipo toman las decisiones y llevan esas acciones a su proyecto o trabajo cotidiano.</p>
               </div>
-              <span className="root-monday-signature">
-                De Rodrigo, para tu semana.
-              </span>
+              <div className="hub-offer-note">
+                <p>Los talleres y la capacitación desarrollan habilidades concretas. Los programas y la membresía te acompañan al ponerlas en práctica.</p>
+              </div>
+              <a className="hub-link" href="/como-lo-hacemos">Ver el recorrido completo <Arrow /></a>
             </div>
+
           </div>
-          <div className="root-container root-last-path">
-            <p>¿Ya sabes qué necesitas?</p>
-            <a href="#caminos">
-              Encuentra tu camino <span aria-hidden="true">→</span>
-            </a>
+          <HomeCycle />
+        </div>
+      </section>
+
+      <HomeStories />
+      <section className="hub-network hub-section" id="red-mentores" aria-labelledby="network-title">
+        <div className="hub-shell hub-network-layout">
+          <div>
+            <p className="hub-eyebrow">La red</p>
+            <h2 id="network-title">Acompañar también se aprende.</h2>
+            <p>Algunas personas que fueron acompañadas hoy acompañan a otras. La red también reúne a emprendedores y especialistas que quieren compartir lo que han aprendido.</p>
+            <p>Si tienes un camino recorrido, puedes formarte para acompañar con el Modelo uHüb y aportar tu experiencia a los retos de otras personas.</p>
+            <a className="button button-primary" href="/mentores">Quiero ser mentor <Arrow /></a>
           </div>
-        </section>
+          <NetworkStats />
+        </div>
+      </section>
+      <section className="hub-stay hub-section" id="lunes" aria-labelledby="stay-title">
+        <div className="hub-shell hub-stay-layout">
+          <div>
+            <p className="hub-eyebrow">Un primer paso para tu semana</p>
+            <h2 id="stay-title">Si todavía no sabes por dónde empezar</h2>
+            <p>Un correo los lunes: una historia, un reto y una pregunta. Para empezar la semana con algo concreto que puedas poner en práctica.</p>
+            <NewsletterForm />
+          </div>
+          <aside className="hub-test" aria-labelledby="test-invitation">
+            <p className="hub-eyebrow">Para tu propio recorrido</p>
+            <h3 id="test-invitation">¿Qué perfil te describe hoy?</h3>
+            <p>Explora cuatro perfiles emprendedores y reflexiona sobre tu contexto. Tu resultado es un punto de partida; no decide por ti qué camino tomar.</p>
+            <a className="hub-link" href="/test">Hacer el test del cuadrante <Arrow /></a>
+          </aside>
+        </div>
+      </section>
+      <section className="hub-contact hub-section" aria-labelledby="contact-title">
+        <div className="hub-shell hub-contact-layout">
+          <div><h2 id="contact-title">¿Prefieres preguntar antes de decidir?</h2><p>Cuéntanos qué quieres iniciar, retomar o mejorar. Te orientamos sobre las opciones de acompañamiento.</p></div>
+          <a className="button" href={whatsappGeneral} target="_blank" rel="noreferrer">Hablemos por WhatsApp <Arrow external /></a>
+        </div>
+      </section>
     </main>
     <SiteFooter />
   </>;
