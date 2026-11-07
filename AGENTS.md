@@ -1,6 +1,6 @@
 # Documento rector — uhub.mx
 
-**Versión 2.2 · Actualizada el 31 de octubre de 2026** — portada paraguas aprobada por Rodrigo. Las secciones 1–12 y la adenda del 31 de octubre son la política vigente; los registros fechados anteriores conservan contexto y quedan superados donde contradigan esta versión.
+**Versión 2.3 · Actualizada el 7 de noviembre de 2026** — cierre del 6 de noviembre y selección de fotografías autorizados por Rodrigo. Las secciones 1–12 y la última adenda son la política vigente; los registros anteriores conservan contexto y quedan superados donde contradigan esta versión.
 **Responsable:** Rodrigo Campillo
 
 Este documento registra decisiones de uHüb. Las instrucciones explícitas y posteriores de Rodrigo prevalecen. Si falta un dato material, no se inventa; se documenta para revisarlo con él.
@@ -135,15 +135,16 @@ Emprendedores · Empresas y cámaras · A.C. y fundaciones · Universidades · C
 ### 6.2 La raíz (uhub.mx): paraguas
 Explica qué es uHüb, muestra cómo ayuda y orienta hacia las ofertas. Presenta el conjunto sin fusionar entidades, condiciones ni resultados. Las páginas hijas desarrollan y venden cada oferta. Esta estructura sustituye la antigua portada de ocho bloques.
 
-1. **Hero y cuatro entradas:** «Nadie emprende solo.»; mentores, estructura y hábitos para la persona, su equipo y comunidad. «¿Qué te trae aquí?» lleva directamente a `/emprende-diario`, `/organizaciones`, `/universidades` y `/organizaciones/osc`. Sin página intermedia ni test obligatorio.
-2. **Banda de trayectoria:** Desde 2015 · +1,300 participaciones en actividades abiertas desde 2016 · 953 sesiones de mentoría desde 2023 · Chihuahua y Ciudad Juárez. Datos de uHüb A.C., corte octubre 2026; son participaciones y sesiones, no personas únicas ni resultados de membresía.
-3. **Por qué existe:** «El talento está repartido. El ecosistema, no.»; argumento breve y concreto, sin atribuir el éxito o abandono a una sola causa. Enlace a `/nosotros`; fundador e historia completa allí.
-4. **Cómo acompaña:** «Un solo modelo. Distintas aplicaciones.»; situación → acción → prueba → revisión → siguiente acción. Explica talleres/capacitación y programas/membresía. Reutiliza `CycleWheel.tsx` en vista reducida interactiva: clic, toque y teclado; un panel por etapa, ejemplos por contexto y enlace que conserva la etapa en el recorrido detallado. El modelo es el conjunto, el ciclo son etapas recurrentes, la ruta propone actividades.
-5. **Historia individual:** Cynthia Piñón autorizada por Rodrigo en el addendum y solicitud del 29 de octubre. Tercera persona, sin inventar citas; identificar AWE / uHüb A.C. y usar el retrato existente.
-6. **Continuidad:** Lunes 1-1-1 principal (Kit existente, historia/reto/pregunta); test secundario dirigido a la persona. Brújula dentro de Emprende Diario, no en portada.
-7. **Pie:** navegación breve, contacto, red de mentores y puente A.C. con destino explícito. No crear `/historias` vacía ni aviso legal no autorizado.
+1. **Hero y cuatro entradas:** «La constancia se construye.» con los dos niveles del subtítulo aprobados el 6 de noviembre. «¿Qué te trae aquí?» lleva directamente a `/emprende-diario`, `/organizaciones`, `/universidades` y `/organizaciones/osc`. Sin página intermedia ni test obligatorio.
+2. **Banda de trayectoria:** Desde 2015 · 953 sesiones de mentoría uno a uno desde 2023 · 13 de 14 personas egresadas entre 2018 y 2021 reportaron que seguían emprendiendo · Chihuahua y Ciudad Juárez. Atribuir al informe al Consejo de uHüb A.C., octubre 2026. Diferenciar sesiones de personas y el seguimiento de una cohorte de cualquier resultado de la membresía.
+3. **Por qué existe:** eyebrow «Nadie emprende solo»; título «El talento está repartido. El ecosistema, no.»; conservar los tres párrafos vigentes y añadir apertura y cierre autorizados. Enlace a `/nosotros`.
+4. **Cómo trabajamos:** «Mentores, no consultores.»; explicar responsabilidades, práctica y capacitación con Biné. No caricaturizar consultoría ni prometer acompañamiento indefinido; la constancia oficial depende del curso. Foto real 004, dos columnas en escritorio, sin CTA nuevo.
+5. **Cómo acompaña:** «Un solo modelo. Distintas aplicaciones.»; situación → acción → prueba → revisión → siguiente acción. Conservar `CycleWheel.tsx`, clic/toque/teclado, ejemplos por contexto y continuidad al recorrido con la etapa elegida. Modelo, ciclo y ruta son distintos.
+6. **Historia y red:** Cynthia Piñón autorizada, tercera persona y atribución AWE / A.C.; red con 5 mentores base + 8 especializados y corte. Las fotos de oficina no sustituyen un muro de emprendedoras en sus negocios.
+7. **Continuidad:** Kit de Estructura como descarga tras registro en el formulario Kit existente, con información de suscripción a Lunes 1-1-1. Test secundario. Brújula dentro de Emprende Diario.
+8. **Pie:** navegación breve, contacto, red, puente A.C. y aviso de privacidad comercial autorizado. No crear `/historias` vacía.
 
-Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín y título blanco. Preparar picture condicional sin archivo inexistente. Sin retrato usado como si fuera una sesión, stock, foto generada o anuncio de pendiente.
+Fotos autorizadas del ZIP STILLS: 009 portada (versión móvil propia), 004 mentoría, 007 práctica en `/como-lo-hacemos`, 011 retrato de Rodrigo y 003 pizarrón en `/nosotros`. No atribuir testimonios, nombre, graduación ni fechas históricas a las personas fotografiadas sin confirmación. No stock ni imágenes generadas; preservar el logo original.
 
 ### 6.3 Páginas por audiencia (una por puerta, un CTA principal cada una)
 | Página | Para quién | CTA principal |
@@ -177,11 +178,11 @@ Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín
 ## 8. Reglas que no se rompen
 
 - **Paraguas con entidades identificadas:** uhub.mx orienta hacia el conjunto; uhub.org.mx explica los programas A.C. Distinguir operador, condiciones, testimonios y resultados. No botones de donar ni afirmaciones sobre equivalencia entre factura y recibo deducible. El paraguas no fusiona finanzas ni ofertas.
-- **Cifras separadas, nunca fusionadas:** el addendum del 29 de octubre corrige el brief anterior. Usar +1,300 participaciones en actividades abiertas desde 2016 y 953 sesiones de mentoría desde 2023, atribuidas a uHüb A.C., informe al Consejo octubre 2026. No publicar 600 personas ni +2,000 alcanzados: fueron retirados por Rodrigo. No sumarlas ni tratarlas como personas únicas. El 97% queda pendiente de denominador, población, cohorte y fecha de medición; el informe completo no se adjuntó en esta ronda.
+- **Cifras separadas, nunca fusionadas:** sesiones, participaciones, personas de una cohorte y mentores activos son indicadores distintos de uHüb A.C. El cierre del 6 de noviembre autoriza 13/14 egresados entre 2018 y 2021, según el informe al Consejo de octubre 2026; usar años explícitos y reporte pasado, no «hace 4–7 años». Mantener 953 sesiones desde 2023. +1,300 participaciones queda en la fuente central, fuera de la nueva banda. No publicar 32/33, 23/33 ni 97% hasta documentar filtros y fecha; una resta que cuadra no prueba el filtro utilizado. No publicar 600 ni +2,000. No guardar datos personales de la encuesta en el repositorio.
 - **Vulnerabilidad:** sin porcentajes; máximo una mención de contexto por pieza.
 - **No inventar:** testimonios, nombres, cifras, fechas, logos de aliados ni precios. Pendientes solo en documentación interna; no renderizar placeholders públicos.
 - **Aliados:** se nombran solo con convenio firmado o autorización.
-- **Fotos:** reales y fieles al contexto. Hero: acompañamiento sin marca de agua de la A.C.; hasta recibirla, degradado de marca sin fotografía. Archivo histórico en Nosotros conserva fotos y atribución; no presentar una escena antigua como oferta actual.
+- **Fotos:** utilizar las fotografías reales autorizadas del ZIP de noviembre y sus derivados optimizados. No cubrir caras con titulares. Respetar contexto y conservar la atribución del archivo histórico en Nosotros. El muro de egresadas sigue pendiente de retratos en sus negocios y autorizaciones.
 - **AWE:** solo en pasado, como historia.
 - **Membresía:** Emprende Diario $399 MXN/mes, fase cerrada por solicitud en grupos pequeños, sin permanencia y cancelable. No exige egreso A.C. Los niveles Ritmo/Momentum quedan sin desglose público hasta definir su alcance. No Stripe en esta etapa.
 - **Colores:** carmín #B81632 (hover #9C1229), vino #781522 (oscuro #5A0F19), pizarra #474855 solo para texto fuerte, cuerpo #5B5C69, apoyo #87838D, bordes #D7D5DA / #E4E3E6, papel #F4F4F4, rosa #F1D4CF, naranja #EC6839, azul #0679AF, teal #00C4B4 y menta #E6F9F7. Componentes nuevos usan alias semánticos. No naranja/teal para texto sobre blanco; notas pequeñas usan pizarra/cuerpo para contraste. El logo original no se recolorea.
@@ -192,8 +193,10 @@ Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín
 
 | Bloque | Copy aprobado |
 |---|---|
-| Hero | Nadie emprende solo. |
-| Subtítulo | Ni tú, ni tu equipo, ni tu comunidad. Acompañamos con mentores, estructura y hábitos para iniciar, retomar o sostener lo que emprendes. |
+| Hero | La constancia se construye. |
+| Subtítulo principal | Iniciar algo no falla por falta de ideas. Falla por falta de estructura para sostenerlo. |
+| Subtítulo de apoyo | Te acompañamos con mentores y un método para que tú, o tu equipo, pasen de la intención a la práctica sin detenerse. |
+| Eyebrow del origen | Nadie emprende solo |
 | Por qué existe | El talento está repartido. El ecosistema, no. |
 | El modelo | Un solo modelo. Distintas aplicaciones. |
 | Cómo lo hacemos | Tu proyecto avanza con lo que haces entre una sesión y la siguiente. |
@@ -203,6 +206,7 @@ Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín
 **Cifras externas:** SCORE publica la afirmación de cinco veces más probabilidades de iniciar un negocio en su comunicado del 9 de enero de 2024: https://www.score.org/press-releases/mentorship-improves-odds-success-entrepreneurs/. Si se usa, identificar fuente, fecha y contexto de EE. UU.; no presentarla como resultado de uHüb, garantía individual o prueba causal de nuestro modelo. Priorizar explicación del acompañamiento e historias propias verificadas. Esta revisión no añade esa cifra a la raíz. No usar el dato de supervivencia a cinco años ni afirmaciones neurológicas no verificadas.
 
 ### Frases bloqueadas (no se reescriben)
+- *La constancia se construye.*
 - *Nadie emprende solo.*
 - *El talento está repartido. El ecosistema, no.*
 - *Emprender no es lo que haces. Es en quién te conviertes.*
@@ -229,11 +233,11 @@ Fotos: hasta recibir una foto real de mentoría, hero con degradado vino/carmín
 
 | # | Pendiente | Recomendación |
 |---|---|---|
-| P1 | **Resuelto:** escalera de mensajes de la sección 8, con las cinco observaciones aprobadas. | Hero: "Nadie emprende solo." |
+| P1 | **Resuelto:** cierre del 6 de noviembre; escalera de la sección 8. | Hero: «La constancia se construye.» |
 | P2 | **Actualizado el 29 de octubre de 2026:** cuatro etapas en uhub.mx. Consolidar solo en programas de 12 meses A.C., explicados en uhub.org.mx. | — |
 | P3 | **Resuelto:** base `campillojesus-bot/uhub_mx_web`, rama de revisión `v2-modelo`; se portan piezas de la versión de revisión. | — |
 | P4 | Conectar uhub.mx al proyecto correcto en Vercel | Bloquea publicar. |
-| P5 | Foto real de acompañamiento para la raíz y fotos de archivo para Nosotros | Sin marca de la A.C. |
+| P5 | **Resuelto para portada/mentorías:** fotos reales del ZIP de noviembre. Muro de egresadas pendiente. | Fotografías de cada persona en su negocio, con autorización. |
 | P6 | Autorización de las tres historias y de los aliados | Hasta tenerla, secciones ocultas. |
 | P7 | Emprende Diario: niveles, acceso inicial, logística y procedimiento de cancelación | Solicitud activa; pago público pospuesto. |
 | P8 | Hitos reales de cada etapa (Journey Map) para reemplazar los ejemplos del prototipo | — |
@@ -399,3 +403,16 @@ Rodrigo autorizó priorizar las correcciones del nuevo prompt y aplicar `cierre_
 - **Emprende Diario:** $399 MXN/mes, sin permanencia, cancelas cuando quieras, acceso por solicitud en grupos pequeños; no requiere haber pasado por la A.C. Semana 1 mentoría grupal/planeación; 2 tema mensual; 3 mentoría grupal con invitado; 4 cierre/rendición de cuentas. No publicar todavía niveles Ritmo/Momentum, cobro, reembolsos, onboarding en 24 h, precio vitalicio ni otras recomendaciones del borrador legal como condiciones aprobadas. Preservar recorrido → solicitud editable y exclusión voluntaria de la selección.
 - **Privacidad:** recibido borrador; el cierre condiciona su publicación al domicilio del responsable. Mantener sin publicar y sin nuevo formulario propio. El nombre de la persona física recibido difiere del proporcionado antes: confirmar junto con domicilio. Revisar finalidades, proveedores y cookies frente al funcionamiento real antes de activar el aviso; no declarar revisión legal concluida.
 - **Entrega:** actualizar PR #4 (`home-paraguas-v2` → `mejora-retos-continuidad`) y preview, sin main, dominio, producción ni eliminación de proyectos Vercel. Documentar decisiones, antes/después y pruebas.
+
+
+## Cierre de noviembre y fotografías (6–7 de noviembre de 2026) — decisión vigente
+
+Rodrigo autorizó ejecutar `prompt_astra_cierre_nov.md`, el aviso suministrado y seleccionar las mejores fotos del ZIP STILLS. La ejecución continúa en `home-paraguas-v2`, PR #4 hacia `mejora-retos-continuidad`; no main, dominios ni producción.
+
+- **Copy y diseño:** H1 «La constancia se construye.»; «Nadie emprende solo» pasa al origen. Títulos H1/H2 Mulish 800, mayúsculas por CSS, tracking −0.02em; H3/H4 normales. Se mantienen marca, botones píldora, ciclo, red y caso autorizado de Cynthia. Se registran adaptaciones y antes/después en `docs/CIERRE_2026-11-07.md` y `docs/COPY_2026-11-07.md`.
+- **Mentoría:** el contraste identifica nuestra oferta y responsabilidades sin describir todo consultor como productor de documentos ni prometer permanencia ilimitada. La capacitación Biné se conserva; constancia oficial solo según curso.
+- **Kit:** original PDF de cuatro páginas en `/kit/Kit_de_Estructura_uHub.pdf`. El formulario usa el identificador público existente 9946011 (landing `b3786d63e8`) y no crea listas ni automatizaciones nuevas. Solo una respuesta JSON de éxito del proveedor, sin verificación adicional pendiente, abre `/kit/gracias`. Una respuesta HTTP 200 sola no equivale a éxito. Ante error, verificación o falta de JavaScript, ofrecer el formulario oficial y la descarga manual posterior. El aviso de suscripción a Lunes 1-1-1 precede al envío. No prometer envío del PDF por correo, suscripción confirmada por doble opt-in ni registros reales que no se hayan verificado.
+- **Privacidad:** el cierre confirma Rodrigo Campillo Durán, persona física con actividad empresarial; Progreso 101, Col. Centro, Chihuahua, Chihuahua, C.P. 31000; rodrigo@uhub.mx. Publicar el aviso comercial autorizado, incluyendo fotografías/testimonios y retiro de permiso. Es distinto del de la A.C. No publicar términos del borrador como si estuvieran aprobados, ni activar cobros. Registrar los ajustes a proveedores/finalidades según el funcionamiento actual; implementación no equivale a dictamen jurídico.
+- **Seguimiento:** 13/14 es la cifra de la cohorte 2018–2021 reportada al Consejo en octubre 2026. No se declara validada por auditoría de la hoja individual. 32/33 y 23/33 siguen pendientes de criterio documentado. Interés en ser mentor no se suma a los 13 mentores activos.
+- **Fotografías:** 009 muestra personas en uHüb, no se presenta como una sesión; 004 acompaña la explicación de mentoría; 007 la práctica; 011 y 003 viven en Nosotros. No rellenar el muro de egresadas con fotografías repetidas de la oficina.
+- **Verificación:** build y lint; pruebas de UI, teclado y anchuras 360/390/1440; captura interceptada para evitar altas y mensajes reales. Revisar el despliegue de esta rama y registrar los resultados en el PR. La recepción efectiva del correo se verifica después con una cuenta controlada/autorizada, no inventada.

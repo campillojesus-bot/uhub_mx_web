@@ -128,8 +128,7 @@ export function CaptureScreen({
               Ver mi resultado →
             </button>
             <p className="mx-auto mt-3.5 max-w-[400px] text-xs text-gray-dark/80">
-              Verás tu perfil al continuar. Sin spam. Un clic para
-              salirte.
+              Verás tu perfil al continuar. Consulta el <a className="underline" href="/aviso-de-privacidad" target="_blank" rel="noreferrer">aviso de privacidad</a>.
             </p>
           </form>
         </>

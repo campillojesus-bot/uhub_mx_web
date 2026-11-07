@@ -81,9 +81,7 @@ export function SiteFooter() {
           <a href={whatsappGeneral} target="_blank" rel="noreferrer">
             WhatsApp · (614) 234-6499 <Arrow external />
           </a>
-          <a href="mailto:rodrigo@uhub.mx?subject=Consulta%20de%20avisos%20legales">
-            Consultar avisos legales
-          </a>
+          <Link href="/aviso-de-privacidad">Aviso de privacidad</Link>
         </div>
       </div>
       <div className="uhub-footer-bottom">

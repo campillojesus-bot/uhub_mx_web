@@ -6,6 +6,9 @@ export const cifras = {
   desde: "2015",
   participaciones: { valor: 1300, prefijo: "+", etiqueta: "participaciones en actividades abiertas desde 2016" },
   mentorias: { valor: 953, etiqueta: "sesiones de mentoría uno a uno desde 2023" },
+  // Seguimiento de una cohorte concreta de la A.C., reportado al Consejo en octubre de 2026.
+  // No es una estimación para todas las personas egresadas ni un resultado de la membresía.
+  seguimiento: { siguen: 13, consultadas: 14, inicio: 2018, fin: 2021 },
   territorio: { ciudad: "Chihuahua", complemento: "y Ciudad Juárez" },
   entidad: "uHüb A.C.",
   fuente: "Informe al Consejo Directivo, octubre de 2026",
@@ -13,6 +16,7 @@ export const cifras = {
   corte: "octubre de 2026",
 } as const;
 
+// El interés en ser mentor en una encuesta NO es un mentor activo. No sumar los indicadores.
 export const redMentores = {
   base: 5,
   especializados: 8,

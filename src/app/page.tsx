@@ -5,7 +5,8 @@ import { HomeStories } from "./home-stories";
 import { cifras } from "@/data/uhub";
 import { CountUp } from "@/components/CountUp";
 import { NetworkStats } from "@/components/marketing/NetworkStats";
-import { NewsletterForm } from "./newsletter-form";
+import { KitSignup } from "./kit-signup";
+import { KitContents } from "@/components/marketing/KitContents";
 import "./home-paraguas.css";
 
 const doors = [
@@ -16,33 +17,35 @@ const doors = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "uHüb · Nadie emprende solo" },
+  title: { absolute: "La constancia se construye · uHüb" },
   description: "uHub, Centro de Desarrollo Emprendedor: mentores, práctica y seguimiento para personas, empresas, universidades y organizaciones. Encuentra tu camino con uHüb.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "uHüb · Nadie emprende solo",
+    title: "La constancia se construye · uHüb",
     description: "Mentores, estructura y hábitos para iniciar, retomar o sostener lo que emprendes. Para ti, tu equipo y tu comunidad.",
     url: "https://uhub.mx",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "uHüb · Centro de Desarrollo Emprendedor" }],
   },
 };
 
-// Supply approved image paths here; absent assets never render broken images.
-const heroPhoto: { webp: string; jpg: string; alt: string } | null = null;
-
 export default function Home() {
   return <>
     <SiteHeader />
     <main className="hub-home" id="contenido">
-      <section className={`hub-hero${heroPhoto ? " hub-hero-with-photo" : ""}`} id="inicio" aria-labelledby="home-title">
-        {heroPhoto && <picture className="hub-hero-photo">
-          <source srcSet={heroPhoto.webp} type="image/webp" />
-          <img src={heroPhoto.jpg} alt={heroPhoto.alt} width="2400" height="1030" loading="eager" fetchPriority="high" />
-        </picture>}
+      <section className="hub-hero" id="inicio" aria-labelledby="home-title">
+        <div className="hub-hero-intro">
+          <div className="hub-shell hub-hero-copy">
+            <p className="hub-eyebrow">Centro de Desarrollo Emprendedor</p>
+            <h1 id="home-title">La constancia <span>se construye.</span></h1>
+            <p className="hub-hero-promise">Iniciar algo no falla por falta de ideas. Falla por falta de estructura para sostenerlo.</p>
+            <p className="hub-hero-support">Te acompañamos con mentores y un método para que tú, o tu equipo, pasen de la intención a la práctica sin detenerse.</p>
+          </div>
+          <picture className="hub-hero-photo">
+            <source media="(max-width: 719px)" srcSet="/images/portada-uhub-009-movil.webp" width="960" height="800" />
+            <img src="/images/portada-uhub-009.webp" alt="Dos personas sonríen frente al pizarrón de uHüb." width="1680" height="945" fetchPriority="high" loading="eager" />
+          </picture>
+        </div>
         <div className="hub-shell">
-          <p className="hub-eyebrow">Centro de Desarrollo Emprendedor</p>
-          <h1 id="home-title">Nadie emprende solo.</h1>
-          <p className="hub-lead">Ni tú, ni tu equipo, ni tu comunidad. Acompañamos con mentores, estructura y hábitos para iniciar, retomar o sostener lo que emprendes.</p>
           <div className="hub-paths" id="caminos">
             <span className="hub-anchor" id="para-quien" aria-hidden="true" />
             <h2 id="paths-title">¿Qué te trae aquí?</h2>
@@ -60,21 +63,39 @@ export default function Home() {
       <div className="hub-metrics" aria-label="Trayectoria de uHüb">
         <div className="hub-shell">
           <div><strong>Desde {cifras.desde}</strong><span>Construyendo comunidad</span></div>
-          <div><strong><CountUp value={cifras.participaciones.valor} prefix={cifras.participaciones.prefijo} /></strong><span>{cifras.participaciones.etiqueta}</span></div>
           <div><strong><CountUp value={cifras.mentorias.valor} /></strong><span>{cifras.mentorias.etiqueta}</span></div>
+          <div><strong>{cifras.seguimiento.siguen} de {cifras.seguimiento.consultadas}</strong><span>personas egresadas entre {cifras.seguimiento.inicio} y {cifras.seguimiento.fin} reportaron que seguían emprendiendo.</span></div>
           <div><strong>{cifras.territorio.ciudad}</strong><span>{cifras.territorio.complemento}</span></div>
         </div>
-        <p className="hub-metrics-source">Datos de {cifras.entidad} · {cifras.fuente}. Participaciones y sesiones, no personas únicas.</p>
+        <p className="hub-metrics-source">Datos de {cifras.entidad} · {cifras.fuente}. Los registros de actividad son participaciones y sesiones, no personas únicas. El seguimiento corresponde a las 14 personas de las generaciones señaladas.</p>
       </div>
 
       <section className="hub-why hub-section" id="por-que" aria-labelledby="why-title">
         <div className="hub-reading">
-          <p className="hub-eyebrow">El punto de partida importa</p>
+          <p className="hub-eyebrow">Nadie emprende solo</p>
           <h2 id="why-title">El talento está repartido. <em>El ecosistema, no.</em></h2>
+          <p>Emprender no es solo abrir negocios; es una competencia para la vida. Ya sea que estés fundando tu propia empresa, proponiendo innovaciones dentro de tu empleo, o liderando una causa comunitaria, necesitas las mismas habilidades: resiliencia, disciplina y capacidad de adaptación.</p>
           <p>Hay gente con una idea buenísima que no llega a probarla. A veces le falta una habilidad, tiempo o recursos; otras, alguien a quien preguntarle cómo empezar.</p>
           <p>Contar con ejemplos, contactos y apoyo puede abrir posibilidades. Para empezar y sostener un proyecto también necesitas práctica, apoyo y un entorno que te ayude a avanzar.</p>
           <p>Por eso existe uHüb: para ayudarte a construir ese entorno y convertir tus intenciones en acciones posibles.</p>
+          <p className="hub-why-close">No te enseñamos a hacer una empresa, te desarrollamos para que seas capaz de iniciar lo que sea.</p>
           <a className="hub-link" href="/nosotros">Cómo empezó esto <Arrow /></a>
+        </div>
+      </section>
+
+      <section className="hub-mentoria hub-section" aria-labelledby="mentoria-title">
+        <div className="hub-shell hub-mentoria-layout">
+          <figure className="hub-mentoria-scene">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/mentoria-uno-a-uno-004.webp" alt="Dos personas conversan en una mesa con una libreta y una computadora abierta." width="1200" height="675" loading="lazy" />
+          </figure>
+          <div className="hub-mentoria-copy">
+            <p className="hub-eyebrow">Cómo trabajamos</p>
+            <h2 id="mentoria-title">Mentores, <em>no consultores.</em></h2>
+            <p className="hub-mentoria-lead">Tú haces el camino. Nosotros te acompañamos.</p>
+            <p>Traes una decisión que te cuesta tomar. Con tu mentor eliges una acción, la pruebas y revisan juntos qué pasó. Tú o tu equipo conservan las decisiones y ganan práctica para sostenerlas por su cuenta.</p>
+            <p>También damos capacitación con Biné Educación: talleres y cursos donde trabajas lo que tienes enfrente esta semana. Hay opciones con constancia oficial, según el curso.</p>
+          </div>
         </div>
       </section>
 
@@ -90,13 +111,6 @@ export default function Home() {
               <p>Empiezas desde una situación real: algo que quieres iniciar, retomar o mejorar. Eliges una acción posible, la pruebas y revisas qué pasó con alguien que te ayuda a ver otras posibilidades. De ahí sale la siguiente acción.</p>
               <p>Entre sesiones, llevas lo acordado a la práctica y registras qué ocurrió para revisarlo después.</p>
               <p>Mentores, comunidad, práctica y seguimiento se conectan con tu contexto. Ese es el Modelo uHüb.</p>
-              <div className="hub-working-agreement">
-                <h3>Tú haces el camino. Nosotros te acompañamos.</h3>
-                <p>Trabajamos contigo sobre un reto real. Te ayudamos a elegir acciones, desarrollar habilidades y revisar lo que ocurre al ponerlas en práctica. Tú o tu equipo toman las decisiones y llevan esas acciones a su proyecto o trabajo cotidiano.</p>
-              </div>
-              <div className="hub-offer-note">
-                <p>Los talleres y la capacitación desarrollan habilidades concretas. Los programas y la membresía te acompañan al ponerlas en práctica.</p>
-              </div>
               <a className="hub-link" href="/como-lo-hacemos">Ver el recorrido completo <Arrow /></a>
             </div>
 
@@ -122,9 +136,11 @@ export default function Home() {
         <div className="hub-shell hub-stay-layout">
           <div>
             <p className="hub-eyebrow">Un primer paso para tu semana</p>
-            <h2 id="stay-title">Si todavía no sabes por dónde empezar</h2>
-            <p>Un correo los lunes: una historia, un reto y una pregunta. Para empezar la semana con algo concreto que puedas poner en práctica.</p>
-            <NewsletterForm />
+            <h2 id="stay-title">El Kit de Estructura <span className="kit-wordmark">uHüb</span>.</h2>
+            <p className="hub-kit-lead">Déjanos tu correo y descarga tres cosas para usar esta semana:</p>
+            <KitContents />
+            <p className="kit-weekly">Y luego, cada lunes: una idea, una pregunta, una acción. Eso es <strong>Lunes 1-1-1</strong>. Puedes salirte cuando quieras.</p>
+            <KitSignup />
           </div>
           <aside className="hub-test" aria-labelledby="test-invitation">
             <p className="hub-eyebrow">Para tu propio recorrido</p>

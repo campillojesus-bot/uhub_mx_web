@@ -163,3 +163,7 @@
 .jr-next-step small { font-size: 12px; }
 @media(min-width: 760px) { .jr-challenge-options { grid-template-columns: 1fr 1fr; }.jr-challenge-options button:nth-child(odd) { border-right: 1px solid var(--jr-line); }.jr-next-step { grid-template-columns: 1.2fr 1fr; gap: 40px; } }
 @media (prefers-reduced-motion: reduce) { .journey-page *, .journey-page *::before, .journey-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+
+.jr-team-practice { margin: 24px 0; max-width: 760px; }
+.jr-team-practice img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); }
+.jr-team-practice figcaption { margin-top: 8px; font-size: 14px; color: var(--text-muted); }

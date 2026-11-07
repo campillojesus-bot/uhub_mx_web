@@ -37,6 +37,11 @@ export default function HowPage() {
     <Suspense fallback={<p className="jr-section">Preparando el recorrido…</p>}><JourneyExplorer /></Suspense>
     <AccompanimentExplorer />
     <section className="jr-section jr-continuity"><div className="jr-continuity-heading"><p className="jr-eyebrow">La práctica se repite</p><h2>El avance se construye en tu semana.</h2><p>La forma y la frecuencia del acompañamiento dependen del programa o modalidad que elijas.</p></div>
+      <figure className="jr-team-practice">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/images/practica-en-equipo-007.webp" alt="Tres personas se reúnen junto a un pizarrón con notas; una sostiene una computadora portátil." width="1280" height="720" loading="lazy" />
+        <figcaption>Una sesión de trabajo en uHüb.</figcaption>
+      </figure>
       <details className="jr-practice-details"><summary>Ver la dinámica de seguimiento <span aria-hidden="true">+</span></summary><ol>{practice.map(([title, text], i) => <li key={title}><span>0{i + 1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol></details>
       <aside className="jr-evidence" aria-label="Referencia externa sobre mentoría">
         <p className="jr-eyebrow">Mentoría · Referencia externa</p>

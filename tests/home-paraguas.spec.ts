@@ -7,8 +7,8 @@ for (const width of [360, 390, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto("/");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Nadie emprende solo.");
-    const doors = page.getByRole("navigation", { name: "¿Qué te trae aquí?" }).getByRole("link");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("La constancia se construye.");
+    const doors = page.getByRole("navigation", { name: /¿Qué te trae aquí\?/i }).getByRole("link");
     await expect(doors).toHaveCount(4);
     const destinations = ["/emprende-diario", "/organizaciones", "/universidades", "/organizaciones/osc"];
     for (let i = 0; i < destinations.length; i++) {
@@ -19,7 +19,17 @@ for (const width of [360, 390, 1440]) {
     await expect(page.getByRole("tablist", { name: "Explorar las etapas del ciclo" }).getByRole("tab")).toHaveCount(4);
     await expect(page.locator(".home-cycle-explorer")).toContainText("Volver no es retroceder.");
     await expect(page.locator("main")).not.toContainText(/Consolidar|PENDIENTE|por integrar|No vendemos contenido/);
-    await expect(page.locator(".root-newsletter-capture a")).toHaveAttribute("href", "https://uhub.kit.com/b3786d63e8");
+    await expect(page.getByRole("button", { name: "Quiero el kit" })).toBeVisible();
+    const hero = page.locator(".hub-hero-photo img");
+    await expect.poll(() => hero.evaluate(img => (img as HTMLImageElement).naturalWidth > 0)).toBe(true);
+    expect(await hero.evaluate(img => (img as HTMLImageElement).currentSrc)).toContain(width < 720 ? "009-movil.webp" : "009.webp");
+    if (width < 720) {
+      const photoBounds = await hero.boundingBox();
+      const copyBounds = await page.locator(".hub-hero-copy").boundingBox();
+      expect(photoBounds!.y).toBeGreaterThanOrEqual(copyBounds!.y + copyBounds!.height - 1);
+    }
+    const notice = page.locator(".kit-signup a[href='/aviso-de-privacidad']");
+    await expect(notice).toBeVisible();
     await expect(page.locator(".hub-test a")).toHaveAttribute("href", "/test");
     // Legacy hashes still resolve after moving the sections.
     for (const anchor of ["modelo", "como-lo-hacemos", "ciclo", "para-quien", "historias", "resultado", "mentores", "caminos", "lunes"])
@@ -66,7 +76,8 @@ for (const width of [360, 390, 1440]) {
     await expect(page.locator(".home-cycle-example")).toContainText("El grupo compara");
     await page.getByLabel("Ver un ejemplo para").selectOption("3");
     await expect(page.locator(".home-cycle-example")).toContainText("carpeta de accionables");
-    await expect(page.locator(".hub-metrics")).toContainText("+1,300");
+    await expect(page.locator(".hub-metrics")).toContainText("13 de 14");
+    await expect(page.locator(".hub-metrics")).toContainText("2018 y 2021");
     await expect(page.locator(".hub-metrics")).toContainText("953");
     await expect(page.locator(".hub-metrics")).not.toContainText(/600|2,000|97%/);
     await expect(page.locator(".hub-story")).toContainText("Cynthia Piñón");
@@ -111,4 +122,47 @@ test("el conteo termina en la cifra publicada y no genera crecimiento ficticio",
   await page.locator("#red-mentores summary").click();
   await expect(total).toHaveText("13");
   await expect(page.locator(".network-total .uh-visually-hidden")).toHaveText("13");
+});
+
+// Intercept the provider before submission: no real subscriber, email, or message is created.
+const kitEndpoint = "https://app.kit.com/forms/9946011/subscriptions";
+for (const scenario of ["accepted", "error-200", "challenge", "consent", "unavailable", "not-json", "network", "invalid-email"] as const) {
+  test(`kit y descarga: ${scenario}`, async ({page}) => {
+    let posts = 0;
+    await page.route(kitEndpoint, async route => {
+      posts++;
+      expect(route.request().method()).toBe("POST");
+      expect(route.request().postData()).toContain('name="email_address"');
+      if (scenario === "network") return route.abort();
+      if (scenario === "not-json") return route.fulfill({status:200,contentType:"text/html",body:"<p>Try again</p>"});
+      const json = scenario === "accepted" ? {status:"success"} : scenario === "challenge" ? {status:"quarantined"} : scenario === "consent" ? {status:"success",consent:{enabled:true}} : {status:"error"};
+      return route.fulfill({status:scenario === "unavailable" ? 503 : 200,json});
+    });
+    await page.goto("/#lunes");
+    await page.getByLabel("Tu correo", {exact:true}).fill(scenario === "invalid-email" ? "incompleto" : "prueba@example.invalid");
+    await page.getByRole("button",{name:"Quiero el kit"}).click();
+    if(scenario === "accepted") {
+      await expect(page).toHaveURL(/\/kit\/gracias$/);
+      const download = page.getByRole("link",{name:"Descargar mi kit"});
+      const file = await page.request.get((await download.getAttribute("href"))!);
+      expect(file.ok()).toBe(true);
+      expect(file.headers()["content-type"]).toMatch(/pdf/i);
+      expect((await file.body()).subarray(0,5).toString()).toBe("%PDF-");
+    } else if(scenario === "invalid-email") {
+      await expect(page.locator("#kit-email:invalid")).toBeVisible();
+    } else {
+      await expect(page.getByRole("status").filter({hasText:/registro|verificación/})).toBeVisible();
+      await expect(page).toHaveURL(/\/#lunes$/);
+      await expect(page.getByLabel("Tu correo",{exact:true})).toHaveValue("prueba@example.invalid");
+    }
+    expect(posts).toBe(scenario === "invalid-email" ? 0 : 1);
+  });
+}
+
+test("el aviso comercial se encuentra desde la captura y distingue al responsable",async({page})=>{
+  await page.goto("/#lunes");
+  await page.locator(".kit-signup").getByRole("link",{name:"Aviso de privacidad"}).click();
+  await expect(page.getByRole("main")).toContainText("Rodrigo Campillo Durán");
+  await expect(page.getByRole("heading",{name:/Testimonios, fotografías y nombres/i})).toBeVisible();
+  await expect(page.getByRole("main")).toContainText("15 días hábiles");
 });

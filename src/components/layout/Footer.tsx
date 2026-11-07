@@ -105,7 +105,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-3 px-6 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} uHüb. Todos los derechos reservados.</p>
-          <p className="italic">[PENDIENTE: URL o texto del aviso de privacidad]</p>
+          <Link href="/aviso-de-privacidad">Aviso de privacidad</Link>
         </div>
       </div>
     </footer>

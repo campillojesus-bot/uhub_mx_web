@@ -83,7 +83,7 @@ export default function AboutPage() {
             <a className="button button-primary" href="#historia">Recorrer nuestra historia →</a>
           </div>
           <figure className="about-portrait">
-            <img src="/images/rodrigo-retrato.webp" alt="Rodrigo Campillo, fundador de uHüb." width="1600" height="1067" />
+            <img src="/images/rodrigo-campillo-011.webp" alt="Rodrigo Campillo frente al pizarrón de uHüb." width="800" height="800" />
             <figcaption>Rodrigo Campillo · Fundador de uHüb</figcaption>
           </figure>
         </section>
@@ -117,6 +117,12 @@ export default function AboutPage() {
                       <span className="history-talk-link">Ver la charla en YouTube <Arrow external /></span>
                     </span>
                   </a>
+                )}
+                {chapter.id === "hoy" && (
+                  <figure className="history-photo-wide">
+                    <img src="/images/pizarron-uhub-003.webp" alt="El nombre de uHüb escrito con gis de colores en un pizarrón." width="960" height="540" loading="lazy" />
+                    <figcaption>Un detalle del espacio de uHüb.</figcaption>
+                  </figure>
                 )}
                 {chapter.id === "programas" && (
                   <figure className="history-photo-wide">
