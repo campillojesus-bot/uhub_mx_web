@@ -12,7 +12,7 @@
 .hub-hero { overflow: hidden; color: var(--text-on-brand); background: var(--surface-brand-deep); }
 .hub-hero-intro { position: relative; isolation: isolate; display: grid; background: var(--uh-grad-maroon); }
 .hub-hero-copy { align-self: center; padding-block: clamp(36px,5vw,76px); z-index: 1; }
-.hub-hero h1 { max-width: 14ch; font-size: clamp(2.4rem,5.1vw,4.25rem); line-height: 1.03; margin: 0; color: var(--text-on-brand); }
+.hub-hero h1 { max-width: none; font-size: clamp(2.05rem,4.1vw,3.5rem); line-height: 1.03; margin: 0; color: var(--text-on-brand); }
 .hub-hero h1 span { display: block; }
 .hub-hero .hub-eyebrow { color: var(--uh-blush); margin-bottom: 16px; }
 .hub-hero-promise, .hub-hero-support { max-width: 39ch; margin: 0; color: var(--text-on-brand); }
