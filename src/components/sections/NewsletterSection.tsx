@@ -16,7 +16,7 @@ export function NewsletterSection() {
           a ti mismo.
         </p>
         <p className="mt-2 text-sm font-medium text-gray-dark/80">
-          Por Rodrigo Campillo, fundador de uHub.
+          Por Rodrigo Campillo, fundador de uHüb.
         </p>
 
         {submitted ? (

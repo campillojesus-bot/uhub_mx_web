@@ -49,7 +49,7 @@ export function ResultScreen({
       {/* Cuadrante interactivo */}
       <div className="mb-5 rounded-2xl border border-border-subtle bg-white p-7 sm:p-9">
         <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.06em] text-gray-dark/80">
-          Tu posición en el cuadrante uHub — toca cada perfil para saber más
+          Tu posición en el cuadrante uHüb — toca cada perfil para saber más
         </p>
 
         <div className="mx-auto max-w-[460px]">
