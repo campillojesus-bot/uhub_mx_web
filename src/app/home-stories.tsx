@@ -1,4 +1,4 @@
-import { egresadas } from "@/data/uhub";
+import { cifras, egresadas } from "@/data/uhub";
 import { Arrow } from "./components";
 
 export function HomeStories() {
@@ -25,6 +25,7 @@ export function HomeStories() {
           <figcaption>Emprendedora y mentora de uHüb.</figcaption>
         </figure>
       </div>
+      <p className="hub-story-attribution"><strong>Seguimiento de {cifras.entidad}:</strong> {cifras.seguimiento.siguen} de {cifras.seguimiento.consultadas} personas egresadas entre {cifras.seguimiento.inicio} y {cifras.seguimiento.fin} reportaron que seguían emprendiendo. Fuente: {cifras.fuente}.</p>
       {mosaic.length > 0 && <div className="hub-story-mosaic">{mosaic.map(story => <figure key={story.id}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={story.foto} alt={story.alt} width={story.width} height={story.height} loading="lazy" />

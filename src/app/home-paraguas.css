@@ -141,7 +141,7 @@
 @media (min-width: 700px) {
   .hub-shell { width: min(1200px, calc(100% - 64px)); }
   .hub-doors { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-  .hub-metrics .hub-shell { grid-template-columns: 1fr 1.4fr 1.2fr 1.1fr; gap: 26px; }
+  .hub-metrics .hub-shell { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 26px; }
   .hub-metrics .hub-shell > div + div { border-left: 1px solid var(--uh-gray-200); padding-left: 26px; }
   .hub-metrics-source { width: min(1200px, calc(100% - 64px)); }
   .hub-story-layout { grid-template-columns: 1.7fr 1fr; gap: 64px; }

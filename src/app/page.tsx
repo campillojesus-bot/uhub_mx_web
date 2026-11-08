@@ -63,11 +63,10 @@ export default function Home() {
       <div className="hub-metrics" aria-label="Trayectoria de uHüb">
         <div className="hub-shell">
           <div><strong>Desde {cifras.desde}</strong><span>Construyendo comunidad</span></div>
-          <div><strong><CountUp value={cifras.mentorias.valor} /></strong><span>{cifras.mentorias.etiqueta}</span></div>
-          <div><strong>{cifras.seguimiento.siguen} de {cifras.seguimiento.consultadas}</strong><span>personas egresadas entre {cifras.seguimiento.inicio} y {cifras.seguimiento.fin} reportaron que seguían emprendiendo.</span></div>
-          <div><strong>{cifras.territorio.ciudad}</strong><span>{cifras.territorio.complemento}</span></div>
+          <div><strong><CountUp value={cifras.mentorias.valor} /></strong><span>sesiones de mentoría uno a uno</span></div>
+          <div><strong>Presencial y en línea</strong><span>Modalidades de acompañamiento</span></div>
         </div>
-        <p className="hub-metrics-source">Datos de {cifras.entidad} · {cifras.fuente}. Los registros de actividad son participaciones y sesiones, no personas únicas. El seguimiento corresponde a las 14 personas de las generaciones señaladas.</p>
+        <p className="hub-metrics-source">Mentorías: {cifras.entidad} · {cifras.territorio.ciudad} {cifras.territorio.complemento} · 2023–2025. Fuente: {cifras.fuente}.</p>
       </div>
 
       <section className="hub-why hub-section" id="por-que" aria-labelledby="why-title">

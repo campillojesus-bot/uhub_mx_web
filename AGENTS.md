@@ -136,7 +136,7 @@ Emprendedores · Empresas y cámaras · A.C. y fundaciones · Universidades · C
 Explica qué es uHüb, muestra cómo ayuda y orienta hacia las ofertas. Presenta el conjunto sin fusionar entidades, condiciones ni resultados. Las páginas hijas desarrollan y venden cada oferta. Esta estructura sustituye la antigua portada de ocho bloques.
 
 1. **Hero y cuatro entradas:** «La constancia se construye.» con los dos niveles del subtítulo aprobados el 6 de noviembre. «¿Qué te trae aquí?» lleva directamente a `/emprende-diario`, `/organizaciones`, `/universidades` y `/organizaciones/osc`. Sin página intermedia ni test obligatorio.
-2. **Banda de trayectoria:** Desde 2015 · 953 sesiones de mentoría uno a uno desde 2023 · 13 de 14 personas egresadas entre 2018 y 2021 reportaron que seguían emprendiendo · Chihuahua y Ciudad Juárez. Atribuir al informe al Consejo de uHüb A.C., octubre 2026. Diferenciar sesiones de personas y el seguimiento de una cohorte de cualquier resultado de la membresía.
+2. **Banda de trayectoria:** Desde 2015 · 953 sesiones de mentoría uno a uno · Presencial y en línea. Atribuir las sesiones a uHüb A.C., Chihuahua y Ciudad Juárez, 2023–2025. Mostrar el seguimiento 13/14 aparte en Historias, sin implicar que Cynthia pertenece a la cohorte.
 3. **Por qué existe:** eyebrow «Nadie emprende solo»; título «El talento está repartido. El ecosistema, no.»; conservar los tres párrafos vigentes y añadir apertura y cierre autorizados. Enlace a `/nosotros`.
 4. **Cómo trabajamos:** «Mentores, no consultores.»; explicar responsabilidades, práctica y capacitación con Biné. No caricaturizar consultoría ni prometer acompañamiento indefinido; la constancia oficial depende del curso. Foto real 004, dos columnas en escritorio, sin CTA nuevo.
 5. **Cómo acompaña:** «Un solo modelo. Distintas aplicaciones.»; situación → acción → prueba → revisión → siguiente acción. Conservar `CycleWheel.tsx`, clic/toque/teclado, ejemplos por contexto y continuidad al recorrido con la etapa elegida. Modelo, ciclo y ruta son distintos.
@@ -416,3 +416,9 @@ Rodrigo autorizó ejecutar `prompt_astra_cierre_nov.md`, el aviso suministrado y
 - **Seguimiento:** 13/14 es la cifra de la cohorte 2018–2021 reportada al Consejo en octubre 2026. No se declara validada por auditoría de la hoja individual. 32/33 y 23/33 siguen pendientes de criterio documentado. Interés en ser mentor no se suma a los 13 mentores activos.
 - **Fotografías:** 009 muestra personas en uHüb, no se presenta como una sesión; 004 acompaña la explicación de mentoría; 007 la práctica; 011 y 003 viven en Nosotros. No rellenar el muro de egresadas con fotografías repetidas de la oficina.
 - **Verificación:** build y lint; pruebas de UI, teclado y anchuras 360/390/1440; captura interceptada para evitar altas y mensajes reales. Revisar el despliegue de esta rama y registrar los resultados en el PR. La recepción efectiva del correo se verifica después con una cuenta controlada/autorizada, no inventada.
+
+## Preparación de publicación (8 de noviembre de 2026)
+
+- Banda de tres elementos según la decisión de la sección 6.2. El 13/14 previamente autorizado se traslada a Historias; 32/33 queda pendiente de conciliar con las 36 filas de la fuente primaria. No convertir estimaciones históricas en personas únicas ni sesiones en horas.
+- Mantener el flujo de confirmación de Kit. La prueba reportada con otra dirección llega como Unconfirmed; falta comprobar la recepción y confirmación del correo.
+- Actualizar PR #4 y vista previa. Preparar la conexión DNS con Carlos; la rama de revisión no cambia producción.

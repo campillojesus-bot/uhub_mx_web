@@ -76,8 +76,8 @@ for (const width of [360, 390, 1440]) {
     await expect(page.locator(".home-cycle-example")).toContainText("El grupo compara");
     await page.getByLabel("Ver un ejemplo para").selectOption("3");
     await expect(page.locator(".home-cycle-example")).toContainText("carpeta de accionables");
-    await expect(page.locator(".hub-metrics")).toContainText("13 de 14");
-    await expect(page.locator(".hub-metrics")).toContainText("2018 y 2021");
+    await expect(page.locator(".hub-story")).toContainText("13 de 14");
+    await expect(page.locator(".hub-story")).toContainText("2018 y 2021");
     await expect(page.locator(".hub-metrics")).toContainText("953");
     await expect(page.locator(".hub-metrics")).not.toContainText(/600|2,000|97%/);
     await expect(page.locator(".hub-story")).toContainText("Cynthia Piñón");
