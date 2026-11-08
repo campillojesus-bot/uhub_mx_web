@@ -15,7 +15,7 @@ const siteLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-gray-dark text-white">
+    <footer className="bg-burgundy text-white">
       <div className="mx-auto grid max-w-[1200px] gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <span className="font-display text-2xl font-black tracking-tight">
@@ -105,7 +105,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-3 px-6 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} uHüb. Todos los derechos reservados.</p>
-          <p className="italic">[PENDIENTE: URL o texto del aviso de privacidad]</p>
+          <Link href="/aviso-de-privacidad">Aviso de privacidad</Link>
         </div>
       </div>
     </footer>

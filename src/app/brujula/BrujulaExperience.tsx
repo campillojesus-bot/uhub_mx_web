@@ -34,7 +34,7 @@ const DIMENSIONS: Dimension[] = [
     interpretation: "Es momento de trabajar la claridad personal y la capacidad de aprender sin abandonar tu intención.",
   },
   {
-    id: "tierra", name: "Tierra", stage: "Aterrizar", capacity: "Habilidades y herramientas", color: "#8C8F94",
+    id: "tierra", name: "Tierra", stage: "Aterrizar", capacity: "Habilidades y herramientas", color: "#87838d",
     questions: {
       idea: ["Identifico las habilidades que necesito desarrollar para llevar mi idea a la práctica.", "Sé transformar mi idea en una prueba sencilla que pueda realizar con los recursos que tengo."],
       ventas: ["Identifico las habilidades que necesito fortalecer para mejorar mi negocio.", "Sé elegir una mejora concreta y qué aprendizaje o herramienta necesito para aplicarla."],
@@ -46,7 +46,7 @@ const DIMENSIONS: Dimension[] = [
     interpretation: "Aterrizar no es aprenderlo todo: es desarrollar la habilidad precisa para dar el siguiente paso real.",
   },
   {
-    id: "agua", name: "Agua", stage: "Adaptar", capacity: "Mercado, acción y hábitos", color: "#6D1F30",
+    id: "agua", name: "Agua", stage: "Adaptar", capacity: "Mercado, acción y hábitos", color: "#781522",
     questions: {
       idea: ["Puedo identificar a quién podría servir mi idea y conversar con esas personas.", "Estoy pasando de las ideas a acciones y reviso lo que aprendo para ajustar mi propuesta."],
       ventas: ["Conozco a mis clientes prioritarios y escucho lo que realmente necesitan.", "Doy seguimiento a mis acciones y a mis clientes, y ajusto mi forma de trabajar según los resultados."],
@@ -87,7 +87,7 @@ function Compass({ values }: { values: { id: Axis; score: number }[] }) {
       <defs>
         <linearGradient id="br-fill" x1="0" x2="1" y1="0" y2="1">
           <stop stopColor="#B81632" stopOpacity=".28" />
-          <stop offset="1" stopColor="#6D1F30" stopOpacity=".18" />
+          <stop offset="1" stopColor="#781522" stopOpacity=".18" />
         </linearGradient>
       </defs>
       {[1, 2, 3, 4, 5].map(n => (
@@ -97,16 +97,16 @@ function Compass({ values }: { values: { id: Axis; score: number }[] }) {
       <polygon points={pts} fill="url(#br-fill)" stroke="#B81632" strokeWidth="2.6" strokeLinejoin="round"/>
       {[
         { cx: 180, cy: y("fuego", -1), color: "#B81632" },
-        { cx: x("tierra", 1), cy: 180, color: "#8C8F94" },
-        { cx: 180, cy: y("agua", 1), color: "#6D1F30" },
+        { cx: x("tierra", 1), cy: 180, color: "#87838d" },
+        { cx: 180, cy: y("agua", 1), color: "#781522" },
         { cx: x("aire", -1), cy: 180, color: "#474855" },
       ].map((p,i) => <circle key={i} cx={p.cx} cy={p.cy} r="5.5" fill={p.color} stroke="#FFFFFF" strokeWidth="2"/>)}
       <g fontFamily="Arial, sans-serif" textAnchor="middle" fontSize="13" fontWeight="700">
         <text x="180" y="33" fill="#B81632">FUEGO</text>
         <text x="180" y="50" fontSize="11" fill="#474855">{score("fuego").toFixed(1)} / 5</text>
-        <text x="318" y="176" fill="#8C8F94">TIERRA</text>
+        <text x="318" y="176" fill="#87838d">TIERRA</text>
         <text x="318" y="192" fontSize="11" fill="#474855">{score("tierra").toFixed(1)} / 5</text>
-        <text x="180" y="314" fill="#6D1F30">AGUA</text>
+        <text x="180" y="314" fill="#781522">AGUA</text>
         <text x="180" y="330" fontSize="11" fill="#474855">{score("agua").toFixed(1)} / 5</text>
         <text x="42" y="176" fill="#474855">AIRE</text>
         <text x="42" y="192" fontSize="11" fill="#474855">{score("aire").toFixed(1)} / 5</text>
@@ -318,7 +318,7 @@ export function BrujulaExperience() {
 
       <footer className="br-outro">
         <div><p className="br-eyebrow">El siguiente paso no lo das solo</p><h2>La brújula señala una dirección.<br/><em>El acompañamiento te ayuda a avanzar.</em></h2></div>
-        <div className="br-outro-links"><Link href={screen === "results" ? journeyHref("/emprende-diario", nextContext, "ingreso") : "/emprende-diario#ingreso"}>Conocer las opciones de ingreso <span aria-hidden="true">→</span></Link><a href={lunesSubscription}>Primero quiero recibir Lunes 1-1-1 <span aria-hidden="true">↗</span></a><small>Gratis, por correo. La suscripción es opcional y se completa en Kit.</small></div>
+        <div className="br-outro-links"><Link href={screen === "results" ? journeyHref("/emprende-diario", nextContext, "ingreso") : "/emprende-diario#ingreso"}>Conocer las opciones de ingreso <span aria-hidden="true">→</span></Link><a href={lunesSubscription}>Primero quiero recibir Lunes 1-1-1 <span aria-hidden="true">→</span></a><small>Gratis, por correo. La suscripción es opcional y se completa en Kit.</small></div>
       </footer>
       <p className="br-disclaimer">Es un punto de partida basado en tus respuestas, no una evaluación validada ni una medición de impacto. Tus respuestas y puntuaciones se calculan en este navegador y no se envían ni guardan en un servidor. Si continúas al recorrido, llevamos solo el área, la situación y el apoyo elegidos; no tus respuestas ni puntuaciones. El resultado no determina tu perfil ni un plan de pago.</p>
     </div>
