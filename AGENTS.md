@@ -422,3 +422,8 @@ Rodrigo autorizó ejecutar `prompt_astra_cierre_nov.md`, el aviso suministrado y
 - Banda de tres elementos según la decisión de la sección 6.2. El 13/14 previamente autorizado se traslada a Historias; 32/33 queda pendiente de conciliar con las 36 filas de la fuente primaria. No convertir estimaciones históricas en personas únicas ni sesiones en horas.
 - Mantener el flujo de confirmación de Kit. La prueba reportada con otra dirección llega como Unconfirmed; falta comprobar la recepción y confirmación del correo.
 - Actualizar PR #4 y vista previa. Preparar la conexión DNS con Carlos; la rama de revisión no cambia producción.
+
+
+## Foto principal (9 de noviembre de 2026)
+
+Rodrigo solicita cambiar únicamente la foto principal del sitio publicado para evitar repetir a Cynthia y aparecer él en portada. Se utiliza el retrato real autorizado `rodrigo-campillo-011.webp` en móvil y escritorio, con encuadre que conserva el rostro. Esta decisión sustituye la selección de 009 para el hero; el resto de las fotografías, textos, diseño e integraciones se conserva.
