@@ -41,7 +41,7 @@ export default function Home() {
             <p className="hub-hero-support">Te acompañamos con mentores y un método para que tú, o tu equipo, pasen de la intención a la práctica sin detenerse.</p>
           </div>
           <picture className="hub-hero-photo">
-            <img src="/images/rodrigo-campillo-011.webp" alt="Rodrigo Campillo, fundador de uHüb, frente al pizarrón del centro." width="800" height="800" style={{ objectPosition: "50% 10%" }} fetchPriority="high" loading="eager" />
+            <img src="/images/portada-acompanamiento-006.webp" alt="Rodrigo Campillo escucha a otra persona mientras conversan con sus libretas sobre la mesa en uHüb." width="1680" height="901" style={{ objectFit: "contain", objectPosition: "50% 50%" }} fetchPriority="high" loading="eager" />
           </picture>
         </div>
         <div className="hub-shell">

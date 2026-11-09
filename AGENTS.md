@@ -427,3 +427,8 @@ Rodrigo autorizó ejecutar `prompt_astra_cierre_nov.md`, el aviso suministrado y
 ## Foto principal (9 de noviembre de 2026)
 
 Rodrigo solicita cambiar únicamente la foto principal del sitio publicado para evitar repetir a Cynthia y aparecer él en portada. Se utiliza el retrato real autorizado `rodrigo-campillo-011.webp` en móvil y escritorio, con encuadre que conserva el rostro. Esta decisión sustituye la selección de 009 para el hero; el resto de las fotografías, textos, diseño e integraciones se conserva.
+
+
+## Acompañamiento en portada (9 de noviembre de 2026)
+
+Rodrigo aprueba la fotografía 006, conversando con otra persona y con libretas en la mesa, como imagen principal. Sustituye el retrato individual 011 para comunicar acompañamiento. Usar un encuadre que conserve ambas personas en móvil y escritorio. La 004 sigue en Cómo trabajamos, Cynthia conserva su historia y la 011 permanece en Nosotros. Solo cambia la imagen principal y su texto alternativo.
