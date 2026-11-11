@@ -444,3 +444,15 @@ Rodrigo solicita visibilizar trayectoria, alcance y continuidad, y trasladar las
 - Comparación sectorial 60–70%: sin fuente comparable identificada; no se publica.
 - Impacto indirecto 120+: pendiente para una fase posterior. La tabla mezcla personas, familias y grupos y no prueba atribución causal. No sumar unidades distintas ni adjudicar a uHüb todos los empleos de CREALIM. Considerar casos individuales con periodo, fuente y autorización.
 - Se conserva la foto 006, todo el copy fuera de las métricas y las integraciones.
+
+
+## Comunidad y alcance del acompañamiento (11 de noviembre de 2026)
+
+Rodrigo autoriza aplicar las mejoras pertinentes de la comparación con Tech Ranch y el análisis de Gemini, conservando la arquitectura actual.
+
+- Explicar conexiones como práctica concreta: contrastar ideas, pedir apoyo, reconocer colaboradores y dar seguimiento a relaciones. Vinculación pertinente según necesidad y disponibilidad; no garantizar clientes, inversión o contactos específicos.
+- Emprende Diario: Rodrigo es hoy mentor base; invitados en sesiones grupales del calendario. No convertir los 5 mentores base y 8 especializados de la A.C. en trece especialistas incluidos por $399. Consultas individuales se acuerdan por separado si están disponibles; no se publica una tarifa ni disponibilidad nueva.
+- Conservar testimonios literales y atribución al programa real. Omar y Mary ya están contextualizados; Cynthia sigue como historia AWE/A.C. No inventar que la membresía salvó negocios durante la pandemia.
+- El flujo de solicitud ya explica pasos, WhatsApp editable, revisión y ausencia de cobro automático. Se conserva sin inventar tiempos de respuesta ni fechas de ingreso.
+- Plática-taller de entrada para empresas: propuesta en conversación con Rodrigo, todavía no se anuncia, agenda ni vende como producto disponible. La grabación se evaluará después de probar contenido y formato.
+- Mantener hero, fotos, métricas, precios, cuatro puertas, ciclo, formularios e integraciones. Cambio mediante rama y PR sobre el sitio publicado.

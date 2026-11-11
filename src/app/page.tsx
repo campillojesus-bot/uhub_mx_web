@@ -113,6 +113,7 @@ export default function Home() {
               <p>Empiezas desde una situación real: algo que quieres iniciar, retomar o mejorar. Eliges una acción posible, la pruebas y revisas qué pasó con alguien que te ayuda a ver otras posibilidades. De ahí sale la siguiente acción.</p>
               <p>Entre sesiones, llevas lo acordado a la práctica y registras qué ocurrió para revisarlo después.</p>
               <p>Mentores, comunidad, práctica y seguimiento se conectan con tu contexto. Ese es el Modelo uHüb.</p>
+              <p>También trabajas en ampliar tu red de apoyo: contrastar una idea con otras personas, pedir ayuda sobre un reto y reconocer con quién podrías colaborar. Buscamos conexiones pertinentes para tu situación; tú cultivas la relación y das el siguiente paso.</p>
               <a className="hub-link" href="/como-lo-hacemos">Ver el recorrido completo <Arrow /></a>
             </div>
 
