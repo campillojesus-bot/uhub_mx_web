@@ -62,10 +62,14 @@ export default function Home() {
       <div className="hub-metrics" aria-label="Trayectoria de uHüb">
         <div className="hub-shell">
           <div><strong>Desde {cifras.desde}</strong><span>Construyendo comunidad</span></div>
-          <div><strong><CountUp value={cifras.mentorias.valor} /></strong><span>sesiones de mentoría uno a uno</span></div>
+          <div><strong>≈<CountUp value={cifras.alcanceHistorico.valor} /></strong><span>participaciones estimadas en programas y actividades</span></div>
+          <div><strong>{Math.round(cifras.seguimiento.siguen / cifras.seguimiento.consultadas * 10)} de cada 10</strong><span>personas egresadas consultadas reportaron seguir emprendiendo</span></div>
           <div><strong>Presencial y en línea</strong><span>Modalidades de acompañamiento</span></div>
         </div>
-        <p className="hub-metrics-source">Mentorías: {cifras.entidad} · {cifras.territorio.ciudad} {cifras.territorio.complemento} · 2023–2025. Fuente: {cifras.fuente}.</p>
+        <div className="hub-metrics-source">
+          <p>Participaciones: estimación acumulada {cifras.alcanceHistorico.periodo}; incluye asistencias repetidas, no personas únicas. Fuente: {cifras.alcanceHistorico.fuente}.</p>
+          <p>Continuidad: cifra redondeada de {cifras.seguimiento.siguen} de {cifras.seguimiento.consultadas} personas consultadas de {cifras.entidad}, egresadas entre {cifras.seguimiento.inicio} y {cifras.seguimiento.fin}. Fuente: {cifras.fuente}.</p>
+        </div>
       </div>
 
       <section className="hub-why hub-section" id="por-que" aria-labelledby="why-title">
@@ -127,7 +131,7 @@ export default function Home() {
             <p>Si tienes un camino recorrido, puedes formarte para acompañar con el Modelo uHüb y aportar tu experiencia a los retos de otras personas.</p>
             <a className="button button-primary" href="/mentores">Quiero ser mentor <Arrow /></a>
           </div>
-          <NetworkStats />
+          <NetworkStats showSessions />
         </div>
       </section>
       <section className="hub-stay hub-section" id="lunes" aria-labelledby="stay-title">

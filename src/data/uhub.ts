@@ -4,6 +4,13 @@
  */
 export const cifras = {
   desde: "2015",
+  // Approximate cumulative engagements, NOT a deduplicated count of people.
+  // Master report estimates ~381 program participants + ~1,900 event attendances.
+  // Rounded to ~2,000; repeated attendance may be included. No causal attribution.
+  alcanceHistorico: {
+    valor: 2000, periodo: "2015–2025",
+    fuente: "Documento Maestro de Impacto 2015–2025, febrero de 2026",
+  },
   participaciones: { valor: 1300, prefijo: "+", etiqueta: "participaciones en actividades abiertas desde 2016" },
   mentorias: { valor: 953, etiqueta: "sesiones de mentoría uno a uno desde 2023" },
   // Seguimiento de una cohorte concreta de la A.C., reportado al Consejo en octubre de 2026.
