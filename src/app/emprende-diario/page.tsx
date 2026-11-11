@@ -59,10 +59,16 @@ export default function EmprendeDiarioPage() {
             <span>03</span>
             <h3>Mentoría y comunidad</h3>
             <p>
-              Personas que preguntan, escuchan y te ayudan a volver cuando te
-              sales.
+              Rodrigo Campillo es hoy el mentor base de la membresía. Los
+              mentores invitados aportan su experiencia en las sesiones grupales
+              previstas en el calendario.
             </p>
           </article>
+        </div>
+        <div className="section-kicker">
+          <h3>Una comunidad para contrastar ideas y ampliar tus apoyos.</h3>
+          <p>En las sesiones compartes lo que estás probando, escuchas cómo otras personas enfrentan sus retos y practicas pedir apoyo. Buscamos facilitar conexiones pertinentes según tu necesidad y la disponibilidad; tú das seguimiento a esas relaciones.</p>
+          <p>El acompañamiento de la membresía se organiza en las actividades del mes. La red de mentores de uHüb A.C. corresponde a sus programas; las consultas individuales con especialistas se acuerdan por separado cuando están disponibles.</p>
         </div>
       </section>
 
