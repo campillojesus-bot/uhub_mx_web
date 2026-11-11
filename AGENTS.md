@@ -136,7 +136,7 @@ Emprendedores · Empresas y cámaras · A.C. y fundaciones · Universidades · C
 Explica qué es uHüb, muestra cómo ayuda y orienta hacia las ofertas. Presenta el conjunto sin fusionar entidades, condiciones ni resultados. Las páginas hijas desarrollan y venden cada oferta. Esta estructura sustituye la antigua portada de ocho bloques.
 
 1. **Hero y cuatro entradas:** «La constancia se construye.» con los dos niveles del subtítulo aprobados el 6 de noviembre. «¿Qué te trae aquí?» lleva directamente a `/emprende-diario`, `/organizaciones`, `/universidades` y `/organizaciones/osc`. Sin página intermedia ni test obligatorio.
-2. **Banda de trayectoria:** Desde 2015 · 953 sesiones de mentoría uno a uno · Presencial y en línea. Atribuir las sesiones a uHüb A.C., Chihuahua y Ciudad Juárez, 2023–2025. Mostrar el seguimiento 13/14 aparte en Historias, sin implicar que Cynthia pertenece a la cohorte.
+2. **Banda de trayectoria:** Desde 2015 · ≈2,000 participaciones estimadas · 9 de cada 10 personas egresadas consultadas reportaron seguir emprendiendo · Presencial y en línea. Mostrar periodo, fuentes y base 13/14; no generalizar a todos los egresados. Las 953 sesiones pasan al bloque de la Red, atribuidas a uHüb A.C., Chihuahua y Ciudad Juárez, 2023–2025. Conservar el seguimiento contextualizado en Historias, sin implicar que Cynthia pertenece a la cohorte.
 3. **Por qué existe:** eyebrow «Nadie emprende solo»; título «El talento está repartido. El ecosistema, no.»; conservar los tres párrafos vigentes y añadir apertura y cierre autorizados. Enlace a `/nosotros`.
 4. **Cómo trabajamos:** «Mentores, no consultores.»; explicar responsabilidades, práctica y capacitación con Biné. No caricaturizar consultoría ni prometer acompañamiento indefinido; la constancia oficial depende del curso. Foto real 004, dos columnas en escritorio, sin CTA nuevo.
 5. **Cómo acompaña:** «Un solo modelo. Distintas aplicaciones.»; situación → acción → prueba → revisión → siguiente acción. Conservar `CycleWheel.tsx`, clic/toque/teclado, ejemplos por contexto y continuidad al recorrido con la etapa elegida. Modelo, ciclo y ruta son distintos.
@@ -178,7 +178,7 @@ Fotos autorizadas del ZIP STILLS: 009 portada (versión móvil propia), 004 ment
 ## 8. Reglas que no se rompen
 
 - **Paraguas con entidades identificadas:** uhub.mx orienta hacia el conjunto; uhub.org.mx explica los programas A.C. Distinguir operador, condiciones, testimonios y resultados. No botones de donar ni afirmaciones sobre equivalencia entre factura y recibo deducible. El paraguas no fusiona finanzas ni ofertas.
-- **Cifras separadas, nunca fusionadas:** sesiones, participaciones, personas de una cohorte y mentores activos son indicadores distintos de uHüb A.C. El cierre del 6 de noviembre autoriza 13/14 egresados entre 2018 y 2021, según el informe al Consejo de octubre 2026; usar años explícitos y reporte pasado, no «hace 4–7 años». Mantener 953 sesiones desde 2023. +1,300 participaciones queda en la fuente central, fuera de la nueva banda. No publicar 32/33, 23/33 ni 97% hasta documentar filtros y fecha; una resta que cuadra no prueba el filtro utilizado. No publicar 600 ni +2,000. No guardar datos personales de la encuesta en el repositorio.
+- **Cifras separadas, nunca fusionadas:** sesiones, participaciones, personas de una cohorte y mentores activos son indicadores distintos de uHüb A.C. El cierre del 6 de noviembre autoriza 13/14 egresados entre 2018 y 2021, según el informe al Consejo de octubre 2026; usar años explícitos y reporte pasado, no «hace 4–7 años». Mantener 953 sesiones desde 2023. +1,300 participaciones queda en la fuente central, fuera de la nueva banda. No publicar 32/33, 23/33 ni 97% hasta documentar filtros y fecha; una resta que cuadra no prueba el filtro utilizado. No publicar 600 ni +2,000 personas únicas. El estimado ≈2,000 se permite solo como participaciones acumuladas, con fuente, periodo y advertencia de repetición. No guardar datos personales de la encuesta en el repositorio.
 - **Vulnerabilidad:** sin porcentajes; máximo una mención de contexto por pieza.
 - **No inventar:** testimonios, nombres, cifras, fechas, logos de aliados ni precios. Pendientes solo en documentación interna; no renderizar placeholders públicos.
 - **Aliados:** se nombran solo con convenio firmado o autorización.
@@ -432,3 +432,15 @@ Rodrigo solicita cambiar únicamente la foto principal del sitio publicado para 
 ## Acompañamiento en portada (9 de noviembre de 2026)
 
 Rodrigo aprueba la fotografía 006, conversando con otra persona y con libretas en la mesa, como imagen principal. Sustituye el retrato individual 011 para comunicar acompañamiento. Usar un encuadre que conserve ambas personas en móvil y escritorio. La 004 sigue en Cómo trabajamos, Cynthia conserva su historia y la 011 permanece en Nosotros. Solo cambia la imagen principal y su texto alternativo.
+
+
+## Banda de trayectoria y Red (10 de noviembre de 2026)
+
+Rodrigo solicita visibilizar trayectoria, alcance y continuidad, y trasladar las 953 mentorías a la Red. Se aplican las siguientes precisiones tras revisar ambas versiones del Documento Maestro de Impacto 2015–2025:
+
+- ≈2,000 participaciones estimadas 2015–2025: magnitud redondeada de ~381 participantes en programas + ~1,900 asistencias a actividades. No se presentan como personas únicas ni como una nueva auditoría nominal. Los documentos no permiten verificar su deduplicación del 20–30%.
+- 9 de cada 10: redondeo del seguimiento previamente autorizado de 13/14 personas egresadas 2018–2021, reporte al Consejo de octubre de 2026. La etiqueta dice consultadas y reportaron; nota visible con muestra y fuente. No mezclar con 19/20, 32/33, 36 respuestas ni la tasa AWE.
+- 953 sesiones: solo en el bloque de Red de la portada, con entidad, territorio y periodo 2023–2025; no implica que los 13 mentores actuales impartieron todas esas sesiones.
+- Comparación sectorial 60–70%: sin fuente comparable identificada; no se publica.
+- Impacto indirecto 120+: pendiente para una fase posterior. La tabla mezcla personas, familias y grupos y no prueba atribución causal. No sumar unidades distintas ni adjudicar a uHüb todos los empleos de CREALIM. Considerar casos individuales con periodo, fuente y autorización.
+- Se conserva la foto 006, todo el copy fuera de las métricas y las integraciones.

@@ -78,8 +78,13 @@ for (const width of [360, 390, 1440]) {
     await expect(page.locator(".home-cycle-example")).toContainText("carpeta de accionables");
     await expect(page.locator(".hub-story")).toContainText("13 de 14");
     await expect(page.locator(".hub-story")).toContainText("2018 y 2021");
-    await expect(page.locator(".hub-metrics")).toContainText("953");
-    await expect(page.locator(".hub-metrics")).not.toContainText(/600|2,000|97%/);
+    await expect(page.locator("#red-mentores")).toContainText("953");
+    await expect(page.locator(".hub-metrics")).not.toContainText("953");
+    await expect(page.locator(".hub-metrics")).toContainText("2,000");
+    await expect(page.locator(".hub-metrics")).toContainText("no personas únicas");
+    await expect(page.locator(".hub-metrics")).toContainText("9 de cada 10");
+    await expect(page.locator(".hub-metrics")).toContainText("13 de 14");
+    await expect(page.locator(".hub-metrics")).not.toContainText(/600|97%|promedio del sector/);
     await expect(page.locator(".hub-story")).toContainText("Cynthia Piñón");
     const photo = page.locator(".hub-story img");
     await photo.scrollIntoViewIfNeeded();

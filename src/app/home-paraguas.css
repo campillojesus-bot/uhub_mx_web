@@ -51,6 +51,8 @@
 .hub-metrics strong { font-size: 26px; line-height: 1.22; font-weight: 900; color: var(--text-brand); }
 .hub-metrics .hub-shell > div > span { font-size: 14px; line-height: 1.5; color: var(--text-muted); }
 .hub-metrics-source { width: min(1200px, calc(100% - 40px)); margin: 0 auto; padding: 0 0 24px; font-size: 14px; color: var(--text-muted); }
+.hub-metrics-source p { margin: 0; }
+.hub-metrics-source p + p { margin-top: 8px; }
 .hub-reading { width: min(680px, calc(100% - 40px)); margin-inline: auto; text-align: center; }
 .hub-why { background: var(--surface-page); }
 .hub-why h2 { margin: 0 0 28px; }
@@ -141,7 +143,7 @@
 @media (min-width: 700px) {
   .hub-shell { width: min(1200px, calc(100% - 64px)); }
   .hub-doors { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-  .hub-metrics .hub-shell { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 26px; }
+  .hub-metrics .hub-shell { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 26px; }
   .hub-metrics .hub-shell > div + div { border-left: 1px solid var(--uh-gray-200); padding-left: 26px; }
   .hub-metrics-source { width: min(1200px, calc(100% - 64px)); }
   .hub-story-layout { grid-template-columns: 1.7fr 1fr; gap: 64px; }
